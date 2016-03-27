@@ -171,7 +171,8 @@ html, body {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    height: 140px;
+    /*height: 140px;*/
+    padding: 45px 0;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -181,7 +182,6 @@ html, body {
 .menu-nav ul {
     list-style-type: none;
     margin: 0;
-    /*height: 30px;*/
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -789,6 +789,23 @@ html, body {
         justify-content: center;
     }
 
+    .nav-menu {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 25px 0;
+    }
+
+    .menu-nav ul{
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
 }
 
 @media screen and (max-width: 426px) {
@@ -819,7 +836,7 @@ html, body {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        height: 240px;
+        padding: 25px 0;
     }
 
     .menu-nav ul, ._findus ul{
@@ -828,6 +845,10 @@ html, body {
         -ms-flex-pack: center;
         justify-content: center;
         padding-left: 0px;
+    }
+
+    .menu-nav ul{
+        padding-top: 20px;
     }
 
     .filter ul{
@@ -843,7 +864,6 @@ html, body {
 
     .posts, .tweet-post{
         width: 260px;
-
     }
 
     ._footercolumn{
