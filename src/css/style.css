@@ -1,0 +1,1867 @@
+/*------------FONTS------------*/
+@import url(../fonts/stylesheet.css);
+/*------------COLOR------------*/
+html {
+  background: white; }
+
+body {
+  margin: 0;
+  font-family: 'pf_beausans_pro', sans-serif;
+  color: #52565e;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  body select::-ms-expand {
+    display: none; }
+  body a, body img {
+    border: none;
+    outline: none; }
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 94%;
+  max-width: 1410px; }
+
+/*------------BUTTON------------*/
+.arrow {
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  background: #ff5c56;
+  padding-right: 20px;
+  border: none;
+  color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+  width: 300px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 35px;
+  cursor: pointer;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2); }
+  .arrow:before, .arrow:after {
+    position: absolute;
+    top: 3px;
+    bottom: 0;
+    right: 3px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    content: "";
+    font-family: 'FontAwesome', sans-serif;
+    line-height: 55px;
+    text-align: center;
+    -webkit-transition: .2s;
+    transition: .2s; }
+  .arrow:before {
+    background: #eb4943; }
+  .arrow:hover:before {
+    background: rgba(0, 0, 0, 0.2); }
+  .arrow:after {
+    content: "\F054"; }
+  .arrow:hover {
+    background: #eb4943; }
+  .arrow:active, .arrow:focus {
+    background: #eb4943;
+    outline: none; }
+  .arrow:hover:after {
+    -webkit-animation: bounceright .3s alternate ease infinite;
+    animation: bounceright .3s alternate ease infinite; }
+
+@-webkit-keyframes bounceright {
+  from {
+    -webkit-transform: translateX(0); }
+  to {
+    -webkit-transform: translateX(3px); } }
+@keyframes bounceright {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); }
+  to {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px); } }
+/*------------DESKTOP------------*/
+#header {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: 62px;
+  background: #fff;
+  color: #454545;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2); }
+  #header .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    #header .container #nav {
+      display: block;
+      position: relative; }
+      #header .container #nav ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex; }
+        #header .container #nav ul li {
+          float: right;
+          list-style-type: none; }
+          #header .container #nav ul li a {
+            display: block;
+            color: #52565e;
+            text-decoration: none;
+            margin-left: 60px;
+            font-weight: 700; }
+
+#slide {
+  min-height: 990px;
+  background: url("../img/bg1.png") center top no-repeat;
+  background-size: inherit; }
+  #slide .container {
+    padding-top: 62px;
+    max-width: 650px;
+    z-index: 5; }
+    #slide .container h1 {
+      font-weight: 700;
+      font-size: 38px;
+      text-align: center;
+      margin: 46px 0 0 0;
+      color: #504365; }
+    #slide .container > p {
+      font-size: 18px;
+      text-align: center;
+      font-weight: 400;
+      text-align: center;
+      margin: 0 auto;
+      width: 55%;
+      margin-bottom: 30px; }
+    #slide .container .tabs {
+      width: 650px;
+      padding: 0;
+      height: 47px;
+      margin-bottom: 0; }
+      #slide .container .tabs li {
+        float: left;
+        width: 24.7%;
+        list-style-type: none;
+        height: 100%;
+        margin: 0 0.20%; }
+        #slide .container .tabs li:first-child {
+          margin-left: 0; }
+        #slide .container .tabs li:last-child {
+          margin-right: 0; }
+      #slide .container .tabs a {
+        text-decoration: none;
+        height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 6px 6px 0 0;
+        font-size: 16px;
+        font-weight: 400;
+        background: #504365;
+        color: #ffffff; }
+        #slide .container .tabs a:hover {
+          -webkit-transition: all 0.8s, color 0.3s 0.3s;
+          transition: all 0.8s, color 0.3s 0.3s; }
+        #slide .container .tabs a.active {
+          background: #ffffff;
+          color: #52565e; }
+          #slide .container .tabs a.active:hover {
+            -webkit-transition: all 0.8s, color 0.3s 0.3s;
+            transition: all 0.8s, color 0.3s 0.3s; }
+    #slide .container .tabgroup #tab1, #slide .container .tabgroup #tab2, #slide .container .tabgroup #tab3, #slide .container .tabgroup #tab4 {
+      max-width: 590px;
+      padding: 0; }
+      #slide .container .tabgroup #tab1 #form1, #slide .container .tabgroup #tab1 #form2, #slide .container .tabgroup #tab1 #form3, #slide .container .tabgroup #tab1 #form4, #slide .container .tabgroup #tab2 #form1, #slide .container .tabgroup #tab2 #form2, #slide .container .tabgroup #tab2 #form3, #slide .container .tabgroup #tab2 #form4, #slide .container .tabgroup #tab3 #form1, #slide .container .tabgroup #tab3 #form2, #slide .container .tabgroup #tab3 #form3, #slide .container .tabgroup #tab3 #form4, #slide .container .tabgroup #tab4 #form1, #slide .container .tabgroup #tab4 #form2, #slide .container .tabgroup #tab4 #form3, #slide .container .tabgroup #tab4 #form4 {
+        box-shadow: 0px 12px 42px 2px rgba(0, 0, 0, 0.3);
+        border-radius: 0 0 6px 6px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+        background: #ffffff;
+        z-index: 1;
+        padding: 40px 30px; }
+        #slide .container .tabgroup #tab1 #form1 form, #slide .container .tabgroup #tab1 #form2 form, #slide .container .tabgroup #tab1 #form3 form, #slide .container .tabgroup #tab1 #form4 form, #slide .container .tabgroup #tab2 #form1 form, #slide .container .tabgroup #tab2 #form2 form, #slide .container .tabgroup #tab2 #form3 form, #slide .container .tabgroup #tab2 #form4 form, #slide .container .tabgroup #tab3 #form1 form, #slide .container .tabgroup #tab3 #form2 form, #slide .container .tabgroup #tab3 #form3 form, #slide .container .tabgroup #tab3 #form4 form, #slide .container .tabgroup #tab4 #form1 form, #slide .container .tabgroup #tab4 #form2 form, #slide .container .tabgroup #tab4 #form3 form, #slide .container .tabgroup #tab4 #form4 form {
+          width: 100%; }
+          #slide .container .tabgroup #tab1 #form1 form > span, #slide .container .tabgroup #tab1 #form2 form > span, #slide .container .tabgroup #tab1 #form3 form > span, #slide .container .tabgroup #tab1 #form4 form > span, #slide .container .tabgroup #tab2 #form1 form > span, #slide .container .tabgroup #tab2 #form2 form > span, #slide .container .tabgroup #tab2 #form3 form > span, #slide .container .tabgroup #tab2 #form4 form > span, #slide .container .tabgroup #tab3 #form1 form > span, #slide .container .tabgroup #tab3 #form2 form > span, #slide .container .tabgroup #tab3 #form3 form > span, #slide .container .tabgroup #tab3 #form4 form > span, #slide .container .tabgroup #tab4 #form1 form > span, #slide .container .tabgroup #tab4 #form2 form > span, #slide .container .tabgroup #tab4 #form3 form > span, #slide .container .tabgroup #tab4 #form4 form > span {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10px; }
+            #slide .container .tabgroup #tab1 #form1 form > span p, #slide .container .tabgroup #tab1 #form2 form > span p, #slide .container .tabgroup #tab1 #form3 form > span p, #slide .container .tabgroup #tab1 #form4 form > span p, #slide .container .tabgroup #tab2 #form1 form > span p, #slide .container .tabgroup #tab2 #form2 form > span p, #slide .container .tabgroup #tab2 #form3 form > span p, #slide .container .tabgroup #tab2 #form4 form > span p, #slide .container .tabgroup #tab3 #form1 form > span p, #slide .container .tabgroup #tab3 #form2 form > span p, #slide .container .tabgroup #tab3 #form3 form > span p, #slide .container .tabgroup #tab3 #form4 form > span p, #slide .container .tabgroup #tab4 #form1 form > span p, #slide .container .tabgroup #tab4 #form2 form > span p, #slide .container .tabgroup #tab4 #form3 form > span p, #slide .container .tabgroup #tab4 #form4 form > span p {
+              font-size: 18px;
+              font-weight: 700;
+              margin: 0; }
+            #slide .container .tabgroup #tab1 #form1 form > span a, #slide .container .tabgroup #tab1 #form2 form > span a, #slide .container .tabgroup #tab1 #form3 form > span a, #slide .container .tabgroup #tab1 #form4 form > span a, #slide .container .tabgroup #tab2 #form1 form > span a, #slide .container .tabgroup #tab2 #form2 form > span a, #slide .container .tabgroup #tab2 #form3 form > span a, #slide .container .tabgroup #tab2 #form4 form > span a, #slide .container .tabgroup #tab3 #form1 form > span a, #slide .container .tabgroup #tab3 #form2 form > span a, #slide .container .tabgroup #tab3 #form3 form > span a, #slide .container .tabgroup #tab3 #form4 form > span a, #slide .container .tabgroup #tab4 #form1 form > span a, #slide .container .tabgroup #tab4 #form2 form > span a, #slide .container .tabgroup #tab4 #form3 form > span a, #slide .container .tabgroup #tab4 #form4 form > span a {
+              font-size: 16px;
+              color: #5a5a94;
+              text-decoration: none;
+              border-bottom: 1px dashed #5a5a94; }
+          #slide .container .tabgroup #tab1 #form1 form .sliderCalc, #slide .container .tabgroup #tab1 #form2 form .sliderCalc, #slide .container .tabgroup #tab1 #form3 form .sliderCalc, #slide .container .tabgroup #tab1 #form4 form .sliderCalc, #slide .container .tabgroup #tab2 #form1 form .sliderCalc, #slide .container .tabgroup #tab2 #form2 form .sliderCalc, #slide .container .tabgroup #tab2 #form3 form .sliderCalc, #slide .container .tabgroup #tab2 #form4 form .sliderCalc, #slide .container .tabgroup #tab3 #form1 form .sliderCalc, #slide .container .tabgroup #tab3 #form2 form .sliderCalc, #slide .container .tabgroup #tab3 #form3 form .sliderCalc, #slide .container .tabgroup #tab3 #form4 form .sliderCalc, #slide .container .tabgroup #tab4 #form1 form .sliderCalc, #slide .container .tabgroup #tab4 #form2 form .sliderCalc, #slide .container .tabgroup #tab4 #form3 form .sliderCalc, #slide .container .tabgroup #tab4 #form4 form .sliderCalc {
+            width: 100%; }
+            #slide .container .tabgroup #tab1 #form1 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab1 #form2 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab1 #form3 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab1 #form4 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab2 #form1 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab2 #form2 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab2 #form3 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab2 #form4 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab3 #form1 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab3 #form2 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab3 #form3 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab3 #form4 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab4 #form1 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab4 #form2 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab4 #form3 form .sliderCalc input[type="text"], #slide .container .tabgroup #tab4 #form4 form .sliderCalc input[type="text"] {
+              width: 100%;
+              outline: none;
+              border: 2px solid #dbdbdb;
+              background: #f0f0f0;
+              font-size: 18px;
+              color: #52565e;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              height: 38px;
+              border-bottom: 0;
+              padding-left: 12px; }
+            #slide .container .tabgroup #tab1 #form1 form .sliderCalc .irs, #slide .container .tabgroup #tab1 #form2 form .sliderCalc .irs, #slide .container .tabgroup #tab1 #form3 form .sliderCalc .irs, #slide .container .tabgroup #tab1 #form4 form .sliderCalc .irs, #slide .container .tabgroup #tab2 #form1 form .sliderCalc .irs, #slide .container .tabgroup #tab2 #form2 form .sliderCalc .irs, #slide .container .tabgroup #tab2 #form3 form .sliderCalc .irs, #slide .container .tabgroup #tab2 #form4 form .sliderCalc .irs, #slide .container .tabgroup #tab3 #form1 form .sliderCalc .irs, #slide .container .tabgroup #tab3 #form2 form .sliderCalc .irs, #slide .container .tabgroup #tab3 #form3 form .sliderCalc .irs, #slide .container .tabgroup #tab3 #form4 form .sliderCalc .irs, #slide .container .tabgroup #tab4 #form1 form .sliderCalc .irs, #slide .container .tabgroup #tab4 #form2 form .sliderCalc .irs, #slide .container .tabgroup #tab4 #form3 form .sliderCalc .irs, #slide .container .tabgroup #tab4 #form4 form .sliderCalc .irs {
+              height: 25px; }
+              #slide .container .tabgroup #tab1 #form1 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab1 #form2 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab1 #form3 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab1 #form4 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab2 #form1 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab2 #form2 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab2 #form3 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab2 #form4 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab3 #form1 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab3 #form2 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab3 #form3 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab3 #form4 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab4 #form1 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab4 #form2 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab4 #form3 form .sliderCalc .irs .irs-bar, #slide .container .tabgroup #tab4 #form4 form .sliderCalc .irs .irs-bar {
+                height: 8px;
+                top: 0;
+                background-color: #504365;
+                border-radius: 0; }
+              #slide .container .tabgroup #tab1 #form1 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab1 #form2 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab1 #form3 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab1 #form4 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab2 #form1 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab2 #form2 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab2 #form3 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab2 #form4 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab3 #form1 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab3 #form2 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab3 #form3 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab3 #form4 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab4 #form1 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab4 #form2 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab4 #form3 form .sliderCalc .irs .irs-line, #slide .container .tabgroup #tab4 #form4 form .sliderCalc .irs .irs-line {
+                height: 8px;
+                top: 0;
+                background-color: #dbdbdb;
+                border-radius: 0; }
+              #slide .container .tabgroup #tab1 #form1 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab1 #form2 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab1 #form3 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab1 #form4 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab2 #form1 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab2 #form2 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab2 #form3 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab2 #form4 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab3 #form1 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab3 #form2 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab3 #form3 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab3 #form4 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab4 #form1 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab4 #form2 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab4 #form3 form .sliderCalc .irs .irs-slider, #slide .container .tabgroup #tab4 #form4 form .sliderCalc .irs .irs-slider {
+                background: url("../img/slide-point.png");
+                top: 11px;
+                margin-top: -18px;
+                cursor: pointer;
+                width: 32px;
+                height: 40px;
+                border-radius: 0;
+                background-color: transparent;
+                box-shadow: none; }
+          #slide .container .tabgroup #tab1 #form1 form .two-column, #slide .container .tabgroup #tab1 #form2 form .two-column, #slide .container .tabgroup #tab1 #form3 form .two-column, #slide .container .tabgroup #tab1 #form4 form .two-column, #slide .container .tabgroup #tab2 #form1 form .two-column, #slide .container .tabgroup #tab2 #form2 form .two-column, #slide .container .tabgroup #tab2 #form3 form .two-column, #slide .container .tabgroup #tab2 #form4 form .two-column, #slide .container .tabgroup #tab3 #form1 form .two-column, #slide .container .tabgroup #tab3 #form2 form .two-column, #slide .container .tabgroup #tab3 #form3 form .two-column, #slide .container .tabgroup #tab3 #form4 form .two-column, #slide .container .tabgroup #tab4 #form1 form .two-column, #slide .container .tabgroup #tab4 #form2 form .two-column, #slide .container .tabgroup #tab4 #form3 form .two-column, #slide .container .tabgroup #tab4 #form4 form .two-column {
+            margin-bottom: 20px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+            #slide .container .tabgroup #tab1 #form1 form .two-column .formrow, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow {
+              display: -webkit-box;
+              display: -webkit-flex;
+              display: -moz-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+              -webkit-box-pack: justify;
+              -webkit-justify-content: space-between;
+              -moz-box-pack: justify;
+              -ms-flex-pack: justify;
+              justify-content: space-between;
+              width: 47%; }
+              #slide .container .tabgroup #tab1 #form1 form .two-column .formrow p, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow p, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow p, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow p, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow p, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow p, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow p, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow p, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow p, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow p, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow p, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow p, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow p, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow p, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow p, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow p {
+                width: 100%;
+                text-align: left;
+                font-size: 16px;
+                font-weight: 300;
+                margin-bottom: 1px;
+                letter-spacing: 0; }
+                #slide .container .tabgroup #tab1 #form1 form .two-column .formrow p:after, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow p:after, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow p:after, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow p:after, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow p:after, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow p:after, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow p:after, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow p:after, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow p:after, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow p:after, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow p:after, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow p:after, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow p:after, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow p:after, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow p:after, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow p:after {
+                  content: "*";
+                  color: #ff5c56; }
+              #slide .container .tabgroup #tab1 #form1 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab1 #form2 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab1 #form3 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab1 #form4 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab2 #form1 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab2 #form2 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab2 #form3 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab2 #form4 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab3 #form1 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab3 #form2 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab3 #form3 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab3 #form4 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab4 #form1 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab4 #form2 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab4 #form3 form .two-column .formrow input[type="text"], #slide .container .tabgroup #tab4 #form4 form .two-column .formrow input[type="text"] {
+                margin-bottom: 10px;
+                padding: 0 12px 0 10px;
+                width: 100%;
+                border: 2px solid #dbdbdb;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                background: #f0f0f0;
+                font-size: 18px;
+                color: #52565e;
+                height: 38px;
+                outline: none; }
+                #slide .container .tabgroup #tab1 #form1 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow input[type="text"]::-webkit-input-placeholder, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow input[type="text"]::-webkit-input-placeholder {
+                  color: #a9a9a9; }
+              #slide .container .tabgroup #tab1 #form1 form .two-column .formrow select, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow select, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow select, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow select, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow select, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow select, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow select, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow select, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow select, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow select, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow select, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow select, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow select, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow select, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow select, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow select {
+                width: 100%;
+                outline: none;
+                border: 2px solid #dbdbdb;
+                font-size: 18px;
+                color: #52565e;
+                height: 38px;
+                padding-left: 12px;
+                cursor: pointer;
+                -webkit-appearance: none;
+                background: url("../img/select-arrow.png") 97% 50% no-repeat #f0f0f0;
+                line-height: 1em;
+                -moz-appearance: none;
+                text-indent: 0.01px;
+                text-overflow: '';
+                -ms-appearance: none;
+                appearance: none !important;
+                margin-bottom: 10px; }
+              #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row {
+                width: 100%;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -moz-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                height: 38px;
+                margin-bottom: 10px; }
+                #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox {
+                  display: none; }
+                  #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox + label, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox + label {
+                    cursor: pointer;
+                    background-color: #f0f0f0;
+                    border-radius: 50px;
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 10px;
+                    -webkit-transition: all .1s ease-in;
+                    transition: all .1s ease-in;
+                    border: 2px solid #dbdbdb;
+                    width: 62px;
+                    height: 34px; }
+                    #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox + label:after, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox + label:after {
+                      content: ' ';
+                      position: absolute;
+                      top: 0;
+                      -webkit-transition: box-shadow .1s ease-in;
+                      transition: box-shadow .1s ease-in;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      border-radius: 100px;
+                      box-shadow: inset 0 0 0 0 #ddd, 0 0 1px rgba(0, 0, 0, 0.4); }
+                    #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox + label:before, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox + label:before {
+                      content: ' ';
+                      position: absolute;
+                      background: #fff;
+                      top: 3px;
+                      left: 3px;
+                      z-index: 33;
+                      -webkit-transition: all .1s ease-in;
+                      transition: all .1s ease-in;
+                      height: 28px;
+                      width: 28px;
+                      border-radius: 100px;
+                      box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.3); }
+                    #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox + label:active, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox + label:active {
+                      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.1); }
+                  #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox:active + label:after, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox:active + label:after {
+                    box-shadow: inset 0 0 0 20px #eee, 0 0 1px #eee; }
+                  #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox:active + label:before, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox:active + label:before {
+                    width: 37px; }
+                  #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox:checked:active + label:before, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox:checked:active + label:before {
+                    width: 37px;
+                    left: 10px; }
+                  #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox:checked + label:before, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox:checked + label:before {
+                    content: ' ';
+                    position: absolute;
+                    left: 29px;
+                    border-radius: 100px; }
+                  #slide .container .tabgroup #tab1 #form1 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab1 #form2 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab1 #form3 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab1 #form4 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab2 #form1 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab2 #form2 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab2 #form3 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab2 #form4 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab3 #form1 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab3 #form2 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab3 #form3 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab3 #form4 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab4 #form1 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab4 #form2 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab4 #form3 form .two-column .formrow .row .my-checkbox:checked + label:after, #slide .container .tabgroup #tab4 #form4 form .two-column .formrow .row .my-checkbox:checked + label:after {
+                    content: ' ';
+                    font-size: 1.5em;
+                    position: absolute;
+                    background: #5a5a94;
+                    box-shadow: 0 0 1px #5a5a94; }
+              #slide .container .tabgroup #tab1 #form1 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab1 #form2 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab1 #form3 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab1 #form4 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab2 #form1 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab2 #form2 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab2 #form3 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab2 #form4 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab3 #form1 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab3 #form2 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab3 #form3 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab3 #form4 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab4 #form1 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab4 #form2 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab4 #form3 form .two-column .formrow:nth-child(odd), #slide .container .tabgroup #tab4 #form4 form .two-column .formrow:nth-child(odd) {
+                padding-right: 6%; }
+          #slide .container .tabgroup #tab1 #form1 form label input[type='checkbox'], #slide .container .tabgroup #tab1 #form2 form label input[type='checkbox'], #slide .container .tabgroup #tab1 #form3 form label input[type='checkbox'], #slide .container .tabgroup #tab1 #form4 form label input[type='checkbox'], #slide .container .tabgroup #tab2 #form1 form label input[type='checkbox'], #slide .container .tabgroup #tab2 #form2 form label input[type='checkbox'], #slide .container .tabgroup #tab2 #form3 form label input[type='checkbox'], #slide .container .tabgroup #tab2 #form4 form label input[type='checkbox'], #slide .container .tabgroup #tab3 #form1 form label input[type='checkbox'], #slide .container .tabgroup #tab3 #form2 form label input[type='checkbox'], #slide .container .tabgroup #tab3 #form3 form label input[type='checkbox'], #slide .container .tabgroup #tab3 #form4 form label input[type='checkbox'], #slide .container .tabgroup #tab4 #form1 form label input[type='checkbox'], #slide .container .tabgroup #tab4 #form2 form label input[type='checkbox'], #slide .container .tabgroup #tab4 #form3 form label input[type='checkbox'], #slide .container .tabgroup #tab4 #form4 form label input[type='checkbox'] {
+            margin: 1px 10px 0 0;
+            line-height: normal;
+            position: relative;
+            vertical-align: -4px;
+            border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer; }
+            #slide .container .tabgroup #tab1 #form1 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab1 #form2 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab1 #form3 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab1 #form4 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab2 #form1 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab2 #form2 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab2 #form3 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab2 #form4 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab3 #form1 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab3 #form2 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab3 #form3 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab3 #form4 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab4 #form1 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab4 #form2 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab4 #form3 form label input[type='checkbox']:focus, #slide .container .tabgroup #tab4 #form4 form label input[type='checkbox']:focus {
+              outline: none; }
+            #slide .container .tabgroup #tab1 #form1 form label input[type='checkbox']:after, #slide .container .tabgroup #tab1 #form2 form label input[type='checkbox']:after, #slide .container .tabgroup #tab1 #form3 form label input[type='checkbox']:after, #slide .container .tabgroup #tab1 #form4 form label input[type='checkbox']:after, #slide .container .tabgroup #tab2 #form1 form label input[type='checkbox']:after, #slide .container .tabgroup #tab2 #form2 form label input[type='checkbox']:after, #slide .container .tabgroup #tab2 #form3 form label input[type='checkbox']:after, #slide .container .tabgroup #tab2 #form4 form label input[type='checkbox']:after, #slide .container .tabgroup #tab3 #form1 form label input[type='checkbox']:after, #slide .container .tabgroup #tab3 #form2 form label input[type='checkbox']:after, #slide .container .tabgroup #tab3 #form3 form label input[type='checkbox']:after, #slide .container .tabgroup #tab3 #form4 form label input[type='checkbox']:after, #slide .container .tabgroup #tab4 #form1 form label input[type='checkbox']:after, #slide .container .tabgroup #tab4 #form2 form label input[type='checkbox']:after, #slide .container .tabgroup #tab4 #form3 form label input[type='checkbox']:after, #slide .container .tabgroup #tab4 #form4 form label input[type='checkbox']:after {
+              content: "";
+              display: block;
+              width: 16px;
+              height: 16px;
+              margin-top: -1px;
+              margin-right: 5px;
+              margin-left: -0px;
+              border: 2px solid #dbdbdb;
+              background: #f0f0f0;
+              border-radius: 0;
+              -webkit-transition: 240ms;
+              transition: 240ms; }
+            #slide .container .tabgroup #tab1 #form1 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab1 #form2 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab1 #form3 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab1 #form4 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab2 #form1 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab2 #form2 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab2 #form3 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab2 #form4 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab3 #form1 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab3 #form2 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab3 #form3 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab3 #form4 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab4 #form1 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab4 #form2 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab4 #form3 form label input[type='checkbox']:checked:before, #slide .container .tabgroup #tab4 #form4 form label input[type='checkbox']:checked:before {
+              content: "";
+              position: absolute;
+              top: 1px;
+              left: 6px;
+              display: table;
+              width: 5px;
+              height: 8px;
+              border: 4px solid #5a5a91;
+              border-radius: 3px;
+              border-top-width: 0;
+              border-left-width: 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+              box-shadow: none; }
+            #slide .container .tabgroup #tab1 #form1 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab1 #form2 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab1 #form3 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab1 #form4 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab2 #form1 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab2 #form2 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab2 #form3 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab2 #form4 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab3 #form1 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab3 #form2 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab3 #form3 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab3 #form4 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab4 #form1 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab4 #form2 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab4 #form3 form label input[type='checkbox']:checked:after, #slide .container .tabgroup #tab4 #form4 form label input[type='checkbox']:checked:after {
+              border: 2px solid #dbdbdb;
+              background: #f0f0f0; }
+            #slide .container .tabgroup #tab1 #form1 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab1 #form2 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab1 #form3 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab1 #form4 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab2 #form1 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab2 #form2 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab2 #form3 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab2 #form4 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab3 #form1 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab3 #form2 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab3 #form3 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab3 #form4 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab4 #form1 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab4 #form2 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab4 #form3 form label input[type='checkbox']:disabled:after, #slide .container .tabgroup #tab4 #form4 form label input[type='checkbox']:disabled:after {
+              border: 2px solid #dbdbdb; }
+            #slide .container .tabgroup #tab1 #form1 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab1 #form2 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab1 #form3 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab1 #form4 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab2 #form1 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab2 #form2 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab2 #form3 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab2 #form4 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab3 #form1 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab3 #form2 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab3 #form3 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab3 #form4 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab4 #form1 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab4 #form2 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab4 #form3 form label input[type='checkbox']:disabled:checked :after, #slide .container .tabgroup #tab4 #form4 form label input[type='checkbox']:disabled:checked :after {
+              border: 2px solid #dbdbdb;
+              background: #f0f0f0; }
+          #slide .container .tabgroup #tab1 #form1 form label a, #slide .container .tabgroup #tab1 #form2 form label a, #slide .container .tabgroup #tab1 #form3 form label a, #slide .container .tabgroup #tab1 #form4 form label a, #slide .container .tabgroup #tab2 #form1 form label a, #slide .container .tabgroup #tab2 #form2 form label a, #slide .container .tabgroup #tab2 #form3 form label a, #slide .container .tabgroup #tab2 #form4 form label a, #slide .container .tabgroup #tab3 #form1 form label a, #slide .container .tabgroup #tab3 #form2 form label a, #slide .container .tabgroup #tab3 #form3 form label a, #slide .container .tabgroup #tab3 #form4 form label a, #slide .container .tabgroup #tab4 #form1 form label a, #slide .container .tabgroup #tab4 #form2 form label a, #slide .container .tabgroup #tab4 #form3 form label a, #slide .container .tabgroup #tab4 #form4 form label a {
+            color: #5a5a94;
+            text-decoration: none;
+            border-bottom: 1px dashed #5a5a94; }
+          #slide .container .tabgroup #tab1 #form1 form .formrowcenter, #slide .container .tabgroup #tab1 #form2 form .formrowcenter, #slide .container .tabgroup #tab1 #form3 form .formrowcenter, #slide .container .tabgroup #tab1 #form4 form .formrowcenter, #slide .container .tabgroup #tab2 #form1 form .formrowcenter, #slide .container .tabgroup #tab2 #form2 form .formrowcenter, #slide .container .tabgroup #tab2 #form3 form .formrowcenter, #slide .container .tabgroup #tab2 #form4 form .formrowcenter, #slide .container .tabgroup #tab3 #form1 form .formrowcenter, #slide .container .tabgroup #tab3 #form2 form .formrowcenter, #slide .container .tabgroup #tab3 #form3 form .formrowcenter, #slide .container .tabgroup #tab3 #form4 form .formrowcenter, #slide .container .tabgroup #tab4 #form1 form .formrowcenter, #slide .container .tabgroup #tab4 #form2 form .formrowcenter, #slide .container .tabgroup #tab4 #form3 form .formrowcenter, #slide .container .tabgroup #tab4 #form4 form .formrowcenter {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin-top: 30px; }
+
+#counter {
+  padding: 40px 0 0 0; }
+  #counter .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    #counter .container .counter {
+      width: 530px;
+      height: 201px;
+      background: url("../img/counter-bg.png") center center no-repeat;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 0;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -moz-box-align: end;
+      -ms-flex-align: end;
+      -ms-grid-row-align: flex-end;
+      align-items: flex-end; }
+      #counter .container .counter p {
+        font-weight: 700;
+        font-size: 28px;
+        margin: 0;
+        height: 0; }
+      #counter .container .counter span {
+        font-size: 50.5px;
+        letter-spacing: 50px;
+        width: 90%;
+        padding-left: 50px;
+        color: white;
+        margin: 0;
+        text-align: center;
+        line-height: 150px; }
+
+#advantages {
+  padding: 65px 0 80px 0; }
+  #advantages .container {
+    max-width: 1170px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex; }
+    #advantages .container div {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      max-width: 35%; }
+      #advantages .container div:last-child {
+        width: 30%; }
+      #advantages .container div span h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        margin-top: 15px; }
+      #advantages .container div span p {
+        font-size: 16px;
+        margin-top: 0; }
+      #advantages .container div span:last-child {
+        width: 55%;
+        padding-left: 15px;
+        float: left; }
+
+#calc {
+  padding: 65px 0 80px 0;
+  background: url("../img/bg3.png") left bottom no-repeat #5a5a94; }
+  #calc .container {
+    max-width: 1170px; }
+    #calc .container h1 {
+      font-size: 38px;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center; }
+    #calc .container .calc-content {
+      background: #fff;
+      border-radius: 6px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      #calc .container .calc-content .left-content {
+        width: 43%;
+        padding: 60px 0;
+        padding-left: 3%;
+        padding-right: 3%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        #calc .container .calc-content .left-content .formcalc {
+          width: 100%; }
+          #calc .container .calc-content .left-content .formcalc > span {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 30px; }
+            #calc .container .calc-content .left-content .formcalc > span:first-child {
+              margin-top: 0; }
+            #calc .container .calc-content .left-content .formcalc > span p {
+              font-size: 18px;
+              font-weight: 700;
+              margin: 0; }
+            #calc .container .calc-content .left-content .formcalc > span a {
+              font-size: 16px;
+              color: #5a5a94;
+              text-decoration: none;
+              border-bottom: 1px dashed #5a5a94; }
+          #calc .container .calc-content .left-content .formcalc select {
+            width: 100%;
+            outline: none;
+            border: 2px solid #dbdbdb;
+            font-size: 18px;
+            color: #52565e;
+            height: 48px;
+            padding-left: 12px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            background: url("../img/select-arrow.png") 97% 50% no-repeat #f0f0f0;
+            line-height: 1em;
+            -moz-appearance: none;
+            text-indent: 0.01px;
+            text-overflow: '';
+            -ms-appearance: none;
+            appearance: none !important; }
+          #calc .container .calc-content .left-content .formcalc .sliderCalc {
+            width: 100%; }
+            #calc .container .calc-content .left-content .formcalc .sliderCalc input[type="text"] {
+              width: 100%;
+              outline: none;
+              border: 2px solid #dbdbdb;
+              background: #f0f0f0;
+              font-size: 18px;
+              color: #52565e;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              height: 38px;
+              border-bottom: 0;
+              padding-left: 12px; }
+            #calc .container .calc-content .left-content .formcalc .sliderCalc .irs {
+              height: 25px; }
+              #calc .container .calc-content .left-content .formcalc .sliderCalc .irs .irs-bar {
+                height: 8px;
+                top: 0;
+                background-color: #504365;
+                border-radius: 0; }
+              #calc .container .calc-content .left-content .formcalc .sliderCalc .irs .irs-line {
+                height: 8px;
+                top: 0;
+                background-color: #dbdbdb;
+                border-radius: 0; }
+              #calc .container .calc-content .left-content .formcalc .sliderCalc .irs .irs-slider {
+                background: url("../img/slide-point.png") transparent;
+                top: 11px;
+                margin-top: -18px;
+                cursor: pointer;
+                width: 32px;
+                height: 40px;
+                border-radius: 0;
+                box-shadow: none; }
+            #calc .container .calc-content .left-content .formcalc .sliderCalc .stavka .irs-slider {
+              background: url("../img/slide-point-precent.png") transparent; }
+          #calc .container .calc-content .left-content .formcalc .arrow {
+            display: none; }
+      #calc .container .calc-content .right-content {
+        width: 43%;
+        padding: 60px 0;
+        padding-left: 3%;
+        padding-right: 3%;
+        background: #ececec;
+        border-radius: 0 6px 6px 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        #calc .container .calc-content .right-content p {
+          font-size: 28px;
+          color: #ff5c56;
+          margin: 0; }
+        #calc .container .calc-content .right-content ul {
+          width: 98%;
+          list-style: none;
+          padding-left: 0;
+          font-size: 18px; }
+          #calc .container .calc-content .right-content ul li {
+            padding: 10px 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            background: url(../img/dashed.png) 0 28px repeat-x; }
+            #calc .container .calc-content .right-content ul li span {
+              background: #ececec;
+              padding-right: 6px; }
+            #calc .container .calc-content .right-content ul li .page {
+              padding-right: 0;
+              padding-left: 6px;
+              font-weight: 700;
+              float: right; }
+            #calc .container .calc-content .right-content ul li:last-child {
+              padding-top: 37px;
+              background: url(../img/dashed.png) 0 54px repeat-x; }
+              #calc .container .calc-content .right-content ul li:last-child span {
+                background: #ececec; }
+              #calc .container .calc-content .right-content ul li:last-child .page {
+                top: -23px;
+                position: relative; }
+                #calc .container .calc-content .right-content ul li:last-child .page img {
+                  background: #ececec;
+                  padding-left: 10px; }
+            #calc .container .calc-content .right-content ul li:nth-child(3) {
+              padding-top: 15px;
+              background: url(../img/dashed.png) 0 34px repeat-x; }
+              #calc .container .calc-content .right-content ul li:nth-child(3) .page {
+                font-size: 24px;
+                line-height: 24px; }
+
+#info {
+  padding: 80px 0; }
+  #info .container {
+    max-width: 980px; }
+    #info .container .row-one {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 70px; }
+      #info .container .row-one div {
+        width: 50%; }
+        #info .container .row-one div h4 {
+          font-size: 28px;
+          font-weight: 400; }
+          #info .container .row-one div h4 span {
+            font-weight: 700; }
+        #info .container .row-one div p {
+          font-size: 16px;
+          line-height: 24px; }
+        #info .container .row-one div:last-child {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -moz-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-self: center;
+          -ms-flex-item-align: center;
+          align-self: center; }
+    #info .container .row-two {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex; }
+      #info .container .row-two div {
+        width: 50%; }
+        #info .container .row-two div ul {
+          list-style-type: none; }
+          #info .container .row-two div ul li {
+            background: url("../img/list-marker.png") no-repeat;
+            padding-left: 50px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 24px; }
+        #info .container .row-two div:first-child {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -moz-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-self: center;
+          -ms-flex-item-align: center;
+          align-self: center; }
+
+#banks {
+  padding: 50px 0 40px 0;
+  background: url("../img/bg-banks.png") center bottom no-repeat #ececec; }
+  #banks .container {
+    max-width: 1170px; }
+    #banks .container .banks {
+      text-align: center; }
+      #banks .container .banks h4 {
+        font-size: 28px;
+        font-weight: 400; }
+      #banks .container .banks #banks-slider {
+        margin-bottom: 235px; }
+        #banks .container .banks #banks-slider .owl-theme .owl-stage-outer {
+          width: 99.7%; }
+          #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .owl-item .item {
+            margin-bottom: 10px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 100px; }
+            #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .owl-item .item img {
+              width: auto; }
+            #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .owl-item .item:first-child {
+              border-bottom: 1px solid #dcdcdc; }
+          #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .active .owl2row-item {
+            border-right: 1px solid #dcdcdc; }
+        #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav div {
+          position: absolute; }
+        #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-prev, #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-next {
+          right: -60px;
+          top: 70px;
+          font: 0/0 serif;
+          text-shadow: none;
+          color: transparent;
+          background: url("../img/arrow-slider.png") transparent center center no-repeat;
+          opacity: 0.5;
+          line-height: 0;
+          outline: none;
+          width: 34px;
+          border: none;
+          cursor: pointer;
+          height: 60px;
+          margin-right: 10px; }
+          #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-prev:hover, #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-next:hover {
+            opacity: 1; }
+        #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-prev {
+          left: -60px;
+          background: url("../img/arrow-slider.png") transparent center center no-repeat;
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+          margin-left: 10px; }
+
+#reviews {
+  padding: 50px 0 0 0;
+  min-height: 400px;
+  background: url("../img/bg-4.jpg") center bottom no-repeat #504365;
+  color: white; }
+  #reviews .container {
+    max-width: 1410px;
+    text-align: center; }
+    #reviews .container h1 {
+      font-size: 32px;
+      margin-bottom: 6px; }
+    #reviews .container p {
+      font-size: 20px;
+      margin-top: 0; }
+      #reviews .container p span {
+        font-weight: 700; }
+    #reviews .container .reviews-slider {
+      margin-bottom: 60px; }
+      #reviews .container .reviews-slider #thumbs-plugin div {
+        margin: 0 auto; }
+        #reviews .container .reviews-slider #thumbs-plugin div .slide-content {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          width: 936px;
+          padding: 45px 0 30px 0;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -moz-box-align: center;
+          -ms-flex-align: center;
+          align-items: center; }
+          #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:first-child {
+            width: 208px;
+            height: 208px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background: url("../img/review-photo-bg.png") center center transparent; }
+            #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:first-child img {
+              width: 186px; }
+          #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:last-child {
+            width: 60%;
+            text-align: left; }
+            #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:last-child p {
+              font-size: 16px;
+              line-height: 24px; }
+              #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:last-child p:last-child {
+                font-size: 14px;
+                margin: 0; }
+            #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:last-child h4 {
+              font-size: 22px;
+              font-weight: 700;
+              margin: 0; }
+      #reviews .container .reviews-slider #thumbs-plugin .owl-thumbs button {
+        background: transparent;
+        border: none;
+        outline: none;
+        height: 81px;
+        width: 81px;
+        opacity: 0.4;
+        margin-right: 30px; }
+        #reviews .container .reviews-slider #thumbs-plugin .owl-thumbs button:first-child {
+          margin-left: 140px; }
+        #reviews .container .reviews-slider #thumbs-plugin .owl-thumbs button.active {
+          background: url("../img/review-btn-bg.png") transparent center center no-repeat;
+          opacity: 1; }
+        #reviews .container .reviews-slider #thumbs-plugin .owl-thumbs button:hover {
+          opacity: 1; }
+        #reviews .container .reviews-slider #thumbs-plugin .owl-thumbs button img {
+          width: 64px;
+          cursor: pointer; }
+      #reviews .container .reviews-slider #thumbs-plugin .owl-controls .owl-nav div {
+        position: absolute; }
+      #reviews .container .reviews-slider #thumbs-plugin .owl-controls .owl-nav .owl-prev, #reviews .container .reviews-slider #thumbs-plugin .owl-controls .owl-nav .owl-next {
+        right: 0;
+        top: 135px;
+        font: 0/0 serif;
+        text-shadow: none;
+        color: transparent;
+        background: url("../img/arrow-slider-white.png") transparent center center no-repeat;
+        opacity: 0.5;
+        line-height: 0;
+        outline: none;
+        width: 34px;
+        border: none;
+        cursor: pointer;
+        height: 60px;
+        margin-right: 10px; }
+        #reviews .container .reviews-slider #thumbs-plugin .owl-controls .owl-nav .owl-prev:hover, #reviews .container .reviews-slider #thumbs-plugin .owl-controls .owl-nav .owl-next:hover {
+          opacity: 1; }
+      #reviews .container .reviews-slider #thumbs-plugin .owl-controls .owl-nav .owl-prev {
+        left: 0;
+        background: url("../img/arrow-slider-white.png") transparent center center no-repeat;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        margin-left: 10px; }
+    #reviews .container .footer {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-top: solid 1px #736c85;
+      text-align: left;
+      padding: 30px 0; }
+      #reviews .container .footer span {
+        font-size: 16px; }
+      #reviews .container .footer div {
+        width: 35%; }
+
+/*------------TABLET------------*/
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  #header .container {
+    width: 87%; }
+
+  #slide {
+    background: url("../img/bg1-1024.jpg") center top no-repeat;
+    height: 940px; }
+    #slide .container h1 {
+      margin: 16px 0 0 0; }
+    #slide .container > p {
+      margin-bottom: 18px; }
+
+  #advantages {
+    padding: 65px 0 45px 0; }
+    #advantages .container {
+      width: 97%; }
+      #advantages .container div {
+        width: 35%; }
+        #advantages .container div:last-child {
+          width: 30%; }
+        #advantages .container div span h3 {
+          font-size: 18px; }
+        #advantages .container div span:last-child {
+          width: 60%; }
+
+  #calc {
+    padding: 35px 0 70px 0; }
+    #calc .container {
+      width: 96%; }
+      #calc .container .calc-content .left-content {
+        width: 45%;
+        padding-left: 2%;
+        padding-right: 2%; }
+      #calc .container .calc-content .right-content {
+        width: 45%;
+        padding-left: 3%;
+        padding-right: 2%; }
+
+  #info {
+    padding: 60px 0; }
+    #info .container {
+      max-width: 90%; }
+      #info .container .row-one {
+        margin-bottom: 45px; }
+
+  #banks {
+    padding: 20px 0 40px 0; }
+    #banks .container {
+      max-width: 86%; }
+      #banks .container .banks h4 {
+        font-size: 24px;
+        margin-bottom: 55px; }
+      #banks .container .banks #banks-slider {
+        margin-bottom: 145px; }
+        #banks .container .banks #banks-slider .owl-theme .owl-stage-outer {
+          width: 99.7%; }
+          #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .owl-item .item {
+            height: 60px; }
+            #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .owl-item .item img {
+              width: 75%; }
+            #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .owl-item .item:first-child {
+              border-bottom: 0; }
+          #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .active {
+            border-right: 1px solid #dcdcdc; }
+        #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-prev, #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-next {
+          top: 0;
+          background-size: 50%; }
+
+  #reviews {
+    padding: 50px 0 0 0; }
+    #reviews .container .reviews-slider #thumbs-plugin div .slide-content {
+      width: 78%; }
+      #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:first-child {
+        width: 40%;
+        height: auto;
+        background: url("../img/review-photo-bg.png") center center transparent no-repeat;
+        background-size: contain;
+        margin: 0;
+        margin-right: 30px; }
+        #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:first-child img {
+          padding: 10px; }
+    #reviews .container .reviews-slider #thumbs-plugin .owl-thumbs button:first-child {
+      margin-left: 0; }
+    #reviews .container .footer span:last-child {
+      width: 50%; } }
+@media screen and (min-width: 760px) and (max-width: 920px) {
+  #calc {
+    padding: 35px 0 70px 0; }
+    #calc .container {
+      width: 70%; }
+      #calc .container .calc-content .left-content {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%; }
+      #calc .container .calc-content .right-content {
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+        border-radius: 0 0 6px 6px; } }
+/*------------PHONE------------*/
+@media screen and (min-width: 320px) and (max-width: 760px) {
+  #header .container {
+    width: 100%; }
+    #header .container > a {
+      margin-left: 5%; }
+    #header .container #navbttn:before {
+      padding-right: 5%;
+      content: '\2630';
+      display: block;
+      position: absolute;
+      right: 0px;
+      top: 12px;
+      line-height: 41px;
+      font-size: 33px;
+      cursor: pointer; }
+    #header .container #nav {
+      width: 100%;
+      top: 60px;
+      position: absolute; }
+      #header .container #nav ul {
+        background: #222;
+        width: 100%;
+        margin-top: 0;
+        position: absolute;
+        display: block;
+        padding-left: 0; }
+        #header .container #nav ul li {
+          float: none;
+          margin-left: 5%; }
+          #header .container #nav ul li a {
+            padding: 10px 5%;
+            padding-left: 0;
+            line-height: 20px;
+            border-top: 1px solid #333;
+            color: #fff;
+            margin-left: 0; }
+
+  #slide {
+    background: #5a5a94;
+    height: auto; }
+    #slide .container {
+      padding-top: 62px;
+      width: 100%; }
+      #slide .container h1 {
+        font-size: 18px;
+        margin: 46px 0 0 0;
+        color: #ffffff; }
+      #slide .container > p {
+        font-size: 14px;
+        color: #ffffff;
+        width: 90%;
+        margin-bottom: 30px; }
+      #slide .container .tabs {
+        display: none; }
+      #slide .container .tabgroup #tab1 {
+        max-width: 100%;
+        padding: 0; }
+        #slide .container .tabgroup #tab1 #form1 {
+          box-shadow: none;
+          border-radius: 0;
+          width: 92%;
+          padding: 4%;
+          border-bottom: 1px #bdbfc1 dashed; }
+          #slide .container .tabgroup #tab1 #form1 form {
+            width: 100%; }
+            #slide .container .tabgroup #tab1 #form1 form > span p {
+              font-size: 16px; }
+            #slide .container .tabgroup #tab1 #form1 form > span a {
+              font-size: 14px; }
+            #slide .container .tabgroup #tab1 #form1 form .two-column {
+              margin-top: 20px; }
+              #slide .container .tabgroup #tab1 #form1 form .two-column .formrow {
+                width: 100%; }
+                #slide .container .tabgroup #tab1 #form1 form .two-column .formrow p {
+                  margin-top: 7px; }
+                #slide .container .tabgroup #tab1 #form1 form .two-column .formrow:nth-child(odd) {
+                  padding-right: 0; }
+
+  #counter {
+    padding: 0;
+    background: #ececec; }
+    #counter .container {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      #counter .container .counter {
+        width: 100%;
+        height: 150px;
+        background-size: 290px; }
+        #counter .container .counter p {
+          font-size: 18px;
+          margin: 0;
+          height: 0;
+          margin-bottom: -35px; }
+        #counter .container .counter span {
+          font-size: 34px;
+          letter-spacing: 23.2px;
+          width: 90%;
+          padding-left: 24px;
+          margin-top: 14px;
+          margin-bottom: 0;
+          text-align: center; }
+
+  #advantages {
+    padding: 10px 0 25px 0;
+    background: #ececec; }
+    #advantages .container {
+      width: 94%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #advantages .container div {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 92%; }
+        #advantages .container div:last-child {
+          width: 100%; }
+        #advantages .container div:nth-child(2) span:first-child img {
+          margin-top: 15px; }
+        #advantages .container div span h3 {
+          font-size: 16px; }
+        #advantages .container div span img {
+          width: 82px; }
+        #advantages .container div span:last-child {
+          width: 100%; }
+
+  #calc {
+    padding: 15px 0 40px 0; }
+    #calc .container h1 {
+      font-size: 18px; }
+    #calc .container .calc-content {
+      border-radius: 0; }
+      #calc .container .calc-content .left-content {
+        width: 94%;
+        padding: 20px 0 30px 0;
+        padding-left: 3%;
+        padding-right: 3%; }
+        #calc .container .calc-content .left-content .formcalc {
+          width: 100%; }
+          #calc .container .calc-content .left-content .formcalc > span p {
+            font-size: 16px; }
+          #calc .container .calc-content .left-content .formcalc > span a {
+            font-size: 14px; }
+          #calc .container .calc-content .left-content .formcalc .arrow {
+            display: block;
+            width: 100%;
+            margin-top: 25px; }
+      #calc .container .calc-content .right-content {
+        display: none; }
+
+  #info {
+    padding: 40px 0; }
+    #info .container {
+      max-width: 980px; }
+      #info .container .row-one {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 0; }
+        #info .container .row-one div {
+          width: 100%; }
+          #info .container .row-one div h4 {
+            font-size: 18px;
+            margin: 0; }
+          #info .container .row-one div p {
+            font-size: 16px; }
+          #info .container .row-one div:last-child {
+            display: none; }
+      #info .container .row-two {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+        -moz-box-orient: vertical;
+        -moz-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; }
+        #info .container .row-two div {
+          width: 100%; }
+          #info .container .row-two div ul {
+            list-style-type: none;
+            padding-left: 0; }
+            #info .container .row-two div ul li {
+              padding-left: 50px;
+              margin-bottom: 20px;
+              font-size: 16px;
+              line-height: 24px; }
+          #info .container .row-two div:first-child {
+            width: 100%; }
+            #info .container .row-two div:first-child img {
+              width: 85%;
+              height: 85%; }
+
+  #banks {
+    padding: 30px 0 40px 0;
+    background: #ececec; }
+    #banks .container {
+      max-width: 78%; }
+      #banks .container .banks h4 {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 30px;
+        width: 120%;
+        margin-left: -10%; }
+      #banks .container .banks #banks-slider {
+        margin-bottom: -40px; }
+        #banks .container .banks #banks-slider .owl-theme .owl-stage-outer {
+          width: 99.7%; }
+          #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .owl-item .item {
+            height: 60px; }
+            #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .owl-item .item img {
+              width: 70%; }
+            #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .owl-stage .owl-item .item:first-child {
+              border-bottom: 0; }
+          #banks .container .banks #banks-slider .owl-theme .owl-stage-outer .active {
+            border-right: 1px solid #dcdcdc; }
+        #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-prev, #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-next {
+          right: -40px;
+          top: 0;
+          background-size: 40%; }
+        #banks .container .banks #banks-slider .owl-theme .owl-controls .owl-nav .owl-prev {
+          left: -40px;
+          right: 0; }
+      #banks .container .banks .arrow {
+        width: 100%;
+        font-size: 16px; }
+
+  #reviews {
+    padding: 25px 0 0 0; }
+    #reviews .container h1 {
+      font-size: 18px; }
+    #reviews .container p {
+      font-size: 16px; }
+    #reviews .container .reviews-slider {
+      margin-bottom: 0px; }
+      #reviews .container .reviews-slider #thumbs-plugin div .slide-content {
+        width: 94%;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 10px 0 30px 0; }
+        #reviews .container .reviews-slider #thumbs-plugin div .slide-content div {
+          width: 100%; }
+          #reviews .container .reviews-slider #thumbs-plugin div .slide-content div p, #reviews .container .reviews-slider #thumbs-plugin div .slide-content div h4 {
+            text-align: center; }
+          #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:last-child {
+            width: 100%; }
+          #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:first-child {
+            height: auto;
+            background: url("../img/review-photo-bg.png") center center transparent no-repeat;
+            background-size: contain;
+            margin: 0;
+            width: 60%;
+            margin-bottom: 22px; }
+            #reviews .container .reviews-slider #thumbs-plugin div .slide-content div:first-child img {
+              width: 75%;
+              padding: 10px; }
+      #reviews .container .reviews-slider #thumbs-plugin .owl-thumbs {
+        display: none; }
+      #reviews .container .reviews-slider #thumbs-plugin .owl-controls .owl-nav .owl-prev, #reviews .container .reviews-slider #thumbs-plugin .owl-controls .owl-nav .owl-next {
+        top: 50px; }
+    #reviews .container .footer {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-top: solid 1px #736c85;
+      text-align: left;
+      padding: 30px 0; }
+      #reviews .container .footer span {
+        font-size: 16px; }
+    #reviews .container .footer {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #reviews .container .footer div {
+        width: 90%;
+        margin-top: 15px; }
+
+  #nav ul {
+    -o-transition: 350ms;
+    transition: 350ms;
+    -moz-transition: 350ms;
+    -webkit-transition: 350ms;
+    transform: perspective(600) rotate3d(0, 0, 0, 0);
+    -moz-transform: perspective(600) rotate3d(0, 0, 0, 0);
+    -webkit-transform: perspective(600) rotate3d(1, 0, 0, -90deg);
+    -ms-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -webkit-transform-origin: 50% 0; }
+
+  #nav.open ul {
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0); } }
+/*-------------------------------FORM PAGE-----------------------------------*/
+#header-formpage .container {
+  max-width: 652px;
+  height: 138px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#aprove-formpage {
+  margin-bottom: 25px; }
+  #aprove-formpage .container {
+    max-width: 652px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #c9eebf;
+    border-radius: 6px;
+    padding: 20px 0; }
+    #aprove-formpage .container div {
+      width: 94px;
+      height: 94px;
+      background: #ffffff;
+      border-radius: 50%;
+      border: 5px solid #b2e7a4;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    #aprove-formpage .container h4 {
+      font-size: 18px;
+      color: #4e4564;
+      margin: 8px 0 0 0; }
+
+#forms-formpage .container {
+  max-width: 652px;
+  box-shadow: 0px 12px 42px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 12px; }
+  #forms-formpage .container .forms-header {
+    height: 147px;
+    border-radius: 11px 11px 0 0;
+    background: url(../img/head-bg-left.png) left bottom no-repeat, url(../img/head-bg-right.png) right center no-repeat, #5a5a91;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white; }
+    #forms-formpage .container .forms-header h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 31px 0 0 0; }
+    #forms-formpage .container .forms-header p {
+      font-size: 16px;
+      margin: 0; }
+    #forms-formpage .container .forms-header img {
+      width: 12px;
+      margin-top: 5px; }
+  #forms-formpage .container .forms-wrapper {
+    border-radius: 12px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 90%;
+    background: #ffffff;
+    z-index: 1;
+    padding: 5%; }
+    #forms-formpage .container .forms-wrapper form {
+      width: 100%; }
+      #forms-formpage .container .forms-wrapper form > p {
+        margin: 10px 0 5px 0; }
+      #forms-formpage .container .forms-wrapper form span {
+        width: 100%;
+        margin-bottom: 10px; }
+        #forms-formpage .container .forms-wrapper form span p {
+          font-size: 18px;
+          font-weight: 700;
+          margin: 0; }
+      #forms-formpage .container .forms-wrapper form select {
+        width: 100%;
+        outline: none;
+        border: 2px solid #dbdbdb;
+        font-size: 18px;
+        color: #52565e;
+        height: 38px;
+        padding-left: 12px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        background: url("../img/select-arrow.png") 97% 50% no-repeat #f0f0f0;
+        line-height: 1em;
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+        -ms-appearance: none;
+        appearance: none !important;
+        margin-bottom: 30px; }
+      #forms-formpage .container .forms-wrapper form .two-column {
+        margin-bottom: 20px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        #forms-formpage .container .forms-wrapper form .two-column span {
+          margin-top: 20px;
+          margin-bottom: 0; }
+          #forms-formpage .container .forms-wrapper form .two-column span span {
+            font-weight: 400; }
+        #forms-formpage .container .forms-wrapper form .two-column .formrow {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          width: 47%; }
+          #forms-formpage .container .forms-wrapper form .two-column .formrow p {
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 1px;
+            letter-spacing: 0; }
+            #forms-formpage .container .forms-wrapper form .two-column .formrow p:after {
+              content: "*";
+              color: #ff5c56; }
+          #forms-formpage .container .forms-wrapper form .two-column .formrow input[type="text"] {
+            margin-bottom: 10px;
+            padding: 0 12px 0 10px;
+            width: 100%;
+            border: 2px solid #dbdbdb;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #f0f0f0;
+            font-size: 18px;
+            color: #52565e;
+            height: 38px;
+            outline: none; }
+            #forms-formpage .container .forms-wrapper form .two-column .formrow input[type="text"]::-webkit-input-placeholder {
+              color: #a9a9a9; }
+          #forms-formpage .container .forms-wrapper form .two-column .formrow select {
+            width: 100%;
+            outline: none;
+            border: 2px solid #dbdbdb;
+            font-size: 18px;
+            color: #52565e;
+            height: 38px;
+            padding-left: 12px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            background: url("../img/select-arrow.png") 97% 50% no-repeat #f0f0f0;
+            line-height: 1em;
+            -moz-appearance: none;
+            text-indent: 0.01px;
+            text-overflow: '';
+            -ms-appearance: none;
+            appearance: none !important;
+            margin-bottom: 10px; }
+          #forms-formpage .container .forms-wrapper form .two-column .formrow:nth-child(odd) {
+            padding-right: 6%; }
+          #forms-formpage .container .forms-wrapper form .two-column .formrow .rowinrow {
+            width: 45%; }
+      #forms-formpage .container .forms-wrapper form .row {
+        width: 100%;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 38px;
+        margin-bottom: 10px; }
+        #forms-formpage .container .forms-wrapper form .row span {
+          width: auto;
+          margin-bottom: 0; }
+        #forms-formpage .container .forms-wrapper form .row .my-checkbox {
+          display: none; }
+          #forms-formpage .container .forms-wrapper form .row .my-checkbox + label {
+            cursor: pointer;
+            background-color: #f0f0f0;
+            border-radius: 50px;
+            display: inline-block;
+            position: relative;
+            margin: 0 10px;
+            -webkit-transition: all .1s ease-in;
+            transition: all .1s ease-in;
+            border: 2px solid #dbdbdb;
+            width: 62px;
+            height: 34px; }
+            #forms-formpage .container .forms-wrapper form .row .my-checkbox + label:after {
+              content: ' ';
+              position: absolute;
+              top: 0;
+              -webkit-transition: box-shadow .1s ease-in;
+              transition: box-shadow .1s ease-in;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 100px;
+              box-shadow: inset 0 0 0 0 #ddd, 0 0 1px rgba(0, 0, 0, 0.4); }
+            #forms-formpage .container .forms-wrapper form .row .my-checkbox + label:before {
+              content: ' ';
+              position: absolute;
+              background: #fff;
+              top: 3px;
+              left: 3px;
+              z-index: 33;
+              -webkit-transition: all .1s ease-in;
+              transition: all .1s ease-in;
+              height: 28px;
+              width: 28px;
+              border-radius: 100px;
+              box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.3); }
+            #forms-formpage .container .forms-wrapper form .row .my-checkbox + label:active {
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.1); }
+          #forms-formpage .container .forms-wrapper form .row .my-checkbox:active + label:after {
+            box-shadow: inset 0 0 0 20px #eee, 0 0 1px #eee; }
+          #forms-formpage .container .forms-wrapper form .row .my-checkbox:active + label:before {
+            width: 37px; }
+          #forms-formpage .container .forms-wrapper form .row .my-checkbox:checked:active + label:before {
+            width: 37px;
+            left: 10px; }
+          #forms-formpage .container .forms-wrapper form .row .my-checkbox:checked + label:before {
+            content: ' ';
+            position: absolute;
+            left: 29px;
+            border-radius: 100px; }
+          #forms-formpage .container .forms-wrapper form .row .my-checkbox:checked + label:after {
+            content: ' ';
+            font-size: 1.5em;
+            position: absolute;
+            background: #5a5a94;
+            box-shadow: 0 0 1px #5a5a94; }
+      #forms-formpage .container .forms-wrapper form .formrowcenter {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: 30px; }
+
+/*------------PHONE------------*/
+@media screen and (min-width: 320px) and (max-width: 560px) {
+  #forms-formpage .container .forms-header {
+    height: 147px;
+    border-radius: 11px 11px 0 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white; }
+    #forms-formpage .container .forms-header h3 {
+      font-size: 18px;
+      text-align: center; }
+    #forms-formpage .container .forms-header p {
+      font-size: 16px; }
+  #forms-formpage .container .forms-wrapper {
+    box-shadow: none;
+    width: 92%;
+    padding: 4%; }
+    #forms-formpage .container .forms-wrapper form {
+      width: 100%; }
+      #forms-formpage .container .forms-wrapper form > span p {
+        font-size: 16px; }
+      #forms-formpage .container .forms-wrapper form > span a {
+        font-size: 14px; }
+      #forms-formpage .container .forms-wrapper form .two-column {
+        margin-top: 20px; }
+        #forms-formpage .container .forms-wrapper form .two-column .formrow {
+          width: 100%; }
+          #forms-formpage .container .forms-wrapper form .two-column .formrow p {
+            margin-top: 7px; }
+          #forms-formpage .container .forms-wrapper form .two-column .formrow:nth-child(odd) {
+            padding-right: 0; }
+      #forms-formpage .container .forms-wrapper form .arrow {
+        margin-bottom: 20px; } }
+
+/*# sourceMappingURL=style.css.map */

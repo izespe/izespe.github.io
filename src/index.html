@@ -1,0 +1,769 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>W-Credits</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.css"/>
+    <link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.skinFlat.css"/>
+    <link rel="stylesheet" href="//owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.reject.css" />
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.reject.js"></script>
+    <script type="text/javascript" src="js/counter.js"></script>
+    <script src="//owlcarousel.owlgraphic.com/assets/owlcarousel/owl.carousel.js"></script>
+
+    <script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/owl.carousel2.thumbs.min.js"></script>
+    <script src="js/owl.rows.js"></script>
+
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+
+<!--[if lt IE 10]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<header id="header">
+    <div class="container">
+        <a href="#"><img src="img/logo.png" alt="logo"></a>
+
+        <div>
+            <div id="navbttn"></div>
+        </div>
+
+        <nav id="nav">
+            <ul>
+                <li><a class="menuitem" href="#calc">Калькулятор</a></li>
+                <li><a class="menuitem" href="#info">О нас</a></li>
+                <li><a class="menuitem" href="#reviews">Отзывы</a></li>
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+<main>
+
+
+    <section id="slide" class="content">
+        <div class="container">
+
+            <h1>Получить кредит просто!</h1>
+            <p>Оформите заявку и получите одобрение от банка прямо сейчас!</p>
+
+            <ul class="tabs" data-tabgroup="first-tab-group">
+                <li><a href="#tab1" class="active">Потребительский</a></li>
+                <li><a href="#tab2">Бизнес кредит</a></li>
+                <li><a href="#tab3">Микрозайм</a></li>
+                <li><a href="#tab4">Ипотека</a></li>
+            </ul>
+            <section id="first-tab-group" class="tabgroup">
+                <div id="tab1">
+
+                    <div id="form1">
+
+                        <form name='form1' method="get" action="">
+                            <span><p>Мне нужно:</p> <a href="#">Нужна сумма больше?</a></span>
+                            <div class="sliderCalc">
+                                <div class="head cfix">
+                                    <div class="res">
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    <div class="range cost">
+                                        <input type="text" data-min="5000" data-max="100000" data-step="100"
+                                               value="35500"
+                                               data-grid-count="6">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="two-column">
+                                <div class="formrow">
+                                    <p>ФИО (полностью):</p>
+                                    <input type="text" id="name" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Дата рождения:</p>
+                                    <input type="text" id="birth" placeholder="" required>
+                                </div>
+
+
+                                <div class="formrow">
+                                    <p>Мобильный телефон:</p>
+                                    <input type="text" id="phone" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>E-mail:</p>
+                                    <input type="text" id="email" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Регион нахождения:</p>
+                                    <select name="select" required>
+                                        <option value="value1">Омская область</option>
+                                        <option value="value2" selected>Московская область</option>
+                                        <option value="value3">Орловская область</option>
+                                    </select>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Город нахождения:</p>
+                                    <input type="text" id="city" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Трудоустройство:</p>
+                                    <select name="select" required>
+                                        <option value="value1">Работаю</option>
+                                        <option value="value2">Не работаю</option>
+                                    </select>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Просрочка в банке:</p>
+                                    <div class="row">
+                                        <span>Нет</span>
+                                        <input type="checkbox" class="my-checkbox" id="notifemail-checkbox1"/>
+                                        <label for="notifemail-checkbox1"></label>
+                                        <span>Есть</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <label>
+                                <input type="checkbox" required/>Я прочитал и подтверждаю <a href="">условия
+                                соглашения</a></label>
+
+                            <div class="formrowcenter">
+                                <button class="arrow submit" type="submit">Получить деньги</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div id="tab2">
+                    <div id="form2">
+
+                        <form name='form2' method="get" action="">
+                            <span><p>Мне нужно:</p> <a href="#">Нужна сумма больше?</a></span>
+                            <div class="sliderCalc">
+                                <div class="head cfix">
+                                    <div class="res">
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    <div class="range cost">
+                                        <input type="text" data-min="5000" data-max="100000" data-step="100"
+                                               value="40500"
+                                               data-grid-count="6">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="two-column">
+                                <div class="formrow">
+                                    <p>ФИО (полностью):</p>
+                                    <input type="text" id="name" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Дата рождения:</p>
+                                    <input type="text" id="birth" placeholder="" required>
+                                </div>
+
+
+                                <div class="formrow">
+                                    <p>Мобильный телефон:</p>
+                                    <input type="text" id="phone" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>E-mail:</p>
+                                    <input type="text" id="email" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Регион нахождения:</p>
+                                    <select name="select" required>
+                                        <option value="value1">Омская область</option>
+                                        <option value="value2" selected>Московская область</option>
+                                        <option value="value3">Орловская область</option>
+                                    </select>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Город нахождения:</p>
+                                    <input type="text" id="city" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Трудоустройство:</p>
+                                    <select name="select" required>
+                                        <option value="value1">Работаю</option>
+                                        <option value="value2">Не работаю</option>
+                                    </select>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Просрочка в банке:</p>
+                                    <div class="row">
+                                        <span>Нет</span>
+                                        <input type="checkbox" class="my-checkbox" id="notifemail-checkbox1"/>
+                                        <label for="notifemail-checkbox1"></label>
+                                        <span>Есть</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <label>
+                                <input type="checkbox" required/>Я прочитал и подтверждаю <a href="">условия
+                                соглашения</a></label>
+
+                            <div class="formrowcenter">
+                                <button class="arrow submit" type="submit">Получить деньги</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div id="tab3">
+                    <div id="form3">
+
+                        <form name='form3' method="get" action="">
+                            <span><p>Мне нужно:</p> <a href="#">Нужна сумма больше?</a></span>
+                            <div class="sliderCalc">
+                                <div class="head cfix">
+                                    <div class="res">
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    <div class="range cost">
+                                        <input type="text" data-min="5000" data-max="100000" data-step="100"
+                                               value="55500"
+                                               data-grid-count="6">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="two-column">
+                                <div class="formrow">
+                                    <p>ФИО (полностью):</p>
+                                    <input type="text" id="name" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Дата рождения:</p>
+                                    <input type="text" id="birth" placeholder="" required>
+                                </div>
+
+
+                                <div class="formrow">
+                                    <p>Мобильный телефон:</p>
+                                    <input type="text" id="phone" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>E-mail:</p>
+                                    <input type="text" id="email" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Регион нахождения:</p>
+                                    <select name="select" required>
+                                        <option value="value1">Омская область</option>
+                                        <option value="value2" selected>Московская область</option>
+                                        <option value="value3">Орловская область</option>
+                                    </select>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Город нахождения:</p>
+                                    <input type="text" id="city" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Трудоустройство:</p>
+                                    <select name="select" required>
+                                        <option value="value1">Работаю</option>
+                                        <option value="value2">Не работаю</option>
+                                    </select>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Просрочка в банке:</p>
+                                    <div class="row">
+                                        <span>Нет</span>
+                                        <input type="checkbox" class="my-checkbox" id="notifemail-checkbox1"/>
+                                        <label for="notifemail-checkbox1"></label>
+                                        <span>Есть</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <label>
+                                <input type="checkbox" required/>Я прочитал и подтверждаю <a href="">условия
+                                соглашения</a></label>
+
+                            <div class="formrowcenter">
+                                <button class="arrow submit" type="submit">Получить деньги</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                <div id="tab4">
+                    <div id="form4">
+
+                        <form name='form4' method="get" action="">
+                            <span><p>Мне нужно:</p> <a href="#">Нужна сумма больше?</a></span>
+                            <div class="sliderCalc">
+                                <div class="head cfix">
+                                    <div class="res">
+                                        <input type="text"/>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    <div class="range cost">
+                                        <input type="text" data-min="5000" data-max="100000" data-step="100"
+                                               value="35500"
+                                               data-grid-count="6">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="two-column">
+                                <div class="formrow">
+                                    <p>ФИО (полностью):</p>
+                                    <input type="text" id="name" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Дата рождения:</p>
+                                    <input type="text" id="birth" placeholder="" required>
+                                </div>
+
+
+                                <div class="formrow">
+                                    <p>Мобильный телефон:</p>
+                                    <input type="text" id="phone" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>E-mail:</p>
+                                    <input type="text" id="email" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Регион нахождения:</p>
+                                    <select name="select" required>
+                                        <option value="value1">Омская область</option>
+                                        <option value="value2" selected>Московская область</option>
+                                        <option value="value3">Орловская область</option>
+                                    </select>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Город нахождения:</p>
+                                    <input type="text" id="city" placeholder="" required>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Трудоустройство:</p>
+                                    <select name="select" required>
+                                        <option value="value1">Работаю</option>
+                                        <option value="value2">Не работаю</option>
+                                    </select>
+                                </div>
+
+                                <div class="formrow">
+                                    <p>Просрочка в банке:</p>
+                                    <div class="row">
+                                        <span>Нет</span>
+                                        <input type="checkbox" class="my-checkbox" id="notifemail-checkbox1"/>
+                                        <label for="notifemail-checkbox1"></label>
+                                        <span>Есть</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <label>
+                                <input type="checkbox" required/>Я прочитал и подтверждаю <a href="">условия
+                                соглашения</a></label>
+
+                            <div class="formrowcenter">
+                                <button class="arrow submit" type="submit">Получить деньги</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <script>
+
+            </script>
+
+        </div>
+
+
+    </section>
+
+    <section id="counter" class="content">
+        <div class="container">
+            <div class="counter">
+
+                <p>Одобрено заявок:</p>
+
+                <span class="timer count-title" id="count-number" data-to="24712" data-speed="1500"></span>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages">
+        <div class="container">
+
+            <div>
+                <span><img src="img/cup.png" alt=""></span>
+                <span>
+                    <h3>Лучшее предложение</h3>
+                    <p>Подберем для Вас банки с минимальными ставками</p>
+                </span>
+            </div>
+
+            <div>
+                <span><img src="img/wallet.png" alt=""></span>
+                <span>
+                    <h3>Выгодно</h3>
+                    <p>Наши услуги бесплатные, за выданный кредит нам платят банки</p>
+                </span>
+            </div>
+
+            <div>
+                <span><img src="img/clock.png" alt=""></span>
+                <span>
+                    <h3>Быстро</h3>
+                    <p>Решение по кредиту за один час!</p>
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="calc">
+        <div class="container">
+
+            <h1>Кредитный калькулятор</h1>
+            <div class="calc-content">
+
+                <div class="left-content">
+
+                    <div class="formcalc">
+                        <span><p>Мне нужно:</p> <a href="#">Нужна сумма больше?</a></span>
+                        <div class="sliderCalc">
+                            <div class="head cfix">
+                                <div class="res">
+                                    <input type="text"/>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <div class="range cost">
+                                    <input type="text" data-min="5000" data-max="100000" data-step="100" value="12500"
+                                           data-grid-count="6">
+                                </div>
+                            </div>
+                        </div>
+                        <span><p>На срок:</p></span>
+                        <select name="select">
+                            <option value="value1">6 месяцев</option>
+                            <option value="value2" selected>12 месяцев</option>
+                            <option value="value3">24 месяца</option>
+                        </select>
+
+                        <span><p>Процентная ставка:</p></span>
+                        <div class="sliderCalc">
+                            <div class="head cfix">
+                                <div class="res">
+                                    <input type="text"/>
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <div class="range cost stavka">
+                                    <input type="text" data-min="0" data-max="100" data-step="1" value="5"
+                                           data-grid-count="6">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="arrow">Получить деньги</button>
+                    </div>
+                </div>
+                <div class="right-content">
+
+                    <p>Лучшее предложение</p>
+                    <ul>
+                        <li><span>Ежемесячный платеж:</span><span class="page">1039 руб.</span></li>
+                        <li><span>Переплата:</span><span class="page">736 500 руб.</span></li>
+                        <li><span>Полная сумма кредита:</span><span class="page">7 436 500 руб.</span></li>
+                        <li><span>Способы получения</span><span class="page"><img src="img/payment1.png" alt=""><img
+                            src="img/payment2.png" alt=""><img src="img/payment3.png" alt=""></span></li>
+                    </ul>
+                    <button class="arrow">Получить деньги</button>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="info">
+        <div class="container">
+            <div class="row-one">
+                <div>
+
+                    <h4>Кредит с помощью W-Credit<br><span>— выгодное решение!</span></h4>
+                    <p>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за просрочку займа.
+                        Большинство кредиторов идут на уступки и дают дополнительные 3 рабочих дня для оплаты.</p>
+                    <p>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за просрочку займа.
+                        Большинство кредиторов идут на уступки и дают дополнительные 3 рабочих дня для оплаты.</p>
+                </div>
+                <div>
+                    <img src="img/row-one-img.png" alt="">
+                </div>
+            </div>
+
+            <div class="row-two">
+
+                <div>
+                    <img src="img/row-two-img.png" alt="">
+                </div>
+                <div>
+
+                    <ul>
+                        <li>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за просрочку
+                            займа.
+                        </li>
+                        <li>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за просрочку
+                            займа.
+                        </li>
+                        <li>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за просрочку
+                            займа.
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="banks">
+        <div class="container">
+            <div class="banks">
+                <h4>С нами работают более 100 банков,<br>МФО и бюро кредитных историй:</h4>
+
+                <section id="banks-slider">
+                    <div class="row">
+                        <div id="owl2row-plugin" class="owl-carousel">
+                            <div class="item">
+                                <img src="img/banklogo/vtb.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/renesans.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/standert.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/alpha.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/opt.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/zaem.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/vtb.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/renesans.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/standert.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/alpha.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/opt.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/zaem.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/vtb.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/renesans.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/standert.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/alpha.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/opt.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/zaem.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/vtb.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/renesans.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/standert.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/alpha.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/opt.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="img/banklogo/zaem.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <button class="arrow">Получить деньги</button>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="reviews">
+        <div class="container">
+            <h1>Мы ценим каждого клиента!</h1>
+            <p>Одобрено более <span>28669</span> заявок!</p>
+            <section class="reviews-slider">
+                <div class="owl-carousel" id="thumbs-plugin">
+                    <div data-thumb='Content of your thumbnail (can be anything)'>
+                        <div class="slide-content">
+                            <div><img src="img/review1.png" alt=""></div>
+                            <div>
+                                <p>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за
+                                    просрочку займа. Большинство кредиторов идут на уступки и дают дополнительные 3
+                                    рабочих дня для оплаты. Они предусмотрены специально для Вас на случай, к примеру,
+                                    если банковский перевод занял больше времени, чем обычно, или Вы просто поздно
+                                    отправили сумму.</p>
+                                <h4>Бородин Андрей,</h4>
+                                <p>секретарь, г. Санкт-Петербург</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-thumb='Content of your thumbnail (can be anything)'>
+                        <div class="slide-content">
+                            <div><img src="img/review2.png" alt=""></div>
+                            <div>
+                                <p>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за
+                                    просрочку займа. Большинство кредиторов идут на уступки и дают дополнительные 3
+                                    рабочих дня для оплаты. Они предусмотрены специально для Вас на случай, к примеру,
+                                    если банковский перевод занял больше времени, чем обычно, или Вы просто поздно
+                                    отправили сумму.</p>
+                                <h4>Бородин Андрей,</h4>
+                                <p>секретарь, г. Санкт-Петербург</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div data-thumb='Content of your thumbnail (can be anything)'>
+                        <div class="slide-content">
+                            <div><img src="img/review3.png" alt=""></div>
+                            <div>
+                                <p>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за
+                                    просрочку займа. Большинство кредиторов идут на уступки и дают дополнительные 3
+                                    рабочих дня для оплаты. Они предусмотрены специально для Вас на случай, к примеру,
+                                    если банковский перевод занял больше времени, чем обычно, или Вы просто поздно
+                                    отправили сумму.</p>
+                                <h4>Бородин Андрей,</h4>
+                                <p>секретарь, г. Санкт-Петербург</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div data-thumb='Content of your thumbnail (can be anything)'>
+                        <div class="slide-content">
+                            <div><img src="img/review4.png" alt=""></div>
+                            <div>
+                                <p>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за
+                                    просрочку займа. Большинство кредиторов идут на уступки и дают дополнительные 3
+                                    рабочих дня для оплаты. Они предусмотрены специально для Вас на случай, к примеру,
+                                    если банковский перевод занял больше времени, чем обычно, или Вы просто поздно
+                                    отправили сумму.</p>
+                                <h4>Бородин Андрей,</h4>
+                                <p>секретарь, г. Санкт-Петербург</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div data-thumb='Content of your thumbnail (can be anything)'>
+                        <div class="slide-content">
+                            <div><img src="img/review5.png" alt=""></div>
+                            <div>
+                                <p>В случае невозвращения общей суммы займа, кредитор вынуждено начислит штраф за
+                                    просрочку займа. Большинство кредиторов идут на уступки и дают дополнительные 3
+                                    рабочих дня для оплаты. Они предусмотрены специально для Вас на случай, к примеру,
+                                    если банковский перевод занял больше времени, чем обычно, или Вы просто поздно
+                                    отправили сумму.</p>
+                                <h4>Бородин Андрей,</h4>
+                                <p>секретарь, г. Санкт-Петербург</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="footer">
+                <span>© 2007 - 2016 «W-Credits»</span>
+                <div>
+                                <span>«W-credits» занимается консультационной деятельностью
+по подбору кредитных программ, не является кредитной организацией и самостоятельно не выдает кредиты.</span>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
