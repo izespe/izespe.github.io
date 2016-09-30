@@ -31,16 +31,38 @@ body {
 }
 
 header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   .head {
     margin-top: 15px;
     position: absolute;
     z-index: 10;
     width: 88%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
 
     .booking-btn {
@@ -58,7 +80,15 @@ header {
     .owl-stage {
       .owl-item {
         .item {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          -moz-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
           p {
             position: absolute;
@@ -70,12 +100,32 @@ header {
       }
     }
     .owl-controls {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       width: 100%;
       .owl-dots {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         z-index: 15;
         position: absolute;
@@ -90,10 +140,17 @@ header {
             margin: 5px;
             background: transparent;
             border: 1px solid white;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
             box-sizing: border-box;
             display: block;
             -webkit-backface-visibility: visible;
+            -webkit-transition: opacity 200ms ease;
+            -o-transition: opacity 200ms ease;
+            -moz-transition: opacity 200ms ease;
             transition: opacity 200ms ease;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
             border-radius: 50%;
           }
           &.active, &:hover {
@@ -109,7 +166,15 @@ header {
 
   .buttons {
     width: 88%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 16px 0;
     button {
@@ -117,6 +182,8 @@ header {
       height: 48px;
       background: transparent;
       border: 1px $gold solid;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
       box-sizing: border-box;
       color: $gold;
       font-size: 14px;
@@ -127,8 +194,18 @@ header {
 }
 
 main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   .container {
     width: 88%;
@@ -149,8 +226,20 @@ main {
       border: none;
       font-size: 16px;
       margin-bottom: 16px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       img {
         margin-right: 10px;
@@ -202,7 +291,15 @@ main {
     .title-name {
       height: 48px;
       width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
     }
     a i {
@@ -219,7 +316,6 @@ main {
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
       transition: all 0.3s ease;
       margin: 20px;
       right: 0;
@@ -246,17 +342,35 @@ main {
   left: 0;
   .lang {
     height: 32px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 16px 0;
     a {
       height: 100%;
       width: 32px;
       border: 1px #4d4d4d solid;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
       box-sizing: border-box;
       color: $gold;
       padding: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       margin-right: 8px;
       font-size: 16px;
@@ -272,6 +386,8 @@ main {
     height: 48px;
     background: transparent;
     border: 2px $gold solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     color: $gold;
     font-size: 16px;
@@ -284,7 +400,15 @@ main {
     text-decoration: none;
     height: 48px;
     border-bottom: 1px solid #4d4d4d;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     &:nth-child(3) {
       border-top: 1px solid #4d4d4d;
@@ -303,6 +427,7 @@ main {
 .menumobile, .menuoff, .buttonmove, .menutoggle {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
