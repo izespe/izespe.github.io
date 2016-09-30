@@ -12,30 +12,30 @@
   font-style: normal;
   font-weight: 800; }
 /*--------------------COLORS----------------------*/
+.noscroll {
+  overflow: hidden; }
+
 body {
   margin: 0;
   font-family: PTSansRegular;
   font-size: 16px;
   color: #393939; }
+  body .overlay-active {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    background: black;
+    opacity: 0.6; }
 
 header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   header .head {
     margin-top: 15px;
     position: absolute;
-    z-index: 10;
+    z-index: 8;
     width: 88%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -53,11 +53,11 @@ header {
     -ms-flex-align: start;
     align-items: flex-start; }
     header .head .booking-btn {
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
       background: url("../img/booking-ico.png") center center #bc9d71 no-repeat; }
     header .head .menu {
-      width: 40px; }
+      width: 48px; }
   header #owl-head .owl-stage .owl-item .item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -157,27 +157,17 @@ header {
       padding: 0; }
 
 main {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-bottom: 30px; }
   main .container {
     width: 88%; }
-    main .container p {
+    main .container > p {
       text-align: center;
       margin-top: 8px;
       margin-bottom: 24px; }
-      main .container p span {
+      main .container > p span {
         font-weight: 800;
         color: #bc9d71; }
     main .container button {
@@ -268,6 +258,7 @@ main {
     border-width: 0 6px 6px 6px;
     border-color: transparent transparent #bc9d71 transparent; }
 
+/* Styles for Menu */
 .menumobile {
   overflow-y: auto;
   background: #393939;
@@ -277,38 +268,24 @@ main {
   height: 100%;
   top: 0;
   z-index: 999;
-  left: 0; }
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
   .menumobile .lang {
     height: 32px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    margin: 16px 0; }
+    margin: 16px 0 24px 0;
+    width: 50%; }
     .menumobile .lang a {
       height: 100%;
       width: 32px;
       border: 1px #4d4d4d solid;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       color: #bc9d71;
       padding: 0;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -moz-box-pack: center;
-      -ms-flex-pack: center;
       justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -moz-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       margin-right: 8px;
       font-size: 16px; }
@@ -326,7 +303,7 @@ main {
     box-sizing: border-box;
     color: #bc9d71;
     font-size: 16px;
-    margin-bottom: 16px; }
+    margin-bottom: 24px; }
   .menumobile a {
     color: #fff;
     font-size: 16px;
@@ -334,24 +311,27 @@ main {
     text-decoration: none;
     height: 48px;
     border-bottom: 1px solid #4d4d4d;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    width: 100%; }
     .menumobile a:nth-child(3) {
       border-top: 1px solid #4d4d4d; }
     .menumobile a:hover {
       background: #4d4d4d; }
+    .menumobile a.close-menu {
+      width: 32px;
+      height: 32px;
+      border-bottom: none;
+      margin-top: 16px; }
+      .menumobile a.close-menu:before {
+        content: "";
+        width: 32px;
+        height: 32px;
+        background: url("../img/cross.png") center center #393939 no-repeat; }
   .menumobile.menuoff {
     margin-left: -84%; }
 
-.menumobile, .menuoff, .buttonmove, .menutoggle {
+.menumobile, .menuoff, .menutoggle, .close-menu {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -366,31 +346,107 @@ main {
     content: "";
     position: absolute;
     left: 0;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     background: url("../img/burger.png") center center white no-repeat; }
-  .menutoggle.menuclose:before {
+
+/*--------------------BOOKING---------------------*/
+.booking header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .booking header .head {
+    margin-top: 15px;
+    position: relative;
+    z-index: 8;
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .booking header .head .back-btn {
+      width: 48px;
+      height: 48px;
+      background: url("../img/back-btn.png") center center #bc9d71 no-repeat; }
+    .booking header .head .menu {
+      width: 48px; }
+.booking main .container .sale {
+  border: 2px solid #bc9d71;
+  padding: 5px 10px 0 10px;
+  margin: 20px 0 30px 0; }
+  .booking main .container .sale p {
+    text-align: left;
+    margin-bottom: 12px; }
+.booking main .container form input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  height: 48px;
+  margin-bottom: 16px;
+  padding-left: 8px;
+  font-size: 16px;
+  color: #393939;
+  border: 1px solid #cdcdcd; }
+  .booking main .container form input[type="text"]::-webkit-input-placeholder {
+    color: #393939; }
+.booking main .container form input[type="submit"] {
+  width: 100%;
+  border: none;
+  height: 48px;
+  margin-bottom: 16px;
+  padding-left: 8px;
+  font-size: 16px;
+  background: #bc9d71;
+  color: white; }
+.booking .menutoggle {
+  position: relative; }
+  .booking .menutoggle:before {
+    background: url("../img/burger.png") center center #ebebeb no-repeat; }
+  .booking .menutoggle.menuclose:before {
     content: "";
     width: 32px;
     height: 32px;
-    background: url("../img/cross.png") center center transparent no-repeat; }
-  .menutoggle.buttonmove {
+    background: url("../img/cross.png") center center #393939 no-repeat; }
+  .booking .menutoggle.buttonmove {
     position: absolute;
     margin-left: 72%;
     z-index: 1001; }
-
-.noscroll {
-  overflow: hidden; }
-
-.overlay-active {
-  width: 100%;
+.booking .bankmobile {
+  overflow-y: auto;
+  background: #393939;
+  position: fixed;
+  width: 72%;
+  padding: 0 5%;
   height: 100%;
-  position: absolute;
-  z-index: 9;
-  background: black;
-  opacity: 0.6; }
-
-.opacity06 {
-  opacity: 0.6; }
+  top: 0;
+  z-index: 999;
+  left: 0; }
+  .booking .bankmobile p {
+    display: flex;
+    justify-content: flex-start;
+    color: #fff; }
+    .booking .bankmobile p:first-child {
+      color: #bc9d71; }
+  .booking .bankmobile.menuoff {
+    margin-left: -84%; }
+  .booking .bankmobile a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%; }
+    .booking .bankmobile a.close-menu {
+      margin-top: 16px; }
+      .booking .bankmobile a.close-menu:before {
+        content: "";
+        width: 32px;
+        height: 32px;
+        background: url("../img/cross.png") center center #393939 no-repeat; }
+.booking .bankmobile, .booking .menuoff, .booking .buttonmove, .booking .banktoggle {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+.booking .banktoggle {
+  left: 0;
+  cursor: pointer;
+  z-index: 999; }
 
 /*# sourceMappingURL=style.css.map */

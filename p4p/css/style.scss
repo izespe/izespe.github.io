@@ -23,31 +23,34 @@
 $gray: #393939;
 $gold: #bc9d71;
 
+
+.noscroll {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   font-family: PTSansRegular;
   font-size: 16px;
   color: $gray;
+  .overlay-active {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    background: black;
+    opacity: 0.6;
+  }
 }
 
 header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   .head {
     margin-top: 15px;
     position: absolute;
-    z-index: 10;
+    z-index: 8;
     width: 88%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -66,13 +69,13 @@ header {
     align-items: flex-start;
 
     .booking-btn {
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
       background: url("../img/booking-ico.png") center center $gold no-repeat;
     }
 
     .menu {
-      width: 40px;
+      width: 48px;
     }
   }
 
@@ -197,23 +200,13 @@ header {
 }
 
 main {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-bottom: 30px;
   .container {
     width: 88%;
-    p {
+    >p {
       text-align: center;
       margin-top: 8px;
       margin-bottom: 24px;
@@ -334,6 +327,9 @@ main {
   }
 }
 
+
+/* Styles for Menu */
+
 .menumobile {
   overflow-y: auto;
   background: $gray;
@@ -344,37 +340,23 @@ main {
   top: 0;
   z-index: 999;
   left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   .lang {
     height: 32px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    margin: 16px 0;
+    margin: 16px 0 24px 0;
+    width: 50%;
     a {
       height: 100%;
       width: 32px;
       border: 1px #4d4d4d solid;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       color: $gold;
       padding: 0;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -moz-box-pack: center;
-      -ms-flex-pack: center;
       justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -moz-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       margin-right: 8px;
       font-size: 16px;
@@ -395,7 +377,7 @@ main {
     box-sizing: border-box;
     color: $gold;
     font-size: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
   a {
     color: #fff;
@@ -404,21 +386,26 @@ main {
     text-decoration: none;
     height: 48px;
     border-bottom: 1px solid #4d4d4d;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
+    width: 100%;
     &:nth-child(3) {
       border-top: 1px solid #4d4d4d;
     }
     &:hover {
       background: #4d4d4d;
+    }
+    &.close-menu {
+      width: 32px;
+      height: 32px;
+      border-bottom: none;
+      margin-top: 16px;
+      &:before {
+        content: "";
+        width: 32px;
+        height: 32px;
+        background: url("../img/cross.png") center center $gray no-repeat;
+      }
     }
 
   }
@@ -428,7 +415,7 @@ main {
   }
 }
 
-.menumobile, .menuoff, .buttonmove, .menutoggle {
+.menumobile, .menuoff, .menutoggle, .close-menu {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -444,38 +431,161 @@ main {
     content: "";
     position: absolute;
     left: 0;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     background: url("../img/burger.png") center center white no-repeat;
   }
-  &.menuclose {
-    &:before {
-      content: "";
-      width: 32px;
-      height: 32px;
-      background: url("../img/cross.png") center center transparent no-repeat;
+}
+
+/*--------------------BOOKING---------------------*/
+
+.booking {
+  header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .head {
+      margin-top: 15px;
+      position: relative;
+      z-index: 8;
+      width: 88%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .back-btn {
+        width: 48px;
+        height: 48px;
+        background: url("../img/back-btn.png") center center $gold no-repeat;
+      }
+
+      .menu {
+        width: 48px;
+      }
     }
   }
-  &.buttonmove {
-    position: absolute;
-    margin-left: 72%;
-    z-index: 1001;
+  main {
+    .container {
+      .sale {
+        border: 2px solid $gold;
+        padding: 5px 10px 0 10px;
+        margin: 20px 0 30px 0;
+        p{
+          text-align: left;
+          margin-bottom: 12px;
+        }
+      }
+      form{
+        input[type="text"]{
+          width: 100%;
+          box-sizing: border-box;
+          height: 48px;
+          margin-bottom: 16px;
+          padding-left: 8px;
+          font-size: 16px;
+          color: $gray;
+          border: 1px solid #cdcdcd;
+          &::-webkit-input-placeholder{
+            color: $gray;
+          }
+        }
+
+        input[type="submit"]{
+          width: 100%;
+          border: none;
+          height: 48px;
+          margin-bottom: 16px;
+          padding-left: 8px;
+          font-size: 16px;
+          background: $gold;
+          color: white;
+        }
+      }
+
+
+    }
+  }
+
+  .menutoggle {
+    position: relative;
+    &:before {
+      background: url("../img/burger.png") center center #ebebeb no-repeat;
+    }
+    &.menuclose {
+      &:before {
+        content: "";
+        width: 32px;
+        height: 32px;
+        background: url("../img/cross.png") center center $gray no-repeat;
+      }
+    }
+    &.buttonmove {
+      position: absolute;
+      margin-left: 72%;
+      z-index: 1001;
+    }
+  }
+
+  .bankmobile {
+    overflow-y: auto;
+    background: $gray;
+    position: fixed;
+    width: 72%;
+    padding: 0 5%;
+    height: 100%;
+    top: 0;
+    z-index: 999;
+    left: 0;
+    p {
+      display: flex;
+      justify-content: flex-start;
+      color: #fff;
+      &:first-child {
+        color: $gold;
+      }
+    }
+
+    &.menuoff {
+      margin-left: -84%;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      &.close-menu {
+        margin-top: 16px;
+        &:before {
+          content: "";
+          width: 32px;
+          height: 32px;
+          background: url("../img/cross.png") center center $gray no-repeat;
+        }
+      }
+
+    }
+
+
+  }
+
+  .bankmobile, .menuoff, .buttonmove, .banktoggle {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .banktoggle {
+    left: 0;
+    cursor: pointer;
+    z-index: 999;
+
+
   }
 }
 
-.noscroll {
-  overflow: hidden;
-}
 
-.overlay-active {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 9;
-  background: black;
-  opacity: 0.6;
-}
 
-.opacity06 {
-  opacity: 0.6;
-}
+
+

@@ -33,11 +33,14 @@ $(function () {
 $(document).ready(function(){
     $('.menutoggle,.menumobile>a').click (function() {
         $('.menumobile').toggleClass("menuoff");
-        $('.menutoggle').toggleClass("buttonmove");
-        $('.menutoggle').toggleClass("menuclose");
         $("html,body").toggleClass("noscroll");
         $('.overlay').toggleClass("overlay-active");
-        $(".booking-btn").toggleClass("opacity06");
     });
 
+    $('.banktoggle,.bankmobile>a').click (function() {
+        $('.bankmobile').toggleClass("menuoff");
+        $("html,body").toggleClass("noscroll");
+        $('.overlay').toggleClass("overlay-active");
+    });
+    
 });
