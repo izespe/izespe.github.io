@@ -1,0 +1,268 @@
+/*--------------------FONTS----------------------*/
+@font-face {
+  font-family: "PTSansRegular";
+  src: url("../fonts/PTSansRegular/PTSansRegular.eot");
+  src: url("../fonts/PTSansRegular/PTSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSansRegular/PTSansRegular.woff") format("woff"), url("../fonts/PTSansRegular/PTSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400; }
+@font-face {
+  font-family: "PTSansBold";
+  src: url("../fonts/PTSansBold/PTSansBold.eot");
+  src: url("../fonts/PTSansBold/PTSansBold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSansBold/PTSansBold.woff") format("woff"), url("../fonts/PTSansBold/PTSansBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800; }
+/*--------------------COLORS----------------------*/
+body {
+  margin: 0;
+  font-family: PTSansRegular;
+  font-size: 16px;
+  color: #393939; }
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  header .head {
+    margin-top: 15px;
+    position: absolute;
+    z-index: 10;
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    header .head .booking-btn {
+      width: 40px;
+      height: 40px;
+      background: url("../img/booking-ico.png") center center #bc9d71 no-repeat; }
+    header .head .menu {
+      width: 40px; }
+  header #owl-head .owl-stage .owl-item .item {
+    display: flex;
+    justify-content: center; }
+    header #owl-head .owl-stage .owl-item .item p {
+      position: absolute;
+      bottom: 30px;
+      color: white;
+      font-size: 20px; }
+  header #owl-head .owl-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    header #owl-head .owl-controls .owl-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 15;
+      position: absolute;
+      bottom: 11px; }
+      header #owl-head .owl-controls .owl-dots .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        *display: inline; }
+        header #owl-head .owl-controls .owl-dots .owl-dot span {
+          width: 12px;
+          height: 12px;
+          margin: 5px;
+          background: transparent;
+          border: 1px solid white;
+          box-sizing: border-box;
+          display: block;
+          -webkit-backface-visibility: visible;
+          transition: opacity 200ms ease;
+          border-radius: 50%; }
+        header #owl-head .owl-controls .owl-dots .owl-dot.active span, header #owl-head .owl-controls .owl-dots .owl-dot:hover span {
+          background: white; }
+  header .buttons {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0; }
+    header .buttons button {
+      width: 32%;
+      height: 48px;
+      background: transparent;
+      border: 1px #bc9d71 solid;
+      box-sizing: border-box;
+      color: #bc9d71;
+      font-size: 14px;
+      padding: 0; }
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  main .container {
+    width: 88%; }
+    main .container p {
+      text-align: center;
+      margin-top: 8px;
+      margin-bottom: 24px; }
+      main .container p span {
+        font-weight: 800;
+        color: #bc9d71; }
+    main .container button {
+      width: 100%;
+      height: 48px;
+      background: #bc9d71;
+      color: white;
+      border: none;
+      font-size: 16px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      main .container button img {
+        margin-right: 10px; }
+
+/* Styles for Accordion */
+.toggle:last-child {
+  border-bottom: 1px solid #bc9d71; }
+.toggle .toggle-title {
+  position: relative;
+  display: block;
+  border-top: 1px solid #bc9d71;
+  margin-bottom: 6px; }
+  .toggle .toggle-title h3 {
+    font-size: 16px;
+    margin: 0px;
+    line-height: 1;
+    cursor: pointer;
+    font-weight: 200; }
+.toggle .toggle-inner {
+  padding: 3px 0 10px 0;
+  display: none; }
+  .toggle .toggle-inner div, .toggle .toggle-inner img {
+    max-width: 100%; }
+  .toggle .toggle-inner p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 7px; }
+.toggle .toggle-title {
+  margin: 0; }
+  .toggle .toggle-title .title-name {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center; }
+  .toggle .toggle-title a i {
+    font-size: 22px;
+    margin-right: 5px; }
+  .toggle .toggle-title i {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #bc9d71 transparent transparent transparent;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin: 20px;
+    right: 0; }
+  .toggle .toggle-title.active i {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent #bc9d71 transparent; }
+
+.menumobile {
+  overflow-y: auto;
+  background: #393939;
+  position: fixed;
+  width: 72%;
+  padding: 0 5%;
+  height: 100%;
+  top: 0;
+  z-index: 999;
+  left: 0; }
+  .menumobile .lang {
+    height: 32px;
+    display: flex;
+    margin: 16px 0; }
+    .menumobile .lang a {
+      height: 100%;
+      width: 32px;
+      border: 1px #4d4d4d solid;
+      box-sizing: border-box;
+      color: #bc9d71;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 8px;
+      font-size: 16px; }
+      .menumobile .lang a.active {
+        border: none;
+        background: white;
+        color: #393939; }
+  .menumobile button {
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    border: 2px #bc9d71 solid;
+    box-sizing: border-box;
+    color: #bc9d71;
+    font-size: 16px;
+    margin-bottom: 16px; }
+  .menumobile a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    height: 48px;
+    border-bottom: 1px solid #4d4d4d;
+    display: flex;
+    align-items: center; }
+    .menumobile a:nth-child(3) {
+      border-top: 1px solid #4d4d4d; }
+    .menumobile a:hover {
+      background: #4d4d4d; }
+  .menumobile.menuoff {
+    margin-left: -84%; }
+
+.menumobile, .menuoff, .buttonmove, .menutoggle {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.menutoggle {
+  left: 0;
+  position: absolute;
+  cursor: pointer;
+  z-index: 999; }
+  .menutoggle:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: url("../img/burger.png") center center white no-repeat; }
+  .menutoggle.menuclose:before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    background: url("../img/cross.png") center center transparent no-repeat; }
+  .menutoggle.buttonmove {
+    position: absolute;
+    margin-left: 72%;
+    z-index: 1001; }
+
+.noscroll {
+  overflow: hidden; }
+
+.overlay-active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9;
+  background: black;
+  opacity: 0.6; }
+
+.opacity06 {
+  opacity: 0.6; }
+
+/*# sourceMappingURL=style.css.map */
