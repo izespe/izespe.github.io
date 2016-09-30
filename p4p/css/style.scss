@@ -90,6 +90,9 @@ header {
           -moz-box-pack: center;
           -ms-flex-pack: center;
           justify-content: center;
+          div {
+            width: 100%;
+          }
           p {
             position: absolute;
             bottom: 30px;
@@ -276,8 +279,8 @@ main {
   .toggle-inner {
     padding: 3px 0 10px 0;
     display: none;
-    div, img {
-      max-width: 100%;
+    img {
+      width: 100%;
     }
     p {
       text-align: left;
@@ -463,9 +466,7 @@ main {
   overflow: hidden;
 }
 
-
-
-.overlay-active{
+.overlay-active {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -474,6 +475,6 @@ main {
   opacity: 0.6;
 }
 
-.opacity06{
+.opacity06 {
   opacity: 0.6;
 }
