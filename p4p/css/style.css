@@ -169,7 +169,8 @@ main {
   justify-content: center;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-bottom: 30px; }
   main .container {
     width: 88%; }
     main .container p {
