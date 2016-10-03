@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Опалата</title>
+    <title>Контакты</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="//owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.carousel.min.css">
@@ -59,6 +59,29 @@
             В любое время по записи</p>
 
         <span>Ночью на все услуги наценка 30%</span>
+
+        <div id="map"></div>
+        <script>
+
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 60.017992, lng: 30.293293},
+                    zoom: 14
+                });
+
+                marker = new google.maps.Marker({
+
+                    position: {lat: 60.016702, lng: 30.293218},
+                    map: map,
+                    icon: 'img/map-pointer.png'
+                });
+            }
+
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmYtzndy9PVD3WF_QOePu3q7RnxqpyUCQ&callback=initMap"
+                async defer></script>
 
     </div>
 </main>
