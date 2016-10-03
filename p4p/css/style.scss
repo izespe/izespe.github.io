@@ -353,14 +353,13 @@ main {
   top: 0;
   z-index: 999;
   left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: block;
   .lang {
     height: 32px;
     display: flex;
     margin: 16px 0 24px 0;
     width: 50%;
+    float: left;
     a {
       height: 100%;
       width: 32px;
@@ -420,6 +419,7 @@ main {
     width: 32px;
     height: 32px;
     margin-top: 16px;
+    float: right;
     &:before {
       content: "";
       width: 32px;
