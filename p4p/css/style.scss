@@ -23,7 +23,6 @@
 $gray: #393939;
 $gold: #bc9d71;
 
-
 .noscroll {
   overflow: hidden;
 }
@@ -206,7 +205,7 @@ main {
   padding-bottom: 30px;
   .container {
     width: 88%;
-    >p {
+    > p {
       text-align: center;
       margin-top: 8px;
       margin-bottom: 24px;
@@ -326,7 +325,6 @@ main {
     }
   }
 }
-
 
 /* Styles for Menu */
 
@@ -468,15 +466,16 @@ main {
     .container {
       .sale {
         border: 2px solid $gold;
-        padding: 5px 10px 0 10px;
+        padding: 0 10px;
         margin: 20px 0 30px 0;
-        p{
+        p {
           text-align: left;
-          margin-bottom: 12px;
+          margin-bottom: 14px;
+          margin-top: 14px;
         }
       }
-      form{
-        input[type="text"]{
+      form {
+        input[type="text"] {
           width: 100%;
           box-sizing: border-box;
           height: 48px;
@@ -485,12 +484,12 @@ main {
           font-size: 16px;
           color: $gray;
           border: 1px solid #cdcdcd;
-          &::-webkit-input-placeholder{
+          &::-webkit-input-placeholder {
             color: $gray;
           }
         }
 
-        input[type="submit"]{
+        input[type="submit"] {
           width: 100%;
           border: none;
           height: 48px;
@@ -501,7 +500,6 @@ main {
           color: white;
         }
       }
-
 
     }
   }
@@ -540,7 +538,7 @@ main {
       display: flex;
       justify-content: flex-start;
       color: #fff;
-      &:first-child {
+      &:nth-child(2) {
         color: $gold;
       }
     }
@@ -566,7 +564,6 @@ main {
 
     }
 
-
   }
 
   .bankmobile, .menuoff, .buttonmove, .banktoggle {
@@ -581,11 +578,121 @@ main {
     cursor: pointer;
     z-index: 999;
 
-
   }
 }
 
+/*--------------------REVIEWS---------------------*/
+
+.reviews {
+  main {
+    .container {
+      > p {
+        margin-bottom: 14px;
+      }
+    }
+
+    .social-network {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      a {
+        margin: 0 8px;
+      }
+    }
+    .review {
+      border-bottom: 1px solid $gold;
+      &:nth-child(3) {
+        border-top: 1px solid $gold;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: 800;
+        color: $gold;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 3px;
+        margin-bottom: 10px;
+      }
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        span {
+          font-size: 14px;
+          color: $gold;
+        }
+      }
+    }
+
+  }
+
+}
+
+/*--------------------CONTACTS---------------------*/
+.contacts {
+  header {
+    .head {
+      position: relative;
+      .menutoggle{
+        &:before {
+          background: url(../img/burger.png) center center #ebebeb no-repeat;
+        }
+      }
+    }
+  }
+  .container{
+    text-align: center;
+    h2{
+      font-size: 24px;
+      font-weight: 400;
+      color: $gold;
+      margin-top: 15px;
+      margin-bottom: 0;
+
+    }
+    p{
+      line-height: 24px;
+      margin-top: 0;
+      >span{
+        font-size: 18px;
+        color: $gray;
+        font-weight: 400;
+      }
+      &:last-of-type{
+        margin-bottom: 5px;
+        &::after{
+          content: '*';
+          color: $gold;
+        }
+      }
+    }
+    .social-network {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      a {
+        margin: 0 8px;
+      }
+    }
+    button{
+      margin-bottom: 26px;
+    }
+    >span{
+      font-size: 14px;
+      &::before{
+        content: '*';
+        color: $gold;
+      }
+    }
+  }
 
 
 
-
+}

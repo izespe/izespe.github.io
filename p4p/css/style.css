@@ -371,11 +371,12 @@ main {
       width: 48px; }
 .booking main .container .sale {
   border: 2px solid #bc9d71;
-  padding: 5px 10px 0 10px;
+  padding: 0 10px;
   margin: 20px 0 30px 0; }
   .booking main .container .sale p {
     text-align: left;
-    margin-bottom: 12px; }
+    margin-bottom: 14px;
+    margin-top: 14px; }
 .booking main .container form input[type="text"] {
   width: 100%;
   box-sizing: border-box;
@@ -423,7 +424,7 @@ main {
     display: flex;
     justify-content: flex-start;
     color: #fff; }
-    .booking .bankmobile p:first-child {
+    .booking .bankmobile p:nth-child(2) {
       color: #bc9d71; }
   .booking .bankmobile.menuoff {
     margin-left: -84%; }
@@ -448,5 +449,79 @@ main {
   left: 0;
   cursor: pointer;
   z-index: 999; }
+
+/*--------------------REVIEWS---------------------*/
+.reviews main .container > p {
+  margin-bottom: 14px; }
+.reviews main .social-network {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; }
+  .reviews main .social-network a {
+    margin: 0 8px; }
+.reviews main .review {
+  border-bottom: 1px solid #bc9d71; }
+  .reviews main .review:nth-child(3) {
+    border-top: 1px solid #bc9d71; }
+  .reviews main .review h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #bc9d71;
+    margin-bottom: 0; }
+  .reviews main .review p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 3px;
+    margin-bottom: 10px; }
+  .reviews main .review div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; }
+    .reviews main .review div span {
+      font-size: 14px;
+      color: #bc9d71; }
+
+/*--------------------CONTACTS---------------------*/
+.contacts header .head {
+  position: relative; }
+  .contacts header .head .menutoggle:before {
+    background: url(../img/burger.png) center center #ebebeb no-repeat; }
+.contacts .container {
+  text-align: center; }
+  .contacts .container h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #bc9d71;
+    margin-top: 15px;
+    margin-bottom: 0; }
+  .contacts .container p {
+    line-height: 24px;
+    margin-top: 0; }
+    .contacts .container p > span {
+      font-size: 18px;
+      color: #393939;
+      font-weight: 400; }
+    .contacts .container p:last-of-type {
+      margin-bottom: 5px; }
+      .contacts .container p:last-of-type::after {
+        content: '*';
+        color: #bc9d71; }
+  .contacts .container .social-network {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; }
+    .contacts .container .social-network a {
+      margin: 0 8px; }
+  .contacts .container button {
+    margin-bottom: 26px; }
+  .contacts .container > span {
+    font-size: 14px; }
+    .contacts .container > span::before {
+      content: '*';
+      color: #bc9d71; }
 
 /*# sourceMappingURL=style.css.map */
