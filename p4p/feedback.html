@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Контакты</title>
+    <title>Обратная связь</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="//owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//owlcarousel.owlgraphic.com/assets/owlcarousel/owl.carousel.js"></script>
     <script src="js/main.js"></script>
 
 </head>
-<body class="contacts">
+<body class="feedback">
 
 <header>
     <nav class="menumobile menuoff">
@@ -41,50 +43,21 @@
             <a class="menutoggle"></a>
         </div>
         <a href=""><img src="img/logo.png" alt=""></a>
-        <a href="booking.html" class="booking-btn"></a>
+        <a href="contacts.html" class="back-btn"></a>
 
     </div>
 </header>
 <main>
     <div class="container">
-        <h2>Контакты</h2>
-        <p>Санкт-Петербург Коломяги,<br>
-            1-ая Никитинская, 13 <br>
-            <span>+7 (981) 982-00-00</span></p>
-        <div class="social-network"><a href=""><img src="img/vk.png" alt=""></a><a href=""><img src="img/fb.png" alt=""></a><a
-                href=""><img src="img/ta.png" alt=""></a><a href=""><img src="img/ig.png" alt=""></a></div>
-
-        <button onclick="window.location.href='/p4p/feedback.html'">Напишите нам</button>
-        <h2>Время работы:</h2>
-        <p>11:00-23:00<br>
-            или<br>
-            В любое время по записи</p>
-
-        <span>Ночью на все услуги наценка 30%</span>
-
-        <div id="map"></div>
-        <script>
-
-            var map;
-            function initMap() {
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 60.017992, lng: 30.293293},
-                    zoom: 14
-                });
-
-                marker = new google.maps.Marker({
-
-                    position: {lat: 60.016702, lng: 30.293218},
-                    map: map,
-                    icon: 'img/map-pointer.png'
-                });
-            }
-
-        </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmYtzndy9PVD3WF_QOePu3q7RnxqpyUCQ&callback=initMap"
-                async defer></script>
-
+        <p>Напишите нам и наш менеджер
+            свяжется с Вами в течении <span>30 секунд</span></p>
+        <form action="">
+            <input type="text" placeholder="Имя">
+            <input type="text" placeholder="Телефон">
+            <input type="text" placeholder="Email">
+            <textarea name="" id="" cols="30" rows="4" placeholder="Сообщение"></textarea>
+            <input type="submit" value="Отправить">
+        </form>
     </div>
 </main>
 

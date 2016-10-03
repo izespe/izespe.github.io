@@ -2,23 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Галерея</title>
+    <title>Контакты</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/css/lightgallery.css">
+    <link rel="stylesheet" href="//owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
     <script src="https://sachinchoolur.github.io/lightGallery/lightgallery/js/lightgallery.js"></script>
-    <script src="https://cdn.rawgit.com/sachinchoolur/lg-thumbnail/master/dist/lg-thumbnail.js"></script>
-    <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay/master/dist/lg-autoplay.js"></script>
     <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom/master/dist/lg-zoom.js"></script>
-    <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager/master/dist/lg-pager.js"></script>
-    <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash/master/dist/lg-hash.js"></script>
     <script src="https://sachinchoolur.github.io/lightGallery/external/jquery.mousewheel.min.js"></script>
-
+    <script src="//owlcarousel.owlgraphic.com/assets/owlcarousel/owl.carousel.js"></script>
     <script src="js/main.js"></script>
-
 </head>
 <body class="gallery">
 
@@ -31,15 +25,17 @@
         <a class="close-menu" href="#"></a>
 
         <button onclick="window.location.href='/p4p/booking.html'">Забронировать</button>
-        <a href="#">Банный комплекс</a>
-        <a href="#">Услуги банного комплекса</a>
-        <a href="#">Премиум SPA-отель</a>
-        <a href="#">Ресторан</a>
-        <a href="#">Специальные предложения</a>
-        <a href="#">Отзывы</a>
-        <a href="#">Сертификат</a>
-        <a href="#">Галерея</a>
-        <a href="#">Контакты</a>
+        <div class="list">
+            <a href="bathcomplex.html">Банный комплекс</a>
+            <a href="bathcomplex.html">Услуги банного комплекса</a>
+            <a href="spahotel.html">Премиум SPA-отель</a>
+            <a href="restaurant.html">Ресторан</a>
+            <a href="specialoffers.html">Специальные предложения</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="сertificate.html">Сертификат</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="contacts.html">Контакты</a>
+        </div>
     </nav>
     <div class="overlay"></div>
     <div class="head">
@@ -53,60 +49,127 @@
 </header>
 <main>
     <div class="container">
-        <div class="page-head">
-            <div class="demo-gallery">
-                <ul id="lightgallery">
-                    <li data-responsive="http://sachinchoolur.github.io/lightGallery/static/img/1-375.jpg 375, http://sachinchoolur.github.io/lightGallery/static/img/1-480.jpg 480, http://sachinchoolur.github.io/lightGallery/static/img/1.jpg 800"
-                        data-src="http://sachinchoolur.github.io/lightGallery/static/img/1-1600.jpg"
-                        data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
-                        <a href="">
-                            <img class="img-responsive"
-                                 src="http://sachinchoolur.github.io/lightGallery/static/img/thumb-1.jpg">
-                            <div class="demo-gallery-poster">
-                                <img src="http://sachinchoolur.github.io/lightGallery/static/img/zoom.png">
-                            </div>
-                        </a>
-                    </li>
-                    <li data-responsive="http://sachinchoolur.github.io/lightGallery/static/img/2-375.jpg 375, http://sachinchoolur.github.io/lightGallery/static/img/2-480.jpg 480, http://sachinchoolur.github.io/lightGallery/static/img/2.jpg 800"
-                        data-src="http://sachinchoolur.github.io/lightGallery/static/img/2-1600.jpg"
-                        data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
-                        <a href="">
-                            <img class="img-responsive"
-                                 src="http://sachinchoolur.github.io/lightGallery/static/img/thumb-2.jpg">
-                            <div class="demo-gallery-poster">
-                                <img src="http://sachinchoolur.github.io/lightGallery/static/img/zoom.png">
-                            </div>
-                        </a>
-                    </li>
-                    <li data-responsive="http://sachinchoolur.github.io/lightGallery/static/img/13-375.jpg 375, http://sachinchoolur.github.io/lightGallery/static/img/13-480.jpg 480, http://sachinchoolur.github.io/lightGallery/static/img/13.jpg 800"
-                        data-src="http://sachinchoolur.github.io/lightGallery/static/img/13-1600.jpg"
-                        data-sub-html="<h4>Sunset Serenity</h4><p>A gorgeous Sunset tonight captured at Coniston Water....</p>">
-                        <a href="">
-                            <img class="img-responsive"
-                                 src="http://sachinchoolur.github.io/lightGallery/static/img/thumb-13.jpg">
-                            <div class="demo-gallery-poster">
-                                <img src="http://sachinchoolur.github.io/lightGallery/static/img/zoom.png">
-                            </div>
-                        </a>
-                    </li>
-                    <li data-responsive="http://sachinchoolur.github.io/lightGallery/static/img/4-375.jpg 375, http://sachinchoolur.github.io/lightGallery/static/img/4-480.jpg 480, http://sachinchoolur.github.io/lightGallery/static/img/4.jpg 800"
-                        data-src="http://sachinchoolur.github.io/lightGallery/static/img/4-1600.jpg"
-                        data-sub-html="<h4>Coniston Calmness</h4><p>Beautiful morning</p>">
-                        <a href="">
-                            <img class="img-responsive"
-                                 src="http://sachinchoolur.github.io/lightGallery/static/img/thumb-4.jpg">
-                            <div class="demo-gallery-poster">
-                                <img src="http://sachinchoolur.github.io/lightGallery/static/img/zoom.png">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <span class="small">Click on any of the images to see lightGallery</span>
-            </div>
+        <div class="labels">
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">Банный комплекс</label>
+
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">Отлеь</label>
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3">Ресторан</label>
+
+            <section id="content1">
+                <div class="page-head">
+                    <div class="demo-gallery">
+                        <ul class="lightgallery">
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="content2">
+                <div class="page-head">
+                    <div class="demo-gallery">
+                        <ul class="lightgallery">
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="content3">
+                <div class="page-head">
+                    <div class="demo-gallery">
+                        <ul class="lightgallery">
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                            <li data-src="img/gallery/gallery1.jpg">
+                                <a href="">
+                                    <img class="img-responsive" src="img/gallery/thumb-gallery1.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
         </div>
+    </div>
         <script>
-            $('#lightgallery').lightGallery({
-                pager: true
+            $('.lightgallery').lightGallery({
+                thumbnail: false,
+                autoplay: false,
+                counter: false,
+                download: false,
+                controls: false,
+                actualSize: false
             });
         </script>
 </main>
