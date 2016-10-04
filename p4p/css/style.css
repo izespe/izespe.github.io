@@ -28,8 +28,9 @@ body {
     background: black;
     opacity: 0.6; }
 
-input {
-  outline: none; }
+input, textarea {
+  outline: none;
+  -webkit-appearance: none; }
 
 header {
   display: -webkit-box;

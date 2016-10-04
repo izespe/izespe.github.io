@@ -42,8 +42,9 @@ body {
   }
 }
 
-input {
+input, textarea {
   outline: none;
+  -webkit-appearance: none;
 }
 
 header {
