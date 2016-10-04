@@ -52,6 +52,7 @@ header {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   header .head {
+    margin: 0 6%;
     margin-top: 15px;
     position: absolute;
     z-index: 8;
@@ -70,7 +71,8 @@ header {
     -webkit-align-items: flex-start;
     -moz-box-align: start;
     -ms-flex-align: start;
-    align-items: flex-start; }
+    align-items: flex-start;
+    left: 0; }
     header .head .booking-btn {
       width: 48px;
       height: 48px;
@@ -104,7 +106,7 @@ header {
       text-transform: uppercase; }
       header #owl-head .owl-stage .owl-item .item h1 span {
         font-size: 20px; }
-  header #owl-head .owl-controls {
+  header #owl-head .owl-controls .owl-dots {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -115,50 +117,39 @@ header {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 15;
+    position: absolute;
+    bottom: 11px;
     width: 100%; }
-    header #owl-head .owl-controls .owl-dots {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -moz-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -moz-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      z-index: 15;
-      position: absolute;
-      bottom: 11px; }
-      header #owl-head .owl-controls .owl-dots .owl-dot {
-        display: inline-block;
-        zoom: 1;
-        *display: inline; }
-        header #owl-head .owl-controls .owl-dots .owl-dot span {
-          width: 12px;
-          height: 12px;
-          margin: 5px;
-          background: transparent;
-          border: 1px solid white;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          display: block;
-          -webkit-backface-visibility: visible;
-          -webkit-transition: opacity 200ms ease;
-          -o-transition: opacity 200ms ease;
-          -moz-transition: opacity 200ms ease;
-          transition: opacity 200ms ease;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          border-radius: 50%; }
-        header #owl-head .owl-controls .owl-dots .owl-dot.active span, header #owl-head .owl-controls .owl-dots .owl-dot:hover span {
-          background: white; }
+    header #owl-head .owl-controls .owl-dots .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      *display: inline; }
+      header #owl-head .owl-controls .owl-dots .owl-dot span {
+        width: 12px;
+        height: 12px;
+        margin: 5px;
+        background: transparent;
+        border: 1px solid white;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        -webkit-backface-visibility: visible;
+        -webkit-transition: opacity 200ms ease;
+        -o-transition: opacity 200ms ease;
+        -moz-transition: opacity 200ms ease;
+        transition: opacity 200ms ease;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%; }
+      header #owl-head .owl-controls .owl-dots .owl-dot.active span, header #owl-head .owl-controls .owl-dots .owl-dot:hover span {
+        background: white; }
   header .buttons {
     width: 88%;
     display: -webkit-box;
