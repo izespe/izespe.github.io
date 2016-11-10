@@ -36,7 +36,7 @@
     // My own arbitrary use of isMobile, as an example
     (function () {
         var MOBILE_SITE = 'mobile.html', // site to redirect to
-                DESCTOP_SITE = 'desktop.html',
+                DESKTOP_SITE = 'desktop.html',
                 TABLET_SITE = 'tablet.html',
                 NO_REDIRECT = 'noredirect'; // cookie to prevent redirect
 
@@ -46,7 +46,7 @@
         } else if (isMobile.tablet) {
             document.location.href = TABLET_SITE;
         } else {
-            document.location.href = TABLET_SITE;
+            document.location.href = DESKTOP_SITE;
         }
     })();
 </script>
