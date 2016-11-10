@@ -36,14 +36,14 @@
     // My own arbitrary use of isMobile, as an example
     (function () {
         var MOBILE_SITE = 'mobile.html', // site to redirect to
-                DESKTOP_SITE = 'desktop.html',
                 TABLET_SITE = 'tablet.html',
+                DESKTOP_SITE = 'desktop.html',
                 NO_REDIRECT = 'noredirect'; // cookie to prevent redirect
 
         // I only want to redirect iPhones, Android phones and a handful of 7" devices
         if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
             document.location.href = MOBILE_SITE;
-        } else if (isMobile.tablet) {
+        } else if (isMobile.tablet || isMobile.apple.tablet || isMobile.android.tablet) {
             document.location.href = TABLET_SITE;
         } else {
             document.location.href = DESKTOP_SITE;
