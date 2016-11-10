@@ -429,7 +429,7 @@ footer {
     padding-top: 4px; }
     footer .container p {
       color: white; }
-    footer .container div {
+    footer .container > div {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -442,24 +442,24 @@ footer {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
-      footer .container div .si {
+      footer .container > div .si {
         text-decoration: none;
         color: white;
         margin-left: 15px;
         font-size: 16px; }
-        footer .container div .si img {
+        footer .container > div .si img {
           border-radius: 50%; }
-          footer .container div .si img:hover {
+          footer .container > div .si img:hover {
             cursor: pointer;
             -webkit-animation: bounceOutBottom .7s linear;
-            animation: bounceOutBottom .7s linear;
+            animation: bounceOutBottom  .7s linear;
             -webkit-box-shadow: 0 0 0 5px #484848;
             box-shadow: 0 0 0 5px #484848;
             opacity: 1; }
-      footer .container div nav {
+      footer .container > div nav {
         text-align: center;
         background: #1f1f1f; }
-        footer .container div nav a {
+        footer .container > div nav a {
           text-decoration: none;
           color: white;
           margin-left: 15px;
@@ -470,7 +470,7 @@ footer {
           border-bottom: 4px solid #1f1f1f;
           padding: 20px 0;
           margin-right: 15px; }
-          footer .container div nav a:hover {
+          footer .container > div nav a:hover {
             border-bottom: 4px solid #484848;
             padding: 1px 0; }
 

@@ -6,7 +6,6 @@ $white: #ffffff;
 $bounce-red: #c1251a;
 $bounce-gray: #484848;
 
-
 @-webkit-keyframes bounceOut {
     0%{ -webkit-box-shadow: 0 0 0 4px $bounce-red; box-shadow: 0 0 0 4px $bounce-red; opacity:1;}
     25%{ -webkit-box-shadow: 0 0 0 1px $bounce-red; box-shadow: 0 0 0 1px $bounce-red; opacity:1;}
@@ -62,10 +61,11 @@ img {
 header {
     position: relative;
     z-index: 1;
-    background: url("../img/header-bg.jpg") center bottom no-repeat $red;
+    background: url(../img/header-bg.jpg) 63% bottom no-repeat $red;
     width: 100%;
+    background-size: 185%;
     .container {
-        width: 1170px;
+        width: 90%;
         .top {
             display: -webkit-box;
             display: -webkit-flex;
@@ -79,50 +79,50 @@ header {
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
-            height: 83px;
-            padding-top: 5px;
-            div {
+            height: 55px;
+            padding-top: 10px;
+            >div {
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: -ms-flexbox;
                 display: flex;
-                -webkit-box-pack: end;
-                -webkit-justify-content: flex-end;
-                -ms-flex-pack: end;
-                justify-content: flex-end;
                 -webkit-box-align: center;
                 -webkit-align-items: center;
                 -ms-flex-align: center;
                 align-items: center;
+                width: 100%;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
                 .si{
                     text-decoration: none;
                     color: white;
-                    margin-left: 15px;
+                    margin-left: 10px;
                     img {
+                        width: 27px;
                         border-radius: 50%;
                         &:hover {
                             cursor: pointer;
                             -webkit-animation:bounceOut .7s linear;
                             animation:bounceOut .7s linear;
                             -webkit-box-shadow: 0 0 0 5px $bounce-red;
-                            box-shadow: 0 0 0 5px $bounce-red; opacity:1;
+                            box-shadow: 0 0 0 5px $bounce-red;
+                            opacity:1;
                         }
                     }
                 }
                 nav {
                     text-align: center;
-                    background: $red;
                     a{
                         text-decoration: none;
                         color: white;
-                        margin-left: 15px;
                         font-size: 16px;
                         -webkit-transition: 0.3s ease;
                         transition: 0.3s ease;
-                        background: $red;
-                        border-bottom: 4px solid $red;
+                        background: transparent;
+                        border-bottom: 4px solid transparent;
                         padding: 20px 0;
-                        margin-right: 15px;
                         &:hover {
                             border-bottom: 4px solid $bounce-red;
                             padding: 1px 0;
@@ -140,12 +140,18 @@ header {
             -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
             justify-content: space-between;
-            padding: 97px 0 50px;
-            > img {
-                margin-left: -30px;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 15px 0;
+            .logo{
+                img{
+                    width: 103px;
+                }
             }
+
             > div {
-                width: 50%;
+                width: 100%;
                 display: -webkit-box;
                 display: -webkit-flex;
                 display: -ms-flexbox;
@@ -159,37 +165,43 @@ header {
                 -webkit-align-items: center;
                 -ms-flex-align: center;
                 align-items: center;
-                padding-top: 30px;
+                > img{
+                    width: 144px;
+                }
                 h1 {
-                    margin-top: 54px;
-                    margin-bottom: 44px;
+                    margin-top: 14px;
+                    margin-bottom: 12px;
                     color: white;
-                    font-size: 36px;
+                    font-size: 18px;
                     font-weight: 400;
                     span {
                         font-weight: 800;
                     }
                 }
-                div {
-                    width: 100%;
-                    display: -webkit-box;
-                    display: -webkit-flex;
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-orient: horizontal;
-                    -webkit-box-direction: normal;
-                    -webkit-flex-direction: row;
-                    -ms-flex-direction: row;
-                    flex-direction: row;
-                    -webkit-box-pack: center;
-                    -webkit-justify-content: center;
-                    -ms-flex-pack: center;
-                    justify-content: center;
-                    a {
-                        margin: 0 20px;
+
+            }
+            .store {
+                width: 100%;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                padding-top: 20px;
+                a {
+                    margin: 10px 15px;
+                    img{
+                        width: 113px;
                     }
                 }
-
             }
         }
     }
@@ -198,10 +210,10 @@ header {
 main {
 
     #map {
-        height: 2430px;
+        height: 2620px;
         width: 100%;
         position: absolute;
-        top: 880px;
+        top: 360px;
         left: 0;
         z-index: 0;
         background: white;
@@ -211,7 +223,7 @@ main {
 
     .how-work {
         .container {
-            width: 1170px;
+            width: 90%;
             text-align: center;
             display: -webkit-box;
             display: -webkit-flex;
@@ -226,17 +238,17 @@ main {
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
-            padding: 65px 0;
+            padding: 15px 0;
             h2 {
-                font-size: 36px;
+                font-size: 24px;
                 font-weight: 400;
                 span {
                     font-weight: 800;
                 }
             }
             p {
-                font-size: 16px;
-                width: 650px;
+                font-size: 14px;
+                width: 94%;
                 margin-top: 6px;
             }
             > div {
@@ -245,32 +257,27 @@ main {
                 display: -webkit-flex;
                 display: -ms-flexbox;
                 display: flex;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
                 -webkit-box-orient: horizontal;
                 -webkit-box-direction: normal;
                 -webkit-flex-direction: row;
                 -ms-flex-direction: row;
                 flex-direction: row;
-                padding-bottom: 30px;
+                padding-bottom: 20px;
                 div {
-                    width: 50%;
+                    width: 100%;
+                    text-align: center;
                     h3 {
-                        font-size: 30px;
+                        font-size: 18px;
                         font-weight: 400;
                         span {
                             font-weight: 800;
                         }
                     }
-                    &.listen {
-                        text-align: left;
-                        h3 {
-                            padding-left: 115px;
-                        }
-                    }
-                    &.stream {
-                        text-align: right;
-                        h3 {
-                            padding-right: 113px;
-                        }
+                    &.listen{
+                        margin-bottom: 10px;
                     }
                 }
             }
@@ -282,24 +289,31 @@ main {
             width: 100%;
             background: rgba(0, 0, 0, 0.2);
             text-align: center;
-            padding: 100px 0;
+            padding: 30px 0;
+            iframe{
+                width: 320px;
+                height: 180px;
+            }
         }
     }
 
     .contacts {
-        padding: 100px 0;
+        padding: 45px 0;
         .container {
-            width: 1178px;
-            height: 687px;
+            width: 100%;
+            height: 821px;
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
-            background: url("../img/contacts-bg.png") center center no-repeat transparent;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            background: url("../img/contacts-bg-p.png") center center no-repeat transparent;
             div {
-                width: 50%;
+                width: 100%;
                 h3 {
-                    font-size: 36px;
+                    font-size: 24px;
                     font-weight: 800;
                     color: white;
                     span {
@@ -321,15 +335,23 @@ main {
                     -ms-flex-align: center;
                     align-items: center;
                     text-align: center;
-                    padding-left: 86px;
-                    padding-top: 60px;
                     -webkit-box-sizing: border-box;
                     box-sizing: border-box;
+                    padding-top: 40px;
+                    h3{
+                        margin-bottom: 32px;
+                    }
                     p{
-                        font-size: 18px;
+                        font-size: 14px;
                         color: white;
                         font-weight: 200;
                         margin-bottom: 30px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                    img{
+                        width: 42px;
                     }
                 }
                 &.feedback {
@@ -342,13 +364,14 @@ main {
                     -webkit-flex-direction: column;
                     -ms-flex-direction: column;
                     flex-direction: column;
-                    -webkit-box-pack: end;
-                    -webkit-justify-content: flex-end;
-                    -ms-flex-pack: end;
-                    justify-content: flex-end;
-                    padding-bottom: 60px;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    -webkit-box-align: center;
+                    -webkit-align-items: center;
+                    -ms-flex-align: center;
+                    align-items: center;
                     h3 {
-                        margin-top: 42px;
+                        margin-top: -28px;
                         margin-bottom: 30px;
                     }
                     form{
@@ -361,18 +384,22 @@ main {
                         -webkit-flex-direction: column;
                         -ms-flex-direction: column;
                         flex-direction: column;
-                        width: 304px;
+                        width: 290px;
+                        -webkit-box-align: center;
+                        -webkit-align-items: center;
+                        -ms-flex-align: center;
+                        align-items: center;
                         input[type=text]{
                             border: none;
                             outline: none;
                             width: 100%;
-                            height: 40px;
+                            height: 32px;
                             margin-bottom: 15px;
                             color: $gray;
                             padding-left: 15px;
                             font-family: SFUIText;
                             font-weight: 200;
-                            font-size: 16px;
+                            font-size: 14px;
                             -webkit-box-sizing: border-box;
                             box-sizing: border-box;
                             &::-webkit-input-placeholder {
@@ -383,12 +410,12 @@ main {
                             border: none;
                             outline: none;
                             width: 100%;
-                            height: 100px;
+                            height: 96px;
                             color: $gray;
                             padding: 10px 15px;
                             font-family: SFUIText;
                             font-weight: 200;
-                            font-size: 16px;
+                            font-size: 14px;
                             -webkit-box-sizing: border-box;
                             box-sizing: border-box;
                             &::-webkit-input-placeholder {
@@ -396,12 +423,8 @@ main {
                             }
                         }
                         input[type=submit]{
-                            position: absolute;
-                            right: 83px;
-                            bottom: 92px;
-                            border-radius: 50%;
-                            width: 145px;
-                            height: 145px;
+                            width: 194px;
+                            height: 38px;
                             border: none;
                             outline: none;
                             background: $red;
@@ -410,6 +433,7 @@ main {
                             font-weight: 200;
                             font-size: 16px;
                             color: white;
+                            margin-top: 20px;
                             &:hover{
                                 -webkit-animation: bounceOut 1s linear;
                                 animation: bounceOut 1s linear;
@@ -430,7 +454,7 @@ footer {
     z-index: 1;
     background: $gray;
     .container {
-        width: 1170px;
+        width: 90%;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -443,35 +467,43 @@ footer {
         -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
         height: 82px;
-        padding-top: 4px;
+        padding-top: 12px;
         p {
             color: white;
+            font-size: 14px;
+            width: 100%;
+            text-align: center;
+            margin-top: 4px;
         }
         >div {
             display: -webkit-box;
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
-            -webkit-box-pack: end;
-            -webkit-justify-content: flex-end;
-            -ms-flex-pack: end;
-            justify-content: flex-end;
             -webkit-box-align: center;
             -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
+            width: 100%;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
             .si{
                 text-decoration: none;
                 color: white;
-                margin-left: 15px;
-                font-size: 16px;
+                margin-left: 10px;
                 img {
+                    width: 27px;
                     border-radius: 50%;
                     &:hover {
                         cursor: pointer;
                         -webkit-animation: bounceOutBottom .7s linear;
-                        animation: bounceOutBottom  .7s linear;
+                        animation: bounceOutBottom .7s linear;
                         -webkit-box-shadow: 0 0 0 5px $bounce-gray;
                         box-shadow: 0 0 0 5px $bounce-gray;
                         opacity:1;
@@ -480,18 +512,15 @@ footer {
             }
             nav {
                 text-align: center;
-                background: $gray;
+                background: transparent;
                 a{
                     text-decoration: none;
                     color: white;
-                    margin-left: 15px;
-                    font-size: 16px;
+                    font-size: 14px;
                     -webkit-transition: 0.3s ease;
                     transition: 0.3s ease;
-                    background: $gray;
-                    border-bottom: 4px solid $gray;
-                    padding: 20px 0;
-                    margin-right: 15px;
+                    background: transparent;
+                    border-bottom: 4px solid transparent;
                     &:hover {
                         border-bottom: 4px solid $bounce-gray;
                         padding: 1px 0;

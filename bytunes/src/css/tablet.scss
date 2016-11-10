@@ -139,6 +139,8 @@ header {
             -webkit-justify-content: space-between;
             -ms-flex-pack: justify;
             justify-content: space-between;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
             padding-top: 15px;
             > img {
@@ -200,7 +202,7 @@ header {
 main {
 
     #map {
-        height: 3430px;
+        height: 3360px;
         width: 100%;
         position: absolute;
         top: 880px;
@@ -247,6 +249,8 @@ main {
                 display: -webkit-flex;
                 display: -ms-flexbox;
                 display: flex;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
                 -webkit-box-orient: horizontal;
                 -webkit-box-direction: normal;
@@ -290,6 +294,8 @@ main {
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
             div {
                 width: 100%;
@@ -303,7 +309,8 @@ main {
                     }
                 }
                 &.contacts-info {
-                    background: url("../img/contacts-bg-t.png") -41% center no-repeat transparent;
+                    margin-left: 24%;
+                    background: url("../img/contacts-bg-t.png") left center no-repeat transparent;
                     display: -webkit-box;
                     display: -webkit-flex;
                     display: -ms-flexbox;
@@ -313,24 +320,24 @@ main {
                     -webkit-flex-direction: column;
                     -ms-flex-direction: column;
                     flex-direction: column;
-                    -webkit-box-align: center;
-                    -webkit-align-items: center;
-                    -ms-flex-align: center;
-                    align-items: center;
-                    text-align: center;
-                    padding-left: 32%;
                     padding-top: 69px;
                     -webkit-box-sizing: border-box;
                     box-sizing: border-box;
-                    p{
-                        font-size: 18px;
-                        color: white;
-                        font-weight: 200;
-                        margin-bottom: 30px;
+                    text-align: center;
+                    >div{
+                        width: 300px;
+                        margin-left: 188px;
+                        p{
+                            font-size: 18px;
+                            color: white;
+                            font-weight: 200;
+                            margin-bottom: 30px;
+                        }
                     }
+
                 }
                 &.feedback {
-                    background: url(../img/contacts-bg-t.png) 116% center no-repeat transparent;
+                    background: url(../img/contacts-bg-t.png) -447px center no-repeat transparent;
                     display: -webkit-box;
                     display: -webkit-flex;
                     display: -ms-flexbox;
@@ -345,6 +352,7 @@ main {
                     -ms-flex-pack: end;
                     justify-content: flex-end;
                     padding-bottom: 67px;
+                    -webkit-box-sizing: border-box;
                     box-sizing: border-box;
                     padding-left: 17%;
                     margin-top: -297px;
@@ -399,7 +407,7 @@ main {
                         }
                         input[type=submit]{
                             position: absolute;
-                            right: 135px;
+                            left: 516px;
                             bottom: 87px;
                             border-radius: 50%;
                             width: 145px;
