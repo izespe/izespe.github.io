@@ -1,0 +1,182 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ByTunes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+<header>
+
+    <div class="container">
+        <div class="top">
+            <div>
+                <nav>
+                    <a href="">Privacy&Condizioni</a>
+                </nav>
+                <div>
+                    <a href="" class="si"><img src="img/twitter-w.png" alt=""></a>
+                    <a href="" class="si"><img src="img/facebook-w.png" alt=""></a>
+                    <a href="" class="si"><img src="img/instagram-w.png" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="content">
+
+            <div>
+                <img src="img/logo-pic.png" alt="">
+                <h1>You can <span>touch</span>, you can <span>play</span></h1>
+                <a href="" class="logo"><img src="img/logo.png" alt=""></a>
+            </div>
+
+            <div class="store">
+                <a href=""><img src="img/appstore.png" alt=""></a>
+                <a href=""><img src="img/googleplay.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+</header>
+<main>
+    <div id="map"></div>
+    <section class="how-work">
+        <div class="container">
+            <h2><span>How</span> it works</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur.</p>
+            <div>
+                <div class="listen">
+                    <h3>To <span>listen</span></h3>
+                    <img src="img/listen-m.png" alt="">
+                </div>
+                <div class="stream">
+                    <h3>To <span>stream</span></h3>
+                    <img src="img/stream-m.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="video">
+        <div class="container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_Su7KbCdBCE" frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts-info">
+                <h3>Contact <span>us</span></h3>
+                <img src="img/phone.png" alt="">
+                <p>+375 33 000 00 00</p>
+                <img src="img/adress.png" alt="">
+                <p>Belarus, Brest,<br>100 Moskovskaya street</p>
+                <img src="img/mail.png" alt="">
+                <p>info@bytunes.com</p>
+            </div>
+            <div class="feedback">
+                <h3>Talk <span>us</span></h3>
+                <form action="">
+                    <input type="text" id="name" placeholder="Name">
+                    <input type="text" id="email" placeholder="Email">
+                    <textarea name="message" id="" cols="30" rows="5" placeholder="Messsage"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer>
+    <div class="container">
+        <div>
+            <nav>
+                <a href="">Privacy&Condizioni</a>
+            </nav>
+            <div>
+                <a href="" class="si"><img src="img/twitter-w.png" alt=""></a>
+                <a href="" class="si"><img src="img/facebook-w.png" alt=""></a>
+                <a href="" class="si"><img src="img/instagram-w.png" alt=""></a>
+            </div>
+        </div>
+        <p>© ByTunes | 2016</p>
+    </div>
+</footer>
+
+<script>
+
+
+    function initMap() {
+        var map;
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 43.767759, lng: 11.255568},
+            zoom: 17,
+            scrollwheel: false,
+            disableDoubleClickZoom: true,
+            navigationControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            draggable: false,
+            zoomControl: false,
+            streetViewControl: false,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+        });
+
+        setMarkers(map);
+    }
+
+    var places = [
+        ['1', 43.775556, 11.246958, 4],
+        ['2', 43.773712, 11.254766, 5],
+        ['3', 43.770257, 11.261611, 3],
+        ['4', 43.766755, 11.247964, 2],
+        ['5', 43.763113, 11.263765, 1]
+    ];
+
+    function setMarkers(map) {
+        // Adds markers to the map.
+
+        // Marker sizes are expressed as a Size of X,Y where the origin of the image
+        // (0,0) is located in the top left of the image.
+
+        // Origins, anchor positions and coordinates of the marker increase in the X
+        // direction to the right and in the Y direction down.
+        var image = {
+            url: 'img/marker.png',
+            // This marker is 20 pixels wide by 32 pixels high.
+            size: new google.maps.Size(60, 73),
+            // The origin for this image is (0, 0).
+            origin: new google.maps.Point(0, 0),
+            // The anchor for this image is the base of the flagpole at (0, 32).
+            anchor: new google.maps.Point(30, 73)
+        };
+        // Shapes define the clickable region of the icon. The type defines an HTML
+        // <area> element 'poly' which traces out a polygon as a series of X,Y points.
+        // The final coordinate closes the poly by connecting to the first coordinate.
+
+        for (var i = 0; i < places.length; i++) {
+            var place = places[i];
+            var marker = new google.maps.Marker({
+                position: {lat: place[1], lng: place[2]},
+                map: map,
+                icon: image,
+                title: place[0],
+                zIndex: place[3]
+            });
+        }
+    }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPS3K_qzJn3gv9sSaYVN3m3Zrw3443It0&callback=initMap"
+        async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
