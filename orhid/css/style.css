@@ -1,7 +1,6 @@
 @import url(../fonts/stylesheet.css);
 * {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 h1, h2 {
@@ -15,6 +14,7 @@ body {
   padding: 0; }
   body > .content {
     float: right;
+    width: -webkit-calc(100% - 350px);
     width: calc(100% - 350px); }
     body > .content .main_seo_text {
       background-image: url(../img/VIP_2-4-min.jpg);
@@ -22,9 +22,22 @@ body {
       height: 550px;
       background-size: cover; }
       body > .content .main_seo_text .layer_color {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
         width: 100%;
         height: 100%;
@@ -41,11 +54,23 @@ body {
           line-height: 24px; }
         body > .content .main_seo_text .layer_color .buttons-header {
           margin-top: 14px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex; }
           body > .content .main_seo_text .layer_color .buttons-header button {
             cursor: pointer;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
             justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
             align-items: center;
             border: none;
             width: 58px;
@@ -57,8 +82,18 @@ body {
             body > .content .main_seo_text .layer_color .buttons-header button:hover {
               background: #e91e91; }
     body > .content .calcmsg {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       background: #fbfbfb;
       padding-top: 33px;
@@ -68,7 +103,13 @@ body {
         margin-top: 8px; }
       body > .content .calcmsg .label {
         width: 320px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         color: #d51f8a;
         margin-bottom: 10px;
@@ -76,6 +117,9 @@ body {
       body > .content .calcmsg .custom-switch {
         position: relative;
         display: inline-block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none; }
         body > .content .calcmsg .custom-switch input {
           display: none; }
@@ -103,12 +147,18 @@ body {
             background: #fff;
             pointer-events: none;
             -webkit-box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.21);
-            -moz-box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.21);
             box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.21);
+            -webkit-transition: all .4s ease-in-out;
             transition: all .4s ease-in-out; }
       body > .content .calcmsg .sliderCalc {
         width: 630px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         margin-top: 30px; }
         body > .content .calcmsg .sliderCalc .from-to {
@@ -162,7 +212,13 @@ body {
         background-color: #e91e91;
         margin-top: 20px; }
     body > .content .resultcalc {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       margin: 0 70px;
       padding-top: 40px;
