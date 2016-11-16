@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'futura';
+    src: url('futura-boo-webfont.eot');
+    src: url('futura-boo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('futura-boo-webfont.woff2') format('woff2'),
+         url('futura-boo-webfont.woff') format('woff'),
+         url('futura-boo-webfont.ttf') format('truetype'),
+         url('futura-boo-webfont.svg#webfontregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "FuturaBold";
+    src: url("FuturaBold/FuturaBold.eot");
+    src: url("FuturaBold/FuturaBold.eot?#iefix")format("embedded-opentype"),
+    url("FuturaBold/FuturaBold.woff") format("woff"),
+    url("FuturaBold/FuturaBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*
+@font-face {
+    font-family: 'futura';
+    src: url('futura-lig-webfont.eot');
+    src: url('futura-lig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('futura-lig-webfont.woff2') format('woff2'),
+         url('futura-lig-webfont.woff') format('woff'),
+         url('futura-lig-webfont.ttf') format('truetype'),
+         url('futura-lig-webfont.svg#webfontregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+@font-face{font-family:'eb_garamond';src:url('ebgaramondregular-webfont.eot');src:url('ebgaramondregular-webfont.eot?#iefix') format('embedded-opentype'),
+url('ebgaramondregular-webfont.woff2') format('woff2'),
+url('ebgaramondregular-webfont.woff') format('woff'),
+url('ebgaramondregular-webfont.ttf') format('truetype'),
+url('ebgaramondregular-webfont.svg#eb_garamondregular') format('svg');font-weight:normal;font-style:normal;}
