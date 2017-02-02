@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js?137"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div>
+            <a href=""><img src="img/logo.png" alt=""></a>
+            <p>Арендный центр «Парголово Север»<br><span>СПб, Выборгское шоссе, д. 226</span></p>
+            <p>Арендный центр «Шушары Юг»,<br><span>Московское шоссе, д. 181A</span></p>
+            <div class="phone">
+                <div><img src="img/phone-header.png" alt=""></div>
+                <p>+7 (812)<span> 946-74-04</span><br><a href="" data-remodal-target="modal">Заказать звонок</a></p>
+            </div>
+        </div>
+        <nav>
+            <ul class="mobile-menu1">
+                <li><a href="">О компании</a></li>
+                <li><a href="">Каталог</a></li>
+                <li><a href="">Условия работы</a></li>
+                <li><a href="">Доставка и оплата</a></li>
+                <li><a href="">Ремонт</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+            <div class="box">
+                <div class="container-search">
+                    <input type="search" id="search" placeholder="Поиск"/>
+                    <button class="icon"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="breadcrumbs-category">
+        <div class="container">
+            <ul id="breadcrumbs2">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#" class="current">О компании</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="main-info">
+        <div class="container">
+            <div class="left">
+                <img src="img/boss.jpg" alt="">
+            </div>
+            <div class="right">
+                <h1>Компания Силоват</h1>
+                <p>Компания SILOVAT предлагает прокат строительного инструмента в Петербурге на самых выгодных условиях,
+                    одно из которых м разные тарифы при разных сроках найма. У нас самый полный перечень оборудования,
+                    среди
+                    которого Вы всегда найдете то, что Вам нужно именно сейчас для строительства.</p>
+                <p>Кроме этого, Вы получаете настоящий европейский сервис, который предлагает наша компания. Уже при
+                    первом
+                    звонке по телефону +7 812 946-74-04 менеджер поможет определиться с инструментом или оборудованием
+                    для
+                    быстрого и качественного проведения необходимых работ и предложит несколько вариантов инструмента на
+                    ваш
+                    выбор. Среди них вы обязательно выберете тот, который будет отвечать требованиям к цене и качеству.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="history">
+
+    </section>
+    <section class="team">
+        <div class="leaders">
+            <div class="container">
+                <div class="item">
+                    <img src="img/employee-photo.png" alt="">
+                    <div><h5>Руководитель</h5>
+                        <p>Иванова Мария Сергеевна</p>
+                        <p>Телефон: <a href="tel:78129467404">+7 812 <span>946-74-04</span></a></p>
+                        <p>E-mail: <a href="mailto:silovat-rent@mail.ru">silovat-rent@mail.ru</a></p>
+                        <p>Стаж: 5 лет</p></div>
+                </div>
+                <div class="item">
+                    <img src="img/employee-photo.png" alt="">
+                    <div><h5>Менеджер по аренде</h5>
+                        <p>Иванова Мария Сергеевна</p>
+                        <p>Телефон: <a href="tel:78129467404">+7 812 <span>946-74-04</span></a></p>
+                        <p>E-mail: <a href="mailto:silovat-rent@mail.ru">silovat-rent@mail.ru</a></p>
+                        <p>Стаж: 5 лет</p></div>
+                </div>
+                <div class="item">
+                    <img src="img/employee-photo.png" alt="">
+                    <div><h5>Руководитель отдела доставки</h5>
+                        <p>Иванова Мария Сергеевна</p>
+                        <p>Телефон: <a href="tel:78129467404">+7 812 <span>946-74-04</span></a></p>
+                        <p>E-mail: <a href="mailto:silovat-rent@mail.ru">silovat-rent@mail.ru</a></p>
+                        <p>Стаж: 5 лет</p></div>
+                </div>
+                <div class="item">
+                    <img src="img/employee-photo.png" alt="">
+                    <div><h5>Бухгалтер</h5>
+                        <p>Иванова Мария Сергеевна</p>
+                        <p>Телефон: <a href="tel:78129467404">+7 812 <span>946-74-04</span></a></p>
+                        <p>E-mail: <a href="mailto:silovat-rent@mail.ru">silovat-rent@mail.ru</a></p>
+                        <p>Стаж: 5 лет</p></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-info">
+        <div class="container">
+            <div class="left">
+                <img src="img/co-working.jpg" alt="">
+            </div>
+            <div class="right">
+                <h3>Сотрудничество</h3>
+                <p>Все сдаваемые в аренду виброплиты и вибротрамбовки регулярно проходит контроль технического состояния
+                    и регулярно обслуживается для сведения к минимуму возможности выхода оборудования из строя на
+                    объекте во время работы.</p>
+                <p>Чем выше плотность основной подстилающей подушки, тем лучше на ней держится конструкция. Раньше
+                    фундаменты зданий и грунт под ним «отдыхали» около полугода, но современные темпы делают невозможным
+                    такой простой. Поэтому современные строители используют виброплиты и вибротрамбовки.
+                    Вибрационно-ударная обработка — самый эффективный способ уплотнения грунта и подложки. Там, где
+                    применение вибокатков нецелесообразно или невозможно, приоритет отдается менее громоздким и более
+                    маневренным виброплитам и вибротрамбовкам.</p>
+                <p>Аренда виброплит востребована в обустройстве дорог и строительстве: ими уплотняют грунт, трамбуют
+                    асфальт на тротуарах и в других ограниченных по площади и труднодоступных местах. </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="reviews">
+        <div class="container">
+            <h2>Отзывы</h2>
+            <div class="tabs-reviews">
+                <input type="radio" name="tabs-reviews" id="tabone2" checked="checked">
+                <label for="tabone2">Благодарности</label>
+                <div class="tab">
+                    <div class="owl-carousel owl-one owl-theme">
+                        <div class="item">
+                            <div class="left">
+                                <img src="img/rewiews-person.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <p class="name">Владимир Иванович</p>
+                                <span>Директор «Организация»</span>
+                                <p>«В наши дни моторизованная садовая техника для ухода за приусадебными участками
+                                    получает все большее распространение»</p>
+                                <img src="img/signature.png" alt="">
+                                <img src="img/letter.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <img src="img/rewiews-person.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <p class="name">Владимир Иванович</p>
+                                <span>Директор «Организация»</span>
+                                <p>«В наши дни моторизованная садовая техника для ухода за приусадебными участками
+                                    получает все большее распространение»</p>
+                                <img src="img/signature.png" alt="">
+                                <img src="img/letter.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <img src="img/rewiews-person.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <p class="name">Владимир Иванович</p>
+                                <span>Директор «Организация»</span>
+                                <p>«В наши дни моторизованная садовая техника для ухода за приусадебными участками
+                                    получает все большее распространение»</p>
+                                <img src="img/signature.png" alt="">
+                                <img src="img/letter.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="radio" name="tabs-reviews" id="tabtwo2">
+                <label for="tabtwo2">Видео отзывы</label>
+                <div class="tab">
+                    <div class="owl-carousel owl-one owl-theme">
+                        <div class="item">
+                            <div class="left">
+                                <img src="img/rewiews-person.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <p class="name">Владимир Иванович</p>
+                                <span>Директор «Организация»</span>
+                                <p>«В наши дни моторизованная садовая техника для ухода за приусадебными участками
+                                    получает все большее распространение»</p>
+                                <img src="img/signature.png" alt="">
+                                <img src="img/letter.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <img src="img/rewiews-person.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <p class="name">Владимир Иванович</p>
+                                <span>Директор «Организация»</span>
+                                <p>«В наши дни моторизованная садовая техника для ухода за приусадебными участками
+                                    получает все большее распространение»</p>
+                                <img src="img/signature.png" alt="">
+                                <img src="img/letter.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="left">
+                                <img src="img/rewiews-person.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <p class="name">Владимир Иванович</p>
+                                <span>Директор «Организация»</span>
+                                <p>«В наши дни моторизованная садовая техника для ухода за приусадебными участками
+                                    получает все большее распространение»</p>
+                                <img src="img/signature.png" alt="">
+                                <img src="img/letter.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback-form">
+        <div class="dark-bg"></div>
+        <div class="container">
+            <div class="feedback">
+                <h3>Остались вопросы?</h3>
+                <p>Оставьте ваши контактные данные и наш мененджер свяжется с вами в течении 30 секунд
+                </p>
+                <form action="">
+                    <div class="left">
+                        <div><i class="fa fa-user" aria-hidden="true"></i><input name="name" id="name" type="text"
+                                                                                 class="callback-input"
+                                                                                 placeholder="Имя"/></div>
+                        <div><i class="fa fa-phone" aria-hidden="true"></i><input name="phone" id="phone" type="text"
+                                                                                  class="callback-input"
+                                                                                  placeholder="Телефон"/></div>
+                        <div><i class="fa fa-envelope" aria-hidden="true"></i><input name="phone" id="email" type="text"
+                                                                                     class="callback-input"
+                                                                                     placeholder="E-mail"/></div>
+                    </div>
+                    <div class="right">
+                        <textarea name="" id="" cols="30" rows="8" placeholder="Сообщение"></textarea>
+                    </div>
+                    <div class="wrap">
+                        <input type="submit" value="Отправить"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer>
+    <div class="container">
+        <div class="menu-bottom">
+            <ul>
+                <li><a href="">Каталог</a></li>
+                <li><a href="">О компании</a></li>
+                <li><a href="">Условия работы</a></li>
+                <li><a href="">Доставка и оплата</a></li>
+                <li><a href="">Ремонт</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="time-bottom">
+            <p>Понедельник-пятница: <br>с <strong>9:00</strong> до <strong>18:00</strong></p>
+            <p>Суббота: <br>с <strong>10:00</strong> до <strong>16:00</strong></p>
+            <p>Воскресенье: <strong class="weekend">выходной</strong></p>
+        </div>
+        <div class="contacts-bottom">
+            <a href="tel:78129467404">+7 (812) 946-74-04</a>
+            <p>Арендный центр «Парголово Север»
+                СПб, Выборгское шоссе, д. 226</p>
+            <a href="tel:78129467404">+7 (812) 946-74-04</a>
+            <p>Арендный центр «Шушары Юг»
+                СПб, Московское шоссе, д. 181A</p>
+        </div>
+        <div class="social-bottom">
+            <div id="vk_groups"></div>
+            <script type="text/javascript">
+                VK.Widgets.Group("vk_groups", {mode: 3, width: "330"}, 20003922);
+            </script>
+            <div>
+                <a><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Компания «Силоват» 2011—2016</p>
+            <p>Комплексный интернет маркетинг - <a href="">Wide-Web</a></p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
