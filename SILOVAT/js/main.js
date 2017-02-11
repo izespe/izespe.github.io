@@ -8,11 +8,27 @@ $(document).ready(function () {
         margin: 10,
         nav: true,
         items: 1,
-        navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
+        navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
+        responsive: {
+            0: {
+                nav: false
+            },
+            620: {
+                nav: true
+            }
+        }
     });
     $('.owl-card').owlCarousel({
         loop: true,
-        items: 1
+        items: 1,
+        responsive: {
+            0: {
+                nav: false
+            },
+            620: {
+                nav: true
+            }
+        }
 });
 
     $('.owl-four').owlCarousel({
@@ -24,12 +40,13 @@ $(document).ready(function () {
         navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: false
             },
-            600: {
-                items: 3
+            620: {
+                items: 2
             },
-            1000: {
+            1025: {
                 items: 4
             }
         }
@@ -45,6 +62,24 @@ $(document).ready(function () {
         $('#tabs-nav li').removeClass('active');
         $(this).addClass('active');
         $('.content').hide();
+
+        var activeTab = $(this).find('a').attr('href');
+        $(activeTab).fadeIn();
+        return false;
+
+    });
+
+
+    // show first content by default
+    $('#tabs-nav-map li:first-child').addClass('active');
+    $('.content-map').hide();
+    $('.content-map:first').show();
+
+    // click function
+    $('#tabs-nav-map li').click(function(){
+        $('#tabs-nav-map li').removeClass('active');
+        $(this).addClass('active');
+        $('.content-map').hide();
 
         var activeTab = $(this).find('a').attr('href');
         $(activeTab).fadeIn();

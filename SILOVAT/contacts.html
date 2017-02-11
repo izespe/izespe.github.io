@@ -76,20 +76,34 @@
             </div>
         </div>
         <nav>
-            <ul class="mobile-menu1">
-                <li><a href="">О компании</a></li>
-                <li><a href="">Каталог</a></li>
-                <li><a href="">Условия работы</a></li>
-                <li><a href="">Доставка и оплата</a></li>
-                <li><a href="">Ремонт</a></li>
-                <li><a href="">Контакты</a></li>
-            </ul>
-            <div class="box">
-                <div class="container-search">
-                    <input type="search" id="search" placeholder="Поиск"/>
-                    <button class="icon"><i class="fa fa-search"></i></button>
-                </div>
+            <div id="menu">
+                <ul class="mobile-menu1">
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Каталог</a></li>
+                    <li><a href="">Условия работы</a></li>
+                    <li><a href="">Доставка и оплата</a></li>
+                    <li><a href="">Ремонт</a></li>
+                    <li><a href="">Контакты</a></li>
+                    <div class="box">
+                        <div class="container-search">
+                            <input type="search" id="search" placeholder="Поиск"/>
+                            <button class="icon"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </ul>
+                <script>
+
+
+                    $('ul.mobile-menu1').click(function(){
+                        $(".mobile-menu1 > li").toggleClass("open-menu");
+                        $(".mobile-menu1 > div").toggleClass("open-menu");
+                    });
+
+
+                </script>
             </div>
+
+
         </nav>
     </div>
 </header>
