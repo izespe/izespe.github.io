@@ -7,15 +7,59 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/remodal.css" rel="stylesheet">
+    <link href="css/remodal-default-theme.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?137"></script>
+    <script type="text/javascript" src="js/remodal.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
 </head>
 <body>
+<div class="remodal-bg">
+</div>
+<div class="remodal" data-remodal-id="modal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <div class="callback">
+        <div class="header">
+            <img src="img/form-man.png" alt="">
+            <p>Арендовать можно по телефону:</p>
+            <a href="tel:78129467404">+7 (812) <span>946-74-04</span></a>
+            <span class="or">или</span>
+        </div>
+        <form action="" id="qwerty">
+            <p>Оставьте ваши контактные данные и наш мененджер свяжется с вами в течении 30 секунд
+            </p>
+            <div><i class="fa fa-user" aria-hidden="true"></i><input name="name" id="name" type="text" class="callback-input" placeholder="Имя"/></div>
+            <div><i class="fa fa-phone" aria-hidden="true"></i><input name="phone" id="phone" type="text" class="callback-input" placeholder="Телефон"/></div>
+            <input type="submit" value="Отправить"/>
+        </form>
+    </div>
+</div>
+<div class="remodal modal-cat" data-remodal-id="modal2">
+    <ul>
+        <li class="current"><div><img src="img/cat/1.png" alt=""></div><a href="">Аренда <br>виброплит</a></li>
+        <li><div><img src="img/cat/2.png" alt=""></div><a href="">Аренда <br>генераторов</a></li>
+        <li><div><img src="img/cat/3.png" alt=""></div><a href="">Аренда <br>бензорезов</a></li>
+        <li><div><img src="img/cat/4.png" alt=""></div><a href="">Аренда <br>культиваторов</a></li>
+        <li><div><img src="img/cat/5.png" alt=""></div><a href="">Аренда <br>насосов, мотопомп</a></li>
+        <li><div><img src="img/cat/6.png" alt=""></div><a href="">Аренда <br>ямобуров</a></li>
+        <li><div><img src="img/cat/7.png" alt=""></div><a href="">Аренда <br>бетономешалок</a></li>
+        <li><div><img src="img/cat/8.png" alt=""></div><a href="">Аренда <br>сварочных аппаратов</a></li>
+        <li><div><img src="img/cat/9.png" alt=""></div><a href="">Аренда <br>штроборезов</a></li>
+        <li><div><img src="img/cat/10.png" alt=""></div><a href="">Аренда <br>тепловых пушек</a></li>
+        <li><div><img src="img/cat/11.png" alt=""></div><a href="">Аренда <br>вибраторов для бетона</a></li>
+        <li><div><img src="img/cat/12.png" alt=""></div><a href="">Аренда <br>отбойных молотков</a></li>
+        <li><div><img src="img/cat/13.png" alt=""></div><a href="">Аренда <br>перфораторов</a></li>
+        <li><div><img src="img/cat/14.png" alt=""></div><a href="">Аренда <br>бензопил</a></li>
+        <li><div><img src="img/cat/15.png" alt=""></div><a href="">Аренда <br>пылесосов</a></li>
+        <li><div><img src="img/cat/16.png" alt=""></div><a href="">Аренда <br>Снегоуборщиков</a></li>
+    </ul>
+    <button data-remodal-action="cancel" class="remodal-cancel">Отмена</button>
+</div>
 <header>
     <div class="container">
         <div>
@@ -72,7 +116,21 @@
     <section class="main-content-category">
         <div class="container">
             <aside>
-                <div><i class="fa fa-bars" aria-hidden="true"></i>Каталог</div>
+
+                <div class="nav-bottom"><a href="" data-remodal-target="modal2"><i class="fa fa-bars" aria-hidden="true"></i>Каталог</a></div>
+
+                <script>
+                    var prev = 0;
+                    var $window = $(window);
+                    var nav = $('.nav-bottom');
+
+                    $window.on('scroll', function(){
+                        var scrollTop = $window.scrollTop();
+                        nav.toggleClass('hidden', scrollTop > prev);
+                        prev = scrollTop;
+                    });
+                </script>
+
                 <ul>
                     <li class="current"><div><img src="img/cat/1.png" alt=""></div><a href="">Аренда <br>виброплит</a></li>
                     <li><div><img src="img/cat/2.png" alt=""></div><a href="">Аренда <br>генераторов</a></li>
@@ -126,7 +184,7 @@
                                 <span>3 000 <i class="fa fa-rub"></i></span>
                             </div>
                         </div>
-                        <button>Арендовать</button>
+                        <button data-remodal-target="modal">Арендовать</button>
                     </div>
                     <div class="item">
                         <div class="photo">
@@ -159,7 +217,7 @@
                                 <span>3 000 <i class="fa fa-rub"></i></span>
                             </div>
                         </div>
-                        <button>Арендовать</button>
+                        <button data-remodal-target="modal">Арендовать</button>
                     </div>
                     <div class="item">
                         <div class="photo">
@@ -192,7 +250,7 @@
                                 <span>3 000 <i class="fa fa-rub"></i></span>
                             </div>
                         </div>
-                        <button>Арендовать</button>
+                        <button data-remodal-target="modal">Арендовать</button>
                     </div>
                     <div class="item">
                         <div class="photo">
@@ -225,7 +283,7 @@
                                 <span>3 000 <i class="fa fa-rub"></i></span>
                             </div>
                         </div>
-                        <button>Арендовать</button>
+                        <button data-remodal-target="modal">Арендовать</button>
                     </div>
                     <div class="item">
                         <div class="photo">
@@ -258,7 +316,7 @@
                                 <span>3 000 <i class="fa fa-rub"></i></span>
                             </div>
                         </div>
-                        <button>Арендовать</button>
+                        <button data-remodal-target="modal">Арендовать</button>
                     </div>
                 </div>
             </section>

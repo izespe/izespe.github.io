@@ -14,21 +14,16 @@ $(document).ready(function () {
                 nav: false
             },
             620: {
-                nav: true
+                nav: true,
+                navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"]
             }
         }
     });
     $('.owl-card').owlCarousel({
         loop: true,
         items: 1,
-        responsive: {
-            0: {
-                nav: false
-            },
-            620: {
-                nav: true
-            }
-        }
+        nav: false
+
 });
 
     $('.owl-four').owlCarousel({
