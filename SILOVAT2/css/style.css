@@ -5145,7 +5145,8 @@ ul#breadcrumbs {
           align-items: center;
           border-bottom: 1px solid #f4f4f4;
           background: white;
-          border-top: 1px solid #f4f4f4; }
+          border-top: 1px solid #f4f4f4;
+          pointer-events: auto; }
           header nav #menu ul > div .container-search {
             width: 100%; }
         header nav #menu ul li {
@@ -5159,7 +5160,8 @@ ul#breadcrumbs {
           display: none;
           padding: 0;
           background: white;
-          border-top: 1px solid #f4f4f4; }
+          border-top: 1px solid #f4f4f4;
+          pointer-events: auto; }
           header nav #menu ul li:after {
             display: none; }
           header nav #menu ul li a {

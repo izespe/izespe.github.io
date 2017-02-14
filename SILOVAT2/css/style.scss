@@ -6013,6 +6013,7 @@ ul#breadcrumbs {
             border-bottom: 1px solid #f4f4f4;
             background: white;
             border-top: 1px solid #f4f4f4;
+            pointer-events: auto;
             .container-search {
               width: 100%;
             }
@@ -6029,7 +6030,7 @@ ul#breadcrumbs {
             padding: 0;
             background: white;
             border-top: 1px solid $light-gray;
-
+            pointer-events: auto;
             &:after {
               display: none;
             }
