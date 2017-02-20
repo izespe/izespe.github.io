@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+<header>
+    <section class="header">
+        <div class="container">
+            <div class="social">
+                <a href=""><i class="icon-facebook"></i></a>
+                <a href=""><i class="icon-VK"></i></a>
+            </div>
+            <a href="#"><img src="../img/logo.png" alt=""></a>
+            <div class="languages">
+                <a href="" class="active">RU</a><i>|</i><a href="">EN</a>
+            </div>
+        </div>
+    </section>
+    <section class="navigation">
+        <div class="nav-container">
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <li><a href="#!" class="cool-link">Кафе и рестораны</a></li>
+
+                    <li class="dropdown cool-link"><a href="#!">Гостиницы</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="#">Гостиница «Молодежная»</a></li>
+                            <li><a href="#">Эко-комплекс «Chalet GreenWood»</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#!" class="cool-link">События</a></li>
+                    <li><a href="#!" class="cool-link">Программы лояльности</a></li>
+                    <li><a href="#!" class="cool-link">Вакансии</a></li>
+                    <li><a href="#!" class="cool-link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+</header>
+<main>
+    <section class="gallery">
+        <div class="container">
+            <div class="head">
+                <h1>Вакансии </h1>
+                <p>Команда Санта Рест— это эксклюзивная работа, уникальные люди и насыщенная жизнь! Мы верим, что работа
+                    должна приносить удовольствие и новые впечатления. Присоединяйтесь к нашей команде!</p>
+            </div>
+            <div class="owl-carousel ">
+                <div class="item">
+
+                    <img src="../img/hotel-slide1.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide2.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide3.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide1.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide2.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide3.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+            </div>
+            <script>
+                $('.owl-carousel').owlCarousel({
+                    stagePadding: 200,
+                    loop: true,
+                    margin: 0,
+                    items: 1,
+                    lazyLoad: true,
+                    nav: true,
+                    dots: true,
+                    navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right' aria-hidden='true'></i>"],
+                    responsive: {
+                        0: {
+                            items: 1,
+                            stagePadding: 60
+                        },
+                        600: {
+                            items: 1,
+                            stagePadding: 100
+                        },
+                        1000: {
+                            items: 1,
+                            stagePadding: 200
+                        },
+                        1200: {
+                            items: 1,
+                            stagePadding: 250
+                        },
+                        1400: {
+                            items: 1,
+                            stagePadding: 300
+                        },
+                        1600: {
+                            items: 1,
+                            stagePadding: 350
+                        },
+                        1800: {
+                            items: 1,
+                            stagePadding: 420
+                        }
+                    }
+                })
+            </script>
+        </div>
+    </section>
+    <section class="career-list">
+        <div class="container">
+            <h2>Наши вакансии</h2>
+            <div class="select-wrapper">
+                <select name="" id="radiusSelect">
+                    <option value="">Написать директору</option>
+                    <option value="">Написать директору</option>
+                    <option value="">Написать директору</option>
+                </select>
+            </div>
+            <ul class="accordion">
+                <li>
+                    <a>
+                        <p>Официант
+                            <span>Times Cafe</span>
+                        </p>
+                        Зарплата не указана
+                    </a>
+                    <div>
+                        <p>Требования:</p>
+                        <ul>
+                            <li>Стаж работы не менее 3-х лет</li>
+                            <li>Опыт руководства коллективом</li>
+                            <li>Знание технологического и торгового оборудования, используемого на предприятиях  общественного питания;</li>
+                            <li>Знание технологии процесса приготовления продукции;</li>
+                            <li>Знание ХАССП;</li>
+                            <li>Отличные коммуникационные навыки и высокая адаптивность</li>
+                       </ul>
+                        <p>Обязанности:</p>
+                        <ul>
+                            <li>Контроль качества производимой продукции, соблюдение норм закладки сырья, технологии и выхода готовой продукции</li>
+                            <li>Контроль качества входящего сырья и полуфабрикатов</li>
+                            <li>Контроль правильной эксплуатации оборудования, инвентаря и других материальных средств</li>
+                            <li>Контроль соблюдения работниками правил и норм охраны труда и техники безопасности, санитарных норм, производственной и трудовой дисциплины</li>
+                            <li>Контроль санитарного состояния, маркировки, хранения сырья и полуфабрикатов</li>
+                            <li>Проведение инвентаризации остатков сырья и готовой продукции</li>
+                            <li>Составление заявок на необходимые товары, полуфабрикаты и сырье, обеспечение их своевременного получения со склада</li>
+                        </ul>
+                        <p>Условия работы:</p>
+                        <ul>
+                            <li>Стаж работы не менее 3-х лет</li>
+                            <li>Опыт руководства коллективом</li>
+                            <li>Знание технологического и торгового оборудования, используемого на предприятиях  общественного питания;</li>
+                            <li>Знание технологии процесса приготовления продукции;</li>
+                            <li>Знание ХАССП;</li>
+                            <li>Отличные коммуникационные навыки и высокая адаптивность</li>
+                        </ul>
+                        <p>Контактные данные:</p>
+                        <span>Контактное лицо: <span>Рак Татьяна Аркадьевна</span></span>
+                        <span>Телефон: 	<span>8 (0162) 209324</span></span>
+                       <span> E-mail:  <span>lawer@rest.santa.by</span></span>
+
+                    </div>
+                </li>
+                <li>
+                    <a>
+                        <p>Официант
+                            <span>Times Cafe</span>
+                        </p>
+                        Зарплата не указана
+                    </a>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsum, fuga, in,
+                        obcaecati magni ullam nobis voluptas fugiat tenetur voluptatum quas tempora maxime rerum neque
+                        deserunt suscipit provident cumque et mollitia ex aspernatur porro minus sapiente voluptatibus
+                        eos at perferendis repellat odit aliquid harum molestias ratione pariatur adipisci. Aliquid,
+                        iure.
+                    </div>
+                </li>
+                <li>
+                    <a>
+                        <p>Официант
+                            <span>Times Cafe</span>
+                        </p>
+                        Зарплата не указана
+                    </a>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsum, fuga, in,
+                        obcaecati magni ullam nobis voluptas fugiat tenetur voluptatum quas tempora maxime rerum neque
+                        deserunt suscipit provident cumque et mollitia ex aspernatur porro minus sapiente voluptatibus
+                        eos at perferendis repellat odit aliquid harum molestias ratione pariatur adipisci. Aliquid,
+                        iure.
+                    </div>
+                </li>
+            </ul> <!-- / accordion -->
+        </div>
+        <script>
+            (function ($) {
+                $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+
+                $('.accordion a').click(function (j) {
+                    var dropDown = $(this).closest('li').find('div');
+
+                    $(this).closest('.accordion').find('div').not(dropDown).slideUp();
+
+                    if ($(this).hasClass('active')) {
+                        $(this).removeClass('active');
+                    } else {
+                        $(this).closest('.accordion').find('a.active').removeClass('active');
+                        $(this).addClass('active');
+                    }
+
+                    dropDown.stop(false, true).slideToggle();
+
+                    j.preventDefault();
+                });
+            })(jQuery);
+        </script>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2016 Санта-Рест</p>
+        <p>Комплексный интернет маркетинг - <a href="">"Wide-Web"</a></p>
+    </div>
+</footer>
+</body>
+</html>
