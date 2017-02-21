@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58a24a94222bfcbf"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+<header>
+    <section class="header">
+        <div class="container">
+            <div class="social">
+                <a href=""><i class="icon-facebook"></i></a>
+                <a href=""><i class="icon-VK"></i></a>
+            </div>
+            <a href="#"><img src="../img/logo.png" alt=""></a>
+            <div class="languages">
+                <a href="" class="active">RU</a><i>|</i><a href="">EN</a>
+            </div>
+        </div>
+    </section>
+    <section class="navigation">
+        <div class="nav-container">
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <li><a href="#!" class="cool-link">Кафе и рестораны</a></li>
+
+                    <li class="dropdown cool-link"><a href="#!">Гостиницы</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="#">Гостиница «Молодежная»</a></li>
+                            <li><a href="#">Эко-комплекс «Chalet GreenWood»</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#!" class="cool-link">События</a></li>
+                    <li><a href="#!" class="cool-link">Программы лояльности</a></li>
+                    <li><a href="#!" class="cool-link">Вакансии</a></li>
+                    <li><a href="#!" class="cool-link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+</header>
+<main>
+    <section class="contacta-main-info">
+        <div class="container">
+            <h1>Контакты</h1>
+            <div class="wrapper">
+                <div class="info">
+                    <div class="tabs">
+                        <input type="radio" name="tabs" id="tabone" checked="checked">
+                        <label for="tabone">Как нас найти</label>
+                        <div class="tab">
+                            <div>
+                                <i class="icon-phone"></i>
+                                <span>Телефон:</span>
+                                <p>+375162 207176</p>
+                            </div>
+                            <div>
+                                <i class="icon-address"></i>
+                                <span>Адрес:</span>
+                                <p> г. Брест<br> ул. Советская, 30</p>
+                            </div>
+                            <div>
+                                <i class="icon-address"></i>
+                                <span>E-mail:</span>
+                                <p>Santarest@mail.ru</p>
+                            </div>
+                        </div>
+
+                        <input type="radio" name="tabs" id="tabtwo">
+                        <label for="tabtwo">Юридический адрес</label>
+                        <div class="tab">
+                            <div>
+                                <i class="icon-phone"></i>
+                                <span>Телефон:</span>
+                                <p>+375162 207176</p>
+                            </div>
+                            <div>
+                                <i class="icon-address"></i>
+                                <span>Адрес:</span>
+                                <p> г. Брест <br>ул. Советская, 30</p>
+                            </div>
+                            <div>
+                                <i class="icon-address"></i>
+                                <span>E-mail:</span>
+                                <p>Santarest@mail.ru</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form">
+                    <span>Появились вопросы?</span>
+                    <p>Напишите нам и наш менеджер <br>свяжется с Вами в течении 30 секунд</p>
+                    <form action="">
+                        <div class="select-wrapper">
+                            <select name="" id="radiusSelect">
+                                <option value="">Написать директору</option>
+                                <option value="">Написать директору</option>
+                                <option value="">Написать директору</option>
+                            </select>
+                        </div>
+                        <input type="text" placeholder="Ваше имя">
+                        <input type="tel" placeholder="Телефон">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                        <button type='submit' class="large-btn">Отправить<i class='icon-arr-right'></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="map"></section>
+    <script type="text/javascript">
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 18,
+                center: {lat: 52.098502,  lng: 23.685345}
+            });
+
+            var image = '../img/sr-map-pointer.png';
+            var beachMarker = new google.maps.Marker({
+                position: {lat: 52.098502,  lng: 23.685345},
+                map: map,
+                icon: image
+            });
+        }
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt3Iy5bTIj6BTKaauvbQTwUg06Cu7Zksk&callback=initMap">
+    </script>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2016 Санта-Рест</p>
+        <p>Комплексный интернет маркетинг - <a href="">"Wide-Web"</a></p>
+    </div>
+</footer>
+</body>
+</html>
