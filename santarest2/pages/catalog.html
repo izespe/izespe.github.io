@@ -3,49 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Каталог</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+
     <link rel="stylesheet" href="../css/main.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
     <script src="../js/main.js"></script>
 </head>
 <body>
+<div class="remodal-bg">
+
+</div>
+<div class="remodal" data-remodal-id="modal">
+    <div class="head">
+        <span>Бронирование</span>
+        <a data-remodal-action="close" class="icon-close"></a>
+
+    </div>
+
+    <form action="">
+        <div class="left">
+            <input type="text" placeholder="Дата">
+            <input type="text" placeholder="Время">
+            <input type="text" placeholder="Количество гостей">
+            <div class="select-wrapper">
+                <select name="" id="radiusSelect1">
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                </select>
+            </div>
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Имя">
+            <input type="tel" placeholder="Телефон">
+            <textarea name="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+        </div>
+
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm" ><i class="icon-book"></i>Забронировать</button>
+
+
+    </form>
+
+</div>
 <header>
     <section class="header">
         <div class="container">
-            <div class="social">
-                <a href=""><i class="icon-facebook"></i></a>
-                <a href=""><i class="icon-VK"></i></a>
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
             </div>
             <a href="#"><img src="../img/logo.png" alt=""></a>
             <div class="languages">
-                <a href="" class="active">RU</a><i>|</i><a href="">EN</a>
+                <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
             </div>
         </div>
     </section>
     <section class="navigation">
         <div class="nav-container">
-            <nav>
-                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-                <ul class="nav-list">
-                    <li><a href="#!" class="cool-link">Кафе и рестораны</a></li>
+            <nav class="menu" id="main-nav">
+                <!--  this is the mobile menu button -->
+                <a href="#" id="mobileButton" class="mobileMenuButton"><i class="icon-menu"></i></a>
+                <!--  this is the menu -->
+                <ul class="listMenu nav-list">
+                    <li><a href="../pages/catalog.html" class="cool-link">Кафе и рестораны</a></li>
 
-                    <li class="dropdown cool-link"><a href="#!">Гостиницы</a>
+                    <li class="dropdown"><a href="#">Гостиницы</a>
                         <ul class="nav-dropdown">
-                            <li><a href="#">Гостиница «Молодежная»</a></li>
-                            <li><a href="#">Эко-комплекс «Chalet GreenWood»</a></li>
+                            <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная»</a></li>
+                            <li><a href="../pages/cart-hotel.html">Эко-комплекс «Chalet GreenWood»</a></li>
                         </ul>
                     </li>
-                    <li><a href="#!" class="cool-link">События</a></li>
-                    <li><a href="#!" class="cool-link">Программы лояльности</a></li>
-                    <li><a href="#!" class="cool-link">Вакансии</a></li>
-                    <li><a href="#!" class="cool-link">Контакты</a></li>
+                    <li><a href="../pages/events.html" class="cool-link">События</a></li>
+                    <li><a href="../pages/discount.html" class="cool-link">Программы лояльности</a></li>
+                    <li><a href="../pages/career.html" class="cool-link">Вакансии</a></li>
+                    <li><a href="../pages/contacts.html" class="cool-link">Контакты</a></li>
+
                 </ul>
             </nav>
         </div>
+        <div class="mobileMenu slideOut">
+
+            <div class="head">
+                <a href="#"><img src="../img/logo.png" alt=""></a>
+                <span class="close"><i class="icon-close"></i></span>
+            </div>
+
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <div class="languages">
+                <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+            </div>
+
+            <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+        </div>
+
+        <div class="mobileMenu2 slideOut">
+
+            <div class="head">
+                <a href="#"><img src="../img/logo.png" alt=""></a>
+                <span class="close2"><i class="icon-close"></i></span>
+            </div>
+            <ul>
+                <li class="back-to-main-menu"><a href="#"><i class="icon-arr-left"></i>Гостиницы</a></li>
+                <li><a href="../pages/cart-hotel.html">Chalet GreenWood</a></li>
+                <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная</a></li>
+            </ul>
+
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <div class="languages">
+                <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+            </div>
+
+            <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+        </div>
+
+        <script>
+            // var settings ****************************************************
+            var $header = $('header');
+            var $brand = $('.branding');
+            var $logoLG = $('.logo-lg');
+            var $logoSM = $('.logo-sm');
+            var $overlay = $('<div class="overlay-menu"></div>');
+            var $menu = $('.mobileMenu');
+            var $ul = $('<ul></ul>');
+            // code setting  (mobile menu )*************************************
+
+
+            // 01. append overlay div (see overlay var) to body
+            $("body").append($overlay);
+
+            // 02. lock page scroll whe the mobile menu is active, Given a jQuery object that represents a set of DOM elements, the .add() method constructs a new jQuery object from the union of those elements and the ones passed into the method.
+            $overlay.add($menu).on('scroll touchmove mousewheel', function (event) {
+                event.preventDefault();
+            });
+
+            // 03. on mobile button press, slide menu in and show overlay
+            $('#mobileButton').click(function (event) {
+                event.preventDefault();
+                //Show the overlay and we add some opacity animation
+                $overlay.show().animate({opacity: 0.8,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+            // 04. on overlay click, close menu and hide overlay
+            $overlay.click(function () {
+                //Hide the overlay and set opacity to 0
+                $overlay.hide().animate({opacity: 0,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+            $('.close').click(function (event) {
+                //Hide the overlay and set opacity to 0
+                $overlay.hide().animate({opacity: 0,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+
+            // 05. obtain menu links from .listMenu and copy them to the mobile menu (Traversing the DOM)
+            $menu.append($ul);
+            $('.listMenu a').each(function () {
+                var $anchor = $(this);
+                var $li = $('<li></li>');
+                $anchor.clone().appendTo($li);
+                $ul.append($li);
+            });
+
+            // 06. we add the class stick to the fixed header to change his appearance and the apparence of their content on scroll
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $($header).addClass("stick");
+                    $($brand).addClass('stick')
+                    $($logoLG).hide();
+                    $($logoSM).show();
+                }
+                else {
+                    $($header).removeClass("stick");
+                    $($brand).removeClass('stick');
+                    $($logoSM).hide();
+                    $($logoLG).show();
+                }
+            });
+
+            var $menu2 = $('.mobileMenu2');
+            $('.mobileMenu li:nth-child(2) ').addClass('submenu-hotels');
+
+            $('.submenu-hotels').click(function (event) {
+
+                $menu2.toggleClass("slideOut");
+            });
+
+            $('.close2').click(function (event) {
+                $menu2.toggleClass("slideOut");
+                $menu.toggleClass("slideOut");
+                $overlay.hide().animate({opacity: 0,}, 200);
+            });
+
+            $('.back-to-main-menu').click(function (event) {
+                $menu2.toggleClass("slideOut");
+            });
+        </script>
     </section>
 
 </header>
@@ -54,23 +225,32 @@
         <div class="container">
             <h1>Кафе и рестораны</h1>
         </div>
-        <section class="nav">
+        <section class="nav-cat">
             <div class="container">
                 <nav class="main-nav">
                     <a class="main-nav__item" href="#"><i class="icon-book"></i>Забронировать столик</a>
                     <a class="main-nav__item" href="#"><i class="icon-banket"></i>Банкетные залы</a>
                     <a class="main-nav__item" href="#"><i class="icon-corporate"></i>Корпоративы</a>
-                    <a class="main-nav__item" href="#"><i class="icon-birth"></i>Дни рождения</a>
-                    <button class="main-nav__item js-nav-more"><i class="more"></i>Все услуги</button>
+                    <a class="main-nav__item birth" href="#"><i class="icon-birth"></i>Дни рождения</a>
+                    <a class="main-nav__item js-nav-more"><i class="more"></i>Все услуги</a>
+                    <a class="main-nav__sub-item main-nav__sub js-sub-nav" href="#"><i class="icon-child"></i>Детский
+                        праздник</a>
+                    <a class="main-nav__sub-item main-nav__sub js-sub-nav" href="#"><i class="icon-anniversary"></i>Юбилей</a>
+                    <a class="main-nav__sub-item main-nav__sub js-sub-nav" href="#"><i class="icon-nc"></i>Новогодний
+                        корпоратив</a>
+                    <a class="main-nav__sub-item main-nav__sub js-sub-nav" href="#"><i class="icon-wedding"></i>Свадьба</a>
+                    <a class="main-nav__sub-item main-nav__sub js-sub-nav" href="#"><i class="icon-muse"></i>Живая
+                        музыка</a>
 
-                    <div class="main-nav__sub js-sub-nav">
-                        <a class="main-nav__sub-item" href="#"><i class="icon-child"></i>Детский праздник</a>
-                        <a class="main-nav__sub-item" href="#"><i class="icon-anniversary"></i>Юбилей</a>
-                        <a class="main-nav__sub-item" href="#"><i class="icon-nc"></i>Новогодний корпоратив</a>
-                        <a class="main-nav__sub-item" href="#"><i class="icon-wedding"></i>Свадьба</a>
-                        <a class="main-nav__sub-item" href="#"><i class="icon-muse"></i>Живая музыка</a>
-                    </div>
                 </nav>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        var w = $(window).width();
+                        if (w <= 1281) {
+                            $( ".birth" ).addClass("main-nav__sub-item main-nav__sub js-sub-nav").removeClass("main-nav__item");
+                        }
+                    });
+                </script>
             </div>
         </section>
     </section>
@@ -83,6 +263,8 @@
                     <div class="header">
                         <img src="../img/times-logo.png" alt="">
                         <h2>Times Cafe</h2>
+                        <a href="tel:375162207176" class="call circle button button-1"><i class="icon-phone"></i></a>
+
                     </div>
                     <ul class="info-list">
                         <li>
@@ -105,14 +287,18 @@
                             <span class="left">Кухня:</span>
                             <span class="right">Итальянская, средиземноморская</span>
                         </li>
-                        <li>
+                        <li class="address">
                             <span class="left">Адрес:</span>
                             <span class="right">г. Брест, ул. Советская, 30</span>
                         </li>
+                        <li class="today">
+                            <span class="left">Сегодня:</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
                     </ul>
                     <div class="bttns">
-                        <a href="" class="large-btn ico-left"><i class="icon-more"></i>Подробнее</a>
-                        <button class="large-btn ico-left filled"><i class="icon-book"></i>Забронировать</button>
+                        <a href="" class="large-btn ico-left button button-1" ><i class="icon-more"></i>Подробнее</a>
+                        <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"><i class="icon-book"></i>Забронировать</button>
                     </div>
                 </div>
             </div>
@@ -121,6 +307,8 @@
                     <div class="header">
                         <img src="../img/traktir-logo.png" alt="">
                         <h2>Трактир у озера</h2>
+                        <a href="tel:375162207176" class="call circle button button-1"><i class="icon-phone"></i></a>
+
                     </div>
                     <ul class="info-list">
                         <li>
@@ -143,14 +331,18 @@
                             <span class="left">Кухня:</span>
                             <span class="right">Итальянская, средиземноморская</span>
                         </li>
-                        <li>
+                        <li class="address">
                             <span class="left">Адрес:</span>
                             <span class="right">г. Брест, ул. Советская, 30</span>
                         </li>
+                        <li class="today">
+                            <span class="left">Сегодня:</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
                     </ul>
                     <div class="bttns">
-                        <a href="" class="large-btn ico-left"><i class="icon-more"></i>Подробнее</a>
-                        <button class="large-btn ico-left filled"><i class="icon-book"></i>Забронировать</button>
+                        <a href="" class="large-btn ico-left button button-1"><i class="icon-more"></i>Подробнее</a>
+                        <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"><i class="icon-book"></i>Забронировать</button>
                     </div>
                 </div>
                 <div class="photo"></div>
@@ -161,6 +353,8 @@
                     <div class="header">
                         <img src="../img/papi-logo.png" alt="">
                         <h2>PaPi</h2>
+                        <a href="tel:375162207176" class="call circle button button-1"><i class="icon-phone"></i></a>
+
                     </div>
                     <ul class="info-list">
                         <li>
@@ -183,14 +377,18 @@
                             <span class="left">Кухня:</span>
                             <span class="right">Итальянская, средиземноморская</span>
                         </li>
-                        <li>
+                        <li class="address">
                             <span class="left">Адрес:</span>
                             <span class="right">г. Брест, ул. Советская, 30</span>
                         </li>
+                        <li class="today">
+                            <span class="left">Сегодня:</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
                     </ul>
                     <div class="bttns">
-                        <a href="" class="large-btn ico-left"><i class="icon-more"></i>Подробнее</a>
-                        <button class="large-btn ico-left filled"><i class="icon-book"></i>Забронировать</button>
+                        <a href="" class="large-btn ico-left button button-1"><i class="icon-more"></i>Подробнее</a>
+                        <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"><i class="icon-book"></i>Забронировать</button>
                     </div>
                 </div>
             </div>
@@ -199,6 +397,8 @@
                     <div class="header">
                         <img src="../img/vern-logo.png" alt="">
                         <h2>Жюль Верн</h2>
+                        <a href="tel:375162207176" class="call circle button button-1"><i class="icon-phone"></i></a>
+
                     </div>
                     <ul class="info-list">
                         <li>
@@ -221,14 +421,18 @@
                             <span class="left">Кухня:</span>
                             <span class="right">Итальянская, средиземноморская</span>
                         </li>
-                        <li>
+                        <li class="address">
                             <span class="left">Адрес:</span>
                             <span class="right">г. Брест, ул. Советская, 30</span>
                         </li>
+                        <li class="today">
+                            <span class="left">Сегодня:</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
                     </ul>
                     <div class="bttns">
-                        <a href="" class="large-btn ico-left"><i class="icon-more"></i>Подробнее</a>
-                        <button class="large-btn ico-left filled"><i class="icon-book"></i>Забронировать</button>
+                        <a href="" class="large-btn ico-left button button-1"><i class="icon-more"></i>Подробнее</a>
+                        <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"><i class="icon-book"></i>Забронировать</button>
                     </div>
                 </div>
                 <div class="photo"></div>
@@ -239,6 +443,8 @@
                     <div class="header">
                         <img src="../img/grennwood-logo.png" alt="">
                         <h2>Chalet GreenWood</h2>
+                        <a href="tel:375162207176" class="call circle button button-1"><i class="icon-phone"></i></a>
+
                     </div>
                     <ul class="info-list">
                         <li>
@@ -261,14 +467,18 @@
                             <span class="left">Кухня:</span>
                             <span class="right">Итальянская, средиземноморская</span>
                         </li>
-                        <li>
+                        <li class="address">
                             <span class="left">Адрес:</span>
                             <span class="right">г. Брест, ул. Советская, 30</span>
                         </li>
+                        <li class="today">
+                            <span class="left">Сегодня:</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
                     </ul>
                     <div class="bttns">
-                        <a href="" class="large-btn ico-left"><i class="icon-more"></i>Подробнее</a>
-                        <button class="large-btn ico-left filled"><i class="icon-book"></i>Забронировать</button>
+                        <a href="" class="large-btn ico-left button button-1"><i class="icon-more"></i>Подробнее</a>
+                        <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"><i class="icon-book"></i>Забронировать</button>
                     </div>
                 </div>
             </div>
@@ -277,6 +487,7 @@
                     <div class="header">
                         <img src="../img/molodezh-logo.png" alt="">
                         <h2>Молодежное</h2>
+                        <a href="tel:375162207176" class="call circle button button-1"><i class="icon-phone"></i></a>
                     </div>
                     <ul class="info-list">
                         <li>
@@ -299,14 +510,18 @@
                             <span class="left">Кухня:</span>
                             <span class="right">Итальянская, средиземноморская</span>
                         </li>
-                        <li>
+                        <li class="address">
                             <span class="left">Адрес:</span>
                             <span class="right">г. Брест, ул. Советская, 30</span>
                         </li>
+                        <li class="today">
+                            <span class="left">Сегодня:</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
                     </ul>
                     <div class="bttns">
-                        <a href="" class="large-btn ico-left"><i class="icon-more"></i>Подробнее</a>
-                        <button class="large-btn ico-left filled"><i class="icon-book"></i>Забронировать</button>
+                        <a href="" class="large-btn ico-left button button-1"><i class="icon-more"></i>Подробнее</a>
+                        <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"><i class="icon-book"></i>Забронировать</button>
                     </div>
                 </div>
                 <div class="photo"></div>
@@ -335,7 +550,7 @@
                 </p>
             </div>
             <div class="right">
-                <div class="owl-carousel-only-phone-off owl-theme box-to-carousel">
+                <div class="owl-carousel box-to-carousel owl-theme">
                     <div class="item">
                         <div></div>
                     </div>
@@ -349,6 +564,34 @@
                         <div></div>
                     </div>
                 </div>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        var w = $(window).width(); // Получаем ширину окна
+                        if (w <= 770) { // Если ширина окна меньше, либо равна 600
+                            $(".box-to-carousel").addClass("box-to-carousel-on").removeClass("");
+                        }
+                        $('.box-to-carousel-on').owlCarousel({
+                            loop: true,
+                            margin: 10,
+                            dots: false,
+                            nav: true,
+                            items: 1,
+                            navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right' aria-hidden='true'></i>"],
+                            responsive: {
+                                0: {
+                                    items: 1,
+                                    nav: false,
+                                    dots: true
+                                },
+                                600: {
+                                    dots: false
+                                }
+                            }
+
+                        })
+                    });
+
+                </script>
             </div>
 
         </div>
@@ -368,7 +611,7 @@
                 <input type="text" placeholder="Ваше имя">
                 <input type="tel" placeholder="Телефон">
                 <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
-                <button type='submit' class="large-btn">Отправить<i class='icon-arr-right'></i>
+                <button type='submit' class="large-btn button button-1">Отправить<i class='icon-arr-right'></i>
                 </button>
             </form>
         </div>
@@ -378,7 +621,7 @@
 <footer>
     <div class="container">
         <p>© 2016 Санта-Рест</p>
-        <p>Комплексный интернет маркетинг - <a href="">"Wide-Web"</a></p>
+        <p>Комплексный интернет маркетинг - <a href="" class="cool-link">"Wide-Web"</a></p>
     </div>
 </footer>
 </body>
