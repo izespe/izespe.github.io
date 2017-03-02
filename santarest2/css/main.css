@@ -214,7 +214,7 @@ header {
     padding-left: 30px; }
   .navigation .nav-dropdown {
     position: static; } }
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 621px) {
   .navigation .nav-list {
     display: block !important; } }
 #nav-toggle {
@@ -4755,6 +4755,7 @@ nav#main-nav ul li ul li a {
     margin: 0 auto; }
 
   nav#main-nav {
+    width: 100%;
     padding: 0;
     text-align: center;
     height: 0; }
