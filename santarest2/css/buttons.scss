@@ -16,6 +16,7 @@
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   &.back_btn {
 
@@ -30,6 +31,7 @@
   color: $icon-dark;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   &:before {
     content: "";
@@ -42,6 +44,7 @@
     background-color: $icon-dark;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   &:hover:before {
@@ -61,6 +64,7 @@
   background-color: $icon-dark;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -80,6 +84,7 @@
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -94,6 +99,7 @@
   background-color: $icon-dark;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -141,7 +147,10 @@
     width: 0;
     height: 1px;
     background: #c0c0c4;
-    transition: width .8s;
+    -webkit-transition: .3s cubic-bezier(.445,.05,.55,.95);
+    -o-transition: .3s cubic-bezier(.445,.05,.55,.95);
+    -moz-transition: .3s cubic-bezier(.445,.05,.55,.95);
+    transition: .3s cubic-bezier(.445,.05,.55,.95);
   }
   &:hover::after {
     width: 100%;

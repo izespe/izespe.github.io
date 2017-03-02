@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../css/main.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="../js/main.js"></script>
 </head>
 <body>
@@ -45,7 +47,9 @@
             <textarea name="" cols="30" rows="10" placeholder="Комментарий"></textarea>
         </div>
 
-        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm" ><i class="icon-book"></i>Забронировать</button>
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm"><i
+                class="icon-book"></i>Забронировать
+        </button>
 
 
     </form>
@@ -252,7 +256,7 @@
                 <a href="tel:000000000" class="button button-1"><i class="icon-phone"></i></a>
             </div>
         </div>
-
+        <span class="arrow-bottom"><img src="../img/arrow-bottom.png" alt=""></span>
         <div class="bottom" id="top_nav">
             <div class="nav">
                 <ul class="main" id="nav">
@@ -265,7 +269,9 @@
                     <li><a href="#section-7">Контакты</a></li>
                 </ul>
             </div>
-            <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"><i class="icon-book"></i>Забронировать</button>
+            <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"><i
+                    class="icon-book"></i>Забронировать
+            </button>
         </div>
         <script>
             $(document).ready(function () {
@@ -658,8 +664,9 @@
                         </div>
                         <span class="trigger"><i class="icon-more"></i> Подробнее</span>
                     </div>
-                            <div class="signature"><p>Иван Иванович,<span>Шев-повар</span></p> <img src="../img/signature.png" alt="">
-                            </div>
+                    <div class="signature"><p>Иван Иванович,<span>Шев-повар</span></p> <img src="../img/signature.png"
+                                                                                            alt="">
+                    </div>
 
                     <div class="download">
                         <a href="" class="cool-link"><i class="icon-pdf"></i>Меню</a>
@@ -675,12 +682,54 @@
                 <p>Семейный обед или вечер с друзьями — подберите <br>ресторан или кафе для любого повода
                 </p>
                 <div class="owl-carousel owl-meals owl-theme">
-                    <div class="item"><img src="../img/meal1.jpg"></div>
-                    <div class="item"><img src="../img/meal2.png"></div>
-                    <div class="item"><img src="../img/meal3.png"></div>
-                    <div class="item"><img src="../img/meal1.jpg"></div>
-                    <div class="item"><img src="../img/meal2.png"></div>
-                    <div class="item"><img src="../img/meal3.png"></div>
+                    <div class="item">
+                        <div class="overlay">
+                            <figure>
+                                <img src="../img/meal1.jpg">
+                                <span>Название блюда</span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="overlay">
+                            <figure>
+                                <img src="../img/meal2.png">
+                                <span>Название блюда</span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="overlay">
+                            <figure>
+                                <img src="../img/meal3.png">
+                                <span>Название блюда</span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="overlay">
+                            <figure>
+                                <img src="../img/meal1.jpg">
+                                <span>Название блюда</span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="overlay">
+                            <figure>
+                                <img src="../img/meal2.png">
+                                <span>Название блюда</span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="overlay">
+                            <figure>
+                                <img src="../img/meal3.png">
+                                <span>Название блюда</span>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
             <script>
@@ -701,7 +750,8 @@
                             items: 3
                         }
                     }
-                })
+                });
+
             </script>
         </section>
         <div class="arrow arrowL"><i class="icon-arr-left"></i></div>
@@ -716,15 +766,18 @@
                     <h2>Размещение</h2>
                     <div class="read-more" onclick="this.classList.add('expanded')">
                         <div class="text content">
-                    <p>Заведение отличается современным стильным дизайном. Декорированием стен занимался брестский
-                        художник,
-                        а удобная мебель изготавливалась вручную на заказ. Это место создано для приятного
-                        времяпрепровождения, атмосфера располагает к душевным беседам и создает хорошее настроение
-                        на весь
-                        день. </p>
-                    <p>Каждую субботу для гостей кафе выступает диджей с качественными сетами, популярные вокалисты
-                        и
-                        музыкальные коллективы города. </p>
+                            <p>Заведение отличается современным стильным дизайном. Декорированием стен занимался
+                                брестский
+                                художник,
+                                а удобная мебель изготавливалась вручную на заказ. Это место создано для приятного
+                                времяпрепровождения, атмосфера располагает к душевным беседам и создает хорошее
+                                настроение
+                                на весь
+                                день. </p>
+                            <p>Каждую субботу для гостей кафе выступает диджей с качественными сетами, популярные
+                                вокалисты
+                                и
+                                музыкальные коллективы города. </p>
                         </div>
                         <span class="trigger"><i class="icon-more"></i> Подробнее</span>
                     </div>
@@ -780,7 +833,7 @@
                     <label for="tabone" class="cool-link">Афиша Times Cafe</label>
                     <div class="tab">
                         <div class="row">
-                            <div class="item">
+                            <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
                                 <div class="photo">
                                     <img src="../img/ivent1.png" alt="">
                                 </div>
@@ -791,7 +844,7 @@
 
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
                                 <div class="photo">
                                     <img src="../img/ivent2.png" alt="">
                                 </div>
@@ -802,7 +855,7 @@
 
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
                                 <div class="photo">
                                     <img src="../img/ivent3.jpg" alt="">
                                 </div>
@@ -813,7 +866,7 @@
 
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s">
                                 <div class="photo">
                                     <img src="../img/ivent1.png" alt="">
                                 </div>
@@ -837,7 +890,7 @@
                         <div class="row">
 
                             <div class="item">
-                                <div class="photo">
+                                <div class="photo wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
                                     <img src="../img/ivent2.png" alt="">
                                 </div>
                                 <div class="info">
@@ -847,7 +900,7 @@
 
                             </div>
                             <div class="item">
-                                <div class="photo">
+                                <div class="photo wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
                                     <img src="../img/ivent1.png" alt="">
                                 </div>
                                 <div class="info">
@@ -856,7 +909,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="photo">
+                                <div class="photo wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
                                     <img src="../img/ivent1.png" alt="">
                                 </div>
                                 <div class="info">
@@ -865,7 +918,7 @@
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="photo">
+                                <div class="photo wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s">
                                     <img src="../img/ivent3.jpg" alt="">
                                 </div>
                                 <div class="info">
@@ -894,7 +947,7 @@
                 <p>Семейный обед или вечер с друзьями — подберите <br>ресторан или кафе для любого повода</p>
                 <div class="wrapper">
                     <div class="left">
-                        <div class="large">
+                        <div class="large wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s" >
                             <div class="overlay">
                                 <figure>
 
@@ -905,7 +958,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="small">
+                        <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
                             <div class="overlay">
                                 <figure>
 
@@ -916,7 +969,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="small">
+                        <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
                             <div class="overlay">
                                 <figure>
 
@@ -928,7 +981,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <div class="small">
+                        <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
                             <div class="overlay">
                                 <figure>
 
@@ -939,7 +992,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="small">
+                        <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
                             <div class="overlay">
                                 <figure>
 
@@ -949,7 +1002,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="medium">
+                        <div class="medium wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
                             <div class="overlay">
                                 <figure>
 
@@ -960,7 +1013,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="medium">
+                        <div class="medium wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s">
                             <div class="overlay">
                                 <figure>
 
@@ -1062,18 +1115,15 @@
             <div class="container">
                 <div>
                     <i class="icon-phone"></i>
-                    <span>Телефон: <p>+375162 207176 <br>+375 44 5603503</p></span>
-
+                    <span>Телефон: <p><a href="tel:375162207176">+375162 207176</a> <br><a href="tel:375445603503">+375 44 5603503</a></p></span>
                 </div>
                 <div>
                     <i class="icon-address"></i>
                     <span>Адрес: <p>г. Брест<br>ул. Советская, 30</p></span>
-
                 </div>
                 <div>
                     <i class="icon-time"></i>
                     <span>Время работы: <p>Пн. - Пт. с 8:30 до 23:00<br>Сб. - Вс. с 11:00 до 23:00</p></span>
-
                 </div>
             </div>
         </section>
@@ -1179,5 +1229,8 @@
         <p>Комплексный интернет маркетинг - <a href="" class="cool-link">"Wide-Web"</a></p>
     </div>
 </footer>
+<script>
+    new WOW().init();
+</script>
 </body>
 </html>

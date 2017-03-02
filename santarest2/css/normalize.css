@@ -18,6 +18,8 @@ html {
 }
 
 *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -83,6 +85,8 @@ figure {
  */
 
 hr {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
     box-sizing: content-box; /* 1 */
     height: 0; /* 1 */
     overflow: visible; /* 2 */
@@ -344,6 +348,8 @@ fieldset {
  */
 
 legend {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; /* 1 */
     color: inherit; /* 2 */
     display: table; /* 1 */
@@ -377,6 +383,8 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }

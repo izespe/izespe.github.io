@@ -254,6 +254,7 @@
                 <a href="tel:000000000" class="button button-1"><i class="icon-phone"></i></a>
             </div>
         </div>
+        <span class="arrow-bottom"><img src="../img/arrow-bottom.png" alt=""></span>
 
         <div class="bottom" id="top_nav">
             <ul id="nav">
@@ -528,8 +529,8 @@
     </section>
 
 </header>
-<main>
 
+<main class="gray-bg-phone">
 
     <div id="page">
             <div class="content">
@@ -661,11 +662,13 @@
                                             },
                                             1400: {
                                                 items: 1,
-                                                stagePadding: 300
+                                                stagePadding: 300,
+                                                nav: false
                                             },
                                             1600: {
                                                 items: 1,
-                                                stagePadding: 350
+                                                stagePadding: 350,
+                                                nav: false
                                             },
                                             1800: {
                                                 items: 1,
@@ -673,7 +676,10 @@
                                             }
                                         }
                                     });
+                                    $('.owl-prev, .owl-next').addClass('cf');
                                 });
+
+
 
                             </script>
                         </div>
@@ -687,7 +693,7 @@
                         <div class="container">
                             <div>
                                 <i class="icon-phone"></i>
-                                <span>Телефон: <p>+375162 207176 <br>+375 44 5603503</p></span>
+                                <span>Телефон: <p><a href="tel:375162207176">+375162 207176</a> <br><a href="tel:375445603503">+375 44 5603503</a></p></span>
 
                             </div>
                             <div>

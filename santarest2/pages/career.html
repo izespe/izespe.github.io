@@ -280,6 +280,7 @@
                         }
                     }
                 })
+                $('.owl-prev, .owl-next').addClass('cf');
             </script>
         </div>
     </section>
@@ -345,7 +346,7 @@
                         <span>Контактное лицо: <span>Рак Татьяна Аркадьевна</span></span><br>
                         <span>Телефон: 	<span>8 (0162) 209324</span></span><br>
                         <span> E-mail:  <span>lawer@rest.santa.by</span></span><br>
-                        <button type='submit' class="large-btn">Откликнуться на вакансию<i class='icon-arr-right'></i></button>
+                        <button type='submit' class="large-btn button button-1">Откликнуться на вакансию<i class='icon-arr-right'></i></button>
                     </div>
                 </li>
                 <li>
@@ -399,7 +400,7 @@
                         <span>Контактное лицо: <span>Рак Татьяна Аркадьевна</span></span><br>
                         <span>Телефон: 	<span>8 (0162) 209324</span></span><br>
                         <span> E-mail:  <span>lawer@rest.santa.by</span></span><br>
-                        <button type='submit' class="large-btn">Откликнуться на вакансию<i class='icon-arr-right'></i></button>
+                        <button type='submit' class="large-btn  button button-1">Откликнуться на вакансию<i class='icon-arr-right'></i></button>
                     </div>
                 </li>
                 <li>
@@ -453,14 +454,17 @@
                         <span>Контактное лицо: <span>Рак Татьяна Аркадьевна</span></span><br>
                         <span>Телефон: 	<span>8 (0162) 209324</span></span><br>
                         <span> E-mail:  <span>lawer@rest.santa.by</span></span><br>
-                        <button type='submit' class="large-btn">Откликнуться на вакансию<i class='icon-arr-right'></i></button>
+                        <button type='submit' class="large-btn button button-1">Откликнуться на вакансию<i class='icon-arr-right'></i></button>
                     </div>
                 </li>
             </ul> <!-- / accordion -->
         </div>
         <script>
             (function ($) {
-                $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+                var w = $(window).width(); // Получаем ширину окна
+                if (w >= 620) {
+                    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+                }
 
                 $('.accordion a').click(function (j) {
                     var dropDown = $(this).closest('li').find('div');

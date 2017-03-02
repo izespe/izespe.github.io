@@ -7,11 +7,15 @@ $(function () {
         margin: 10,
         items: 1
     });
+
+
 });
 
 /* Menu */
 
 $(function () {
+
+
     $('.dropdown').click(function (e) {
         e.stopPropagation();
         $('.nav-dropdown').toggle();
@@ -27,10 +31,8 @@ $(function () {
         $('.js-sub-nav').slideToggle();
         $('.js-nav-more i').toggleClass('cross');
         $('.catalog-nav').toggleClass('blurred');
+        $('.main-nav__sub-item').css('display','flex');
     });
 
 
 });
-
-
-

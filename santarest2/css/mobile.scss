@@ -54,6 +54,8 @@
 
   .error404 {
     padding: 30px 10px;
+    min-height: -webkit-calc(100vh - 158px);
+    min-height: -moz-calc(100vh - 158px);
     min-height: calc(100vh - 158px);
     img {
       width: 100%;
@@ -96,13 +98,23 @@
   }
 
   nav#main-nav ul {
+    height: -webkit-calc(100vh - 123px);
+    height: -moz-calc(100vh - 123px);
     height: calc(100vh - 123px);
     background: white;
   }
   .header .container {
     border-bottom: none;
     padding: 15px 0 8px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .navigation .nav-container {
@@ -113,6 +125,8 @@
     display: none;
   }
   .about-place .container .buttons {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .header-full .content span {
@@ -131,7 +145,13 @@
     padding-left: 10px;
     padding-right: 10px;
     font-size: 14px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     p {
       margin: 0;
@@ -150,7 +170,13 @@
     font-size: 24px;
   }
   .about-place .container .text {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
   }
   .about-place .container .text p {
@@ -159,6 +185,10 @@
   }
   .about-place .container {
     padding: 10px;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
   .large-btn {
@@ -306,6 +336,8 @@
     height: 148px;
   }
   .discount-content .container {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 0;
     .left {
@@ -323,8 +355,18 @@
   }
   .catalog-nav .nav-cat .main-nav a.main-nav__item, .catalog-nav .nav-cat .main-nav__sub-item {
     width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     background: $icon-dark;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
     i {
       font-size: 24px;
@@ -341,12 +383,24 @@
     width: 100%;
   }
   .catalog-nav .nav-cat .main-nav a:nth-child(5) {
+    -webkit-box-ordinal-group: 11;
+    -webkit-order: 10;
+    -moz-box-ordinal-group: 11;
+    -ms-flex-order: 10;
     order: 10;
   }
   .catalog-nav .nav-cat .main-nav a:nth-child(10) {
+    -webkit-box-ordinal-group: 10;
+    -webkit-order: 9;
+    -moz-box-ordinal-group: 10;
+    -ms-flex-order: 9;
     order: 9;
   }
   .catalog-nav > .container {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     padding: 40% 0;
   }
@@ -364,11 +418,23 @@
     background: $light-bg;
     border: 1px solid #c9c9cc;
   }
+  .restaurants-list .info .bttns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
   .restaurants-list .info .bttns a {
-    display: none;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 52px;
   }
   .restaurants-list .info .bttns button {
     width: 100%;
+    height: 52px;
   }
   .restaurants-list .info .header img {
     display: none;
@@ -380,12 +446,26 @@
     min-height: 60px;
   }
   .restaurants-list .info .header .call {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     width: 40px;
     height: 40px;
     border: 1px solid $icon-dark;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
     border-radius: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-decoration: none;
     font-size: 26px;
@@ -403,6 +483,10 @@
   }
 
   .restaurants-list .info .header {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
@@ -426,6 +510,13 @@
     font-size: 24px;
     margin-bottom: 10px;
     letter-spacing: 1.6px;
+  }
+
+  .gray-bg-phone{
+    background: $light-bg;
+    -webkit-box-shadow: inset 0px 48px 0px 0px $icon-dark;
+    -moz-box-shadow: inset 0px 48px 0px 0px $icon-dark;
+    box-shadow: inset 0px 48px 0px 0px $icon-dark;
   }
 
   .main-info-event .container {
@@ -464,9 +555,23 @@
   }
   .main-info-event .container .info .contacts > div {
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     color: #161522;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     text-align: left;
     padding: 20px 0 0;
@@ -492,6 +597,8 @@
       width: 98px;
       height: 98px;
       display: block;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
       border-radius: 100%;
       overflow: hidden;
       float: left;
@@ -504,6 +611,10 @@
     .info {
       text-align: left;
       width: initial;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
       a {
         padding: 0 0 0 10px;
@@ -604,7 +715,17 @@
     margin-right: 15px;
   }
   .contacta-main-info .tabs .tab > div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     text-align: left;
     padding: 15px 0;
@@ -660,6 +781,8 @@
   #page {
     width: 100%;
     margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 
@@ -724,9 +847,23 @@
     height: auto;
     > div {
       width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -moz-box-orient: horizontal;
+      -moz-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
       color: $text-high;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
       align-items: flex-start;
       text-align: left;
       text-shadow: none;
@@ -771,6 +908,10 @@
       width: 100%;
       padding: 0;
       div {
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
       }
       > p {
@@ -802,13 +943,30 @@
       margin: 0;
       background: transparent;
       cursor: pointer;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
       border-radius: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
       border: 1px solid #93929b;
       color: #161522;
       font-size: 14px;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-transition: background ease 0.2s;
+      -o-transition: background ease 0.2s;
+      -moz-transition: background ease 0.2s;
       transition: background ease 0.2s;
     }
     .owl-nav {
@@ -917,18 +1075,34 @@
     background: $light-bg;
     .container {
       padding: 20px 10px;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       > div {
         width: 100%;
         border-left: none !important;
         border-right: none;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -moz-box-orient: horizontal;
+        -moz-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
         color: $text-high;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
         text-align: left;
         padding: 0;
         margin-bottom: 25px;
         &.coordinates {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
           display: flex;
         }
         &.time-hotel {
@@ -941,6 +1115,11 @@
         }
         span {
           text-shadow: none;
+          p{
+            a{
+              color: $text-high;
+            }
+          }
         }
       }
     }
@@ -956,7 +1135,7 @@
   /*read more*/
   // Settings
   $read-more: (
-          'rows': 6,
+          'rows': 5,
           'font-size': 16px,
           'line-height': 1.4,
           'duration': 500ms,
@@ -966,7 +1145,7 @@
           'bg-color': $light-bg
   );
 
-  // Optimal height based on your font size and line-height
+
   $read-more-height: map-get($read-more, 'font-size') * map-get($read-more, 'line-height') * (map-get($read-more, 'rows') + 1); // + 1 for trigger
 
   .read-more {
@@ -994,6 +1173,9 @@
       position: relative;
       overflow: hidden;
       max-height: $read-more-height;
+      -webkit-transition: max-height map-get($read-more, 'duration') map-get($read-more, 'easing');
+      -o-transition: max-height map-get($read-more, 'duration') map-get($read-more, 'easing');
+      -moz-transition: max-height map-get($read-more, 'duration') map-get($read-more, 'easing');
       transition: max-height map-get($read-more, 'duration') map-get($read-more, 'easing');
       &::before {
         content: '';
@@ -1002,12 +1184,15 @@
         bottom: 0;
         width: 100%;
         height: 30px;
+        -webkit-transition: opactiy map-get($read-more, 'duration') map-get($read-more, 'easing'), visibility map-get($read-more, 'duration') map-get($read-more, 'easing');
+        -o-transition: opactiy map-get($read-more, 'duration') map-get($read-more, 'easing'), visibility map-get($read-more, 'duration') map-get($read-more, 'easing');
+        -moz-transition: opactiy map-get($read-more, 'duration') map-get($read-more, 'easing'), visibility map-get($read-more, 'duration') map-get($read-more, 'easing');
         transition: opactiy map-get($read-more, 'duration') map-get($read-more, 'easing'), visibility map-get($read-more, 'duration') map-get($read-more, 'easing');
       }
     }
     &.expanded {
       .content {
-        max-height: 600px; // great value for height animation
+        max-height: 600px;
       }
       .content::before,
       .trigger {
@@ -1034,15 +1219,33 @@
   }
 
   .header-full .content .bttns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 20px;
     a {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
       width: 48px;
       height: 48px;
       border: 1px solid white;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
       border-radius: 100%;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       text-decoration: none;
       font-size: 26px;
@@ -1075,6 +1278,8 @@
     display: inline-block;
     position: relative;
     z-index: 1000;
+    -o-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     text-decoration: none;
@@ -1084,6 +1289,10 @@
   }
 
   .header-full .top .container {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 
@@ -1106,10 +1315,27 @@
     left: 0;
     background-color: white;
     z-index: 1200;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     .head {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       height: 88px;
       border-bottom: 1px solid #d6d6d9;
@@ -1130,8 +1356,16 @@
   }
 
   header .social {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     bottom: 60px;
     width: 100%;
@@ -1140,7 +1374,15 @@
 
   header .languages {
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: absolute;
     top: initial;
@@ -1150,6 +1392,9 @@
 
   .slideOut {
     margin-left: -100%;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
 
@@ -1221,6 +1466,9 @@
     display: none;
     opacity: 0;
     position: fixed;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     z-index: 1150;
   }
@@ -1231,7 +1479,15 @@
     padding: 20px 10px;
     .head{
       width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       border-bottom: 1px solid $icon-dark-border;
       padding-bottom: 10px;
