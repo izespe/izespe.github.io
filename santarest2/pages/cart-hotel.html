@@ -54,9 +54,32 @@
 </div>
 <header class="no-menu">
     <section class="header-full firstScreen greenwood">
+
         <div class="top">
             <div class="container " >
 
+                <div class="menu-dropdown">
+                    <i class="icon-menu burger-check"></i>
+                    <div id="navigation1" class="navigation1">
+                        <ul>
+                            <li><a href="#" class="button button-1">О компании «Santa Rest»</a></li>
+                            <li><a href="#" class="button button-1">Кафе и рестораны «Santa Rest»</a></li>
+                            <li><a href="#" class="button button-1">Гостиницы «Santa Rest»</a></li>
+                            <li><a href="#" class="button button-1">События «Santa Rest»</a></li>
+                            <li><a href="#" class="button button-1">Программа лояльности «Santa Rest»</a></li>
+                            <li><a href="#" class="button button-1">Вакансии «Santa Rest»</a></li>
+                            <li><a href="#" class="button button-1">Контакты «Santa Rest»</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+
+                    $('.burger-check').click(function (e) {
+                        $('.navigation1').toggleClass('active');
+                        $('.menu-dropdown').toggleClass('active-menu1');
+                        $('.burger-check').toggleClass('icon-menu').toggleClass('icon-close');
+                    });
+                </script>
                 <nav class="menu" id="main-nav">
                     <a href="#" id="mobileButton" class="mobileMenuButton"><i class="icon-menu"></i></a>
                     <ul class="listMenu nav-list">
@@ -74,18 +97,9 @@
                         <li><a href="../pages/contacts.html" class="cool-link">Контакты</a></li>
 
                     </ul>
-                    <button class="dropdown-item "><i class="icon-menu"></i>
-                        <ul class="menu-dropdown-item">
-                            <li><a href="#">О компании «Santa Rest»</a></li>
-                            <li><a href="#">Кафе и рестораны «Santa Rest»</a></li>
-                            <li><a href="#">Гостиницы «Santa Rest»</a></li>
-                            <li><a href="#">События «Santa Rest»</a></li>
-                            <li><a href="#">Программа лояльности «Santa Rest»</a></li>
-                            <li><a href="#">Вакансии «Santa Rest»</a></li>
-                            <li><a href="#">Контакты «Santa Rest»</a></li>
-                        </ul>
-                    </button>
+
                 </nav>
+
 
                 <div class="mobileMenu slideOut">
 
@@ -244,6 +258,7 @@
                 </div>
             </div>
         </div>
+
         <div class="content">
             <img src="../img/grennwood-logo-xl.png" alt="">
             <h1>Эко-комплекс

@@ -1,4 +1,7 @@
 @media only screen and (max-width: 620px) {
+  header.no-menu .arrow-bottom{
+    display: none;
+  }
 
   .gallery.career .head h1 {
     font-weight: 700;
@@ -970,8 +973,8 @@
       -moz-transition: background ease 0.2s;
       transition: background ease 0.2s;
     }
-    .owl-nav {
-      top: 37%;
+ .owl-nav {
+      top: 30%;
     }
     .owl-nav .owl-next {
       right: -40px;
@@ -1310,7 +1313,7 @@
   /* The Menu */
   .mobileMenu, .mobileMenu2 {
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -1407,6 +1410,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-bottom: 110px;
   }
 
   .mobileMenu li {
@@ -1515,7 +1519,9 @@
       }
     }
   }
-
+  .menu-dropdown {
+    display: none;
+  }
 }
 
 /*

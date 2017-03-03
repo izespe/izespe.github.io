@@ -762,10 +762,10 @@ footer {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       &__item {
-        -webkit-transition: .2s ease-in-out;
-        -o-transition: .2s ease-in-out;
-        -moz-transition: .2s ease-in-out;
-        transition: .2s ease-in-out;
+/*        -webkit-transition:all .2s ease-in-out;
+        -o-transition:all .2s ease-in-out;
+        -moz-transition:all .2s ease-in-out;
+        transition:all .2s ease-in-out;*/
         border: none;
         height: 125px;
         width: 20%;
@@ -810,10 +810,10 @@ footer {
           font-size: 33px;
           margin-bottom: 12px;
           height: 32px;
-          -webkit-transition: .2s ease-in-out;
-          -o-transition: .2s ease-in-out;
-          -moz-transition: .2s ease-in-out;
-          transition: .2s ease-in-out;
+           -webkit-transition:all .2s ease-in-out;
+          -o-transition:all .2s ease-in-out;
+          -moz-transition:all .2s ease-in-out;
+          transition: all .2s ease-in-out;
         }
         &:first-of-type {
           border-left: 1px solid #474553;
@@ -875,10 +875,10 @@ footer {
         }
 
         &-item {
-          -webkit-transition: .2s ease-in-out;
-          -o-transition: .2s ease-in-out;
-          -moz-transition: .2s ease-in-out;
-          transition: .2s ease-in-out;
+/*          -webkit-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;*/
           display: none;
           height: 125px;
           width: 20%;
@@ -917,7 +917,7 @@ footer {
             border-left: 1px solid #474553;
           }
           i {
-            -webkit-transition: .2s ease-in-out;
+          -webkit-transition: .2s ease-in-out;
             -o-transition: .2s ease-in-out;
             -moz-transition: .2s ease-in-out;
             transition: .2s ease-in-out;

@@ -4,7 +4,7 @@
     top: initial;
   }
 
-  .header-full .bottom .icon-more{
+  .header-full .bottom .icon-more {
     display: block;
   }
 
@@ -212,6 +212,19 @@
   }
   .restaurants-list .item {
     min-height: 448px;
+  }
+  .meals .item figure {
+    display: flex;
+    flex-direction: column;
+  }
+  .meals .owl-nav {
+    top: 30%;
+  }
+    .meals .item figure > span {
+    color: $text-high;
+    bottom: 0;
+    margin-top: 10px;
+    position: relative;
   }
 }
 
@@ -563,8 +576,6 @@ nav#main-nav ul li ul li a {
     position: static;
   }
 }
-
-
 
 #nav-toggle {
   position: absolute;
