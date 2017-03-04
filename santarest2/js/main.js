@@ -32,7 +32,15 @@ $(function () {
         $('.js-nav-more i').toggleClass('cross');
         $('.catalog-nav').toggleClass('blurred');
         $('.main-nav__sub-item').css('display','flex');
+        $('.catalog-nav > .container').css('position','relative');
     });
+
+    $('.catalog-nav > .container').on('click', function(){
+        $('.js-sub-nav').slideUp();
+        $('.js-nav-more i').removeClass('cross');
+        $('.catalog-nav').removeClass('blurred');
+    });
+
 
 
 });

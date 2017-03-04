@@ -11,6 +11,7 @@
   display: -ms-flexbox;
   display: flex;
   background-attachment: fixed;
+
   &.greenwood {
     background: url("../img/big-greenwood-bg.jpg") center no-repeat;
     -moz-background-size: cover;
@@ -232,7 +233,7 @@
     justify-content: space-between;
     width: 100%;
     background: white;
-
+    max-width: 1903px;
     .section-wrapper:first-child .section {
       padding-top: 50px;
     }
@@ -324,6 +325,9 @@
 
 .about-place {
   background: $light-bg;
+  &.cafe{
+      padding-bottom: 80px;
+  }
   .container {
     max-width: 1170px;
     padding: 80px 0 70px;
@@ -404,6 +408,11 @@
         .icon-facebook {
           font-size: 30px;
         }
+        .icon-inst{
+          margin-left: 1px;
+          margin-bottom: 1px;
+          font-size: 19px;
+        }
         &:hover {
           color: white;
         }
@@ -472,10 +481,12 @@
         font-family: "PT Serif";
         font-style: italic;
         text-shadow: 0px 2px 2px rgba(22, 21, 34, 0.4);
-        p {
+        p,a {
           margin: 0;
           font-family: 'PT Sans', sans-serif;
           font-style: normal;
+          text-decoration: none;
+          color: white;
         }
       }
 
@@ -1513,6 +1524,7 @@ button.circle {
 .gallery {
   background: $light-bg;
   padding: 20px 0 100px;
+
   .container {
 
   }
@@ -1695,6 +1707,19 @@ button.circle {
   }
 
 }
+
+.s2{
+  .gallery{
+    padding: 100px 0 100px;
+  }
+}
+
+.s1{
+  .about-place .container{
+    padding-bottom: 0;
+  }
+}
+
 
 .events .tabs .tab .row .item {
   margin: 0 2px 15px;
