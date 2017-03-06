@@ -9,7 +9,7 @@
   }
 
   header {
-    margin: 0 20px auto;
+    /*margin: 0 20px auto;*/
   }
   header.no-menu {
     margin: 0;
@@ -654,6 +654,10 @@ nav#main-nav ul li ul li a {
     top: initial;
   }
 
+  .cafes .wrapper > div {
+    height: 210px;
+  }
+
   .home-slider .carousel .item img {
     max-height: 380px !important;
   }
@@ -713,6 +717,7 @@ nav#main-nav ul li ul li a {
   .cafes .wrapper > div.item3, .cafes .wrapper > div.item4, .cafes .wrapper > div.item5, .cafes .wrapper > div.item6, .hotels .wrapper > div.item3, .hotels .wrapper > div.item4, .hotels .wrapper > div.item5, .hotels .wrapper > div.item6 {
     width: 48.5%;
     margin-bottom: 20px;
+    height: 210px;
   }
 
   .navigation nav ul li a {

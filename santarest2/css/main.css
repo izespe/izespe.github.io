@@ -25,7 +25,7 @@ header {
       -moz-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      bottom: 110px; }
+      bottom: 80px; }
   header .social {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1159,12 +1159,13 @@ footer .container {
   background-size: cover;
   position: relative;
   height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-attachment: fixed; }
+  /*  display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;*/
+  background-attachment: fixed;
+  display: block; }
   .header-full.greenwood {
     background: url("../img/big-greenwood-bg.jpg") center no-repeat;
     -moz-background-size: cover;
@@ -1330,7 +1331,8 @@ footer .container {
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    color: white; }
+    color: white;
+    height: 100%; }
     .header-full .content h1 {
       font-family: "PT Serif";
       font-size: 20px;
@@ -2740,12 +2742,13 @@ button.circle {
 .loading {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  width: 50px; }
   .loading i {
     color: white;
     font-size: 51px;
-    margin-top: 10px;
-    position: absolute; }
+    margin-top: -15px;
+    position: relative; }
   .loading .loading-dot {
     float: left;
     width: 5px;
@@ -3175,7 +3178,7 @@ body {
       margin-top: 15px;
       height: 490px; }
       .cafes .wrapper > div.item3 figure, .cafes .wrapper > div.item4 figure, .cafes .wrapper > div.item5 figure, .cafes .wrapper > div.item6 figure, .hotels .wrapper > div.item3 figure, .hotels .wrapper > div.item4 figure, .hotels .wrapper > div.item5 figure, .hotels .wrapper > div.item6 figure {
-        height: 490px; }
+        /*          height: 490px;*/ }
         .cafes .wrapper > div.item3 figure img, .cafes .wrapper > div.item4 figure img, .cafes .wrapper > div.item5 figure img, .cafes .wrapper > div.item6 figure img, .hotels .wrapper > div.item3 figure img, .hotels .wrapper > div.item4 figure img, .hotels .wrapper > div.item5 figure img, .hotels .wrapper > div.item6 figure img {
           height: 100%;
           width: auto; }
@@ -4187,7 +4190,7 @@ body {
     display: block; }
 
   header {
-    margin: 0 20px auto; }
+    /*margin: 0 20px auto;*/ }
 
   header.no-menu {
     margin: 0; }
@@ -4751,6 +4754,9 @@ nav#main-nav ul li ul li a {
     justify-content: center;
     top: initial; }
 
+  .cafes .wrapper > div {
+    height: 210px; }
+
   .home-slider .carousel .item img {
     max-height: 380px !important; }
 
@@ -4804,7 +4810,8 @@ nav#main-nav ul li ul li a {
 
   .cafes .wrapper > div.item3, .cafes .wrapper > div.item4, .cafes .wrapper > div.item5, .cafes .wrapper > div.item6, .hotels .wrapper > div.item3, .hotels .wrapper > div.item4, .hotels .wrapper > div.item5, .hotels .wrapper > div.item6 {
     width: 48.5%;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    height: 210px; }
 
   .navigation nav ul li a {
     margin: 0;
