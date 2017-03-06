@@ -199,7 +199,7 @@ display: block;
     -ms-flex-align: center;
     align-items: center;
     color: white;
-    height: 100%;
+    height: calc(100% - 74px);
     h1 {
       font-family: "PT Serif";
       font-size: 20px;
