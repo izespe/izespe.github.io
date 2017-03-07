@@ -3,6 +3,17 @@
     display: none;
   }
 
+  .header-full .content{
+    height: 100%;
+  }
+  #toTop {
+    display: none !important;
+  }
+
+  .s2 .gallery {
+    padding: 20px 0;
+  }
+
   .gallery.career .head h1 {
     font-weight: 700;
     text-transform: uppercase;
@@ -1418,7 +1429,7 @@
     height: 46px;
     &:nth-child(2) {
       a:after {
-        content: '\e903';
+        content: '\e91e';
         font-family: icomoon;
         position: absolute;
         margin-left: 10px;

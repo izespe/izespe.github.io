@@ -62,24 +62,33 @@
                     <i class="icon-menu burger-check"></i>
                     <div id="navigation1" class="navigation1">
                         <ul>
-                            <li><a href="#" class="button button-1">О компании «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Кафе и рестораны «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Гостиницы «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">События «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Программа лояльности «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Вакансии «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Контакты «Santa Rest»</a></li>
+                            <li><a href="../index.html" class="">О компании «Santa Rest»</a></li>
+                            <li><a href="../pages/catalog.html" class="">Кафе и рестораны «Santa Rest»</a></li>
+                            <li><a href="#" class="hotels">Гостиницы «Santa Rest»</a></li>
+                            <div class="navigation2">
+                                <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная»</a></li>
+                                <li><a href="../pages/cart-hotel.html">Эко-комплекс «Chalet GreenWood»</a></li>
+                            </div>
+
+                            <li><a href="../pages/events.html" class="">События «Santa Rest»</a></li>
+                            <li><a href="../pages/discount.html" class="">Программа лояльности «Santa Rest»</a></li>
+                            <li><a href="../pages/career.html" class="">Вакансии «Santa Rest»</a></li>
+                            <li><a href="../pages/contacts.html" class="">Контакты «Santa Rest»</a></li>
                         </ul>
                     </div>
+                    <script>
+                        $('.burger-check').click(function (e) {
+                            $('.navigation1').toggleClass('active');
+                            $('.menu-dropdown').toggleClass('active-menu1');
+                            $('.burger-check').toggleClass('icon-menu').toggleClass('icon-close');
+                            $('.navigation2').removeClass('active');
+                        });
+                        $('.hotels').click(function (e) {
+                            $('.navigation2').toggleClass('active');
+                        });
+                    </script>
                 </div>
-                <script>
 
-                    $('.burger-check').click(function (e) {
-                        $('.navigation1').toggleClass('active');
-                        $('.menu-dropdown').toggleClass('active-menu1');
-                        $('.burger-check').toggleClass('icon-menu').toggleClass('icon-close');
-                    });
-                </script>
                 <nav class="menu" id="main-nav">
                     <a href="#" id="mobileButton" class="mobileMenuButton"><i class="icon-menu"></i></a>
                     <ul class="listMenu nav-list">
@@ -270,13 +279,24 @@
             </div>
         </div>
         <span class="arrow-bottom">
-            <div class="loading">
+            <a class="loading" href="#s1">
 		<div class="loading-dot"></div>
 		<div class="loading-dot"></div>
 		<div class="loading-dot"></div>
                 <i class="icon-ar_m loading-arrow"></i>
-            </div>
+            </a>
         </span>
+        <script>
+            $(document).ready(function(){
+                $('.loading').click( function(){
+                    var scroll_el = $(this).attr('href');
+                    if ($(scroll_el).length != 0) {
+                        $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 1000);
+                    }
+                    return false;
+                });
+            });
+        </script>
 
         <div class="bottom" id="top_nav">
             <ul id="nav">
@@ -556,7 +576,7 @@
 
     <div id="page">
             <div class="content">
-                <section class="s1">
+                <section class="s1" id="s1">
                     <span class="caption">О комплексе</span>
                     <section class="about-place" id="section-1">
                         <div class="container">
@@ -592,7 +612,7 @@
                             </div>
                         </div>
                     </section>
-                    <div class="arrow arrowR"><i class="icon-arr-right"></i></div>
+                    <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
                 </section>
                 <section class="s2">
                     <span class="caption">Галерея</span>
@@ -659,7 +679,7 @@
                                         nav: true,
                                         dots: true,
                                         smartSpeed: 1500,
-                                        navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right' aria-hidden='true'></i>"],
+                                        navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right2' aria-hidden='true'></i>"],
                                         responsive: {
                                             0: {
                                                 items: 1,
@@ -707,7 +727,7 @@
                         </div>
                     </section>
                     <div class="arrow arrowL"><i class="icon-arr-left"></i></div>
-                    <div class="arrow arrowR"><i class="icon-arr-right"></i></div>
+                    <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
                 </section>
                 <section class="s3">
                     <span class="caption">Контакты</span>
@@ -841,5 +861,6 @@
         <p>Комплексный интернет маркетинг - <a href="" class="cool-link">"Wide-Web"</a></p>
     </div>
 </footer>
+<div id="toTop" ><i class="icon-arr-top"></i></div>
 </body>
 </html>

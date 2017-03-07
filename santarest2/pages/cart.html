@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!--    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+    <link rel="stylesheet" href="../css/animate.min.css">
     <link rel="stylesheet" href="../css/main.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -63,13 +64,18 @@
                     <i class="icon-menu burger-check"></i>
                     <div id="navigation1" class="navigation1">
                         <ul>
-                            <li><a href="#" class="button button-1">О компании «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Кафе и рестораны «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Гостиницы «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">События «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Программа лояльности «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Вакансии «Santa Rest»</a></li>
-                            <li><a href="#" class="button button-1">Контакты «Santa Rest»</a></li>
+                            <li><a href="../index.html" class="">О компании «Santa Rest»</a></li>
+                            <li><a href="../pages/catalog.html" class="">Кафе и рестораны «Santa Rest»</a></li>
+                            <li><a href="#" class="hotels">Гостиницы «Santa Rest»</a></li>
+                            <div class="navigation2">
+                                <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная»</a></li>
+                                <li><a href="../pages/cart-hotel.html">Эко-комплекс «Chalet GreenWood»</a></li>
+                            </div>
+
+                            <li><a href="../pages/events.html" class="">События «Santa Rest»</a></li>
+                            <li><a href="../pages/discount.html" class="">Программа лояльности «Santa Rest»</a></li>
+                            <li><a href="../pages/career.html" class="">Вакансии «Santa Rest»</a></li>
+                            <li><a href="../pages/contacts.html" class="">Контакты «Santa Rest»</a></li>
                         </ul>
                     </div>
                     <script>
@@ -77,6 +83,10 @@
                             $('.navigation1').toggleClass('active');
                             $('.menu-dropdown').toggleClass('active-menu1');
                             $('.burger-check').toggleClass('icon-menu').toggleClass('icon-close');
+                            $('.navigation2').removeClass('active');
+                        });
+                        $('.hotels').click(function (e) {
+                            $('.navigation2').toggleClass('active');
                         });
                     </script>
                 </div>
@@ -267,7 +277,7 @@
                 </div>
             </div>
         </div>
-        <div class="content">
+        <div class="content wow fadeIn" data-wow-duration="2.5s">
             <img src="../img/times-logo-xl.png" alt="">
             <h1>Современное городское кафе<br><span>Times cafe</span></h1>
 
@@ -277,13 +287,24 @@
             </div>
         </div>
         <span class="arrow-bottom">
-            <div class="loading">
+            <a class="loading" href="#s1">
 		<div class="loading-dot"></div>
 		<div class="loading-dot"></div>
 		<div class="loading-dot"></div>
                 <i class="icon-ar_m loading-arrow"></i>
-            </div>
+            </a>
         </span>
+        <script>
+            $(document).ready(function () {
+                $('.loading').click(function () {
+                    var scroll_el = $(this).attr('href');
+                    if ($(scroll_el).length != 0) {
+                        $('html, body').animate({scrollTop: $(scroll_el).offset().top}, 1000);
+                    }
+                    return false;
+                });
+            });
+        </script>
         <div class="bottom" id="top_nav">
             <div class="nav">
                 <ul class="main" id="nav">
@@ -605,36 +626,39 @@
 
 </header>
 <main>
-    <section class="s1">
+    <section class="s1" id="s1">
         <span class="caption">О ресторане</span>
 
         <section class="about-place cafe" id="section-1">
             <div class="container">
-                <h2>«The best time is now»</h2>
-                <div class="text">
-                    <p>Тimes Cafe представляет собой современное городское кафе, которое ежедневно открывает свои
-                        двери для
-                        любителей свежей выпечки и бодрящего кофе в 08:30 утра. Здесь же можно вкусно пообедать в
-                        приятной
-                        расслабляющей обстановке, попробовать освежающие классические и авторские коктейли, а по
-                        субботам —
-                        послушать музыку в живом исполнении.</p>
-                    <p>Кафе предлагает посетителям свежую выпечку на вынос, постное и вегетарианское меню. Во всех
-                        кафе
-                        кампании «Санта Рест» действует выгодная система лояльности, благодаря которой гости могут
-                        посещать
-                        рестораны и кафе этой сети, накапливать определенные суммы и получать несгораемую
-                        скидку.</p>
+                <div class="wrap wow fadeInUp" data-wow-duration="1.5s">
+                    <h2>«The best time is now»</h2>
+                    <div class="text">
+                        <p>Тimes Cafe представляет собой современное городское кафе, которое ежедневно открывает свои
+                            двери для
+                            любителей свежей выпечки и бодрящего кофе в 08:30 утра. Здесь же можно вкусно пообедать в
+                            приятной
+                            расслабляющей обстановке, попробовать освежающие классические и авторские коктейли, а по
+                            субботам —
+                            послушать музыку в живом исполнении.</p>
+                        <p>Кафе предлагает посетителям свежую выпечку на вынос, постное и вегетарианское меню. Во всех
+                            кафе
+                            кампании «Санта Рест» действует выгодная система лояльности, благодаря которой гости могут
+                            посещать
+                            рестораны и кафе этой сети, накапливать определенные суммы и получать несгораемую
+                            скидку.</p>
+                    </div>
+                    <div class="social cf">
+                        <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                        <a href="" class="button button-1"><i class="icon-VK"></i></a>
+                        <a href="" class="button button-1"><i class="icon-inst"></i></a>
+                    </div>
                 </div>
-                <div class="social cf">
-                    <a href="" class="button button-1"><i class="icon-facebook"></i></a>
-                    <a href="" class="button button-1"><i class="icon-VK"></i></a>
-                    <a href="" class="button button-1"><i class="icon-inst"></i></a>
-                </div>
+
             </div>
         </section>
         <section class="advantages">
-            <div class="container">
+            <div class="container  wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
                 <div>
                     <i class="icon-phone"></i>
                     <span>Телефон:<br> <a href="tel:375162207176">+375162 207176</a> <br>
@@ -667,12 +691,13 @@
                 </div>
             </div>
         </section>
-        <div class="arrow arrowR"><i class="icon-arr-right"></i></div>
+        <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
     </section>
     <section class="s2">
+
         <span class="caption">Кухня</span>
         <section class="kitchen" id="section-2">
-            <div class="container">
+            <div class="container wow fadeInUp" data-wow-duration="1.5s">
                 <div class="left">
                     <img src="../img/chef.png" alt="">
                 </div>
@@ -703,7 +728,7 @@
                 </div>
             </div>
         </section>
-        <section class="meals">
+        <section class="meals wow fadeInUp" data-wow-duration="1.5s">
             <div class="container">
                 <h2>Блюда</h2>
                 <p>Семейный обед или вечер с друзьями — подберите <br>ресторан или кафе для любого повода
@@ -765,7 +790,7 @@
                     margin: 20,
                     dots: false,
                     nav: true,
-                    navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right' aria-hidden='true'></i>"],
+                    navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right2' aria-hidden='true'></i>"],
                     responsive: {
                         0: {
                             items: 1
@@ -782,12 +807,12 @@
             </script>
         </section>
         <div class="arrow arrowL"><i class="icon-arr-left"></i></div>
-        <div class="arrow arrowR"><i class="icon-arr-right"></i></div>
+        <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
     </section>
     <section class="s3">
         <span class="caption">Размещение</span>
         <section class="text-block hall" id="section-3">
-            <div class="container">
+            <div class="container wow fadeInUp" data-wow-duration="1.5s">
                 <div class="left">
 
                     <h2>Размещение</h2>
@@ -837,7 +862,7 @@
                                 nav: true,
                                 dots: false,
                                 items: 1,
-                                navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right' aria-hidden='true'></i>"],
+                                navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right2' aria-hidden='true'></i>"],
 
                             })
                         });
@@ -848,9 +873,9 @@
             </div>
         </section>
         <div class="arrow arrowL"><i class="icon-arr-left"></i></div>
-        <div class="arrow arrowR"><i class="icon-arr-right"></i></div>
+        <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
     </section>
-    <section class="s4">
+    <section class="s4 wow fadeInUp" data-wow-duration="1.5s">
         <span class="caption">События</span>
         <section class="events cafe" id="section-4">
             <div class="container">
@@ -860,47 +885,51 @@
                     <label for="tabone" class="cool-link">Афиша Times Cafe</label>
                     <div class="tab">
                         <div class="row">
-                            <div class="item wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+                            <div class="item">
                                 <a class="photo">
                                     <img src="../img/ivent1.png" alt="">
                                 </a>
                                 <div class="info">
 
-                                    <a href=""  class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
-                                            class="place">Times Cafe</span></a>
+                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                        Дмитрия Булдакова<span
+                                                class="place">Times Cafe</span></a>
 
                                 </div>
                             </div>
-                            <div class="item wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+                            <div class="item">
                                 <a class="photo">
                                     <img src="../img/ivent2.png" alt="">
                                 </a>
                                 <div class="info">
 
-                                    <a href=""  class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
-                                            class="place">Times Cafe</span></a>
+                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                        Дмитрия Булдакова<span
+                                                class="place">Times Cafe</span></a>
 
                                 </div>
                             </div>
-                            <div class="item wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.5s">
+                            <div class="item">
                                 <a class="photo">
                                     <img src="../img/ivent3.jpg" alt="">
                                 </a>
                                 <div class="info">
 
-                                    <a href=""  class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
-                                            class="place">Times Cafe</span></a>
+                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                        Дмитрия Булдакова<span
+                                                class="place">Times Cafe</span></a>
 
                                 </div>
                             </div>
-                            <div class="item wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
+                            <div class="item">
                                 <a class="photo">
                                     <img src="../img/ivent1.png" alt="">
                                 </a>
                                 <div class="info">
 
-                                    <a href=""  class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
-                                            class="place">Times Cafe</span></a>
+                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                        Дмитрия Булдакова<span
+                                                class="place">Times Cafe</span></a>
 
                                 </div>
                             </div>
@@ -917,35 +946,38 @@
                         <div class="row">
 
                             <div class="item">
-                                <a class="photo wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.5s">
+                                <a class="photo">
                                     <img src="../img/ivent2.png" alt="">
                                 </a>
                                 <div class="info">
-                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
-                                            class="place">Times Cafe</span></a>
+                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                        Дмитрия Булдакова<span
+                                                class="place">Times Cafe</span></a>
                                 </div>
 
                             </div>
                             <div class="item">
-                                <a class="photo wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
+                                <a class="photo">
                                     <img src="../img/ivent1.png" alt="">
                                 </a>
                                 <div class="info">
-                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
-                                            class="place">Times Cafe</span></a>
+                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                        Дмитрия Булдакова<span
+                                                class="place">Times Cafe</span></a>
                                 </div>
                             </div>
                             <div class="item">
-                                <a class="photo wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.5s">
+                                <a class="photo">
                                     <img src="../img/ivent1.png" alt="">
                                 </a>
                                 <div class="info">
-                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
-                                            class="place">Times Cafe</span></a>
+                                    <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                        Дмитрия Булдакова<span
+                                                class="place">Times Cafe</span></a>
                                 </div>
                             </div>
                             <div class="item">
-                                <a class="photo wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
+                                <a class="photo">
                                     <img src="../img/ivent3.jpg" alt="">
                                 </a>
                                 <div class="info" class="button button-2 no-border">
@@ -964,9 +996,9 @@
             </div>
         </section>
         <div class="arrow arrowL"><i class="icon-arr-left"></i></div>
-        <div class="arrow arrowR"><i class="icon-arr-right"></i></div>
+        <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
     </section>
-    <section class="s5">
+    <section class="s5 wow fadeInUp" data-wow-duration="1.5s">
         <span class="caption">Отчеты</span>
         <section class="photo-reports" id="section-5">
             <div class="container">
@@ -974,7 +1006,7 @@
                 <p>Семейный обед или вечер с друзьями — подберите <br>ресторан или кафе для любого повода</p>
                 <div class="wrapper">
                     <div class="left">
-                        <div class="large wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                        <div class="large">
                             <div class="overlay">
                                 <figure>
 
@@ -985,7 +1017,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                        <div class="small">
                             <div class="overlay">
                                 <figure>
 
@@ -996,7 +1028,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                        <div class="small">
                             <div class="overlay">
                                 <figure>
 
@@ -1008,7 +1040,7 @@
                         </div>
                     </div>
                     <div class="right">
-                        <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                        <div class="small">
                             <div class="overlay">
                                 <figure>
 
@@ -1019,7 +1051,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
+                        <div class="small">
                             <div class="overlay">
                                 <figure>
 
@@ -1029,7 +1061,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="medium wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
+                        <div class="medium">
                             <div class="overlay">
                                 <figure>
 
@@ -1040,7 +1072,7 @@
                                 </figure>
                             </div>
                         </div>
-                        <div class="medium wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s">
+                        <div class="medium">
                             <div class="overlay">
                                 <figure>
 
@@ -1058,12 +1090,12 @@
             </div>
         </section>
         <div class="arrow arrowL"><i class="icon-arr-left"></i></div>
-        <div class="arrow arrowR"><i class="icon-arr-right"></i></div>
+        <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
     </section>
     <section class="s6">
         <span class="caption">Отзывы</span>
-        <section class="reviews" id="section-6">
-            <div class="container">
+        <section class="reviews">
+            <div class="container  wow fadeInUp" data-wow-duration="1.5s" id="section-6">
                 <div class="owl-carousel owl-reviews owl-theme">
                     <div class="item">
                         <img src="../img/ta-logo.png">
@@ -1118,7 +1150,7 @@
                     dots: false,
                     margin: 10,
                     nav: true,
-                    navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right' aria-hidden='true'></i>"],
+                    navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right2' aria-hidden='true'></i>"],
                     responsive: {
                         0: {
                             items: 1
@@ -1134,7 +1166,7 @@
             </script>
         </section>
         <div class="arrow arrowL"><i class="icon-arr-left"></i></div>
-        <div class="arrow arrowR"><i class="icon-arr-right"></i></div>
+        <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
     </section>
     <section class="s7">
         <span class="caption">Котакты</span>
@@ -1259,5 +1291,6 @@
 <script>
     new WOW().init();
 </script>
+<div id="toTop"><i class="icon-arr-top"></i></div>
 </body>
 </html>

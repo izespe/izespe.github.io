@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700&subset=cyrillic");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&subset=cyrillic");
 @import url(../fonts/style.css);
@@ -1152,6 +1153,24 @@ footer .container {
 .remodal-overlay {
   background: rgba(0, 0, 0, 0.8); }
 
+#toTop {
+  width: 60px;
+  height: 80px;
+  border: 1px solid #252336;
+  background: #f6f6f7;
+  text-align: center;
+  padding: 5px;
+  position: fixed;
+  bottom: 20px;
+  /* ╨╛╤В╤Б╤В╤Г╨┐ ╨║╨╜╨╛╨┐╨║╨╕ ╨╛╤В ╨╜╨╕╨╢╨╜╨╡╨│╨╛ ╨║╤А╨░╤П ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л*/
+  right: 20px;
+  cursor: pointer;
+  display: none;
+  color: #161522;
+  line-height: 70px;
+  font-size: 22px;
+  z-index: 999999; }
+
 .header-full {
   background: url("../img/big-times-bg.jpg") center no-repeat;
   -moz-background-size: cover;
@@ -1418,10 +1437,10 @@ footer .container {
         width: 100%;
         height: 4px;
         background: white;
-        -webkit-transition: background ease 0.2s;
-        -o-transition: background ease 0.2s;
-        -moz-transition: background ease 0.2s;
-        transition: background ease 0.2s; }
+        -webkit-transition: background .2s ease-in-out;
+        -o-transition: background .2s ease-in-out;
+        -moz-transition: background .2s ease-in-out;
+        transition: background .2s ease-in-out; }
     .header-full .bottom #nav a:hover {
       background: none;
       color: #161522; }
@@ -1463,6 +1482,24 @@ footer .container {
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+    .about-place .container > .wrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
     .about-place .container h2 {
       font-family: "PT Serif";
       font-size: 42px;
@@ -2731,13 +2768,34 @@ button.circle {
       padding: 15px;
       text-transform: capitalize;
       margin: 0;
-      border-top: 1px solid #c0c0c4; }
+      border-top: 1px solid #c0c0c4;
+      transition: .2s ease-in-out; }
+      .navigation1 ul li a:hover {
+        color: #ecf0f1;
+        background-color: #252336; }
 
 .navigation1.active {
   max-height: 500px;
   position: absolute;
   width: 100%;
   transition: max-height 0.5s ease-in-out; }
+
+.navigation2 {
+  overflow: hidden;
+  position: relative;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+  width: 100%; }
+  .navigation2 > li > a {
+    background: #f6f6f7 !important; }
+    .navigation2 > li > a:hover {
+      background-color: #252336 !important; }
+  .navigation2.active {
+    max-height: 500px;
+    position: relative;
+    width: 100%;
+    transition: max-height 0.5s ease-in-out;
+    background: #f6f6f7; }
 
 .loading {
   display: flex;
@@ -3135,7 +3193,8 @@ body {
       top: 0;
       display: flex;
       flex-direction: column;
-      justify-content: center; }
+      justify-content: center;
+      text-decoration: none; }
       .cafes .wrapper > div .name h3, .hotels .wrapper > div .name h3 {
         font-size: 20px;
         text-transform: uppercase;
@@ -4936,6 +4995,15 @@ nav#main-nav ul li ul li a {
   header.no-menu .arrow-bottom {
     display: none; }
 
+  .header-full .content {
+    height: 100%; }
+
+  #toTop {
+    display: none !important; }
+
+  .s2 .gallery {
+    padding: 20px 0; }
+
   .gallery.career .head h1 {
     font-weight: 700;
     text-transform: uppercase;
@@ -6152,7 +6220,7 @@ nav#main-nav ul li ul li a {
     border-bottom: 1px solid #d6d6d9;
     height: 46px; }
     .mobileMenu li:nth-child(2) a:after {
-      content: '\e903';
+      content: '\e91e';
       font-family: icomoon;
       position: absolute;
       margin-left: 10px; }

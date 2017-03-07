@@ -1417,3 +1417,22 @@ footer {
 .remodal-overlay {
   background: rgba(0, 0, 0, 0.8);
 }
+
+#toTop {
+  width:60px;
+  height: 80px;
+  border:1px solid $icon-dark;
+  background:$light-bg;
+  text-align:center;
+  padding:5px;
+  position:fixed;
+  bottom:20px; /* отступ кнопки от нижнего края страницы*/
+  right:20px;
+  cursor:pointer;
+  display:none;
+  color: $text-high;
+  line-height: 70px;
+  font-size: 22px;
+  z-index: 999999;
+}
+
