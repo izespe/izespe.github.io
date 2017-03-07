@@ -2128,12 +2128,12 @@ footer .container {
         -webkit-transform: translateZ(0) scale(1);
         -moz-transform: translateZ(0) scale(1);
         transform: translateZ(0) scale(1);
-        -webkit-transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        -o-transition: -o-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        -moz-transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -o-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+        -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        -o-transition: -o-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        -moz-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -o-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       .photo-reports .container .left > div:hover figure > span, .photo-reports .container .right > div:hover figure > span {
         bottom: 70px;
         z-index: 99; }
@@ -2673,12 +2673,12 @@ button.circle {
       -webkit-transform: translateZ(0) scale(1);
       -moz-transform: translateZ(0) scale(1);
       transform: translateZ(0) scale(1);
-      -webkit-transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      -o-transition: -o-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      -moz-transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -o-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+      -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      -o-transition: -o-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      -moz-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -o-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
   .events .tabs .tab .row .item:hover .photo img {
     -webkit-transform: translateZ(0) scale(1.05);
     -moz-transform: translateZ(0) scale(1.05);
@@ -3112,12 +3112,12 @@ body {
       -webkit-transform: translateZ(0) scale(1);
       -moz-transform: translateZ(0) scale(1);
       transform: translateZ(0) scale(1);
-      -webkit-transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      -o-transition: -o-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      -moz-transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-      transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -o-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      -webkit-transition: -webkit-transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: -webkit-transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      -o-transition: -o-transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      -moz-transition: transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -o-transform .4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
       height: auto;
       width: 100%; }
     .cafes .wrapper > div:hover img, .hotels .wrapper > div:hover img {
@@ -4148,12 +4148,12 @@ body {
           -webkit-transform: translateZ(0) scale(1);
           -moz-transform: translateZ(0) scale(1);
           transform: translateZ(0) scale(1);
-          -webkit-transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-          transition: -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-          -o-transition: -o-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-          -moz-transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-          transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-          transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -o-transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+          -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          transition: -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          -o-transition: -o-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          -moz-transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -moz-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95), -o-transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
       .events-grid .columns .item:hover .photo img {
         -webkit-transform: translateZ(0) scale(1.05);
         -moz-transform: translateZ(0) scale(1.05);
