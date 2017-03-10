@@ -1050,9 +1050,32 @@ main {
           margin-bottom: 0;
           min-height: 530px;
           .player {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: black;
+            cursor: pointer;
+            pointer-events: all;
+            &:before{
+              pointer-events: none;
+              content: "\e925";
+              position: absolute;
+              color: white;
+              z-index: 99;
+              font-family: icomoon;
+              font-size: 48px;
+            }
+            img{
+              width: 100%;
+              height: auto;
+              pointer-events: all;
+            }
             iframe {
               width: 100% !important;
               height: 250px !important;
+              border: none;
             }
           }
           .owl-video-reviews {
@@ -1459,3 +1482,6 @@ footer {
 .remodal-overlay {
   background: rgba(0, 0, 0, 0.6);
 }
+
+
+@import "responsive";

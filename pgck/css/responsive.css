@@ -1,0 +1,45 @@
+@media (max-width: 1600px) {
+  header .top .container,
+  main .docs .container,
+  main .how-it-works .container,
+  footer .container {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  main .step3 .container,
+  main .step2 .container {
+    padding-right: 30px; }
+
+  main .step1 {
+    min-height: 650px;
+    background: url("../img/bg1.jpg") 35% 0 no-repeat #f4f8fb; }
+    main .step1 .wrap {
+      margin-top: 80px; }
+
+  main .step2 {
+    min-height: 750px;
+    background: url("../img/bg2.jpg") 35% 0 no-repeat #f4f8fb; }
+    main .step2 .wrap {
+      max-width: 640px; }
+    main .step2 .wrap p {
+      font-size: 16px; }
+    main .step2 .wrap div {
+      padding-bottom: 35px; }
+
+  main .step3 {
+    min-height: 700px;
+    background: url("../img/bg3.jpg") top left no-repeat #f4f8fb; }
+
+  main .step3 .wrap > span {
+    margin: 70px 0 35px; }
+
+  main .step4 {
+    min-height: 900px;
+    background: url(../img/bg4.jpg) 92% 100% no-repeat #ebf2f8;
+    background-size: 100%; }
+
+  main .step4 .wrap {
+    max-width: 710px;
+    margin-top: 25px; } }
+
+/*# sourceMappingURL=responsive.css.map */

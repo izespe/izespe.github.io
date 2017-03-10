@@ -903,9 +903,31 @@ main .step4 {
       main .step4 .wrap .tabs_accordion div.content > div {
         margin-bottom: 0;
         min-height: 530px; }
-        main .step4 .wrap .tabs_accordion div.content > div .player iframe {
-          width: 100% !important;
-          height: 250px !important; }
+        main .step4 .wrap .tabs_accordion div.content > div .player {
+          height: 250px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          background: black;
+          cursor: pointer;
+          pointer-events: all; }
+          main .step4 .wrap .tabs_accordion div.content > div .player:before {
+            pointer-events: none;
+            content: "\e925";
+            position: absolute;
+            color: white;
+            z-index: 99;
+            font-family: icomoon;
+            font-size: 48px; }
+          main .step4 .wrap .tabs_accordion div.content > div .player img {
+            width: 100%;
+            height: auto;
+            pointer-events: all; }
+          main .step4 .wrap .tabs_accordion div.content > div .player iframe {
+            width: 100% !important;
+            height: 250px !important;
+            border: none; }
         main .step4 .wrap .tabs_accordion div.content > div .owl-video-reviews .item {
           background: white;
           min-height: 466px; }
@@ -1241,5 +1263,49 @@ footer {
 
 .remodal-overlay {
   background: rgba(0, 0, 0, 0.6); }
+
+@media (max-width: 1600px) {
+  header .top .container,
+  main .docs .container,
+  main .how-it-works .container,
+  footer .container {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  main .step3 .container,
+  main .step2 .container {
+    padding-right: 30px; }
+
+  main .step1 {
+    min-height: 650px;
+    background: url("../img/bg1.jpg") 35% 0 no-repeat #f4f8fb; }
+    main .step1 .wrap {
+      margin-top: 80px; }
+
+  main .step2 {
+    min-height: 750px;
+    background: url("../img/bg2.jpg") 35% 0 no-repeat #f4f8fb; }
+    main .step2 .wrap {
+      max-width: 640px; }
+    main .step2 .wrap p {
+      font-size: 16px; }
+    main .step2 .wrap div {
+      padding-bottom: 35px; }
+
+  main .step3 {
+    min-height: 700px;
+    background: url("../img/bg3.jpg") top left no-repeat #f4f8fb; }
+
+  main .step3 .wrap > span {
+    margin: 70px 0 35px; }
+
+  main .step4 {
+    min-height: 900px;
+    background: url(../img/bg4.jpg) 92% 100% no-repeat #ebf2f8;
+    background-size: 100%; }
+
+  main .step4 .wrap {
+    max-width: 710px;
+    margin-top: 25px; } }
 
 /*# sourceMappingURL=style.css.map */
