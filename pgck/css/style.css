@@ -9,20 +9,58 @@ header .top .container {
   max-width: 1600px;
   background: white;
   padding: 18px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   max-height: 105px; }
   header .top .container > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     width: 45%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     header .top .container > div p span {
       font-size: 18px; }
     header .top .container > div .call {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -moz-box-align: end;
+      -ms-flex-align: end;
       align-items: flex-end; }
       header .top .container > div .call a {
         font-size: 18px;
@@ -35,17 +73,49 @@ header .top .container {
       header .top .container > div .call button {
         background: transparent;
         border: 2px solid #f8c100;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
         border-radius: 50px;
         height: 42px;
         width: 170px; }
+        header .top .container > div .call button:hover {
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9600+0,ffd43c+100 */
+          background: #ff9600;
+          /* Old browsers */
+          background: -moz-linear-gradient(left, #ff9600 0%, #ffd43c 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(left, #ff9600 0%, #ffd43c 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: -webkit-gradient(linear, left top, right top, from(#ff9600), to(#ffd43c));
+          background: -o-linear-gradient(left, #ff9600 0%, #ffd43c 100%);
+          background: linear-gradient(to right, #ff9600 0%, #ffd43c 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9600', endColorstr='#ffd43c', GradientType=1);
+          /* IE6-9 */
+          color: white;
+          border: none; }
 header .header-form {
   background: url("../img/header-bg.png") top right no-repeat #f4f8fb; }
   header .header-form .container {
     width: 1300px;
     padding-bottom: 30px; }
     header .header-form .container .top {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       height: 470px; }
       header .header-form .container .top h1 {
@@ -64,6 +134,10 @@ header .header-form {
       max-width: 1060px;
       min-height: 468px;
       margin: 0 auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex; }
   header .header-form .advantages {
     background: #42495f;
@@ -75,7 +149,15 @@ header .header-form {
       display: inline-block;
       margin-bottom: 33px; }
     header .header-form .advantages .owl-advantages .item div {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       margin-bottom: 10px; }
       header .header-form .advantages .owl-advantages .item div span {
@@ -93,7 +175,15 @@ header .header-form {
     header .header-form .advantages .owl-theme .owl-dots {
       text-align: left;
       margin-top: 20px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
       header .header-form .advantages .owl-theme .owl-dots .owl-dot span {
         width: 9px;
@@ -112,11 +202,25 @@ header .header-form {
     padding: 30px 60px;
     text-align: center; }
     header .header-form .form span {
-      font-size: 28px; }
+      font-size: 22px; }
     header .header-form .form form {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
       width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
       header .header-form .form form input[type='text'] {
         height: 48px;
@@ -128,7 +232,12 @@ header .header-form {
         color: #42495f; }
         header .header-form .form form input[type='text']:nth-child(2) {
           margin-top: 30px; }
+        header .header-form .form form input[type='text']:focus {
+          border: 1px solid #fea700;
+          background: white; }
       header .header-form .form form input[type='submit'] {
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
         border-radius: 50px;
         margin-top: 25px;
         height: 58px;
@@ -139,6 +248,8 @@ header .header-form {
         /* FF3.6-15 */
         background: -webkit-linear-gradient(left, #fea700 0%, #f8c100 100%);
         /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, right top, from(#fea700), to(#f8c100));
+        background: -o-linear-gradient(left, #fea700 0%, #f8c100 100%);
         background: linear-gradient(to right, #fea700 0%, #f8c100 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fea700', endColorstr='#f8c100', GradientType=1);
@@ -150,6 +261,20 @@ header .header-form {
         -moz-box-shadow: 3px 3px 9px 0px rgba(254, 169, 0, 0.3);
         box-shadow: 3px 3px 9px 0px rgba(254, 169, 0, 0.3);
         margin-top: 20px; }
+        header .header-form .form form input[type='submit']:hover {
+          /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9600+0,ffd43c+100 */
+          background: #ff9600;
+          /* Old browsers */
+          background: -moz-linear-gradient(left, #ff9600 0%, #ffd43c 100%);
+          /* FF3.6-15 */
+          background: -webkit-linear-gradient(left, #ff9600 0%, #ffd43c 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: -webkit-gradient(linear, left top, right top, from(#ff9600), to(#ffd43c));
+          background: -o-linear-gradient(left, #ff9600 0%, #ffd43c 100%);
+          background: linear-gradient(to right, #ff9600 0%, #ffd43c 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9600', endColorstr='#ffd43c', GradientType=1);
+          /* IE6-9 */ }
     header .header-form .form .sliderCalc {
       width: 100%; }
       header .header-form .form .sliderCalc .irs-grid {
@@ -157,6 +282,8 @@ header .header-form {
       header .header-form .form .sliderCalc .irs-bar {
         height: 4px;
         top: -4px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
         border-radius: 0;
         background: #fea700;
         /* Old browsers */
@@ -164,23 +291,29 @@ header .header-form {
         /* FF3.6-15 */
         background: -webkit-linear-gradient(left, #fea700 0%, #f8c100 100%);
         /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, right top, from(#fea700), to(#f8c100));
+        background: -o-linear-gradient(left, #fea700 0%, #f8c100 100%);
         background: linear-gradient(to right, #fea700 0%, #f8c100 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fea700', endColorstr='#f8c100', GradientType=1);
-        /* IE6-9 */ }
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
       header .header-form .form .sliderCalc .irs-bar-edge, header .header-form .form .sliderCalc .irs-line-mid, header .header-form .form .sliderCalc .irs-line-right, header .header-form .form .sliderCalc .irs-line-left {
         background: none; }
       header .header-form .form .sliderCalc .irs-line {
         height: 4px;
         top: -4px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
         border-radius: 0;
         background: #fea700; }
       header .header-form .form .sliderCalc .irs-slider {
         cursor: pointer;
         width: 12px;
         height: 12px;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
         border-radius: 100%;
         background: #fea700;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
         box-sizing: content-box;
         border: 6px solid #f8c100;
         top: -14px; }
@@ -206,8 +339,8 @@ header .header-form {
       margin-top: 20px;
       line-height: 30px; }
       header .header-form .form input[type="checkbox"] + .checkbox-label:before {
-        font-family: 'icomoon', sans-serif;
-        content: '';
+        font-family: "icomoon", sans-serif;
+        content: "";
         font-size: 1em;
         border: 1px solid #d6d4d6;
         background: #edf2f5;
@@ -239,7 +372,15 @@ main .docs {
     font-weight: 500; }
   main .docs .bttns {
     max-width: 1060px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 0 auto; }
     main .docs .bttns a {
@@ -248,11 +389,27 @@ main .docs {
       background: white;
       text-align: left;
       padding: 0 10px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: inherit;
+      -webkit-justify-content: inherit;
+      -moz-box-pack: inherit;
+      -ms-flex-pack: inherit;
       justify-content: inherit;
       color: #42495f;
       text-decoration: none; }
+      main .docs .bttns a:hover {
+        -webkit-box-shadow: 0px 6px 27px 0px rgba(0, 0, 0, 0.18);
+        -moz-box-shadow: 0px 6px 27px 0px rgba(0, 0, 0, 0.18);
+        box-shadow: 0px 6px 27px 0px rgba(0, 0, 0, 0.18); }
       main .docs .bttns a img {
         float: right; }
 main .how-it-works {
@@ -263,9 +420,27 @@ main .how-it-works {
     max-width: 1600px;
     text-align: center;
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
   main .how-it-works h2 {
     font-size: 26px;
@@ -276,16 +451,35 @@ main .how-it-works {
     background: white;
     width: 68px;
     height: 68px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
     border-radius: 100%;
     position: relative;
     bottom: -31px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    font-size: 24px; }
+    font-size: 24px;
+    -webkit-box-shadow: 0px 6px 27px 0px rgba(0, 0, 0, 0.18);
+    -moz-box-shadow: 0px 6px 27px 0px rgba(0, 0, 0, 0.18);
+    box-shadow: 0px 6px 27px 0px rgba(0, 0, 0, 0.18); }
 main .step1 {
   min-height: 800px;
   background: url("../img/bg1.jpg") top right no-repeat #f4f8fb;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   overflow: hidden; }
   main .step1 .container {
@@ -306,13 +500,23 @@ main .step1 {
       line-height: 42px; }
   main .step1 .wrap {
     max-width: 715px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-top: 145px; }
     main .step1 .wrap span {
       font-weight: 500;
       font-size: 28px;
       width: 100%;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between; }
     main .step1 .wrap div {
       width: 50%; }
@@ -320,21 +524,45 @@ main .step1 {
         padding-left: 45px; }
     main .step1 .wrap p {
       font-size: 18px;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -moz-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       margin: 18px 0; }
       main .step1 .wrap p i {
         margin-right: 10px;
         width: 27px;
         height: 27px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
         border-radius: 100%;
         border: 1px solid #42495f; }
 main .step2 {
   min-height: 800px;
   background: url("../img/bg2.jpg") top right no-repeat #f4f8fb;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   overflow: hidden; }
   main .step2 .container {
@@ -355,30 +583,54 @@ main .step2 {
       line-height: 42px; }
   main .step2 .wrap {
     max-width: 715px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-top: 65px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between; }
     main .step2 .wrap span {
       font-weight: 500;
       font-size: 28px;
       width: 100%;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       margin-bottom: 35px; }
     main .step2 .wrap div {
-      width: 40%;
+      width: 45%;
       padding-bottom: 65px; }
     main .step2 .wrap img {
       display: block; }
     main .step2 .wrap p {
       font-size: 18px;
       line-height: 24px;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -moz-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       margin: 18px 0 0; }
 main .step3 {
   min-height: 800px;
   background: url("../img/bg3.jpg") top right no-repeat #f4f8fb;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   overflow: hidden; }
   main .step3 .container {
@@ -402,6 +654,10 @@ main .step3 {
     main .step3 .wrap > span {
       font-size: 18px;
       width: 100%;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       margin: 130px 0 35px;
       font-family: Roboto;
@@ -417,7 +673,17 @@ main .step3 {
     margin: 30px 0 0; }
   main .step3 .owl-banks span {
     font-family: Rubik;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     font-size: 18px;
     font-weight: 400; }
@@ -428,8 +694,20 @@ main .step3 {
   main .step3 .owl-banks .bank-logo {
     height: 80px;
     background: #f4f8fb;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center; }
     main .step3 .owl-banks .bank-logo img {
       width: auto;
@@ -437,7 +715,15 @@ main .step3 {
   main .step3 .owl-theme .owl-dots {
     text-align: left;
     margin-top: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     main .step3 .owl-theme .owl-dots .owl-dot span {
       width: 9px;
@@ -456,24 +742,48 @@ main .step3 {
       background: #f8c100; }
   main .step3 .owl-theme .owl-nav {
     position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     width: 100%; }
     main .step3 .owl-theme .owl-nav [class*=owl-] {
       font-size: 14px;
       width: 42px;
       height: 42px;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
       border-radius: 100%;
       background: transparent;
       border: 2px solid #dadde0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center; }
       main .step3 .owl-theme .owl-nav [class*=owl-]:hover {
         border: 2px solid #f8c100; }
 main .step4 {
   min-height: 990px;
   background: url("../img/bg4.jpg") top right no-repeat #f4f8fb;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   overflow: hidden; }
   main .step4 .container {
@@ -493,6 +803,8 @@ main .step4 {
       text-transform: uppercase;
       line-height: 42px; }
   main .step4 button {
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
     border-radius: 50px;
     height: 42px;
     width: 170px;
@@ -502,10 +814,10 @@ main .step4 {
     /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #fea700 0%, #f8c100 100%);
     /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#fea700), to(#f8c100));
+    background: -o-linear-gradient(left, #fea700 0%, #f8c100 100%);
     background: linear-gradient(to right, #fea700 0%, #f8c100 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fea700', endColorstr='#f8c100', GradientType=1);
-    /* IE6-9 */
     color: white;
     border: none;
     -webkit-box-shadow: 3px 3px 9px 0px rgba(254, 169, 0, 0.3);
@@ -621,12 +933,22 @@ main .step4 {
                 position: absolute;
                 left: 5px;
                 top: 9px;
+                -webkit-border-radius: 100%;
+                -moz-border-radius: 100%;
                 border-radius: 100%;
                 background: #f8c100; }
         main .step4 .wrap .tabs_accordion div.content > div .owl-theme .owl-dots {
           text-align: left;
           margin-top: 20px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          -moz-box-align: center;
+          -ms-flex-align: center;
           align-items: center; }
           main .step4 .wrap .tabs_accordion div.content > div .owl-theme .owl-dots .owl-dot span {
             width: 9px;
@@ -644,7 +966,15 @@ main .step4 {
             background: #f8c100; }
         main .step4 .wrap .tabs_accordion div.content > div .owl-theme .owl-nav {
           position: absolute;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: end;
+          -webkit-justify-content: flex-end;
+          -moz-box-pack: end;
+          -ms-flex-pack: end;
           justify-content: flex-end;
           width: 100%; }
           main .step4 .wrap .tabs_accordion div.content > div .owl-theme .owl-nav [class*=owl-] {
@@ -652,11 +982,25 @@ main .step4 {
             font-size: 14px;
             width: 42px;
             height: 42px;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
             border-radius: 100%;
             background: transparent;
             border: 2px solid #dadde0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -moz-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center; }
             main .step4 .wrap .tabs_accordion div.content > div .owl-theme .owl-nav [class*=owl-]:hover {
               border: 2px solid #f8c100; } }
@@ -666,11 +1010,23 @@ footer {
   footer .container {
     max-width: 1600px; }
   footer .top {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     color: white;
     height: 73px;
     border-bottom: 1px solid #303445;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     footer .top > a {
       color: white;
@@ -679,6 +1035,10 @@ footer {
       footer .top > a span {
         font-weight: 500; }
   footer nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0;
     padding: 0; }
@@ -689,7 +1049,15 @@ footer {
       color: white;
       text-decoration: none; }
   footer .bottom {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 18px 0 25px; }
     footer .bottom p {
@@ -699,7 +1067,16 @@ footer {
       font-size: 14px; }
       footer .bottom p a {
         color: #f8c100;
-        text-decoration: none; }
+        text-decoration: none;
+        position: relative; }
+        footer .bottom p a:hover:after {
+          content: "";
+          width: 91%;
+          position: absolute;
+          height: 1px;
+          border-top: 1px dashed #f8c100;
+          left: 5px;
+          bottom: -2px; }
       footer .bottom p:last-of-type {
         text-align: right; }
 
@@ -732,8 +1109,20 @@ footer {
     background: url("../img/hex.png") no-repeat center transparent;
     position: absolute;
     top: 90px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-size: 24px;
     font-style: normal; }
@@ -745,5 +1134,112 @@ footer {
 
 .step4 .strip:after {
   display: none; }
+
+.remodal {
+  max-width: 530px;
+  padding: 45px 60px; }
+  .remodal span {
+    font-size: 28px; }
+  .remodal form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .remodal form input[type=text] {
+      height: 48px;
+      border: 1px solid #d6d4d6;
+      background: #edf2f5;
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      color: #42495f; }
+      .remodal form input[type=text]:nth-child(2) {
+        margin-top: 30px; }
+      .remodal form input[type=text]:focus {
+        border: 1px solid #fea700;
+        background: white; }
+    .remodal form input[type=submit] {
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+      height: 58px;
+      width: 230px;
+      background: #fea700;
+      /* Old browsers */
+      background: -moz-linear-gradient(left, #fea700 0%, #f8c100 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #fea700 0%, #f8c100 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-gradient(linear, left top, right top, from(#fea700), to(#f8c100));
+      background: -o-linear-gradient(left, #fea700 0%, #f8c100 100%);
+      background: linear-gradient(to right, #fea700 0%, #f8c100 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      color: white;
+      border: none;
+      cursor: pointer;
+      -webkit-box-shadow: 3px 3px 9px 0px rgba(254, 169, 0, 0.3);
+      -moz-box-shadow: 3px 3px 9px 0px rgba(254, 169, 0, 0.3);
+      box-shadow: 3px 3px 9px 0px rgba(254, 169, 0, 0.3);
+      margin-top: 20px; }
+      .remodal form input[type=submit]:hover {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff9600+0,ffd43c+100 */
+        background: #ff9600;
+        /* Old browsers */
+        background: -moz-linear-gradient(left, #ff9600 0%, #ffd43c 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #ff9600 0%, #ffd43c 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: -webkit-gradient(linear, left top, right top, from(#ff9600), to(#ffd43c));
+        background: -o-linear-gradient(left, #ff9600 0%, #ffd43c 100%);
+        background: linear-gradient(to right, #ff9600 0%, #ffd43c 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+  .remodal.download span {
+    font-size: 16px; }
+  .remodal.confirm {
+    padding: 60px; }
+    .remodal.confirm i {
+      color: white;
+      background: #758146;
+      width: 100px;
+      height: 100px;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      display: inline-block;
+      font-size: 60px;
+      line-height: 100px; }
+    .remodal.confirm p {
+      font-size: 28px;
+      color: #758146;
+      margin: 15px 0; }
+    .remodal.confirm span {
+      font-size: 16px; }
+
+.remodal-close {
+  right: -12px;
+  left: inherit;
+  top: -34px; }
+  .remodal-close:before {
+    font-size: 42px;
+    color: white;
+    line-height: 30px;
+    width: 24px; }
+
+.remodal-overlay {
+  background: rgba(0, 0, 0, 0.6); }
 
 /*# sourceMappingURL=style.css.map */
