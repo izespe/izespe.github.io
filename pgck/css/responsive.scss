@@ -1,14 +1,13 @@
-
 @media (max-width: 1600px) {
   header .top .container,
   main .docs .container,
   main .how-it-works .container,
-  footer .container{
+  footer .container {
     padding-left: 30px;
     padding-right: 30px;
   }
   main .step3 .container,
-  main .step2 .container{
+  main .step2 .container {
     padding-right: 30px;
   }
 
@@ -23,7 +22,7 @@
   main .step2 {
     min-height: 750px;
     background: url('../img/bg2.jpg') 35% 0 no-repeat #f4f8fb;
-    .wrap{
+    .wrap {
       max-width: 640px;
     }
     .wrap p {
@@ -50,6 +49,250 @@
   main .step4 .wrap {
     max-width: 710px;
     margin-top: 25px;
+  }
+
+}
+
+@media (max-width: 1025px) {
+  header .header-form {
+    background-size: 80%;
+  }
+  header .header-form .container .top {
+    height: 360px;
+  }
+  header .header-form .form span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  header .header-form .container {
+    width: 95%;
+  }
+  main .step1 {
+    min-height: 650px;
+    background: url("../img/bg1.jpg") 0 0 no-repeat #f4f8fb;
+  }
+  main .step2 .wrap {
+    max-width: 740px;
+  }
+  main .step2 {
+    min-height: 750px;
+    background: white;
+  }
+
+  main .step4 {
+    background: url(../img/bg4.jpg) 0 0 no-repeat #ebf2f8;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 769px) {
+  header .header-form {
+    background: #f4f8fb;
+  }
+  .top {
+    text-align: center;
+    align-items: center;
+  }
+  header .header-form .form {
+    background: white;
+    width: 50%;
+    padding: 20px 20px;
+    text-align: center;
+  }
+  header .header-form .form span {
+    font-size: 17px;
+  }
+  header .header-form .advantages > span {
+    font-size: 22px;
+  }
+  header .header-form .advantages {
+    padding: 20px 20px;
+  }
+  header .header-form .form .checkbox-label {
+    font-size: 12px;
+  }
+  header .header-form .form input[type="checkbox"] + .checkbox-label:before {
+    margin-right: 13px;
+  }
+  header .header-form .container .bottom {
+    min-height: 420px;
+  }
+  header .header-form .form form input[type='text']:nth-child(2) {
+    margin-top: 20px;
+  }
+  header .header-form .form form input[type='text'] {
+    margin-top: 15px;
+  }
+  header .header-form .form input[type="checkbox"] + .checkbox-label {
+    margin-top: 15px;
+  }
+  main .docs .bttns a {
+    font-size: 14px;
+    height: 58px;
+  }
+  header .top .container > div .call a {
+    font-size: 16px;
+  }
+  header .top .container > div {
+    display: flex;
+    width: 60%;
+    p {
+      font-size: 14px;
+      width: 50%;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  header .top .container > div .call button {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    height: auto;
+    width: initial;
+    font-weight: 700;
+    color: $orange;
+  }
+  main .step1 .container {
+    padding-right: 20px;
+  }
+  main .step3 .container, main .step2 .container {
+    padding-right: 20px;
+  }
+
+  main .step4 .container {
+    max-width: 550px;
+    float: left;
+    padding-bottom: 40px;
+  }
+  footer .bottom p {
+    width: 50%;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  header .top .container > div p {
+    display: none;
+  }
+  header .top .container a {
+    width: 130px;
+    img {
+      width: 100%;
+    }
+  }
+  header .header-form .container .top h1 {
+    font-size: 20px;
+    line-height: initial;
+  }
+  header .top .container, main .docs .container, main .how-it-works .container, footer .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  header .header-form .container .top span {
+    width: 103%;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  header .header-form .container .top {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  header .header-form .container .top h1 {
+    margin: 0 0 10px;
+  }
+  header .header-form .advantages {
+    display: none;
+  }
+  header .header-form .form {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  header .header-form .form span {
+    font-size: 16px;
+  }
+  header .header-form .form form input[type='text'] {
+    height: 42px;
+    font-size: 14px;
+  }
+  header .header-form .form form input[type='submit'] {
+    width: 100%;
+    margin-top: 10px;
+  }
+  main .docs h2, main .how-it-works h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  main .docs .bttns {
+    flex-direction: column;
+  }
+
+  main .docs .bttns a {
+    font-size: 13px;
+    height: 54px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  main .docs .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .strip {
+    display: none;
+  }
+
+  main .step1 .container {
+    padding: 40px 8px 20px;
+  }
+  main .step1 h3, main .step2 h3 {
+    font-size: 18px;
+
+  }
+
+  main .step1 h3 span, main .step2 h3 span {
+    font-size: 36px;
+
+  }
+  main .step3 .container, main .step2 .container, main .step4 .container {
+    padding: 20px 8px;
+  }
+  main .step1 .wrap {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+  main .step1 .wrap div {
+    width: 100%;
+  }
+  main .step1 .wrap div:last-of-type {
+    padding-left: 0;
+  }
+  main .step1 .wrap p {
+    margin: 10px 0;
+  }
+  main .step1 .wrap span, main .step2 .wrap span {
+    font-size: 22px;
+  }
+  main .step1 .wrap p {
+    font-size: 14px;
+  }
+  main .step1 {
+    min-height: 615px;
+  }
+  main .step2 .wrap div {
+    width: 100%;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    img {
+      width: 100px;
+      margin-right: 10px;
+    }
+    p{
+      font-size: 14px;
+      margin: 0;
+    }
   }
 
 }
