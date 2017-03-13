@@ -43,6 +43,8 @@
   main .step4 {
     min-height: 900px;
     background: url(../img/bg4.jpg) 92% 100% no-repeat #ebf2f8;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
     background-size: 100%;
   }
 
@@ -55,6 +57,8 @@
 
 @media (max-width: 1025px) {
   header .header-form {
+    -moz-background-size: 80%;
+    -o-background-size: 80%;
     background-size: 80%;
   }
   header .header-form .container .top {
@@ -80,7 +84,9 @@
   }
 
   main .step4 {
-    background: url(../img/bg4.jpg) 0 0 no-repeat #ebf2f8;
+    background: #ebf2f8;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
   }
 }
@@ -91,6 +97,10 @@
   }
   .top {
     text-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   header .header-form .form {
@@ -134,6 +144,10 @@
     font-size: 16px;
   }
   header .top .container > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     width: 60%;
     p {
@@ -147,6 +161,8 @@
   header .top .container > div .call button {
     background: transparent;
     border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0;
     height: auto;
     width: initial;
@@ -226,6 +242,12 @@
     font-weight: 500;
   }
   main .docs .bttns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -246,22 +268,30 @@
   main .step1 .container {
     padding: 40px 8px 20px;
   }
-  main .step1 h3, main .step2 h3 {
+  main .step1 h3, main .step2 h3, main .step4 h3, main .step3 h3 {
     font-size: 18px;
 
   }
 
-  main .step1 h3 span, main .step2 h3 span {
+  main .step1 h3 span, main .step2 h3 span, main .step4 h3 span, main .step3 h3 span {
     font-size: 36px;
 
   }
   main .step3 .container, main .step2 .container, main .step4 .container {
     padding: 20px 8px;
   }
+
   main .step1 .wrap {
     margin-top: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
+
   main .step1 .wrap div {
     width: 100%;
   }
@@ -283,16 +313,119 @@
   main .step2 .wrap div {
     width: 100%;
     padding-bottom: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     img {
       width: 100px;
       margin-right: 10px;
     }
-    p{
+    p {
       font-size: 14px;
       margin: 0;
     }
   }
-
+  footer .bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  footer .bottom p {
+    width: 100%;
+    font-size: 12px;
+  }
+  footer .bottom p:last-of-type {
+    text-align: left;
+    margin-top: 10px;
+  }
+  footer .top {
+    height: auto;
+    padding: 15px 0;
+  }
+  footer nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: left;
+  }
+  main .step4 .wrap .tabs_accordion ul.tabs {
+    display: none;
+  }
+  main .step4 .container {
+    max-width: 320px;
+  }
+  main .step3 .wrap > span {
+    margin: 30px 0 35px;
+  }
+  header .top .container > div .call {
+    width: 100%;
+    a {
+      width: 100%;
+      margin-bottom: 0;
+      text-align: right
+    }
+    button {
+      padding: 0;
+    }
+  }
+  main .step2 .wrap {
+    margin-top: 25px;
+  }
+  main .step4 .wrap .tabs_accordion div.content > div .owl-video-reviews .item {
+    min-height: initial;
+  }
+  main .step4 .wrap .tabs_accordion div.content > div .player {
+    height: 200px;
+  }
+  main .step4 .wrap .tabs_accordion div.content > div .owl-video-reviews .info {
+    padding: 10px 8px;
+  }
+  main .step4 .wrap .tabs_accordion div.content > div .owl-video-reviews .info ul li{
+    font-size: 15px;
+  }
+  main .step4 .wrap .tabs_accordion div.content > div {
+    min-height: auto;
+  }
+  main .step4 .wrap .tabs_accordion div.content > div .owl-theme .owl-nav {
+    display: none;}
+  main .step4 .wrap .tabs_accordion div.content > div .owl-theme .owl-dots {
+    margin: 10px 0 15px;
+    text-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  main .step3 .owl-theme .owl-nav {
+    display: none;
+  }
+  main .step3 .owl-theme .owl-dots {
+    text-align: center;
+    margin-top: 20px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  main .step3 {
+    min-height: auto;
+    padding-bottom: 20px;
+  }
 }

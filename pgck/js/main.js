@@ -58,12 +58,6 @@ $(function () {
                 }
 
 
-
-
-
-
-
-
                 var $slider = $(el).find("input");
                 $slider.ionRangeSlider(setSlider);
 

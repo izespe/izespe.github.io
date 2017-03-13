@@ -352,7 +352,7 @@
                     </ul>
 
                     <div class="content">
-                        <label for="tab_1_content_control">ВИДЕООТЗЫВЫ</label>
+                        <label for="tab_1_content_control">Видеоотзывы</label>
                         <div class="tab_1_content">
                             <div class="owl-video-reviews owl-carousel owl-theme">
                                 <div class="item">
@@ -418,43 +418,71 @@
                                 </div>
 
                             </div>
-                            <script>
-                                $('.owl-video-reviews').owlCarousel({
-                                    margin: 20,
-                                    nav: true,
-                                    loop: true,
-                                    dots: true,
-                                    items: 2,
-                                    navText: ["<i class='icon-arr-left2'></i>", "<i class='icon-arr-right3'></i>"],
-                                    responsive: {
-                                        0: {
-                                            items: 1
-                                        },
-                                        800: {
-                                            items: 2
-                                        }
-                                    }
-                                })
-                            </script>
+
                             <script>
                                 $('.fake-video').click(function () {
                                     video = '<iframe src="' + $(this).attr('data-video') + '"></iframe>';
                                     $(this).replaceWith(video);
+                                    $('main .step4 .wrap .tabs_accordion div.content > div .player iframe').css('z-index', '99');
+                                    $('.player').css('z-index', '0');
                                 });
                             </script>
 
 
                         </div>
 
-                        <label for="tab_2_content_control">ОТЗЫВЫ</label>
+                        <label for="tab_2_content_control">Отзывы</label>
                         <div class="tab_2_content">
-                            <h2>Tab 2 content</h2>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                egestas.</p>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                                egestas.</p>
+                            <div class="owl-reviews owl-carousel owl-theme">
+                                <div class="item">
+                                    <span>prof-air </span>
+                                    <p>Большое спасибо Павлу и Татьяне!
+                                        Помогли осуществить мечту, купить дом.
+                                        Пытался сам оформить ипотеку, везде отказывали (плохая кредитная история) с
+                                        ребятами все получилось. Да еще и ...</p>
+                                    <a href="">Подробнее</a>
+                                </div>
+                                <div class="item">
+                                    <span>Андрей</span>
+                                    <p>Всем добрый вечер! Хочу высказать благодарность работникам данной организации!!!
+                                        Лично Павлу Гордееву! Ситуация у меня была не простая. Нужно было срочное...</p>
+                                    <a href="">Подробнее</a>
+                                </div>
+                                <div class="item">
+                                    <span>prof-air </span>
+                                    <p>Большое спасибо Павлу и Татьяне!
+                                        Помогли осуществить мечту, купить дом.
+                                        Пытался сам оформить ипотеку, везде отказывали (плохая кредитная история) с
+                                        ребятами все получилось. Да еще и ...</p>
+                                    <a href="">Подробнее</a>
+                                </div>
+                                <div class="item">
+                                    <span>Андрей</span>
+                                    <p>Всем добрый вечер! Хочу высказать благодарность работникам данной организации!!!
+                                        Лично Павлу Гордееву! Ситуация у меня была не простая. Нужно было срочное...</p>
+                                    <a href="">Подробнее</a>
+                                </div>
+                            </div>
                         </div>
-
+                        <script>
+                            $('.owl-video-reviews, .owl-reviews').owlCarousel({
+                                margin: 20,
+                                loop: true,
+                                dots: true,
+                                items: 2,
+                                navText: ["<i class='icon-arr-left2'></i>", "<i class='icon-arr-right3'></i>"],
+                                responsive: {
+                                    0: {
+                                        items: 1,
+                                        nav: false
+                                    },
+                                    800: {
+                                        items: 2,
+                                        nav: true
+                                    }
+                                }
+                            })
+                        </script>
                         <label for="tab_3_content_control">Письма об одобрении</label>
                         <div class="tab_3_content">
                             <h2>Tab 3 content</h2>
