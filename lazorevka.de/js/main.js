@@ -1,6 +1,7 @@
 /**
  * Created by Wide-Web on 13.03.2017.
  */
+$(document).ready(function(){
 (function($) {
     $.fn.respnav = function(options) {
         return this.each(function() {
@@ -17,7 +18,7 @@
                     obj.toggleClass("open");
                     overlay.toggle();
                 }
-            }
+            };
 
             obj.click(toggleNav);
             tree.click(toggleNav);
@@ -28,7 +29,7 @@
                     tree.attr('style', '');
                     $("." + obj.attr("class") + "_overlay").attr('style', '');
                     obj.removeClass('open');
-                };
+                }
             });
         });
     };
@@ -38,7 +39,7 @@ $('.icon').respnav();
 
 
 
-$(document).ready(function(){
+
     $("#menu").on("click","a", function (event) {
         //отменяем стандартную обработку нажатия по ссылке
         event.preventDefault();

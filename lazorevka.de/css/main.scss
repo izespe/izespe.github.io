@@ -99,18 +99,21 @@ header {
         display: block;
       }
       ul {
-        border-radius: 3px;
+        border-radius: 0 0 10px 10px;
         display: none;
         position: absolute;
         width: 100%;
-        background: $main_color;
+        background: #4f69b4;
         left: 0;
         top: 100%;
 
         li {
           display: block;
-          border-bottom: 1px solid $darken_color;
+          border-bottom: 1px solid #687bbc;
           border-right: 0;
+          &:last-of-type{
+            border-bottom: none;
+          }
         }
       }
     }
