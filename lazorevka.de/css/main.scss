@@ -9,12 +9,70 @@ header {
   .container {
     max-width: 1652px;
   }
-  nav{
+  .icon_overlay {
+    display: none;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  nav {
+    z-index: 255;
+    display: flex;
     height: 48px;
     margin: 0 30px 40px;
     background: url("../img/menu-bg.png") repeat-x transparent;
     position: relative;
-    &:before{
+    .icon {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      li {
+        display: flex;
+        padding: 0 40px;
+        a {
+          color: #bcc8ec;
+          display: block;
+          text-decoration: none;
+          position: relative;
+          &:hover {
+            color: white;
+            font-weight: 700;
+            &:after {
+              content: '';
+              width: 100%;
+              height: 2px;
+              background: white;
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+            }
+            &:before {
+              content: '';
+              width: 100%;
+              height: 1px;
+              background: white;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+    &:before {
       content: '';
       position: absolute;
       background: url("../img/left-menu-bg.png");
@@ -23,7 +81,7 @@ header {
       top: 0;
       left: -32px;
     }
-    &:after{
+    &:after {
       content: '';
       position: absolute;
       background: url("../img/right-menu-bg.png");
@@ -33,6 +91,110 @@ header {
       right: -32px;
     }
   }
+
+  @media only screen and (max-width: 980px) {
+    nav {
+      position: relative;
+      .icon {
+        display: block;
+      }
+      ul {
+        border-radius: 3px;
+        display: none;
+        position: absolute;
+        width: 100%;
+        background: $main_color;
+        left: 0;
+        top: 100%;
+
+        li {
+          display: block;
+          border-bottom: 1px solid $darken_color;
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  /* animated hamburger icon. Check it -> http://codepen.io/pvrt/pen/eJZmxZ*/
+  .icon {
+    float: right;
+    margin: 10px;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    span, &:before, &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: $main_color;
+      height: 4px;
+      width: 100%;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      -webkit-transition: all 0.25s ease-in-out;
+      -ms-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+    span {
+      top: 50%;
+      margin-top: -2px;
+    }
+    &.open {
+      &:before {
+        -moz-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        top: 10px;
+      }
+      &:after {
+        bottom: 10px;
+        -moz-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+      }
+      span {
+        left: -100%;
+        filter: alpha(opacity=0);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        opacity: 0;
+        margin-top: -2px;
+      }
+    }
+  }
+
   .content {
     display: flex;
     justify-content: space-between;
@@ -882,12 +1044,12 @@ footer {
     padding: 25px 80px 25px 180px;
     align-items: flex-end;
     position: relative;
-    img{
+    img {
       position: absolute;
       left: 30px;
       top: -55px;
     }
-    p{
+    p {
       font-size: 27px;
       line-height: 35.46px;
       margin: 0;
@@ -948,18 +1110,18 @@ footer {
   .foot {
     max-width: 446px;
     margin: 0 auto;
-    span{
+    span {
       font-size: 32px;
       line-height: 28px;
       display: inline-block;
       margin-bottom: 10px;
     }
-    p{
+    p {
       margin: 0;
       font-size: 18px;
       line-height: 22px;
       margin-bottom: 8px;
-      a{
+      a {
         text-decoration: none;
         color: $blue;
       }
@@ -967,20 +1129,24 @@ footer {
   }
 }
 
+/*REMODAL*/
+
+.remodal-wrapper {
+  padding: 120px 10px;
+}
+
+.remodal {
+  max-width: 1280px;
+  padding: 0;
+  iframe{
+    width: 1280px;
+    height: 718px;
+  }
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+@import "responsive";
 
 
 

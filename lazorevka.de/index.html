@@ -21,9 +21,52 @@
 </head>
 
 <body>
+<div class="remodal" data-remodal-id="modal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <iframe src="https://www.youtube.com/embed/2AlP2AKX3f0" frameborder="0" allowfullscreen></iframe>
+    <h1>Remodal</h1>
+    <p>
+        Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+    </p>
+    <br>
+    <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+    <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+</div>
+<div class="remodal-bg">
+</div>
 <header>
     <div class="container">
-        <nav> </nav>
+        <nav id="menu">
+
+            <div class='icon'>
+                <span></span>
+            </div>
+            <ul>
+                <li>
+                    <a href='#'>Ganz kurz über uns</a>
+                </li>
+                <li>
+                    <a href='#inf-videos'>Informationsgrafik</a>
+                </li>
+                <li>
+                    <a href='#draw-animation'>Klassische Animation</a>
+                </li>
+                <li>
+                    <a href='#vol-animation'>3D-Grafik</a>
+                </li>
+                <li>
+                    <a href='#promo'>Wir bewerben Animation</a>
+                </li>
+                <li>
+                    <a href='#about'>Das Team</a>
+                </li>
+                <li>
+                    <a href='#contacts'>Kontakt</a>
+                </li>
+            </ul>
+
+        </nav>
+
         <div class="content">
             <div class="left">
                 <a href=""><img src="img/logo.png" alt=""></a>
@@ -53,7 +96,7 @@
 
 </header>
 <main>
-    <section class="inf-videos-head">
+    <section class="inf-videos-head" id="inf-videos">
         <div class="container">
             <h2>Информационые ролики</h2>
             <div class="wrap">
@@ -73,7 +116,7 @@
                 <div class="item">
                     <div class="preview">
                         <img src="img/2-1.jpg" alt="">
-                        <a href=""><img src="img/play.png" alt="" class="play"></a>
+                        <a href="" data-remodal-target="modal"><img src="img/play.png" alt="" class="play"></a>
                     </div>
                     <h3>Транспортное право</h3>
                     <p>4 недели, 250 000 руб.</p>
@@ -81,7 +124,7 @@
                 <div class="item">
                     <div class="preview">
                         <img src="img/2-2.jpg" alt="">
-                        <a href=""><img src="img/play.png" alt="" class="play"></a>
+                        <a href="" data-remodal-target="modal"><img src="img/play.png" alt="" class="play"></a>
                     </div>
                     <h3>Транспортное право</h3>
                     <p>4 недели, 250 000 руб.</p>
@@ -89,7 +132,7 @@
                 <div class="item">
                     <div class="preview">
                         <img src="img/2-3.jpg" alt="">
-                        <a href=""><img src="img/play.png" alt="" class="play"></a>
+                        <a href="" data-remodal-target="modal"><img src="img/play.png" alt="" class="play"></a>
                     </div>
                     <h3>Транспортное право</h3>
                     <p>4 недели, 250 000 руб.</p>
@@ -120,10 +163,10 @@
             </script>
 
             <p>Мы бесплатно разработаем план сценария <br>и расчитаем стоимость производства.</p>
-            <a href="">Отправить заявку</a>
+            <a href="#contacts">Отправить заявку</a>
         </div>
     </section>
-    <section class="draw-animation-head">
+    <section class="draw-animation-head" id="draw-animation">
         <div class="container">
             <h2>Рисованная анимация</h2>
             <div class="wrap">
@@ -183,10 +226,10 @@
                 </div>
             </div>
             <p>Мы бесплатно разработаем план сценария <br>и расчитаем стоимость производства.</p>
-            <a href="">Отправить заявку</a>
+            <a href="#contacts">Отправить заявку</a>
         </div>
     </section>
-    <section class="vol-animation-head">
+    <section class="vol-animation-head" id="vol-animation">
         <div class="container">
             <h2>Объёмная анимация</h2>
             <div class="wrap">
@@ -230,10 +273,10 @@
                 </div>
             </div>
             <p>Мы бесплатно разработаем план сценария <br>и расчитаем стоимость производства.</p>
-            <a href="">Отправить заявку</a>
+            <a href="#contacts">Отправить заявку</a>
         </div>
     </section>
-    <section class="promo">
+    <section class="promo" id="promo">
         <div class="dragon">
             <div class="container">
                 <div class="top">
@@ -391,7 +434,7 @@
         </div>
 
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="info">
                 <div class="left">
@@ -458,7 +501,7 @@
         </div>
     </section>
 </main>
-<footer>
+<footer id="contacts">
     <div class="container">
         <div class="head">
             <img src="img/bird.png" alt="">
