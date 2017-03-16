@@ -21,6 +21,9 @@ header {
   }
   nav {
     z-index: 255;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     height: 48px;
     margin: 0 30px 40px;
@@ -31,15 +34,27 @@ header {
     }
 
     ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
       list-style: none;
       text-align: center;
       margin: 0;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       width: 100%;
       padding: 0;
       li {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         padding: 0 40px;
         a {
@@ -111,7 +126,7 @@ header {
           display: block;
           border-bottom: 1px solid #687bbc;
           border-right: 0;
-          &:last-of-type{
+          &:last-of-type {
             border-bottom: none;
           }
         }
@@ -126,15 +141,10 @@ header {
     width: 30px;
     height: 24px;
     position: relative;
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
     text-align: center;
@@ -148,15 +158,10 @@ header {
       border-radius: 9px;
       opacity: 1;
       left: 0;
-      -moz-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
-      -moz-transition: all 0.25s ease-in-out;
-      -o-transition: all 0.25s ease-in-out;
       -webkit-transition: all 0.25s ease-in-out;
-      -ms-transition: all 0.25s ease-in-out;
       transition: all 0.25s ease-in-out;
     }
     &:before {
@@ -171,8 +176,6 @@ header {
     }
     &.open {
       &:before {
-        -moz-transform: rotate(135deg);
-        -o-transform: rotate(135deg);
         -ms-transform: rotate(135deg);
         -webkit-transform: rotate(135deg);
         transform: rotate(135deg);
@@ -180,8 +183,6 @@ header {
       }
       &:after {
         bottom: 10px;
-        -moz-transform: rotate(-135deg);
-        -o-transform: rotate(-135deg);
         -ms-transform: rotate(-135deg);
         -webkit-transform: rotate(-135deg);
         transform: rotate(-135deg);
@@ -199,7 +200,13 @@ header {
   }
 
   .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     color: white;
     .left {
@@ -208,6 +215,9 @@ header {
       span {
         font-size: 48px;
         font-weight: 700;
+        margin-top: 30px;
+        display: inline-block;
+        margin-bottom: 5px;
       }
       a {
         display: block;
@@ -216,12 +226,25 @@ header {
       p {
         font-size: 18px;
         max-width: 400px;
+        margin: 0;
       }
     }
+
     .right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
       justify-content: flex-end;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       width: 50%;
       img {
@@ -254,13 +277,29 @@ header {
     margin: 0 0 50px;
   }
   .wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     > div {
       width: 33.33%;
       text-align: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
     span {
@@ -269,8 +308,17 @@ header {
       background: $yellow;
       color: #622700;
       font-size: 28px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       border-radius: 100%;
     }
@@ -292,15 +340,10 @@ header {
       display: inline-block;
       background: #5097d7;
       background-image: -webkit-linear-gradient(top, #5097d7, #396ec7);
-      background-image: -moz-linear-gradient(top, #5097d7, #396ec7);
-      background-image: -ms-linear-gradient(top, #5097d7, #396ec7);
-      background-image: -o-linear-gradient(top, #5097d7, #396ec7);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#5097d7), to(#396ec7));
       background-image: linear-gradient(to bottom, #5097d7, #396ec7);
-      -webkit-border-radius: 10;
-      -moz-border-radius: 10;
       border-radius: 10px;
       -webkit-box-shadow: 0px 1px 3px #2e6648;
-      -moz-box-shadow: 0px 1px 3px #2e6648;
       box-shadow: 0px 1px 3px #2e6648;
       color: #ffffff;
       font-size: 20px;
@@ -310,17 +353,23 @@ header {
       &:hover {
         background: #417aab;
         background-image: -webkit-linear-gradient(top, #417aab, #2f5ca3);
-        background-image: -moz-linear-gradient(top, #417aab, #2f5ca3);
-        background-image: -ms-linear-gradient(top, #417aab, #2f5ca3);
-        background-image: -o-linear-gradient(top, #417aab, #2f5ca3);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#417aab), to(#2f5ca3));
         background-image: linear-gradient(to bottom, #417aab, #2f5ca3);
         text-decoration: none;
       }
     }
   }
   .wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding-bottom: 20px;
     margin-bottom: 45px;
@@ -336,8 +385,17 @@ header {
       .preview {
         width: 100%;
         position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
         img {
           width: 100%;
@@ -384,13 +442,29 @@ header {
     text-shadow: 4px 4px 0px rgba(163, 79, 0, 0.92);
   }
   .wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     > div {
       width: 33.33%;
       text-align: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
     span {
@@ -398,8 +472,17 @@ header {
       height: 70px;
       background: $purple;
       font-size: 28px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       border-radius: 100%;
     }
@@ -422,12 +505,8 @@ header {
       display: inline-block;
       background: #3aa85d;
       background-image: -webkit-linear-gradient(top, #3aa85d, #288546);
-      background-image: -moz-linear-gradient(top, #3aa85d, #288546);
-      background-image: -ms-linear-gradient(top, #3aa85d, #288546);
-      background-image: -o-linear-gradient(top, #3aa85d, #288546);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#3aa85d), to(#288546));
       background-image: linear-gradient(to bottom, #3aa85d, #288546);
-      -webkit-border-radius: 10;
-      -moz-border-radius: 10;
       border-radius: 10px;
       color: #ffffff;
       font-size: 20px;
@@ -436,17 +515,23 @@ header {
       &:hover {
         background: #339152;
         background-image: -webkit-linear-gradient(top, #339152, #226e3a);
-        background-image: -moz-linear-gradient(top, #339152, #226e3a);
-        background-image: -ms-linear-gradient(top, #339152, #226e3a);
-        background-image: -o-linear-gradient(top, #339152, #226e3a);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#339152), to(#226e3a));
         background-image: linear-gradient(to bottom, #339152, #226e3a);
         text-decoration: none;
       }
     }
   }
   .wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding-bottom: 20px;
     margin-bottom: 45px;
@@ -462,8 +547,17 @@ header {
       .preview {
         width: 100%;
         position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
         img {
           width: 100%;
@@ -509,13 +603,29 @@ header {
     margin: 0 0 50px;
   }
   .wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     > div {
       width: 33.33%;
       text-align: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
     span {
@@ -523,8 +633,17 @@ header {
       height: 70px;
       background: $pink;
       font-size: 28px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       border-radius: 100%;
     }
@@ -547,12 +666,8 @@ header {
       display: inline-block;
       background: #973b6b;
       background-image: -webkit-linear-gradient(top, #973b6b, #8a294b);
-      background-image: -moz-linear-gradient(top, #973b6b, #8a294b);
-      background-image: -ms-linear-gradient(top, #973b6b, #8a294b);
-      background-image: -o-linear-gradient(top, #973b6b, #8a294b);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#973b6b), to(#8a294b));
       background-image: linear-gradient(to bottom, #973b6b, #8a294b);
-      -webkit-border-radius: 10;
-      -moz-border-radius: 10;
       border-radius: 10px;
       color: #ffffff;
       font-size: 20px;
@@ -561,17 +676,23 @@ header {
       &:hover {
         background: #873661;
         background-image: -webkit-linear-gradient(top, #873661, #782443);
-        background-image: -moz-linear-gradient(top, #873661, #782443);
-        background-image: -ms-linear-gradient(top, #873661, #782443);
-        background-image: -o-linear-gradient(top, #873661, #782443);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#873661), to(#782443));
         background-image: linear-gradient(to bottom, #873661, #782443);
         text-decoration: none;
       }
     }
   }
   .wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding-bottom: 20px;
     margin-bottom: 45px;
@@ -587,8 +708,17 @@ header {
       .preview {
         width: 100%;
         position: relative;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center;
         img {
           width: 100%;
@@ -664,8 +794,18 @@ header {
     }
   }
   .middle {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
     align-items: flex-end;
     .wrap {
       max-width: 940px;
@@ -703,6 +843,12 @@ header {
       }
       .tabs_accordion > input:nth-child(1):checked ~ div.content > div:nth-of-type(1) {
 
+        display: -webkit-box;
+
+        display: -webkit-flex;
+
+        display: -ms-flexbox;
+
         display: flex;
         border-top: none;
       }
@@ -718,6 +864,12 @@ header {
         background: #42495f;
       }
       .tabs_accordion > input:nth-child(2):checked ~ div.content > div:nth-of-type(2) {
+
+        display: -webkit-box;
+
+        display: -webkit-flex;
+
+        display: -ms-flexbox;
 
         display: flex;
         border-top: none;
@@ -735,13 +887,25 @@ header {
       }
       .tabs_accordion > input:nth-child(3):checked ~ div.content > div:nth-of-type(3) {
 
+        display: -webkit-box;
+
+        display: -webkit-flex;
+
+        display: -ms-flexbox;
+
         display: flex;
         border-top: none;
       }
       .tabs_accordion ul.tabs {
         padding: 0;
         margin: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
         justify-content: space-between;
       }
       .tabs_accordion ul.tabs li {
@@ -761,10 +925,11 @@ header {
         line-height: 26px;
         width: 100%;
         height: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         -webkit-transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-        -o-transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-        -moz-transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
         transition: all 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       }
       .tabs_accordion ul.tabs li label:focus {
@@ -781,8 +946,6 @@ header {
         > label {
           display: block;
           background-color: white;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
           border-radius: 5px;
           padding: 10px;
           margin-bottom: 1em;
@@ -800,7 +963,13 @@ header {
         min-height: 420px;
         background: white;
         padding: 20px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
         align-items: flex-start;
         border-radius: 10px;
         .left {
@@ -825,6 +994,9 @@ header {
       }
       @media screen and (min-width: 500px) {
         .tabs_accordion ul.tabs {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
           margin-bottom: 0;
           z-index: 1;
@@ -837,8 +1009,17 @@ header {
     }
   }
   .bottom {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
     align-items: flex-end;
     margin-top: 115px;
     color: white;
@@ -879,7 +1060,13 @@ header {
   }
 
   .info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 185px;
     h1 {
@@ -948,9 +1135,22 @@ header {
   }
   .right {
     width: 48%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     padding-bottom: 55px;
     .item {
@@ -994,8 +1194,16 @@ header {
 
   .team {
     .wrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
       justify-content: flex-start;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       padding-bottom: 20px;
       .item {
@@ -1042,9 +1250,15 @@ footer {
     border-radius: 10px;
   }
   .head {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     height: 245px;
     padding: 25px 80px 25px 180px;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
     align-items: flex-end;
     position: relative;
     img {
@@ -1056,13 +1270,24 @@ footer {
       font-size: 27px;
       line-height: 35.46px;
       margin: 0;
+      text-indent: -10px;
     }
   }
   form {
     max-width: 446px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 0 auto;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
     input[type=text], textarea {
       height: 48px;
@@ -1082,27 +1307,20 @@ footer {
       display: inline-block;
       background: #3aa85d;
       background-image: -webkit-linear-gradient(top, #3aa85d, #288546);
-      background-image: -moz-linear-gradient(top, #3aa85d, #288546);
-      background-image: -ms-linear-gradient(top, #3aa85d, #288546);
-      background-image: -o-linear-gradient(top, #3aa85d, #288546);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#3aa85d), to(#288546));
       background-image: linear-gradient(to bottom, #3aa85d, #288546);
-      -webkit-border-radius: 10;
-      -moz-border-radius: 10;
       border-radius: 10px;
       color: #ffffff;
       font-size: 20px;
       padding: 15px 35px 15px 35px;
       text-decoration: none;
       -webkit-box-shadow: 0px 1px 3px #0b3f06;
-      -moz-box-shadow: 0px 1px 3px #0b3f06;
       box-shadow: 0px 1px 3px #0b3f06;
       border: solid #53cc78 2px;
       &:hover {
         background: #339152;
         background-image: -webkit-linear-gradient(top, #339152, #226e3a);
-        background-image: -moz-linear-gradient(top, #339152, #226e3a);
-        background-image: -ms-linear-gradient(top, #339152, #226e3a);
-        background-image: -o-linear-gradient(top, #339152, #226e3a);
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#339152), to(#226e3a));
         background-image: linear-gradient(to bottom, #339152, #226e3a);
         text-decoration: none;
       }
@@ -1118,6 +1336,7 @@ footer {
       line-height: 28px;
       display: inline-block;
       margin-bottom: 10px;
+      letter-spacing: 2.5px;
     }
     p {
       margin: 0;
@@ -1136,21 +1355,140 @@ footer {
 
 .remodal-wrapper {
   padding: 120px 10px;
+  .name {
+    font-size: 45px;
+    color: #cbc7d5;
+    position: absolute;
+    left: 0;
+    top: -70px;
+  }
 }
 
 .remodal {
   max-width: 1280px;
   padding: 0;
-  iframe{
+  background: transparent;
+  .line1 {
+    color: #cbc7d5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    .left {
+      width: 40%;
+      font-size: 19.35px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      .leftleft {
+        width: 50%;
+        font-weight: 700;
+        padding-left: 70px;
+      }
+      .rightright {
+        width: 50%;
+      }
+    }
+    .right {
+      width: 50%;
+      font-size: 19.35px;
+      font-weight: 700;
+      padding-left: 70px;
+    }
+  }
+  .line2 {
+    background: #cbc7d5;
+    border-radius: 10px;
+    padding: 20px 70px 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    .left {
+      width: 40%;
+      span {
+        font-size: 30px;
+        width: 100%;
+        font-weight: 700;
+      }
+      p {
+        font-size: 19.35px;
+        width: 80%;
+      }
+    }
+    .right {
+      width: 60%;
+      padding-left: 55px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      span {
+        font-size: 30px;
+        width: 100%;
+        font-weight: 700;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .leftleft {
+        width: 25%;
+        img {
+          width: initial;
+          border: 1px solid white;
+        }
+      }
+      .rightright {
+        width: 75%;
+        padding-left: 20px;
+        p {
+          font-size: 19.35px;
+          margin: 0 0 20px;
+          width: 100%;
+        }
+        span {
+          font-size: 19.35px;
+          display: inline-block;
+          margin-bottom: 5px;
+
+        }
+        a {
+          font-size: 19.35px;
+          color: #2c2cdb;
+        }
+      }
+    }
+  }
+  iframe {
     width: 1280px;
     height: 718px;
   }
 }
 
+.remodal-close {
+  right: 0;
+  left: inherit;
+  top: -46px;
 
+}
+
+.remodal-close:before {
+  font-size: 50px;
+  color: #cbc7d5;
+}
+
+.remodal-bg {
+  background: rgba(53, 53, 83, 0.9);
+}
 
 @import "responsive";
-
 
 
 
