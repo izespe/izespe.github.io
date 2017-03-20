@@ -450,6 +450,9 @@
   .about .container {
     padding-bottom: 40px;
   }
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 25px;
+  }
   footer .container {
     max-width: 95%;
     height: 880px;
@@ -476,19 +479,6 @@
   footer {
     min-height: 500px;
     padding: 70px 0;
-  }
-  footer .foot span {
-    font-size: 22px;
-  }
-  footer .foot p {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  .about .team .wrap .item {
-    margin-bottom: 25px;
-  }
-  footer .head p {
-    font-size: 18px;
   }
 }
 

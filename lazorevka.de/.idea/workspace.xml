@@ -21,37 +21,19 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="512" column="43" lean-forward="false" selection-start-line="512" selection-start-column="43" selection-end-line="512" selection-end-column="43" />
-              <folding>
-                <element signature="n#div#1;n#div#0;n#div#0;n#section#6;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="responsive.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/responsive.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="459" column="3" lean-forward="true" selection-start-line="459" selection-start-column="3" selection-end-line="459" selection-end-column="3" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css/main.scss">
+      <file leaf-file-name="responsive.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/responsive.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="612" column="20" lean-forward="false" selection-start-line="612" selection-start-column="20" selection-end-line="612" selection-end-column="20" />
-              <folding>
-                <element signature="e#5902#7785#0" expanded="false" />
-                <element signature="e#7799#10270#0" expanded="false" />
-                <element signature="e#10293#12231#0" expanded="false" />
-                <element signature="e#12249#14624#0" expanded="false" />
-                <element signature="e#14646#16528#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="459">
+              <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,9 +43,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/responsive.scss" />
-        <option value="$PROJECT_DIR$/css/main.scss" />
       </list>
     </option>
   </component>
@@ -141,12 +121,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1490021340325</updated>
-      <workItem from="1490021341505" duration="6019000" />
+      <workItem from="1490021341505" duration="310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6019000" />
+    <option name="totallyTimeSpent" value="310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -183,33 +163,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="512" column="43" lean-forward="false" selection-start-line="512" selection-start-column="43" selection-end-line="512" selection-end-column="43" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#section#6;n#main#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/responsive.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="459" column="3" lean-forward="true" selection-start-line="459" selection-start-column="3" selection-end-line="459" selection-end-column="3" />
+        <state relative-caret-position="459">
+          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="612" column="20" lean-forward="false" selection-start-line="612" selection-start-column="20" selection-end-line="612" selection-end-column="20" />
-          <folding>
-            <element signature="e#5902#7785#0" expanded="false" />
-            <element signature="e#7799#10270#0" expanded="false" />
-            <element signature="e#10293#12231#0" expanded="false" />
-            <element signature="e#12249#14624#0" expanded="false" />
-            <element signature="e#14646#16528#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
