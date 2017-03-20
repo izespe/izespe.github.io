@@ -1395,7 +1395,7 @@ footer {
     flex-direction: column; }
 
   .about .info {
-    max-width: 65%;
+    max-width: 90%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
