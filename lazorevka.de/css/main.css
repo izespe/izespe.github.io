@@ -218,7 +218,18 @@ header {
   min-height: 505px;
   background: url("../img/bg2.jpg");
   background-size: cover;
-  color: white; }
+  color: white;
+  position: relative; }
+  .inf-videos-head:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 16px 16px 16px;
+    border-color: transparent transparent #e9ecf1 transparent;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 16px); }
   .inf-videos-head .container {
     max-width: 1370px;
     text-align: center;
@@ -360,7 +371,18 @@ header {
 .draw-animation-head {
   min-height: 505px;
   background: url("../img/bg3.jpg");
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
+  .draw-animation-head:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 16px 16px 16px;
+    border-color: transparent transparent #f2eeec transparent;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 16px); }
   .draw-animation-head .container {
     max-width: 1370px;
     text-align: center;
@@ -501,7 +523,18 @@ header {
 .vol-animation-head {
   min-height: 490px;
   background: url("../img/bg6.jpg");
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
+  .vol-animation-head:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 16px 16px 16px;
+    border-color: transparent transparent #f8f2f2 transparent;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 16px); }
   .vol-animation-head .container {
     max-width: 1370px;
     text-align: center;
@@ -1645,9 +1678,6 @@ footer {
   .about .container {
     padding-bottom: 40px; }
 
-  .owl-theme .owl-nav.disabled + .owl-dots {
-    margin-top: 25px; }
-
   footer .container {
     max-width: 95%;
     height: 880px; }
@@ -1672,6 +1702,19 @@ footer {
 
   footer {
     min-height: 500px;
-    padding: 70px 0; } }
+    padding: 70px 0; }
+
+  footer .foot span {
+    font-size: 22px; }
+
+  footer .foot p {
+    font-size: 16px;
+    line-height: 20px; }
+
+  .about .team .wrap .item {
+    margin-bottom: 25px; }
+
+  footer .head p {
+    font-size: 18px; } }
 
 /*# sourceMappingURL=main.css.map */
