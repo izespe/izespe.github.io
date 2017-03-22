@@ -1524,6 +1524,10 @@ footer {
   background: rgba(53, 53, 83, 0.9);
 }
 
+.draw-animation .wrap .item, .vol-animation .wrap .item, .inf-videos .wrap .item {
+  cursor: pointer;
+}
+
 @import "responsive";
 
 

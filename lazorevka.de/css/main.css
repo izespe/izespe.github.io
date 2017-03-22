@@ -1266,6 +1266,9 @@ footer {
 .remodal-bg {
   background: rgba(53, 53, 83, 0.9); }
 
+.draw-animation .wrap .item, .vol-animation .wrap .item, .inf-videos .wrap .item {
+  cursor: pointer; }
+
 @media (max-width: 1680px) {
   header .container {
     max-width: 96%; }
@@ -1643,6 +1646,9 @@ footer {
 
   .promo .bottom div {
     width: 100%; }
+
+  .vol-animation-head {
+    background-position: 58%; }
 
   .about .info h1 {
     font-size: 26px;
