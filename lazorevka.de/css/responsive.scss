@@ -493,6 +493,66 @@
   footer .head p {
     font-size: 18px;
   }
+
+  .remodal-wrapper .name {
+    font-size: 22px;
+    top: -45px;
+  }
+  .remodal iframe {
+    width: 100%;
+    height: 220px;
+  }
+
+  .remodal .line1 {
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  .remodal .line1 .left {
+    width: 100%;
+    font-size: 16px;
+
+  }
+  .remodal .line1 .left .leftleft {
+    width: 50%;
+    padding-left: 0;
+  }
+  .remodal .line1 .right {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 0;
+  }
+  .remodal .line2 {
+    padding: 15px 15px;
+    flex-wrap: wrap;
+  }
+  .remodal .line2 .left, .remodal .line2 .right {
+    width: 100%;
+    padding-left: 0;
+    span {
+      font-size: 22px;
+    }
+    p {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+  .remodal .line2 .right .leftleft {
+    width: 100%;
+  }
+  .remodal .line2 .right .rightright {
+    width: 100%;
+    padding-left: 0;
+  }
+  .remodal .line2 .right .rightright p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .remodal .line2 .right .rightright span {
+    font-size: 16px;
+  }
+  .remodal .line2 .right .rightright a {
+    font-size: 16px;
+  }
 }
 
 
