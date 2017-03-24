@@ -366,8 +366,8 @@ header {
         margin-bottom: 10px; }
   .inf-videos p {
     font-size: 17.7px;
-    line-height: 20.5px;
-    margin-top: 0; }
+    line-height: 22px;
+    margin: 0; }
     .inf-videos p.italic {
       font-style: italic; }
 
@@ -520,8 +520,8 @@ header {
         margin-bottom: 10px; }
   .draw-animation p {
     font-size: 17.7px;
-    line-height: 20.5px;
-    margin-top: 0; }
+    line-height: 22px;
+    margin: 0; }
     .draw-animation p.italic {
       font-style: italic; }
 
@@ -673,8 +673,8 @@ header {
         margin-bottom: 10px; }
   .vol-animation p {
     font-size: 17.7px;
-    line-height: 20.5px;
-    margin-top: 0; }
+    line-height: 22px;
+    margin: 0; }
     .vol-animation p.italic {
       font-style: italic; }
 
