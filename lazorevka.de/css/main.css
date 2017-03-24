@@ -285,7 +285,8 @@ header {
       border-radius: 100%; }
     .inf-videos-head .wrap p {
       font-size: 17.7px;
-      line-height: 20.5px; }
+      line-height: 20.5px;
+      max-width: 70%; }
 
 .inf-videos {
   padding: 85px 0 80px;
@@ -367,6 +368,8 @@ header {
     font-size: 17.7px;
     line-height: 20.5px;
     margin-top: 0; }
+    .inf-videos p.italic {
+      font-style: italic; }
 
 .draw-animation-head {
   min-height: 505px;
@@ -519,6 +522,8 @@ header {
     font-size: 17.7px;
     line-height: 20.5px;
     margin-top: 0; }
+    .draw-animation p.italic {
+      font-style: italic; }
 
 .vol-animation-head {
   min-height: 490px;
@@ -670,6 +675,8 @@ header {
     font-size: 17.7px;
     line-height: 20.5px;
     margin-top: 0; }
+    .vol-animation p.italic {
+      font-style: italic; }
 
 .promo {
   margin-top: 5px;
@@ -1047,7 +1054,7 @@ header {
           width: 100%;
           height: auto;
           border-radius: 15px; }
-      .about .team .wrap .item span {
+      .about .team .wrap .item > span {
         font-size: 24px;
         font-weight: 700;
         color: #a12020;
@@ -1057,6 +1064,8 @@ header {
         font-size: 22px;
         margin: 0;
         line-height: 26.5px; }
+        .about .team .wrap .item p .italic {
+          font-style: italic; }
 
 footer {
   min-height: 1415px;
