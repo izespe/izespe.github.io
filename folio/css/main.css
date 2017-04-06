@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic");
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -8,6 +7,8 @@
  */
 /* Document
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic");
+@import url(normalize.css);
 html {
   font-family: 'Open Sans', sans-serif;
   color: #393c30;
@@ -32,7 +33,7 @@ html {
 :before {
   box-sizing: border-box;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 /* Sections
@@ -474,6 +475,7 @@ header {
   background: url("../img/pineapple.jpg") center bottom no-repeat, url("../img/background.jpg") repeat;
   background-attachment: fixed;
   min-height: 890px;
+  height: 100vh;
 }
 header .container.fix-scroll {
   max-width: 1280px;
@@ -484,12 +486,12 @@ header .container.fix-scroll {
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   top: 115px;
   left: 0;
@@ -509,8 +511,8 @@ header .info {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 62%;
 }
 header .info h1 {
@@ -556,9 +558,9 @@ header .info .btn {
   text-align: center;
   cursor: pointer;
   -webkit-transition-property: color, background-color, border-color;
-  transition-property: color, background-color, border-color;
+          transition-property: color, background-color, border-color;
   -webkit-transition-duration: .5s;
-  transition-duration: .5s;
+          transition-duration: .5s;
   color: #9f9a96;
   position: relative;
   overflow: hidden;
@@ -643,13 +645,13 @@ header .info .arrow {
   z-index: 100;
   text-align: center;
   -webkit-transform: translateY(-12px);
-  -ms-transform: translateY(-12px);
-  transform: translateY(-12px);
+      -ms-transform: translateY(-12px);
+          transform: translateY(-12px);
   opacity: 0;
   -webkit-transition-property: all;
-  transition-property: all;
+          transition-property: all;
   -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 header .info .arrow:before, header .info .arrow:after {
   content: "";
@@ -675,23 +677,23 @@ header .info .arrow:after {
 }
 header .info .stack:hover .icon:after {
   -webkit-animation-name: fall-short;
-  animation-name: fall-short;
+          animation-name: fall-short;
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+          animation-duration: 1s;
 }
 header .info .stack:hover .icon:before {
   -webkit-animation-name: fall-long;
-  animation-name: fall-long;
+          animation-name: fall-long;
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+          animation-duration: 1s;
 }
 header .info .stack:hover .icon .arrow {
   -webkit-transform: translateY(2px);
-  -ms-transform: translateY(2px);
-  transform: translateY(2px);
+      -ms-transform: translateY(2px);
+          transform: translateY(2px);
   opacity: 1;
   -webkit-transition-delay: .75s;
-  transition-delay: .75s;
+          transition-delay: .75s;
 }
 header .info .stack .icon {
   display: inline-block;
@@ -709,10 +711,10 @@ header .info .stack .icon:before, header .info .stack .icon:after {
   border: 1px solid currentColor;
   border-top: 3px solid currentColor;
   -webkit-transform: perspective(5px) rotateX(15deg);
-  transform: perspective(5px) rotateX(15deg);
+          transform: perspective(5px) rotateX(15deg);
   -webkit-transform-origin: bottom center;
-  -ms-transform-origin: bottom center;
-  transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
 }
 header .info .stack .icon:before {
   margin-top: -4px;
@@ -758,7 +760,7 @@ header .photo {
 .works h2 .works-item div {
   height: 50px;
   -webkit-transition: margin-top 1s ease-in-out;
-  transition: margin-top 1s ease-in-out;
+          transition: margin-top 1s ease-in-out;
 }
 .works .portfolioFilter {
   margin: 15px 0;
@@ -777,7 +779,7 @@ header .photo {
   line-height: 44px;
   background: #e1dbd8;
   -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+          transition: all 0.8s;
 }
 .works .portfolioFilter a:hover {
   background: #90a873;
@@ -805,16 +807,6 @@ header .photo {
   background: #f3efee;
   border: 10px solid white;
   overflow: hidden;
-  /*      a {
-          width: 100%;
-          height: 100%;
-          border: 1px solid $bg;
-          overflow: hidden;
-          img {
-            width: auto;
-            height: 100%;
-          }
-        }*/
 }
 .works #portfolioContainer .item .img-tbtext {
   width: 100%;
@@ -840,7 +832,7 @@ header .photo {
   width: auto;
   height: 100%;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 .works #portfolioContainer .item .img-tbtext figcaption, .works #portfolioContainer .item .img-tbtext a {
   position: absolute;
@@ -853,8 +845,8 @@ header .photo {
 .works #portfolioContainer .item .img-tbtext figcaption {
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -862,12 +854,12 @@ header .photo {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .works #portfolioContainer .item .img-tbtext h3, .works #portfolioContainer .item .img-tbtext p {
   margin: 0;
@@ -938,11 +930,11 @@ header .photo {
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .skills .container .row a {
   width: 15.5%;
@@ -953,24 +945,24 @@ header .photo {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #f1efee;
   border: 1px solid #e1dbd8;
   height: 96px;
   -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+          transition: all 0.8s;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
 }
 .skills .container .row:hover > a {
   -webkit-filter: grayscale(1);
   -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+          transition: all 0.8s;
   opacity: 0.5;
 }
 .skills .container .row:hover > a:hover {
@@ -1000,7 +992,7 @@ header .photo {
 .skills h2 .skills-item div {
   height: 50px;
   -webkit-transition: margin-top 1s ease-in-out;
-  transition: margin-top 1s ease-in-out;
+          transition: margin-top 1s ease-in-out;
 }
 
 .contacts .container {
@@ -1029,7 +1021,7 @@ header .photo {
 .contacts h2 .contacts-item div {
   height: 50px;
   -webkit-transition: margin-top 1s ease-in-out;
-  transition: margin-top 1s ease-in-out;
+          transition: margin-top 1s ease-in-out;
 }
 .contacts .row {
   display: -webkit-box;
@@ -1037,8 +1029,8 @@ header .photo {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .contacts .row > a {
   color: #393c30;
@@ -1049,15 +1041,15 @@ header .photo {
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 22px;
   text-decoration: none;
   font-weight: 600;
   margin-right: 145px;
   margin-bottom: 40px;
   -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+          transition: all 0.8s;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
 }
@@ -1135,6 +1127,7 @@ footer .container p {
     background: url(../img/pineapple-md.jpg) center bottom no-repeat, url(../img/background.jpg) repeat;
     background-attachment: fixed;
     min-height: 760px;
+    height: auto;
   }
 
   .works .container {
@@ -1295,12 +1288,12 @@ footer .container p {
   header .container.fix-scroll {
     padding: 50px 0 160px;
     -webkit-flex-wrap: wrap-reverse;
-    -ms-flex-wrap: wrap-reverse;
-    flex-wrap: wrap-reverse;
+        -ms-flex-wrap: wrap-reverse;
+            flex-wrap: wrap-reverse;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   header .container.fix-scroll.active {
     padding: 50px 0 160px;
@@ -1414,11 +1407,11 @@ footer .container p {
     display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
 
   .owl-dots .owl-dot span {
