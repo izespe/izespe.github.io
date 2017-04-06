@@ -1,0 +1,324 @@
+@media screen and (max-width: 1441px) {
+
+  header .info h1 .fw700 {
+    font-size: 72px;
+  }
+  header .info h1 div {
+    height: 90px;
+    width: 16px;
+  }
+
+  header .info h1 {
+    height: 90px;
+    line-height: 85px;
+    margin-bottom: 15px;
+  }
+  header .info > span {
+    font-size: 30px;
+    width: 90%;
+  }
+  header .info > p {
+    font-size: 20px;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  header .photo {
+    width: 360px;
+    height: 360px;
+  }
+  header .container.fix-scroll {
+    max-width: 1172px;
+    padding: 0 0 300px;
+    top: 100px;
+    &.active {
+      position: relative;
+      padding: 300px 0 100px;
+      top: 0;
+    }
+  }
+
+  header {
+    background: url(../img/pineapple-md.jpg) center bottom no-repeat, url(../img/background.jpg) repeat;
+    background-attachment: fixed;
+    min-height: 760px;
+  }
+
+  .works .container {
+    max-width: 1172px;
+  }
+
+  .works #portfolioContainer {
+    width: 1192px;
+  }
+  .skills .container {
+    max-width: 1172px;
+  }
+  .skills .container .row a {
+    img {
+      zoom: 0.9;
+    }
+  }
+  .contacts .container {
+    max-width: 1172px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  header .container.fix-scroll {
+    max-width: 92%;
+  }
+  header .info h1 .fw700 {
+    font-size: 56px;
+  }
+  header .info h1 div {
+    height: 76px;
+    width: 12px;
+  }
+
+  header .info h1 {
+    height: 76px;
+    line-height: 73px;
+    margin-bottom: 15px;
+  }
+  header .info > span {
+    font-size: 26px;
+    width: 90%;
+  }
+  header .info > p {
+    font-size: 18px;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  header .photo {
+    width: 280px;
+    height: 280px;
+  }
+  header .info h1 span {
+    margin-left: 5px;
+  }
+
+  header .info {
+    width: 64%;
+  }
+  header {
+    background-attachment: initial;
+    min-height: 768px;
+  }
+  header .container.fix-scroll {
+    padding: 100px 0 340px;
+    position: initial;
+    &.active {
+      padding: 100px 0 340px;
+    }
+  }
+  .works .container {
+    max-width: 92%;
+    padding: 40px 0 70px;
+  }
+  .works #portfolioContainer {
+    width: calc(100% + 20px);
+  }
+  .works #portfolioContainer .item {
+    width: 33.33%;
+  }
+  .skills .container {
+    max-width: 92%;
+    padding: 40px 0 60px;
+  }
+  .skills .container .row a {
+    width: 32%;
+    img {
+      zoom: 1;
+    }
+  }
+  .contacts .container {
+    max-width: 92%;
+    padding: 40px 0;
+  }
+  .contacts .row > a {
+    margin-right: 105px;
+  }
+  .works h2, .skills h2, .contacts h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  footer .container p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  header .info {
+    width: 65%;
+  }
+  header .photo {
+    width: 220px;
+    height: 220px;
+  }
+  header .container.fix-scroll {
+    padding: 140px 0 340px;
+  }
+  .works #portfolioContainer .item {
+    height: 220px;
+  }
+  .works #portfolioContainer .item .img-tbtext {
+    min-width: 200px;
+  }
+  .contacts .row > a {
+    min-width: 45%;
+    margin-right: 5%;
+    font-size: 18px;
+  }
+  .contacts .row > a img {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  header .container.fix-scroll {
+    padding: 50px 0 160px;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    &.active {
+      padding: 50px 0 160px;
+    }
+  }
+  header .info {
+    width: 96%;
+  }
+  header .photo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 40px;
+  }
+  header .info h1 .fw700 {
+    font-size: 36px;
+  }
+  header .info h1 div {
+    height: 42px;
+    width: 8px;
+  }
+
+  header .info h1 {
+    height: 42px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+  header .info > span {
+    font-size: 17px;
+    width: 100%;
+  }
+  header .info > p {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  header {
+    background: url(../img/pineapple-xs.jpg) center bottom no-repeat, url(../img/background.jpg) repeat;
+    min-height: 500px;
+  }
+
+  .works h2, .skills h2, .contacts h2 {
+    font-size: 18px;
+    margin: 0;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+  .works .portfolioFilter a {
+    overflow: hidden;
+    font-size: 14px;
+  }
+  .works h2 .works-item div, .skills h2 .skills-item div, .contacts h2 .contacts-item div {
+    height: 30px;
+  }
+  .works h2 .works-item, .skills h2 .skills-item, .contacts h2 .contacts-item {
+    font-weight: 600;
+    height: 30px;
+  }
+
+  .works #portfolioContainer .item {
+    width: 100%;
+    display: block;
+  }
+  .works #portfolioContainer {
+    display: block;
+
+  }
+  .works #portfolioContainer .item {
+    width: 100%;
+    height: 260px;
+    display: block;
+  }
+  .works #portfolioContainer .item .img-tbtext {
+    max-width: 100%;
+  }
+  .works #portfolioContainer .item .img-tbtext img {
+    width: 100%;
+    height: auto;
+  }
+  .works #portfolioContainer .item {
+    border: 0;
+  }
+  .works #portfolioContainer {
+    width: 100%;
+    margin: 0;
+  }
+  .skills .container .row a img {
+    width: initial;
+  }
+  .owl-dots{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .owl-dots .owl-dot span {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 1px solid #393c30;
+    margin: 20px 4px 0;
+    display: block;
+    border-radius: 100%;
+  }
+  .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: $text;
+  }
+  .skills .container .row a {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .contacts .row > a img {
+    margin-right: 20px;
+    zoom: 0.5;
+  }
+
+  .contacts .row > a {
+    margin-bottom: 20px;
+  }
+  .skills .container {
+     padding: 30px 0 40px;
+   }
+  .contacts .container {
+    padding: 30px 0 20px;
+  }
+  .contacts .row > a {
+    min-width: 100%;
+    margin-right: 0;
+    font-size: 16px;
+  }
+  .works .container {
+    padding: 30px 0 40px;
+  }
+}
+
+
+@media screen and (max-width: 340px) {
+  .works #portfolioContainer .item {
+    height: 220px;
+  }
+}
+
