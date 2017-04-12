@@ -119,6 +119,8 @@
     padding: 40px 0 70px;
   }
   .works #portfolioContainer {
+    width: -webkit-calc(100% + 20px);
+    width: -moz-calc(100% + 20px);
     width: calc(100% + 20px);
   }
   .works #portfolioContainer .item {
@@ -180,7 +182,13 @@
 @media screen and (max-width: 560px) {
   header .container.fix-scroll {
     padding: 50px 0 160px;
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     &.active {
       padding: 50px 0 160px;
@@ -272,17 +280,29 @@
   }
   .owl-dots{
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .owl-dots .owl-dot span {
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
     background: transparent;
     border: 1px solid #393c30;
-    margin: 20px 4px 0;
+    margin: 20px 2px 0;
     display: block;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
     border-radius: 100%;
   }
   .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
@@ -301,8 +321,8 @@
     margin-bottom: 20px;
   }
   .skills .container {
-     padding: 30px 0 40px;
-   }
+    padding: 30px 0 40px;
+  }
   .contacts .container {
     padding: 30px 0 20px;
   }
@@ -314,6 +334,45 @@
   .works .container {
     padding: 30px 0 40px;
   }
+  .contacts .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .contacts .row br{
+    display: none;
+  }
+  .remodal {
+    padding: 10px;
+  }
+  .folio .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border: 1px solid #393c30;
+    margin: 24px 4px 0;
+    display: block;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  .remodal-cancel, .remodal-confirm {
+    margin-top: 0;
+  }
+  .remodal-close, .remodal-close:before {
+     top: -20px;
+  }
+  .remodal-close:focus, .remodal-close:hover {
+    color: white;
+  }
 }
 
 
@@ -322,4 +381,3 @@
     height: 220px;
   }
 }
-
