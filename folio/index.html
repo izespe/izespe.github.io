@@ -15,9 +15,15 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script type="text/javascript">$(window).on('load', function () {
+        var $preloader = $('#p_prldr'),
+            $svg_anm   = $preloader.find('.svg_anm');
+        $svg_anm.fadeOut();
+        $preloader.delay(500).fadeOut('slow');
+    });</script>
 </head>
 <body>
+<div id="p_prldr"><div class="contpre"><span class="svg_anm"></span></div></div>
 
 <div class="remodal-bg">
 </div>
@@ -549,44 +555,7 @@
         </div>
     </section>
 </main>
-<script type="text/javascript">
-    $(document).ready(function () {
-        var w = $(window).width(); // Получаем ширину окна
-        if (w <= 520) { // Если ширина окна меньше, либо равна 600
 
-            $(".portfolioFilter").css('display', 'none');
-            $("#portfolioContainer").addClass("box-to-carousel-on").removeClass("portfolioContainer");
-            $(".box-to-carousel-2").addClass("box-to-carousel-on2");
-        }
-        $('.box-to-carousel-on, .box-to-carousel-on2 ').owlCarousel({
-            loop: true,
-            margin: 10,
-            dots: true,
-            nav: false,
-            items: 1,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false,
-                    dots: true
-                },
-                600: {
-                    dots: false
-                }
-            }
-
-        });
-        $('.folio ').owlCarousel({
-            loop: false,
-            margin: 0,
-            dots: true,
-            nav: true,
-            items: 1,
-            navText: ["&#10141;", "&#10141;"]
-        })
-    });
-
-</script>
 <footer>
     <div class="container">
         <p>Thanks for Watching!</p>
