@@ -147,12 +147,18 @@ $(function () {
         responsive: {
             0: {
                 items: 2,
-                owl2row: false
+                margin: 15
             },
-            768: {
-                items: 3,
+            560: {
+                items: 2
+            },
+            769: {
+                items: 3
             },
             1024: {
+                items: 5
+            },
+            1280: {
                 items: 3
             },
             1500: {

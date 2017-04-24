@@ -1,4 +1,15 @@
-/*------------FONTS------------*/
+/* Put your CSS code in the left column, instead of example, to put or remove unnecessary prefixes. */
+
+.example {
+  display: -ms-flexbox;
+  display: flex;
+  transition: all .5s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: linear-gradient(to bottom, white, black);
+}/*------------FONTS------------*/
 @import "../fonts/stylesheet.css";
 
 /*------------COLOR------------*/
@@ -20,16 +31,10 @@ $very-dark-yellow: #e8bb46;
   border-radius: 50px;
   width: 260px;
   height: 66px;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   font-size: 22px;
@@ -43,27 +48,22 @@ $very-dark-yellow: #e8bb46;
     -ms-transform: translate(0px, 5px);
     transform: translate(0px, 5px);
     -webkit-transform: translate(0px, 5px);
-    -webkit-box-shadow: 0 1px 0 0;
     box-shadow: 0 1px 0 0;
   }
   &.orange {
     background-color: $orange;
-    -webkit-box-shadow: 0 5px 0 0 $dark-orange;
     box-shadow: 0 5px 0 0 $dark-orange;
     &:hover {
       background-color: #FF983C;
-      -webkit-box-shadow: 0 5px 0 0 $very-dark-orange;
       box-shadow: 0 5px 0 0 $very-dark-orange;
     }
   }
   &.yellow {
     background-color: $yellow;
-    -webkit-box-shadow: 0 5px 0 0 $dark-yellow;
     box-shadow: 0 5px 0 0 $dark-yellow;
     color: $dark-grey;
     &:hover {
       background-color: #FFDE29;
-      -webkit-box-shadow: 0 5px 0 0 $very-dark-yellow;
       box-shadow: 0 5px 0 0 $very-dark-yellow;
     }
   }
@@ -76,35 +76,17 @@ $very-dark-yellow: #e8bb46;
 
 @mixin keyframes( $bounce ) {
 
-  @-webkit-keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
-    40% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-    }
-    60% {
-      -webkit-transform: translateY(-5px);
-      transform: translateY(-5px);
-    }
-  }
-
   @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
       -ms-transform: translateY(0);
-      -webkit-transform: translateY(0);
       transform: translateY(0);
     }
     40% {
       -ms-transform: translateY(-10px);
-      -webkit-transform: translateY(-10px);
       transform: translateY(-10px);
     }
     60% {
       -ms-transform: translateY(-5px);
-      -webkit-transform: translateY(-5px);
       transform: translateY(-5px);
     }
   }
@@ -118,11 +100,8 @@ body {
 
 header {
   height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   .headerleft {
@@ -188,7 +167,6 @@ header {
           top: -14px;
           left: 49%;
           margin-left: 2px;
-          -webkit-animation: smokeAnim 1.8s infinite;
           animation: smokeAnim 1.8s infinite;
           zoom: 2.5;
 
@@ -199,7 +177,6 @@ header {
             border-left: 2px solid #cfcfcf;
             position: absolute;
             top: -6px;
-            -webkit-transform: translateX(-49%);
             -ms-transform: translateX(-49%);
             transform: translateX(-49%);
             border-radius: 50%;
@@ -212,7 +189,6 @@ header {
             border-right: 2px solid #cfcfcf;
             position: absolute;
             left: -4px;
-            -webkit-transform: translateX(-49%);
             -ms-transform: translateX(-49%);
             transform: translateX(-49%);
             border-radius: 50%;
@@ -251,15 +227,10 @@ header {
     .container {
       padding-top: 11.5%;
       width: 620px;
-      display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
-      -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       h1 {
@@ -293,20 +264,13 @@ header {
         left: 181px;
         bottom: 220px;
         z-index: 100;
-        display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
         padding: 0 15px 5px 15px;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         background: url("../img/bubble.png") center center no-repeat transparent;
         &#txt {
@@ -360,7 +324,6 @@ header {
           height: 55px;
           border-radius: 50%;
           background-color: #f2f2f2;
-          -webkit-box-shadow: 0px 3px 7px 0px rgba(59, 62, 68, 0.35);
           box-shadow: 0px 3px 7px 0px rgba(59, 62, 68, 0.35);
           &::after {
             content: '';
@@ -398,17 +361,10 @@ header {
     width: 100%;
     height: 17%;
     background: $green;
-    display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     padding-top: 40px;
@@ -420,7 +376,6 @@ header {
     }
 
     .bounce {
-      -webkit-animation: bounce 2s infinite;
       animation: bounce 2s infinite;
       @include keyframes(bounce)
     }
@@ -432,37 +387,23 @@ header {
   background: $green;
   .container {
     padding: 15px 0 55px 0;
-    width: 1170px;
-    display: -webkit-box;
-    display: -webkit-flex;
+    max-width: 1170px;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     .counterblock {
       background: url('../img/bg2.png') center center no-repeat;
       width: 560px;
       height: 400px;
-      display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: end;
-      -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
       justify-content: flex-end;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
       padding-bottom: 105px;
@@ -473,12 +414,8 @@ header {
         letter-spacing: 15px;
         margin-left: 10px;
         height: 71px;
-        display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
       }
@@ -490,21 +427,14 @@ header {
     }
     .advantages {
       width: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
       margin: 10px 0 30px 0;
       div {
-        display: -webkit-box;
-        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
         max-width: 35%;
@@ -533,16 +463,11 @@ header {
   background: $blue;
   .container {
     padding: 130px 0 110px 0;;
-    display: -webkit-box;;
-    display: -webkit-flex;;
     display: -ms-flexbox;;
     display: flex;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 870px;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
     h1 {
@@ -557,7 +482,7 @@ header {
       content: url(../img/bg-setp-active.png);
       position: absolute;
       left: 0px;
-      bottom: 97px;
+      bottom: 80px;
       width: 54px;
       z-index: 12;
       transition: all 0.3s ease-in-out;
@@ -586,102 +511,91 @@ header {
         }
       }
 
-      .owl-controls {
+      .owl-nav {
+        display: -ms-flexbox;
+        display: flex;
         margin-top: 30px;
-        .owl-nav {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          .owl-prev, .owl-next {
-            font: 0/0 serif;
-            text-shadow: none;
-            color: transparent;
-            background: url("../img/arrow-alider-blue.png") transparent center center no-repeat;
-            opacity: 0.9;
-            line-height: 0;
-            outline: none;
-            width: 51px;
-            border: none;
-            cursor: pointer;
-            height: 58px;
-            z-index: 10;
-            position: absolute;
-            right: 0;
-            top: 34%;
-            &:hover {
-              opacity: 1;
-            }
-          }
-          .owl-prev {
-            background: url("../img/arrow-alider-blue.png") transparent center center no-repeat;
-            -webkit-transform: scale(-1, 1);
-            -ms-transform: scale(-1, 1);
-            transform: scale(-1, 1);
-            left: 0;
-
+        .owl-prev, .owl-next {
+          font: 0/0 serif;
+          text-shadow: none;
+          color: transparent;
+          background: url("../img/arrow-alider-blue.png") transparent center center no-repeat;
+          opacity: 0.9;
+          line-height: 0;
+          outline: none;
+          width: 51px;
+          border: none;
+          cursor: pointer;
+          height: 58px;
+          z-index: 10;
+          position: absolute;
+          right: 0;
+          top: 34%;
+          &:hover {
+            opacity: 1;
           }
         }
+        .owl-prev {
+          background: url("../img/arrow-alider-blue.png") transparent center center no-repeat;
+          -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+          left: 0;
 
-        .owl-dots {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: justify;
-          -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-          justify-content: space-between;
-          width: 570px;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-          -ms-flex-align: center;
-          align-items: center;
-          margin-top: -45px;
-          z-index: 10;
-          &::before {
-            content: "";
+        }
+      }
+
+      .owl-dots {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 570px;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: -45px;
+        z-index: 10;
+        &::before {
+          content: "";
+          position: absolute;
+          background: $dark-blue;
+          width: 517px;
+          height: 1px;
+          margin-left: 27px;
+          z-index: -1;
+        }
+        .owl-dot {
+          display: inline-block;
+          zoom: 1;
+          *display: inline;
+          ::before {
+            content: url("../img/bg-step.png");
             position: absolute;
-            background: $dark-blue;
-            width: 517px;
-            height: 1px;
-            margin-left: 27px;
-            z-index: -1;
+            padding-top: 10px;
+            width: 54px;
+            height: 97px;
+            z-index: 11;
           }
-          .owl-dot {
-            display: inline-block;
-            zoom: 1;
-            *display: inline;
-            ::before {
-              content: url("../img/bg-step.png");
-              position: absolute;
-              padding-top: 10px;
-              width: 54px;
-              height: 97px;
-              z-index: 11;
-            }
-            span {
-              width: 54px;
-              height: 18px;
-              margin: 5px 0;
-              background: url("../img/step-dot.png") center center no-repeat;
-              display: block;
-              -webkit-backface-visibility: visible;
-              -webkit-transition: opacity 200ms ease;
-              transition: opacity 200ms ease;
-              border-radius: 30px;
-              opacity: 0.9;
+          span {
+            width: 54px;
+            height: 18px;
+            margin: 5px 0;
+            background: url("../img/step-dot.png") center center no-repeat;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity 200ms ease;
+            border-radius: 30px;
+            opacity: 0.9;
 
-            }
-            &.active, &:hover {
-              span {
-                background: url("../img/step-dot-active.png") center center no-repeat;
-                opacity: 1;
-              }
+          }
+          &.active, &:hover {
+            span {
+              background: url("../img/step-dot-active.png") center center no-repeat;
+              opacity: 1;
             }
           }
         }
       }
+
     }
 
     .btn {
@@ -700,16 +614,11 @@ header {
   background: $gray-bg;
   .container {
     padding: 0 0 100px 0;
-    width: 1170px;
-    display: -webkit-box;
-    display: -webkit-flex;
+    max-width: 1170px;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     h1 {
@@ -721,12 +630,8 @@ header {
       letter-spacing: 1px;
     }
     div {
-      display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
       p {
@@ -738,25 +643,16 @@ header {
 }
 
 #partners {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   max-height: 655px;
   .leftpartners {
     background: $blue;
     width: 50%;
-    display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     padding-top: 30px;
@@ -780,118 +676,98 @@ header {
 
     #banks-slider {
       padding: 75px 105px 90px 105px;
-      .owl-theme {
-        .owl-stage-outer {
-          width: 100%;
-          .owl-stage {
 
-            .owl-item {
-              .item {
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-align: center;
-                -webkit-align-items: center;
-                -ms-flex-align: center;
-                align-items: center;
-                -webkit-box-pack: center;
-                -webkit-justify-content: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                background: $gray-bg;
-                height: 120px;
-                width: 120px;
-                img {
-                  width: 85%;
-                }
-                &:last-child {
-                  margin-top: 30px;
-                }
-              }
-            }
-          }
-        }
+      .owl-stage-outer {
+        width: 100%;
+        .owl-stage {
 
-        .owl-controls {
-          margin-top: 30px;
-          .owl-nav {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -webkit-justify-content: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            .owl-prev, .owl-next {
-              font: 0/0 serif;
-              text-shadow: none;
-              color: transparent;
-              background: url("../img/arrow-alider-blue.png") transparent center center no-repeat;
-              opacity: 0.9;
-              line-height: 0;
-              outline: none;
-              width: 51px;
-              border: none;
-              cursor: pointer;
-              height: 58px;
-              margin-left: 85px;
-              z-index: 10;
-              &:hover {
-                opacity: 1;
+          .owl-item {
+            .item {
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-align: center;
+              align-items: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              background: $gray-bg;
+              height: 120px;
+              width: 120px;
+              img {
+                width: 85%;
               }
-            }
-            .owl-prev {
-              background: url("../img/arrow-alider-blue.png") transparent center center no-repeat;
-              -webkit-transform: scale(-1, 1);
-              -ms-transform: scale(-1, 1);
-              transform: scale(-1, 1);
-              margin-right: 85px;
-              margin-left: 0;
-            }
-          }
-          .owl-dots {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -webkit-justify-content: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
-            margin-top: -45px;
-
-            .owl-dot {
-              display: inline-block;
-              zoom: 1;
-              *display: inline;
-              span {
-                width: 18px;
-                height: 18px;
-                margin: 5px 7px;
-                background: url("../img/dot.png") center center no-repeat;
-                display: block;
-                -webkit-backface-visibility: visible;
-                -webkit-transition: opacity 200ms ease;
-                transition: opacity 200ms ease;
-                border-radius: 30px;
-                opacity: 0.9;
-              }
-              &.active, &:hover {
-                span {
-                  background: url("../img/dot-active.png") center center no-repeat;
-                  opacity: 1;
-                }
+              &:last-child {
+                margin-top: 30px;
               }
             }
           }
         }
       }
+
+      .owl-nav {
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 30px;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .owl-prev, .owl-next {
+          font: 0/0 serif;
+          text-shadow: none;
+          color: transparent;
+          background: url("../img/arrow-alider-blue.png") transparent center center no-repeat;
+          opacity: 0.9;
+          line-height: 0;
+          outline: none;
+          width: 51px;
+          border: none;
+          cursor: pointer;
+          height: 58px;
+          margin-left: 85px;
+          z-index: 10;
+          &:hover {
+            opacity: 1;
+          }
+        }
+        .owl-prev {
+          background: url("../img/arrow-alider-blue.png") transparent center center no-repeat;
+          -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+          margin-right: 85px;
+          margin-left: 0;
+        }
+      }
+      .owl-dots {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-top: -45px;
+
+        .owl-dot {
+          display: inline-block;
+          zoom: 1;
+          *display: inline;
+          span {
+            width: 18px;
+            height: 18px;
+            margin: 5px 7px;
+            background: url("../img/dot.png") center center no-repeat;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity 200ms ease;
+            border-radius: 30px;
+            opacity: 0.9;
+          }
+          &.active, &:hover {
+            span {
+              background: url("../img/dot-active.png") center center no-repeat;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
     }
   }
 }
@@ -900,19 +776,15 @@ header {
   background: $green;
   .container {
     padding: 120px 0 0 0;
-    display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 640px;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     h1 {
+      text-align: center;
       font-size: 42px;
       font-weight: 900;
       color: white;
@@ -924,15 +796,10 @@ header {
         .item {
           text-align: -webkit-center;
           .review-photos {
-            display: -webkit-box;
-            display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
-            -webkit-justify-content: space-around;
             -ms-flex-pack: distribute;
             justify-content: space-around;
-            -webkit-box-align: center;
-            -webkit-align-items: center;
             -ms-flex-align: center;
             align-items: center;
             width: 75%;
@@ -982,96 +849,79 @@ header {
         }
       }
 
-      .owl-controls {
+      .owl-nav {
+        display: -ms-flexbox;
+        display: flex;
         margin-top: 30px;
-        .owl-nav {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          .owl-prev, .owl-next {
-            font: 0/0 serif;
-            text-shadow: none;
-            color: transparent;
-            background: url("../img/green-arrow.png") transparent center center no-repeat;
+        .owl-prev, .owl-next {
+          font: 0/0 serif;
+          text-shadow: none;
+          color: transparent;
+          background: url("../img/green-arrow.png") transparent center center no-repeat;
+          opacity: 0.9;
+          line-height: 0;
+          outline: none;
+          width: 51px;
+          border: none;
+          cursor: pointer;
+          height: 58px;
+          z-index: 10;
+          position: absolute;
+          right: 26%;
+          bottom: -16px;
+          &:hover {
+            opacity: 1;
+          }
+        }
+        .owl-prev {
+          background: url("../img/green-arrow.png") transparent center center no-repeat;
+          -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+          left: 26%;
+
+        }
+      }
+      .owl-dots {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        z-index: 11;
+        .owl-dot {
+          display: inline-block;
+          zoom: 1;
+          *display: inline;
+          span {
+            width: 18px;
+            height: 18px;
+            margin: 5px;
+            background: url("../img/white-dot.png") center center no-repeat;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity 200ms ease;
+            border-radius: 30px;
             opacity: 0.9;
-            line-height: 0;
-            outline: none;
-            width: 51px;
-            border: none;
-            cursor: pointer;
-            height: 58px;
-            z-index: 10;
-            position: absolute;
-            right: 26%;
-            bottom: -16px;
-            &:hover {
+
+          }
+          &.active, &:hover {
+            span {
+              background: url("../img/step-dot-active.png") center center no-repeat;
               opacity: 1;
             }
           }
-          .owl-prev {
-            background: url("../img/green-arrow.png") transparent center center no-repeat;
-            -webkit-transform: scale(-1, 1);
-            -ms-transform: scale(-1, 1);
-            transform: scale(-1, 1);
-            left: 26%;
 
-          }
-        }
-        .owl-dots {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -webkit-align-items: center;
-          -ms-flex-align: center;
-          align-items: center;
-          z-index: 11;
-          .owl-dot {
-            display: inline-block;
-            zoom: 1;
-            *display: inline;
-            span {
-              width: 18px;
-              height: 18px;
-              margin: 5px;
-              background: url("../img/white-dot.png") center center no-repeat;
-              display: block;
-              -webkit-backface-visibility: visible;
-              -webkit-transition: opacity 200ms ease;
-              transition: opacity 200ms ease;
-              border-radius: 30px;
-              opacity: 0.9;
-
-            }
-            &.active, &:hover {
-              span {
-                background: url("../img/step-dot-active.png") center center no-repeat;
-                opacity: 1;
-              }
-            }
-          }
         }
       }
     }
     .lastbttn {
       width: 100%;
       height: 300px;
-      display: -webkit-box;
-      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center;
-      -webkit-box-align: end;
-      -webkit-align-items: flex-end;
       -ms-flex-align: end;
       align-items: flex-end;
       background: url("../img/last-bg.png") center bottom transparent no-repeat;
@@ -1085,22 +935,16 @@ footer {
   background: $green;
   .container {
     max-width: 1530px;
-    margin: 0 30px;
-    display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
     border-top: 1px solid $dark-green;
     color: white;
     padding: 30px 0;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    margin: 0 auto;
     div {
       width: 30%;
     }
@@ -1187,20 +1031,508 @@ footer {
     .rightpartners {
       #banks-slider {
         padding: 75px 105px 90px 105px;
-        .owl-theme {
-          .owl-controls {
-            .owl-nav {
-              .owl-prev, .owl-next {
-                margin-left: 85px;
-              }
-              .owl-prev {
-                margin-right: 150px;
-                margin-left: 0;
-              }
-            }
+        .owl-nav {
+          .owl-prev, .owl-next {
+            margin-left: 85px;
+          }
+          .owl-prev {
+            margin-right: 150px;
+            margin-left: 0;
           }
         }
       }
     }
+  }
+  footer .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  header .headerleft .back {
+    bottom: 12.3%;
+    left: -17%;
+    width: 75%;
+    height: 450px;
+    background-size: contain;
+  }
+
+  header .headerleft .back .bag {
+    width: 233px;
+    height: 300px;
+    background-size: contain;
+  }
+
+  header .headerleft .back .bag .round {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 75px;
+    left: 70px;
+  }
+  header .headerleft .back .bag .round .coin {
+    left: 22px;
+  }
+  header .headerbottom p {
+    font-size: 16px;
+    margin: 0 0 15px;
+  }
+  header .headerbottom {
+    padding-top: 25px;
+  }
+  header .headerright .container {
+    padding-top: 8.5%;
+    width: 70%;
+  }
+  header .headerright .container h1 {
+    font-size: 32px;
+    margin: 20px 0 93px;
+  }
+  header .headerleft .back .bag {
+    width: 233px;
+    height: 300px;
+    background-size: contain;
+  }
+
+  header .headerleft .back .bag {
+    right: 109px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  #info .container div {
+    width: 90%;
+  }
+  #info .container div p {
+    width: 48%;
+  }
+  #counter .container .advantages {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    width: 95%;
+    div {
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+      width: 28%;
+
+    }
+  }
+  #partners {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #partners .leftpartners, #partners .rightpartners {
+    width: 100%;
+  }
+  #partners .leftpartners {
+    width: 100%;
+    display: block;
+    padding: 60px 0;
+  }
+  #partners .leftpartners h1 {
+    margin: 0 auto;
+  }
+  #partners .leftpartners img {
+    display: none;
+  }
+  #partners {
+    max-height: none;
+  }
+  #partners .rightpartners #banks-slider {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  #partners .rightpartners {
+    width: 100%;
+    padding: 70px 0;
+  }
+  #partners .rightpartners #banks-slider .owl-stage-outer .owl-stage .owl-item .item {
+    width: 100%;
+  }
+  footer .container div {
+    width: 45%;
+  }
+  header .headerleft .clock, header .headerbottom, header .headerleft .back .coffee-cup {
+    display: none;
+  }
+  header .headerleft {
+    width: 40%;
+    height: 100vh;
+  }
+  header .headerright {
+    width: 60%;
+    height: 100%;
+    height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  header .headerright .container {
+    padding-top: 20px;
+  }
+  header .headerleft .back {
+    background: none;
+    position: relative;
+    left: initial;
+    right: initial;
+    bottom: initial;
+    top: initial;
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  header .headerleft .back .bag {
+    right: initial;
+    top: initial;
+    bottom: inherit;
+    left: initial;
+    height: 420px;
+    background-size: contain;
+    margin-top: 41px;
+    display: inline-block;
+    margin-left: -10px;
+  }
+  header .headerleft .back .bag .round {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 103px;
+    left: 52px;
+
+  }
+  header .headerleft .back .bag .round .coin {
+    left: 44px;
+  }
+  header .headerright .container .bubble#txt {
+    display: none;
+  }
+  #counter .container .advantages div p {
+    font-size: 16px;
+    margin: 15px 0 0;
+  }
+  #info .container {
+    padding: 0 0 60px 0;
+  }
+}
+
+@media (max-width: 769px) {
+  header .headerleft {
+    display: none;
+  }
+  header .headerright {
+    width: 100%;
+  }
+  #steps .container {
+    width: 95%;
+  }
+  header {
+    height: auto;
+  }
+  header .headerright {
+    height: auto;
+    padding: 100px 0;
+  }
+  header .headerbottom {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .headerright .container .sliderCalc .irs-slider::after {
+    top: 21px;
+    left: 30px;
+  }
+  #steps .container {
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  #steps .container {
+    width: 77%;
+  }
+  #steps .container #owl-steps .owl-nav .owl-prev, #steps .container #owl-steps .owl-nav .owl-next {
+    right: -40px;
+  }
+  #steps .container #owl-steps .owl-nav .owl-prev {
+    left: -40px;
+  }
+  #steps .container .btn {
+    width: 236px;
+    height: 54px;
+    font-size: 18px;
+    margin: 140px 0 0;
+  }
+  #steps .container .active-img {
+    bottom: 199px;
+  }
+  footer .container div {
+    width: 61%;
+  }
+  #steps .container {
+    padding: 80px 0 90px 0;
+  }
+  #reviews .container {
+    padding: 100px 0 0 0;
+  }
+  #info .container div p {
+    width: 100%;
+  }
+  #info .container div {
+    width: 77%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #info .container h1 {
+    width: 80%;
+  }
+  #partners .rightpartners #banks-slider .owl-nav .owl-next {
+    margin-left: 215px;
+  }
+  #partners .rightpartners #banks-slider .owl-stage-outer .owl-stage .owl-item .item img {
+    width: initial;
+  }
+  #counter .container .advantages div:last-child {
+    max-width: 32%;
+  }
+  #partners .rightpartners #banks-slider .owl-dots {
+    display: block;
+    padding: 0 15%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 540px) {
+  #steps .container #owl-steps .owl-dots .owl-dot ::before {
+    display: none;
+  }
+  #steps .container #owl-steps .owl-dots {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+
+  }
+  #steps .container #owl-steps .owl-dots::before {
+    display: none;
+  }
+  #info .container {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    img {
+      width: 90%;
+      height: auto;
+
+    }
+  }
+  #info .container h1 {
+    width: 90%;
+    font-size: 20px;
+    margin: 30px 0 0;
+  }
+  #info .container div {
+    width: 92%;
+  }
+  #info .container div p {
+    margin-bottom: 0;
+  }
+  #info .container {
+    padding: 0 0 30px 0;
+  }
+  #reviews .container {
+    padding: 120px 0 0 0;
+    width: 90%;
+  }
+  #reviews .container h1 {
+    font-size: 22px;
+  }
+  #reviews .container {
+    padding: 60px 0 0 0;
+    width: 94%;
+  }
+  #reviews .container .lastbttn {
+    background-size: contain;
+  }
+  #reviews .container #owl-reviews .owl-stage-outer .item .review-photos > div {
+    &:nth-child(1), &:nth-child(3) {
+      display: none;
+    }
+  }
+  #reviews .container #owl-reviews .owl-stage-outer .item .review-photos div.active::before {
+    display: none;
+  }
+  #reviews .container #owl-reviews .owl-stage-outer {
+    padding-top: 40px;
+  }
+  #reviews .container #owl-reviews .owl-nav .owl-next {
+    right: 80px;
+  }
+  #reviews .container #owl-reviews .owl-nav .owl-prev {
+    left: 80px;
+  }
+  #reviews .container #owl-reviews .owl-stage-outer .item p.comment {
+    line-height: 22px;
+    font-size: 14px;
+    width: 96%;
+    margin-bottom: 10px;
+  }
+  #reviews .container #owl-reviews .owl-stage-outer .item h3 {
+    margin-top: 15px;
+  }
+  #reviews .container #owl-reviews .owl-stage-outer .item p {
+    margin-bottom: 14px;
+  }
+  #reviews .container .lastbttn {
+    margin-top: 20px;
+  }
+  footer .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 94%;
+    font-size: 14px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .container div {
+    width: 100%;
+    margin-top: 15px;
+  }
+  #partners .rightpartners #banks-slider .owl-nav .owl-prev {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #partners .rightpartners #banks-slider .owl-dots {
+    padding: 0 28%;
+  }
+  #partners .rightpartners #banks-slider .owl-stage-outer .owl-stage .owl-item .item {
+    height: 100px;
+    margin-bottom: 15px !important;
+  }
+  #partners .rightpartners #banks-slider .owl-stage-outer .owl-stage .owl-item .item:last-child {
+    margin-top: 15px;
+  }
+  #partners .leftpartners h1 {
+    width: 80%;
+    font-size: 22px;
+  }
+  #partners .leftpartners {
+    padding: 35px 0;
+  }
+  #partners .rightpartners {
+    padding: 50px 0;
+  }
+  #steps .container .active-img {
+    bottom: 199px;
+    display: none;
+  }
+  #steps .container #owl-steps .owl-stage-outer .item img {
+    width: 85%;
+  }
+  #steps .container .btn {
+    margin: 30px 0 0;
+  }
+  #steps .container #owl-steps .owl-stage-outer .item p {
+    font-size: 18px;
+  }
+  #steps .container h1 {
+    font-size: 20px;
+  }
+  #steps .container {
+    padding: 40px 0 50px 0;
+  }
+  #steps .container #owl-steps .owl-nav .owl-prev, #steps .container #owl-steps .owl-nav .owl-next,
+  #partners .rightpartners #banks-slider .owl-nav .owl-prev, #partners .rightpartners #banks-slider .owl-nav .owl-next,
+  #reviews .container #owl-reviews .owl-nav .owl-prev, #reviews .container #owl-reviews .owl-nav .owl-next {
+    zoom: 0.7;
+  }
+  #partners .rightpartners #banks-slider .owl-dots {
+    display: none;
+  }
+  header .headerright .container h1 {
+    font-size: 24px;
+    text-align: center;
+    margin: 16px 0 35px;
+  }
+  eader .headerright {
+    padding: 50px 0;
+  }
+  header .headerright .container {
+    width: 94%;
+  }
+  header .headerright .container .sliderCalc .irs-grid {
+    display: none;
+  }
+  header .headerright .container .res {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  header .headerright .container .sliderCalc {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  header .headerright {
+    padding: 50px 0;
+  }
+  #counter .container .counterblock {
+    background: url(../img/bg2.png) center center no-repeat;
+    width: 100%;
+    background-size: contain;
+    height: 200px;
+    padding-bottom: 30px;
+  }
+  #counter .container .counterblock span {
+    font-weight: 900;
+    font-size: 31px;
+    letter-spacing: 9px;
+    margin-left: 10px;
+    height: 35px;
+  }
+  #counter .container .counterblock p {
+    font-size: 16px;
+  }
+  #counter .container {
+    padding: 40px 0 55px 0;
+  }
+  #counter .container .advantages {
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 95%;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  #counter .container .advantages div {
+    width: 100%;
+  }
+  #counter .container .advantages div:first-child, #counter .container .advantages div:last-child {
+    max-width: 100%;
+  }
+  #counter .container .advantages div {
+    max-width: 100%;
+  }
+  #counter .container .advantages div p {
+    font-size: 16px;
+    margin: 10px 0 30px;
+  }
+  #partners .rightpartners #banks-slider .owl-stage-outer .owl-stage .owl-item .item img {
+    width: 78%;
+  }
+  #reviews .container .lastbttn {
+    width: 100%;
+    height: 240px;
   }
 }
