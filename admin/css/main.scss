@@ -1,0 +1,326 @@
+html {
+  min-height: 100%;
+}
+
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+body {
+  -webkit-animation: bugfix infinite 1s;
+  background-color: #0d7ecc;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.redaktor.body.container {
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  -webkit-transition: all 128ms ease 0ms;
+  -moz-transition: all 128ms ease 0ms;
+  -o-transition: all 128ms ease 0ms;
+  transition: all 128ms ease 0ms;
+}
+.redaktor.page {
+  min-height: 90%;
+  min-height: calc(100vh - 32px);
+}
+
+.redaktor.body.container.fade .redaktor.page {
+  -webkit-transition: all 512ms ease 0ms;
+  -moz-transition: all 512ms ease 0ms;
+  -o-transition: all 512ms ease 0ms;
+  transition: all 512ms ease 0ms;
+}
+.redaktor.body.container.fade .redaktor.page:target ~ .redaktor.page:last-child,
+.redaktor.body.container.fade .redaktor.page {
+  display: block;
+  position: absolute; top: -9999px; left: -9999px;
+  opacity: 0;
+}
+.redaktor.body.container.fade > .ui.page.container > :last-child,
+.redaktor.body.container.fade > .ui.page.container > .redaktor.page:target {
+  position: static;
+  opacity: 1;
+}
+
+.redaktor.body.container:not(.fade) .redaktor.page:target ~ .redaktor.page:last-child,
+.redaktor.body.container:not(.fade) .redaktor.page {
+  display: none;
+}
+.redaktor.body.container > .ui.page.container > :last-child,
+.redaktor.body.container > .ui.page.container > .redaktor.page:target {
+  display: block;
+}
+
+.redaktor.nav .menu .item {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.redaktor.toolbar.nav .menu,
+.redaktor.push.nav .vertical.menu {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.redaktor.toolbar.nav {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 32px;
+  width: 100%;
+}
+.redaktor.toolbar.nav .ui.menu {
+  border-radius: 0;
+  padding-left: 32px;
+}
+.redaktor.toolbar.nav .logo.item {
+  width: 96px;
+  color: #fff;
+}
+
+.redaktor.toolbar.nav .ui.inverted.menu {
+  background: #242023;
+  height: 48px;
+}
+
+.redaktor.push.nav {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  color: #fff;
+  background: #3e373c;
+  -webkit-transition: all 128ms ease 0ms;
+  -moz-transition: all 128ms ease 0ms;
+  -o-transition: all 128ms ease 0ms;
+  transition: all 128ms ease 0ms;
+}
+.redaktor.push.nav .ui.menu {
+  border-radius: 0;
+  height: 100%;
+  background: none;
+}
+.redaktor.push.nav .ui.menu .bg {
+  pointer-events: none;
+  z-index: 1;
+  background: rgba(231,230,226,.24);
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: -9999px;
+}
+
+.redaktor.push.nav .logo.item {
+  height: 64px;
+  background: url(https://redaktor.circinus.uberspace.de/css/redaktor_0_95/logoLightNav.svg) no-repeat 8px 8px;
+  background-size: 48px;
+}
+.redaktor.push.nav::after {
+  opacity: .99;
+  z-index: 0;
+}
+.redaktor.push.nav .ui.menu a.item:link {
+  -webkit-tap-highlight-color: rgba(231,230,226,.24);
+}
+.redaktor.push.nav .ui.menu div.bg {
+  -webkit-transition: all 0s 9999999s;
+  -moz-transition: all 0s 9999999s;
+  -o-transition: all 0s 9999999s;
+  transition: all 0s 9999999s;
+}
+[data-initial] .redaktor.push.nav:not(:hover) .ui.menu .item ~ .bg,
+.redaktor.push.nav .ui.menu a.item:active ~ div.bg {
+  height: 42px;
+  width: 100%;
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  transition: all 0s;
+}
+
+[data-initial="1"] .redaktor.push.nav:not(:hover) .ui.menu .item ~ .bg,
+.redaktor.push.nav > .ui.menu a:nth-of-type(1):active ~ .bg {
+  top: 65px;
+}
+[data-initial="2"] .redaktor.push.nav:not(:hover) .ui.menu .item ~ .bg,
+.redaktor.push.nav > .ui.menu a:nth-of-type(2):active ~ .bg {
+  top: 108px;
+}
+[data-initial="3"] .redaktor.push.nav:not(:hover) .ui.menu .item ~ .bg,
+.redaktor.push.nav > .ui.menu a:nth-of-type(3):active ~ .bg {
+  top: 151px;
+}
+
+:not([data-has_js]) .redaktor.push.nav noscript {
+  display: block;
+  -webkit-transition: all 0s 9999999s;
+  -moz-transition: all 0s 9999999s;
+  -o-transition: all 0s 9999999s;
+  transition: all 0s 9999999s;
+  position: fixed;
+  top: 32px;
+  left: 128px;
+  width: 100%;
+  width: calc(100% - 128px);
+  min-height: 32px;
+  line-height: 32px;
+  padding: 0 16px 0 16px;
+  text-align: center;
+  background: rgba(220,0,5,.8);
+}
+:not([data-has_js]) .redaktor.push.nav .menu > a.item:active ~ noscript {
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
+  transition: all 0s;
+  left: -9999px;
+  top: -9999px;
+}
+
+/* Navigation Push Toggling */
+.redaktor.nav.toggle:checked ~ .redaktor.body.container {
+  width: calc(100% - 128px);
+  -webkit-transform: translate(128px, 32px);
+  -moz-transform: translate(128px, 32px);
+  -ms-transform: translate(128px, 32px);
+  -o-transform: translate(128px, 32px);
+  transform: translate(128px, 32px);
+  -webkit-transform: translate3d(128px, 32px, 0);
+  -moz-transform: translate3d(128px, 32px, 0);
+  -ms-transform: translate3d(128px, 32px, 0);
+  -o-transform: translate3d(128px, 32px, 0);
+  transform: translate3d(128px, 32px, 0);
+}
+.redaktor.nav.toggle:not(:checked) ~ .redaktor.body.container {
+  width: 100%;
+  -webkit-transform: translate(0px, 32px);
+  -moz-transform: translate(0px, 32px);
+  -ms-transform: translate(0px, 32px);
+  -o-transform: translate(0px, 32px);
+  transform: translate(0px, 32px);
+  -webkit-transform: translate3d(0px, 32px, 0);
+  -moz-transform: translate3d(0px, 32px, 0);
+  -ms-transform: translate3d(0px, 32px, 0);
+  -o-transform: translate3d(0px, 32px, 0);
+  transform: translate3d(0px, 32px, 0);
+}
+
+
+.redaktor.nav.toggle:not(:checked) ~ .redaktor.push.nav {
+  width: 0px;
+  left: -15%;
+}
+.redaktor.nav.toggle:checked ~ .redaktor.push.nav {
+  width: 15%;
+  left: 0;
+}
+.redaktor.nav.toggle {
+  opacity: 0;
+  z-index: 0;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.redaktor.nav.toggle + label {
+  z-index: 2;
+  position: fixed;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 128px;
+  height: 48px;
+}
+.redaktor.nav.toggle + label::selection,
+.redaktor.toolbar.nav::selection,
+.redaktor.toolbar.nav *::selection,
+.redaktor.push.nav::selection,
+.redaktor.push.nav *::selection {
+  background: none !important;
+  color: inherit;
+}
+.redaktor.nav.toggle + label > i {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  left: 24px;
+  top: 24px;
+  border-radius: 16px;
+  -webkit-transition: all 128ms ease 0ms;
+  -moz-transition: all 128ms ease 0ms;
+  -o-transition: all 128ms ease 0ms;
+  transition: all 128ms ease 0ms;
+}
+.redaktor.nav.toggle:checked + label > i {
+  left: 24px;
+  top: 24px;
+  background-color: #e7e6e2;
+  -webkit-animation: blub 128ms 1;
+  -moz-animation: blub 128ms 1;
+  animation: blub 128ms 1;
+}
+.redaktor.nav.toggle:not(:checked) + label > i {
+  top: 8px;
+  background-color: #ff7a00;
+}
+.redaktor.nav.toggle + label:hover {
+  cursor: pointer;
+}
+@-webkit-keyframes blub {
+  0% { transform: scale(1) }
+  50% { transform: scale(.5) }
+  100% { transform: scale(1) }
+}
+@-moz-keyframes blub {
+  0% { transform: scale(1) }
+  50% { transform: scale(.5) }
+  100% { transform: scale(1) }
+}
+@keyframes blub {
+  0% { transform: scale(1) }
+  50% { transform: scale(.5) }
+  100% { transform: scale(1) }
+}
+
+.page.container {
+  background-color: white;
+  background-position:50% 0;
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -ms-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+}
+.EXAMPLE {
+  padding: 80px 0;
+  color: black;
+  text-align: center;
+}
+
+.ui.container {
+  width: 100%;
+}
+
