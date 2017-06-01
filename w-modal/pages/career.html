@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+<header>
+    <section class="header">
+        <div class="container">
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <a href="#"><img src="../img/logo.png" alt=""></a>
+            <div class="languages">
+                <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+            </div>
+        </div>
+    </section>
+    <section class="navigation">
+        <div class="nav-container">
+            <nav class="menu" id="main-nav">
+                <!--  this is the mobile menu button -->
+                <a href="#" id="mobileButton" class="mobileMenuButton"><i class="icon-menu"></i></a>
+                <!--  this is the menu -->
+                <ul class="listMenu nav-list">
+                    <li><a href="../pages/catalog.html" class="cool-link">Кафе и рестораны</a></li>
+
+                    <li class="dropdown"><a href="#">Гостиницы</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная»</a></li>
+                            <li><a href="../pages/cart-hotel.html">Эко-комплекс «Chalet GreenWood»</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/events.html" class="cool-link">События</a></li>
+                    <li><a href="../pages/discount.html" class="cool-link">Программы лояльности</a></li>
+                    <li><a href="../pages/career.html" class="cool-link">Вакансии</a></li>
+                    <li><a href="../pages/contacts.html" class="cool-link">Контакты</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="mobileMenu slideOut">
+
+            <div class="head">
+                <a href="#"><img src="../img/logo.png" alt=""></a>
+                <span class="close"><i class="icon-close"></i></span>
+            </div>
+
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <div class="languages">
+                <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+            </div>
+
+            <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+        </div>
+
+        <div class="mobileMenu2 slideOut">
+
+            <div class="head">
+                <a href="#"><img src="../img/logo.png" alt=""></a>
+                <span class="close2"><i class="icon-close"></i></span>
+            </div>
+            <ul>
+                <li class="back-to-main-menu"><a href="#"><i class="icon-arr-left"></i>Гостиницы</a></li>
+                <li><a href="../pages/cart-hotel.html">Chalet GreenWood</a></li>
+                <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная</a></li>
+            </ul>
+
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <div class="languages">
+                <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+            </div>
+
+            <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+        </div>
+
+        <script>
+            // var settings ****************************************************
+            var $header = $('header');
+            var $brand = $('.branding');
+            var $logoLG = $('.logo-lg');
+            var $logoSM = $('.logo-sm');
+            var $overlay = $('<div class="overlay-menu"></div>');
+            var $menu = $('.mobileMenu');
+            var $ul = $('<ul></ul>');
+            // code setting  (mobile menu )*************************************
+
+
+            // 01. append overlay div (see overlay var) to body
+            $("body").append($overlay);
+
+            // 02. lock page scroll whe the mobile menu is active, Given a jQuery object that represents a set of DOM elements, the .add() method constructs a new jQuery object from the union of those elements and the ones passed into the method.
+            $overlay.add($menu).on('scroll touchmove mousewheel', function (event) {
+                event.preventDefault();
+            });
+
+            // 03. on mobile button press, slide menu in and show overlay
+            $('#mobileButton').click(function (event) {
+                event.preventDefault();
+                //Show the overlay and we add some opacity animation
+                $overlay.show().animate({opacity: 0.8,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+            // 04. on overlay click, close menu and hide overlay
+            $overlay.click(function () {
+                //Hide the overlay and set opacity to 0
+                $overlay.hide().animate({opacity: 0,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+            $('.close').click(function (event) {
+                //Hide the overlay and set opacity to 0
+                $overlay.hide().animate({opacity: 0,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+
+            // 05. obtain menu links from .listMenu and copy them to the mobile menu (Traversing the DOM)
+            $menu.append($ul);
+            $('.listMenu a').each(function () {
+                var $anchor = $(this);
+                var $li = $('<li></li>');
+                $anchor.clone().appendTo($li);
+                $ul.append($li);
+            });
+
+            // 06. we add the class stick to the fixed header to change his appearance and the apparence of their content on scroll
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $($header).addClass("stick");
+                    $($brand).addClass('stick')
+                    $($logoLG).hide();
+                    $($logoSM).show();
+                }
+                else {
+                    $($header).removeClass("stick");
+                    $($brand).removeClass('stick');
+                    $($logoSM).hide();
+                    $($logoLG).show();
+                }
+            });
+
+            var $menu2 = $('.mobileMenu2');
+            $('.mobileMenu li:nth-child(2) ').addClass('submenu-hotels');
+
+            $('.submenu-hotels').click(function (event) {
+
+                $menu2.toggleClass("slideOut");
+            });
+
+            $('.close2').click(function (event) {
+                $menu2.toggleClass("slideOut");
+                $menu.toggleClass("slideOut");
+                $overlay.hide().animate({opacity: 0,}, 200);
+            });
+
+            $('.back-to-main-menu').click(function (event) {
+                $menu2.toggleClass("slideOut");
+            });
+        </script>
+    </section>
+
+</header>
+<main>
+    <section class="gallery career">
+        <div class="container">
+            <div class="head">
+                <h1>Вакансии </h1>
+                <p>Команда Санта Рест— это эксклюзивная работа, уникальные люди и насыщенная жизнь! Мы верим, что работа
+                    должна приносить удовольствие и новые впечатления. Присоединяйтесь к нашей команде!</p>
+            </div>
+            <div class="owl-carousel ">
+                <div class="item">
+
+                    <img src="../img/hotel-slide1.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide2.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide3.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide1.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide2.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+                <div class="item">
+
+                    <img src="../img/hotel-slide3.jpg" alt=""/>
+                    <div class="inner">
+                        <p>Описание</p>
+                    </div>
+
+                </div>
+            </div>
+            <script>
+                $('.owl-carousel').owlCarousel({
+                    stagePadding: 200,
+                    loop: true,
+                    margin: 0,
+                    items: 1,
+                    lazyLoad: true,
+                    nav: true,
+                    dots: true,
+                    smartSpeed: 1500,
+                    navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right2' aria-hidden='true'></i>"],
+                    responsive: {
+                        0: {
+                            items: 1,
+                            stagePadding: 0,
+                            nav: false
+                        },
+                        620: {
+                            items: 1,
+                            stagePadding: 100,
+                            nav: false
+                        },
+                        769: {
+                            items: 1,
+                            stagePadding: 190,
+                            nav: false
+                        },
+                        1400: {
+                            items: 1,
+                            stagePadding: 300
+                        },
+                        1600: {
+                            items: 1,
+                            stagePadding: 350
+                        },
+                        1800: {
+                            items: 1,
+                            stagePadding: 420
+                        }
+                    }
+                })
+                $('.owl-prev, .owl-next').addClass('cf');
+            </script>
+        </div>
+    </section>
+    <section class="career-list">
+        <div class="container">
+            <h2>Наши вакансии</h2>
+            <div class="select-wrapper">
+                <select name="" id="radiusSelect">
+                    <option value="">Написать директору</option>
+                    <option value="">Написать директору</option>
+                    <option value="">Написать директору</option>
+                </select>
+            </div>
+            <ul class="accordion">
+                <li>
+                    <a>
+                        <p>Официант
+                            <span>Times Cafe</span>
+                        </p>
+                        Зарплата не указана
+                    </a>
+                    <div>
+                        <p>Требования:</p>
+                        <ul>
+                            <li>Стаж работы не менее 3-х лет</li>
+                            <li>Опыт руководства коллективом</li>
+                            <li>Знание технологического и торгового оборудования, используемого на предприятиях
+                                общественного питания;
+                            </li>
+                            <li>Знание технологии процесса приготовления продукции;</li>
+                            <li>Знание ХАССП;</li>
+                            <li>Отличные коммуникационные навыки и высокая адаптивность</li>
+                        </ul>
+                        <p>Обязанности:</p>
+                        <ul>
+                            <li>Контроль качества производимой продукции, соблюдение норм закладки сырья, технологии и
+                                выхода готовой продукции
+                            </li>
+                            <li>Контроль качества входящего сырья и полуфабрикатов</li>
+                            <li>Контроль правильной эксплуатации оборудования, инвентаря и других материальных средств
+                            </li>
+                            <li>Контроль соблюдения работниками правил и норм охраны труда и техники безопасности,
+                                санитарных норм, производственной и трудовой дисциплины
+                            </li>
+                            <li>Контроль санитарного состояния, маркировки, хранения сырья и полуфабрикатов</li>
+                            <li>Проведение инвентаризации остатков сырья и готовой продукции</li>
+                            <li>Составление заявок на необходимые товары, полуфабрикаты и сырье, обеспечение их
+                                своевременного получения со склада
+                            </li>
+                        </ul>
+                        <p>Условия работы:</p>
+                        <ul>
+                            <li>Стаж работы не менее 3-х лет</li>
+                            <li>Опыт руководства коллективом</li>
+                            <li>Знание технологического и торгового оборудования, используемого на предприятиях
+                                общественного питания;
+                            </li>
+                            <li>Знание технологии процесса приготовления продукции;</li>
+                            <li>Знание ХАССП;</li>
+                            <li>Отличные коммуникационные навыки и высокая адаптивность</li>
+                        </ul>
+                        <p>Контактные данные:</p>
+                        <span>Контактное лицо: <span>Рак Татьяна Аркадьевна</span></span><br>
+                        <span>Телефон: 	<span>8 (0162) 209324</span></span><br>
+                        <span> E-mail:  <span>lawer@rest.santa.by</span></span><br>
+                        <button type='submit' class="large-btn button button-1">Откликнуться на вакансию<i class='icon-arr-right2'></i></button>
+                    </div>
+                </li>
+                <li>
+                    <a>
+                        <p>Официант
+                            <span>Times Cafe</span>
+                        </p>
+                        Зарплата не указана
+                    </a>
+                    <div>
+                        <p>Требования:</p>
+                        <ul>
+                            <li>Стаж работы не менее 3-х лет</li>
+                            <li>Опыт руководства коллективом</li>
+                            <li>Знание технологического и торгового оборудования, используемого на предприятиях
+                                общественного питания;
+                            </li>
+                            <li>Знание технологии процесса приготовления продукции;</li>
+                            <li>Знание ХАССП;</li>
+                            <li>Отличные коммуникационные навыки и высокая адаптивность</li>
+                        </ul>
+                        <p>Обязанности:</p>
+                        <ul>
+                            <li>Контроль качества производимой продукции, соблюдение норм закладки сырья, технологии и
+                                выхода готовой продукции
+                            </li>
+                            <li>Контроль качества входящего сырья и полуфабрикатов</li>
+                            <li>Контроль правильной эксплуатации оборудования, инвентаря и других материальных средств
+                            </li>
+                            <li>Контроль соблюдения работниками правил и норм охраны труда и техники безопасности,
+                                санитарных норм, производственной и трудовой дисциплины
+                            </li>
+                            <li>Контроль санитарного состояния, маркировки, хранения сырья и полуфабрикатов</li>
+                            <li>Проведение инвентаризации остатков сырья и готовой продукции</li>
+                            <li>Составление заявок на необходимые товары, полуфабрикаты и сырье, обеспечение их
+                                своевременного получения со склада
+                            </li>
+                        </ul>
+                        <p>Условия работы:</p>
+                        <ul>
+                            <li>Стаж работы не менее 3-х лет</li>
+                            <li>Опыт руководства коллективом</li>
+                            <li>Знание технологического и торгового оборудования, используемого на предприятиях
+                                общественного питания;
+                            </li>
+                            <li>Знание технологии процесса приготовления продукции;</li>
+                            <li>Знание ХАССП;</li>
+                            <li>Отличные коммуникационные навыки и высокая адаптивность</li>
+                        </ul>
+                        <p>Контактные данные:</p>
+                        <span>Контактное лицо: <span>Рак Татьяна Аркадьевна</span></span><br>
+                        <span>Телефон: 	<span>8 (0162) 209324</span></span><br>
+                        <span> E-mail:  <span>lawer@rest.santa.by</span></span><br>
+                        <button type='submit' class="large-btn  button button-1">Откликнуться на вакансию<i class='icon-arr-right2'></i></button>
+                    </div>
+                </li>
+                <li>
+                    <a>
+                        <p>Заведующий производством в Бресте
+                            <span>Times Cafe</span>
+                        </p>
+                        Зарплата не указана
+                    </a>
+                    <div>
+                        <p>Требования:</p>
+                        <ul>
+                            <li>Стаж работы не менее 3-х лет</li>
+                            <li>Опыт руководства коллективом</li>
+                            <li>Знание технологического и торгового оборудования, используемого на предприятиях
+                                общественного питания;
+                            </li>
+                            <li>Знание технологии процесса приготовления продукции;</li>
+                            <li>Знание ХАССП;</li>
+                            <li>Отличные коммуникационные навыки и высокая адаптивность</li>
+                        </ul>
+                        <p>Обязанности:</p>
+                        <ul>
+                            <li>Контроль качества производимой продукции, соблюдение норм закладки сырья, технологии и
+                                выхода готовой продукции
+                            </li>
+                            <li>Контроль качества входящего сырья и полуфабрикатов</li>
+                            <li>Контроль правильной эксплуатации оборудования, инвентаря и других материальных средств
+                            </li>
+                            <li>Контроль соблюдения работниками правил и норм охраны труда и техники безопасности,
+                                санитарных норм, производственной и трудовой дисциплины
+                            </li>
+                            <li>Контроль санитарного состояния, маркировки, хранения сырья и полуфабрикатов</li>
+                            <li>Проведение инвентаризации остатков сырья и готовой продукции</li>
+                            <li>Составление заявок на необходимые товары, полуфабрикаты и сырье, обеспечение их
+                                своевременного получения со склада
+                            </li>
+                        </ul>
+                        <p>Условия работы:</p>
+                        <ul>
+                            <li>Стаж работы не менее 3-х лет</li>
+                            <li>Опыт руководства коллективом</li>
+                            <li>Знание технологического и торгового оборудования, используемого на предприятиях
+                                общественного питания;
+                            </li>
+                            <li>Знание технологии процесса приготовления продукции;</li>
+                            <li>Знание ХАССП;</li>
+                            <li>Отличные коммуникационные навыки и высокая адаптивность</li>
+                        </ul>
+                        <p>Контактные данные:</p>
+                        <span>Контактное лицо: <span>Рак Татьяна Аркадьевна</span></span><br>
+                        <span>Телефон: 	<span>8 (0162) 209324</span></span><br>
+                        <span> E-mail:  <span>lawer@rest.santa.by</span></span><br>
+                        <button type='submit' class="large-btn button button-1">Откликнуться на вакансию<i class='icon-arr-right2'></i></button>
+                    </div>
+                </li>
+            </ul> <!-- / accordion -->
+        </div>
+        <script>
+            (function ($) {
+                var w = $(window).width(); // Получаем ширину окна
+                if (w >= 620) {
+                    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+                }
+
+                $('.accordion a').click(function (j) {
+                    var dropDown = $(this).closest('li').find('div');
+
+                    $(this).closest('.accordion').find('div').not(dropDown).slideUp();
+
+                    if ($(this).hasClass('active')) {
+                        $(this).removeClass('active');
+                    } else {
+                        $(this).closest('.accordion').find('a.active').removeClass('active');
+                        $(this).addClass('active');
+                    }
+
+                    dropDown.stop(false, true).slideToggle();
+
+                    j.preventDefault();
+                });
+            })(jQuery);
+        </script>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2016 Санта-Рест</p>
+        <p>Комплексный интернет маркетинг - <a href="" class="cool-link">"Wide-Web"</a></p>
+    </div>
+</footer>
+<div id="toTop" ><i class="icon-arr-top"></i></div>
+</body>
+</html>

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шале GreenWood</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+<div class="remodal-bg">
+
+</div>
+<div class="remodal" data-remodal-id="modal">
+    <div class="head">
+        <span>Бронирование</span>
+        <a data-remodal-action="close" class="icon-close"></a>
+
+    </div>
+
+    <form action="">
+        <div class="left">
+            <input type="text" placeholder="Дата">
+            <input type="text" placeholder="Время">
+            <input type="text" placeholder="Количество гостей">
+            <div class="select-wrapper">
+                <select name="" id="radiusSelect1">
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                </select>
+            </div>
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Имя">
+            <input type="tel" placeholder="Телефон">
+            <textarea name="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+        </div>
+
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm" ><i class="icon-book"></i>Забронировать</button>
+
+
+    </form>
+
+</div>
+<header class="no-menu">
+    <section class="header-full firstScreen greenwood">
+
+        <div class="top">
+            <div class="container " >
+
+                <div class="menu-dropdown">
+                    <i class="icon-menu burger-check"></i>
+                    <div id="navigation1" class="navigation1">
+                        <ul>
+                            <li><a href="../index.html" class="">О компании «Santa Rest»</a></li>
+                            <li><a href="../pages/catalog.html" class="">Кафе и рестораны «Santa Rest»</a></li>
+                            <li><a href="#" class="hotels">Гостиницы «Santa Rest»</a></li>
+                            <div class="navigation2">
+                                <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная»</a></li>
+                                <li><a href="../pages/cart-hotel.html">Эко-комплекс «Chalet GreenWood»</a></li>
+                            </div>
+
+                            <li><a href="../pages/events.html" class="">События «Santa Rest»</a></li>
+                            <li><a href="../pages/discount.html" class="">Программа лояльности «Santa Rest»</a></li>
+                            <li><a href="../pages/career.html" class="">Вакансии «Santa Rest»</a></li>
+                            <li><a href="../pages/contacts.html" class="">Контакты «Santa Rest»</a></li>
+                        </ul>
+                    </div>
+                    <script>
+                        $('.burger-check').click(function (e) {
+                            $('.navigation1').toggleClass('active');
+                            $('.menu-dropdown').toggleClass('active-menu1');
+                            $('.burger-check').toggleClass('icon-menu').toggleClass('icon-close');
+                            $('.navigation2').removeClass('active');
+                        });
+                        $('.hotels').click(function (e) {
+                            $('.navigation2').toggleClass('active');
+                        });
+                    </script>
+                </div>
+
+                <nav class="menu" id="main-nav">
+                    <a href="#" id="mobileButton" class="mobileMenuButton"><i class="icon-menu"></i></a>
+                    <ul class="listMenu nav-list">
+                        <li><a href="../pages/catalog.html" class="cool-link">Кафе и рестораны</a></li>
+
+                        <li class="dropdown"><a href="#">Гостиницы</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная»</a></li>
+                                <li><a href="../pages/cart-hotel.html">Эко-комплекс «Chalet GreenWood»</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../pages/events.html" class="cool-link">События</a></li>
+                        <li><a href="../pages/discount.html" class="cool-link">Программы лояльности</a></li>
+                        <li><a href="../pages/career.html" class="cool-link">Вакансии</a></li>
+                        <li><a href="../pages/contacts.html" class="cool-link">Контакты</a></li>
+
+                    </ul>
+
+                </nav>
+
+
+                <div class="mobileMenu slideOut">
+
+                    <div class="head">
+                        <a href="#"><img src="../img/logo.png" alt=""></a>
+                        <span class="close"><i class="icon-close"></i></span>
+                    </div>
+
+                    <div class="social cf">
+                        <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                        <a href="" class="button button-1"><i class="icon-VK"></i></a>
+                    </div>
+                    <div class="languages">
+                        <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+                    </div>
+
+                    <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+                </div>
+
+                <div class="mobileMenu2 slideOut">
+
+                    <div class="head">
+                        <a href="#"><img src="../img/logo.png" alt=""></a>
+                        <span class="close2"><i class="icon-close"></i></span>
+                    </div>
+                    <ul>
+                        <li class="back-to-main-menu"><a href="#"><i class="icon-arr-left"></i>Гостиницы</a></li>
+                        <li><a href="../pages/cart-hotel.html">Chalet GreenWood</a></li>
+                        <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная</a></li>
+                    </ul>
+
+                    <div class="social cf">
+                        <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                        <a href="" class="button button-1"><i class="icon-VK"></i></a>
+                    </div>
+                    <div class="languages">
+                        <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+                    </div>
+
+                    <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+                </div>
+
+                <script>
+                    $(document).ready(function() {
+                        var w = $(window).width(); // Получаем ширину окна
+                        if (w >= 620) { // Если ширина окна меньше, либо равна 600
+                            $('.dropdown-item').click(function (e) {
+                                e.stopPropagation();
+                                $('.menu-dropdown-item').toggle();
+                                $('.dropdown-item').toggleClass('active-menu-item');
+                                $('.icon-menu').toggleClass('icon-close');
+                            });
+
+                            $('html').click(function () {
+                                $('.menu-dropdown-item').hide();
+                                $('.dropdown-item').removeClass('active-menu-item');
+                            });
+
+                        } else {
+                            $('.top > .container').addClass('nav-container');
+
+                            // var settings ****************************************************
+                            var $header = $('header');
+                            var $brand = $('.branding');
+                            var $logoLG = $('.logo-lg');
+                            var $logoSM = $('.logo-sm');
+                            var $overlay = $('<div class="overlay-menu"></div>');
+                            var $menu = $('.mobileMenu');
+                            var $ul = $('<ul></ul>');
+                            // code setting  (mobile menu )*************************************
+
+
+                            // 01. append overlay div (see overlay var) to body
+                            $("body").append($overlay);
+
+                            // 02. lock page scroll whe the mobile menu is active, Given a jQuery object that represents a set of DOM elements, the .add() method constructs a new jQuery object from the union of those elements and the ones passed into the method.
+                            $overlay.add($menu).on('scroll touchmove mousewheel', function (event) {
+                                event.preventDefault();
+                            });
+
+                            // 03. on mobile button press, slide menu in and show overlay
+                            $('#mobileButton').click(function (event) {
+                                event.preventDefault();
+                                //Show the overlay and we add some opacity animation
+                                $overlay.show().animate({opacity: 0.8,}, 200);
+                                //Togle class
+                                $menu.toggleClass("slideOut");
+                            });
+
+                            // 04. on overlay click, close menu and hide overlay
+                            $overlay.click(function () {
+                                //Hide the overlay and set opacity to 0
+                                $overlay.hide().animate({opacity: 0,}, 200);
+                                //Togle class
+                                $menu.toggleClass("slideOut");
+                            });
+
+                            $('.close').click(function (event) {
+                                //Hide the overlay and set opacity to 0
+                                $overlay.hide().animate({opacity: 0,}, 200);
+                                //Togle class
+                                $menu.toggleClass("slideOut");
+                            });
+
+
+                            // 05. obtain menu links from .listMenu and copy them to the mobile menu (Traversing the DOM)
+                            $menu.append($ul);
+                            $('.listMenu a').each(function () {
+                                var $anchor = $(this);
+                                var $li = $('<li></li>');
+                                $anchor.clone().appendTo($li);
+                                $ul.append($li);
+                            });
+
+                            // 06. we add the class stick to the fixed header to change his appearance and the apparence of their content on scroll
+                            $(window).scroll(function () {
+                                if ($(this).scrollTop() > 100) {
+                                    $($header).addClass("stick");
+                                    $($brand).addClass('stick')
+                                    $($logoLG).hide();
+                                    $($logoSM).show();
+                                }
+                                else {
+                                    $($header).removeClass("stick");
+                                    $($brand).removeClass('stick');
+                                    $($logoSM).hide();
+                                    $($logoLG).show();
+                                }
+                            });
+
+                            var $menu2 = $('.mobileMenu2');
+                            $('.mobileMenu li:nth-child(2) ').addClass('submenu-hotels');
+
+                            $('.submenu-hotels').click(function (event) {
+
+                                $menu2.toggleClass("slideOut");
+                            });
+
+                            $('.close2').click(function (event) {
+                                $menu2.toggleClass("slideOut");
+                                $menu.toggleClass("slideOut");
+                                $overlay.hide().animate({opacity: 0,}, 200);
+                            });
+
+                            $('.back-to-main-menu').click(function (event) {
+                                $menu2.toggleClass("slideOut");
+                            });
+                        }
+
+                    });
+
+
+                </script>
+                <div class="languages">
+                    <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <img src="../img/grennwood-logo-xl.png" alt="">
+            <h1>Эко-комплекс<br><span>Chalet Greenwood</span>
+            </h1>
+
+            <div class="bttns">
+                <a href="" class="button button-1" data-remodal-target="modal"><i class="icon-book"></i></a>
+                <a href="tel:000000000" class="button button-1"><i class="icon-phone"></i></a>
+            </div>
+        </div>
+        <span class="arrow-bottom">
+            <a class="loading" href="#s1">
+		<div class="loading-dot"></div>
+		<div class="loading-dot"></div>
+		<div class="loading-dot"></div>
+                <i class="icon-ar_m loading-arrow"></i>
+            </a>
+        </span>
+        <script>
+            $(document).ready(function(){
+                $('.loading').click( function(){
+                    var scroll_el = $(this).attr('href');
+                    if ($(scroll_el).length != 0) {
+                        $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 1000);
+                    }
+                    return false;
+                });
+            });
+        </script>
+
+        <div class="bottom" id="top_nav">
+            <ul id="nav">
+                <li class="current"><a href="#section-1">О комплексе</a></li>
+                <li><a href="#section-2">Галерея</a></li>
+                <li><a href="#section-3">Контакты</a></li>
+            </ul>
+            <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"><i class="icon-book"></i>Забронировать</button>
+        </div>
+        <script>
+
+
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                var w = $(window).width(); // Получаем ширину окна
+                if (w >= 620) {
+                    $(document).ready(function () {
+                        $('#nav').onePageNav();
+                    });
+                    $(function () {
+                        // высота "шапки", px
+                        var h_hght = $('.firstScreen').outerHeight();
+                        // высота блока с меню, px
+                        var h_nav = $('.bottom').outerHeight();
+                        var top;
+                        $(window).scroll(function () {
+                            // отступ сверху
+                            top = $(this).scrollTop();
+                            if ((h_hght - top) <= h_nav) {
+                                $('.bottom').css('top', '0');
+                            }
+                            else if (top < h_hght && top > 0) {
+                                $('.bottom').css({'bottom': top, 'top': ''});
+                            }
+                            else if (top < h_nav) {
+                                $('.bottom').css({'top': '', 'bottom': '0'});
+                            }
+                        });
+                    });
+                }
+            });
+
+        </script>
+        <script>
+            /*
+             * jQuery One Page Nav Plugin
+             * http://github.com/davist11/jQuery-One-Page-Nav
+             *
+             * Copyright (c) 2010 Trevor Davis (http://trevordavis.net)
+             * Dual licensed under the MIT and GPL licenses.
+             * Uses the same license as jQuery, see:
+             * http://jquery.org/license
+             *
+             * @version 3.0.0
+             *
+             * Example usage:
+             * $('#nav').onePageNav({
+             *   currentClass: 'current',
+             *   changeHash: false,
+             *   scrollSpeed: 750
+             * });
+             */
+
+            ;
+            (function ($, window, document, undefined) {
+
+                // our plugin constructor
+                var OnePageNav = function (elem, options) {
+                    this.elem = elem;
+                    this.$elem = $(elem);
+                    this.options = options;
+                    this.metadata = this.$elem.data('plugin-options');
+                    this.$win = $(window);
+                    this.sections = {};
+                    this.didScroll = false;
+                    this.$doc = $(document);
+                    this.docHeight = this.$doc.height();
+                };
+
+                // the plugin prototype
+                OnePageNav.prototype = {
+                    defaults: {
+                        navItems: 'a',
+                        currentClass: 'current',
+                        changeHash: false,
+                        easing: 'swing',
+                        filter: '',
+                        scrollSpeed: 750,
+                        scrollThreshold: 0.5,
+                        begin: false,
+                        end: false,
+                        scrollChange: false
+                    },
+
+                    init: function () {
+                        // Introduce defaults that can be extended either
+                        // globally or using an object literal.
+                        this.config = $.extend({}, this.defaults, this.options, this.metadata);
+
+                        this.$nav = this.$elem.find(this.config.navItems);
+
+                        //Filter any links out of the nav
+                        if (this.config.filter !== '') {
+                            this.$nav = this.$nav.filter(this.config.filter);
+                        }
+
+                        //Handle clicks on the nav
+                        this.$nav.on('click.onePageNav', $.proxy(this.handleClick, this));
+
+                        //Get the section positions
+                        this.getPositions();
+
+                        //Handle scroll changes
+                        this.bindInterval();
+
+                        //Update the positions on resize too
+                        this.$win.on('resize.onePageNav', $.proxy(this.getPositions, this));
+
+                        return this;
+                    },
+
+                    adjustNav: function (self, $parent) {
+                        self.$elem.find('.' + self.config.currentClass).removeClass(self.config.currentClass);
+                        $parent.addClass(self.config.currentClass);
+                    },
+
+                    bindInterval: function () {
+                        var self = this;
+                        var docHeight;
+
+                        self.$win.on('scroll.onePageNav', function () {
+                            self.didScroll = true;
+                        });
+
+                        self.t = setInterval(function () {
+                            docHeight = self.$doc.height();
+
+                            //If it was scrolled
+                            if (self.didScroll) {
+                                self.didScroll = false;
+                                self.scrollChange();
+                            }
+
+                            //If the document height changes
+                            if (docHeight !== self.docHeight) {
+                                self.docHeight = docHeight;
+                                self.getPositions();
+                            }
+                        }, 250);
+                    },
+
+                    getHash: function ($link) {
+                        return $link.attr('href').split('#')[1];
+                    },
+
+                    getPositions: function () {
+                        var self = this;
+                        var linkHref;
+                        var topPos;
+                        var $target;
+
+                        self.$nav.each(function () {
+                            linkHref = self.getHash($(this));
+                            $target = $('#' + linkHref);
+
+                            if ($target.length) {
+                                topPos = $target.offset().top;
+                                self.sections[linkHref] = Math.round(topPos);
+                            }
+                        });
+                    },
+
+                    getSection: function (windowPos) {
+                        var returnValue = null;
+                        var windowHeight = Math.round(this.$win.height() * this.config.scrollThreshold);
+
+                        for (var section in this.sections) {
+                            if ((this.sections[section] - windowHeight) < windowPos) {
+                                returnValue = section;
+                            }
+                        }
+
+                        return returnValue;
+                    },
+
+                    handleClick: function (e) {
+                        var self = this;
+                        var $link = $(e.currentTarget);
+                        var $parent = $link.parent();
+                        var newLoc = '#' + self.getHash($link);
+
+                        if (!$parent.hasClass(self.config.currentClass)) {
+                            //Start callback
+                            if (self.config.begin) {
+                                self.config.begin();
+                            }
+
+                            //Change the highlighted nav item
+                            self.adjustNav(self, $parent);
+
+                            //Removing the auto-adjust on scroll
+                            self.unbindInterval();
+
+                            //Scroll to the correct position
+                            self.scrollTo(newLoc, function () {
+                                //Do we need to change the hash?
+                                if (self.config.changeHash) {
+                                    window.location.hash = newLoc;
+                                }
+
+                                //Add the auto-adjust on scroll back in
+                                self.bindInterval();
+
+                                //End callback
+                                if (self.config.end) {
+                                    self.config.end();
+                                }
+                            });
+                        }
+
+                        e.preventDefault();
+                    },
+
+                    scrollChange: function () {
+                        var windowTop = this.$win.scrollTop();
+                        var position = this.getSection(windowTop);
+                        var $parent;
+
+                        //If the position is set
+                        if (position !== null) {
+                            $parent = this.$elem.find('a[href$="#' + position + '"]').parent();
+
+                            //If it's not already the current section
+                            if (!$parent.hasClass(this.config.currentClass)) {
+                                //Change the highlighted nav item
+                                this.adjustNav(this, $parent);
+
+                                //If there is a scrollChange callback
+                                if (this.config.scrollChange) {
+                                    this.config.scrollChange($parent);
+                                }
+                            }
+                        }
+                    },
+
+                    scrollTo: function (target, callback) {
+                        var offset = $(target).offset().top;
+
+                        $('html, body').animate({
+                            scrollTop: offset
+                        }, this.config.scrollSpeed, this.config.easing, callback);
+                    },
+
+                    unbindInterval: function () {
+                        clearInterval(this.t);
+                        this.$win.unbind('scroll.onePageNav');
+                    }
+                };
+
+                OnePageNav.defaults = OnePageNav.prototype.defaults;
+
+                $.fn.onePageNav = function (options) {
+                    return this.each(function () {
+                        new OnePageNav(this, options).init();
+                    });
+                };
+
+            })(jQuery, window, document);
+        </script>
+    </section>
+
+</header>
+
+<main class="gray-bg-phone">
+
+    <div id="page">
+            <div class="content">
+                <section class="s1" id="s1">
+                    <span class="caption">О комплексе</span>
+                    <section class="about-place" id="section-1">
+                        <div class="container">
+                            <h2>Chalet GreenWood</h2>
+                            <div class="read-more" onclick="this.classList.add('expanded')">
+                                <div class="text content">
+                                    <p>Тimes Cafe представляет собой современное городское кафе, которое ежедневно открывает
+                                        свои
+                                        двери
+                                        для
+                                        любителей свежей выпечки и бодрящего кофе в 08:30 утра. Здесь же можно вкусно пообедать
+                                        в
+                                        приятной
+                                        расслабляющей обстановке, попробовать освежающие классические и авторские коктейли, а по
+                                        субботам —
+                                        послушать музыку в живом исполнении.</p>
+                                    <p>Тimes Cafe представляет собой современное городское кафе, которое ежедневно открывает
+                                        свои
+                                        двери
+                                        для
+                                        любителей свежей выпечки и бодрящего кофе в 08:30 утра. Здесь же можно вкусно пообедать
+                                        в
+                                        приятной
+                                        расслабляющей обстановке, попробовать освежающие классические и авторские коктейли, а по
+                                        субботам —
+                                        послушать музыку в живом исполнении.</p>
+                                </div>
+                                <span class="trigger"><i class="icon-more"></i> Подробнее</span>
+                            </div>
+                            <div class="buttons">
+                                <a href="" class="large-btn  button button-1">Посетить сайт комплекса </a>
+                                <a href="" class="large-btn  button button-1">Подробнее о ресторане</a>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
+                </section>
+                <section class="s2">
+                    <span class="caption">Галерея</span>
+                    <section class="gallery" id="section-2">
+                        <div class="container">
+                            <div id="owl-carousel-drag" class="owl-carousel">
+                                <div class="item">
+
+                                    <img src="../img/hotel-slide1.jpg" alt=""/>
+                                    <div class="inner">
+                                        <p>Описание</p>
+                                    </div>
+
+                                </div>
+                                <div class="item">
+
+                                    <img src="../img/hotel-slide2.jpg" alt=""/>
+                                    <div class="inner">
+                                        <p>Описание</p>
+                                    </div>
+
+                                </div>
+                                <div class="item">
+
+                                    <img src="../img/hotel-slide3.jpg" alt=""/>
+                                    <div class="inner">
+                                        <p>Описание</p>
+                                    </div>
+
+                                </div>
+                                <div class="item">
+
+                                    <img src="../img/hotel-slide1.jpg" alt=""/>
+                                    <div class="inner">
+                                        <p>Описание</p>
+                                    </div>
+
+                                </div>
+                                <div class="item">
+
+                                    <img src="../img/hotel-slide2.jpg" alt=""/>
+                                    <div class="inner">
+                                        <p>Описание</p>
+                                    </div>
+
+                                </div>
+                                <div class="item">
+
+                                    <img src="../img/hotel-slide3.jpg" alt=""/>
+                                    <div class="inner">
+                                        <p>Описание</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <script>
+                                $(document).ready(function () {
+                                    $('#owl-carousel-drag').owlCarousel({
+                                        stagePadding: 200,
+                                        loop: true,
+                                        margin: 0,
+                                        items: 1,
+                                        lazyLoad: true,
+                                        nav: true,
+                                        dots: true,
+                                        smartSpeed: 1500,
+                                        navText: ["<i class='icon-arr-left' aria-hidden='true'></i>", "<i class='icon-arr-right2' aria-hidden='true'></i>"],
+                                        responsive: {
+                                            0: {
+                                                items: 1,
+                                                stagePadding: 0,
+                                                nav: false
+                                            },
+                                            600: {
+                                                items: 1,
+                                                stagePadding: 100,
+                                                nav: false
+                                            },
+                                            1000: {
+                                                items: 1,
+                                                stagePadding: 190,
+                                                nav: false
+                                            },
+                                            1200: {
+                                                items: 1,
+                                                stagePadding: 250,
+                                                nav: false
+
+                                            },
+                                            1400: {
+                                                items: 1,
+                                                stagePadding: 300,
+                                                nav: false
+                                            },
+                                            1600: {
+                                                items: 1,
+                                                stagePadding: 350,
+                                                nav: false
+                                            },
+                                            1800: {
+                                                items: 1,
+                                                stagePadding: 420
+                                            }
+                                        }
+                                    });
+                                    $('.owl-prev, .owl-next').addClass('cf');
+                                });
+
+
+
+                            </script>
+                        </div>
+                    </section>
+                    <div class="arrow arrowL"><i class="icon-arr-left"></i></div>
+                    <div class="arrow arrowR"><i class="icon-arr-right2"></i></div>
+                </section>
+                <section class="s3">
+                    <span class="caption">Контакты</span>
+                    <section class="item-contacts" id="section-3">
+                        <div class="container">
+                            <div>
+                                <i class="icon-phone"></i>
+                                <span>Телефон: <p><a href="tel:375162207176">+375162 207176</a> <br><a href="tel:375445603503">+375 44 5603503</a></p></span>
+
+                            </div>
+                            <div>
+                                <i class="icon-address"></i>
+                                <span>Адрес: <p>г. Брест<br>ул. Советская, 30</p></span>
+
+                            </div>
+                            <div class="time-hotel">
+                                <i class="icon-time"></i>
+                                <span>Время работы: <p>Пн. - Пт. с 8:30 до 23:00<br>Сб. - Вс. с 11:00 до 23:00</p></span>
+
+                            </div>
+
+                            <div class="coordinates">
+                                <i class="icon-coord"></i>
+                                <span>Координаты <p>N:51°82'01.11'' E:23°70'07.93''</p></span>
+
+                            </div>
+                        </div>
+                    </section>
+                    <section id="map"></section>
+                    <script type="text/javascript">
+
+                        function initMap() {
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 12,
+                                center: {lat: 51.813405, lng: 23.705149}
+                            });
+
+                            var image = '../img/greenwood-map-pointer.png';
+                            var beachMarker = new google.maps.Marker({
+                                position: {lat: 51.813405, lng: 23.705149},
+                                map: map,
+                                icon: image
+                            });
+                        }
+
+                    </script>
+                    <div class="arrow arrowL"><i class="icon-arr-left"></i></div>
+                </section>
+            </div>
+    </div>
+
+
+    <script>
+
+
+        $(document).ready(function() {
+
+            $('div.arrow').css('display','none');
+            $('.caption').css('display','none');
+            var w = $(window).width(); // Получаем ширину окна
+            if (w <= 620) { // Если ширина окна меньше, либо равна 600
+                $( "" ).addClass("").removeClass("");
+                $('div.arrow').css('display','block');
+                $('.caption').css('display','block');
+                (function() {
+                    $('.s1').siblings().css('display', 'none');
+                    $('.arrow').css('display', 'block');
+
+                    function leftArrow(e) {
+                        $curSection = $(this).parent();
+                        $prevSection = $curSection.prev();
+                        $prevSection.css('left', '-3000px');
+                        $curSection.animate({
+                            left: '3000'
+                        }, function() {
+                            $curSection.css('display', 'none');
+                            $prevSection.css('display', 'block');
+                            $prevSection.animate({ left: '30' }, function() {
+                                $prevSection.animate({ left: '0' });
+                            });
+                        });
+                    }
+
+                    function rightArrow(e) {
+                        $curSection = $(this).parent();
+                        $nextSection = $curSection.next();
+                        $nextSection.css('left', '3000px');
+                        $curSection.animate({
+                            left: '-3000'
+                        }, function() {
+                            $curSection.css('display', 'none');
+                            $nextSection.css('display', 'block');
+                            $nextSection.animate({ left: '-30' }, function() {
+                                $nextSection.animate({ left: '0' });
+                            });
+                        });
+                    }
+
+                    $('.arrowL').on('click', leftArrow);
+
+                    $('.arrowR').on('click', rightArrow);
+
+                    // Navigation
+                    $('.nav a').on('click', function(e) {
+                        e.preventDefault();
+                        $('.s1').css('left', '0');
+                        title = '.' + $(this).attr('title');
+                        $('section').fadeOut(600);
+                        $('section').promise().done(function(){
+                            $(title).fadeIn(600);
+                        });
+                    });
+                })();
+
+            }
+
+        });
+
+    </script>
+
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt3Iy5bTIj6BTKaauvbQTwUg06Cu7Zksk&callback=initMap">
+    </script>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2016 Санта-Рест</p>
+        <p>Комплексный интернет маркетинг - <a href="" class="cool-link">"Wide-Web"</a></p>
+    </div>
+</footer>
+<div id="toTop" ><i class="icon-arr-top"></i></div>
+</body>
+</html>

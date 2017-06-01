@@ -1,0 +1,6 @@
+/*HOME*/
+@media only screen and (min-width: 769px) and (max-width: 1281px) {
+  .home-slider .carousel .item img {
+    max-height: 420px; } }
+
+/*# sourceMappingURL=tablet.css.map */
