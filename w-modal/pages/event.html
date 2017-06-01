@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выставка Дмитрия Булдакова</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58a24a94222bfcbf"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+<header>
+    <section class="header">
+        <div class="container">
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <a href="#"><img src="../img/logo.png" alt=""></a>
+            <div class="languages">
+                <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+            </div>
+        </div>
+    </section>
+    <section class="navigation">
+        <div class="nav-container">
+            <nav class="menu" id="main-nav">
+                <!--  this is the mobile menu button -->
+                <a href="#" id="mobileButton" class="mobileMenuButton"><i class="icon-menu"></i></a>
+                <!--  this is the menu -->
+                <ul class="listMenu nav-list">
+                    <li><a href="../pages/catalog.html" class="cool-link">Кафе и рестораны</a></li>
+
+                    <li class="dropdown"><a href="#">Гостиницы</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная»</a></li>
+                            <li><a href="../pages/cart-hotel.html">Эко-комплекс «Chalet GreenWood»</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/events.html" class="cool-link">События</a></li>
+                    <li><a href="../pages/discount.html" class="cool-link">Программы лояльности</a></li>
+                    <li><a href="../pages/career.html" class="cool-link">Вакансии</a></li>
+                    <li><a href="../pages/contacts.html" class="cool-link">Контакты</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="mobileMenu slideOut">
+
+            <div class="head">
+                <a href="#"><img src="../img/logo.png" alt=""></a>
+                <span class="close"><i class="icon-close"></i></span>
+            </div>
+
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <div class="languages">
+                <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+            </div>
+
+            <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+        </div>
+
+        <div class="mobileMenu2 slideOut">
+
+            <div class="head">
+                <a href="#"><img src="../img/logo.png" alt=""></a>
+                <span class="close2"><i class="icon-close"></i></span>
+            </div>
+            <ul>
+                <li class="back-to-main-menu"><a href="#"><i class="icon-arr-left"></i>Гостиницы</a></li>
+                <li><a href="../pages/cart-hotel.html">Chalet GreenWood</a></li>
+                <li><a href="../pages/cart-hotel.html">Гостиница «Молодежная</a></li>
+            </ul>
+
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <div class="languages">
+                <a href="" class="active cool-link">RU</a><i>|</i><a href="" class="cool-link">EN</a>
+            </div>
+
+            <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+        </div>
+
+        <script>
+            // var settings ****************************************************
+            var $header = $('header');
+            var $brand = $('.branding');
+            var $logoLG = $('.logo-lg');
+            var $logoSM = $('.logo-sm');
+            var $overlay = $('<div class="overlay-menu"></div>');
+            var $menu = $('.mobileMenu');
+            var $ul = $('<ul></ul>');
+            // code setting  (mobile menu )*************************************
+
+
+            // 01. append overlay div (see overlay var) to body
+            $("body").append($overlay);
+
+            // 02. lock page scroll whe the mobile menu is active, Given a jQuery object that represents a set of DOM elements, the .add() method constructs a new jQuery object from the union of those elements and the ones passed into the method.
+            $overlay.add($menu).on('scroll touchmove mousewheel', function (event) {
+                event.preventDefault();
+            });
+
+            // 03. on mobile button press, slide menu in and show overlay
+            $('#mobileButton').click(function (event) {
+                event.preventDefault();
+                //Show the overlay and we add some opacity animation
+                $overlay.show().animate({opacity: 0.8,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+            // 04. on overlay click, close menu and hide overlay
+            $overlay.click(function () {
+                //Hide the overlay and set opacity to 0
+                $overlay.hide().animate({opacity: 0,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+            $('.close').click(function (event) {
+                //Hide the overlay and set opacity to 0
+                $overlay.hide().animate({opacity: 0,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+
+            // 05. obtain menu links from .listMenu and copy them to the mobile menu (Traversing the DOM)
+            $menu.append($ul);
+            $('.listMenu a').each(function () {
+                var $anchor = $(this);
+                var $li = $('<li></li>');
+                $anchor.clone().appendTo($li);
+                $ul.append($li);
+            });
+
+            // 06. we add the class stick to the fixed header to change his appearance and the apparence of their content on scroll
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $($header).addClass("stick");
+                    $($brand).addClass('stick')
+                    $($logoLG).hide();
+                    $($logoSM).show();
+                }
+                else {
+                    $($header).removeClass("stick");
+                    $($brand).removeClass('stick');
+                    $($logoSM).hide();
+                    $($logoLG).show();
+                }
+            });
+
+            var $menu2 = $('.mobileMenu2');
+            $('.mobileMenu li:nth-child(2) ').addClass('submenu-hotels');
+
+            $('.submenu-hotels').click(function (event) {
+
+                $menu2.toggleClass("slideOut");
+            });
+
+            $('.close2').click(function (event) {
+                $menu2.toggleClass("slideOut");
+                $menu.toggleClass("slideOut");
+                $overlay.hide().animate({opacity: 0,}, 200);
+            });
+
+            $('.back-to-main-menu').click(function (event) {
+                $menu2.toggleClass("slideOut");
+            });
+        </script>
+    </section>
+
+</header>
+<main>
+    <section class="main-info-event">
+        <div class="container">
+            <div class="wrapper">
+                <div class="poster">
+                    <img src="../img/poster.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="head">
+                        <img src="../img/times-logo.png" alt="">
+                        <h1>Выставка Дмитрия Булдакова</h1>
+                        <p>08 декабря в 23:00</p>
+                        <div class="addthis_inline_share_toolbox"></div>
+                    </div>
+
+                    <div class="contacts">
+                        <div>
+                            <i class="icon-phone"></i>
+                            <span>Телефон:<p>+375162 207176</p></span>
+
+                        </div>
+                        <div>
+                            <i class="icon-address"></i>
+                            <span>Адрес:<p> г. Брест ул. Советская, 30</p></span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>Добро пожаловать в Chalet Greenwood. Рекреационный комплекс «Шале Гринвуд» - это 8 гектаров
+                        благоустроенной территории, в окружении хвойных ароматов заповедного леса, кристально чистых
+                        озёр и
+                        первозданной красотой природы. Это – идеальное место как для семейного отдыха, так и для
+                        проведения
+                        корпоративных мероприятий.</p>
+                    <p>Добро пожаловать в Chalet Greenwood. Рекреационный комплекс «Шале Гринвуд» - это 8 гектаров
+                        благоустроенной территории, в окружении хвойных ароматов заповедного леса, кристально чистых
+                        озёр и
+                        первозданной красотой природы. Это – идеальное место как для семейного отдыха, так и для
+                        проведения
+                        корпоративных мероприятий.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="events gray">
+        <div class="container">
+            <h2>События</h2>
+            <div class="tabs">
+                <input type="radio" name="tabs" id="tabone" checked="checked">
+                <label for="tabone" class="cool-link">Афиша Times Cafe</label>
+                <div class="tab">
+                    <div class="row">
+
+                        <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                            <a class="photo">
+                                <img src="../img/ivent1.png" alt="">
+                            </a>
+                            <div class="info cf">
+
+                                <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                    Дмитрия Булдакова<span
+                                            class="place">Times Cafe</span></a>
+
+                            </div>
+                        </div>
+                        <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            <a class="photo">
+                                <img src="../img/ivent2.png" alt="">
+                            </a>
+                            <div class="info cf">
+
+                                <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                    Дмитрия Булдакова<span
+                                            class="place">Times Cafe</span></a>
+
+                            </div>
+                        </div>
+                        <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
+                            <a class="photo">
+                                <img src="../img/ivent3.jpg" alt="">
+                            </a>
+                            <div class="info cf">
+
+                                <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                    Дмитрия Булдакова<span
+                                            class="place">Times Cafe</span></a>
+
+                            </div>
+                        </div>
+                        <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s">
+                            <a class="photo">
+                                <img src="../img/ivent1.png" alt="">
+                            </a>
+                            <div class="info cf">
+
+                                <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка
+                                    Дмитрия Булдакова<span
+                                            class="place">Times Cafe</span></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="circle button button-1">
+                        <i class="icon-more"></i>Ещё
+                    </button>
+
+                </div>
+
+                <input type="radio" name="tabs" id="tabtwo">
+                <label for="tabtwo" class="cool-link">Новинки меню</label>
+                <div class="tab">
+                    <div class="row">
+
+                        <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                            <a class="photo">
+                                <img src="../img/ivent2.png" alt="">
+                            </a>
+                            <div class="info">
+                                <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
+                                        class="place">Times Cafe</span></a>
+                            </div>
+
+                        </div>
+                        <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            <a class="photo">
+                                <img src="../img/ivent1.png" alt="">
+                            </a>
+                            <div class="info">
+                                <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
+                                        class="place">Times Cafe</span></a>
+                            </div>
+                        </div>
+                        <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
+                            <a class="photo">
+                                <img src="../img/ivent1.png" alt="">
+                            </a>
+                            <div class="info">
+                                <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
+                                        class="place">Times Cafe</span></a>
+                            </div>
+                        </div>
+                        <div class="item wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s">
+                            <a class="photo">
+                                <img src="../img/ivent3.jpg" alt="">
+                            </a>
+                            <div class="info">
+                                <a href="" class="button button-2 no-border"><span class="date">с 7 января</span>Выставка Дмитрия Булдакова<span
+                                        class="place">Times Cafe</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="circle button button-1">
+                        <i class="icon-more"></i>Ещё
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="photo-reports gray" id="section-5">
+        <div class="container">
+            <h2>Фотоотчеты</h2>
+            <p>Семейный обед или вечер с друзьями — подберите ресторан или кафе для любого повода</p>
+            <div class="wrapper">
+                <div class="left">
+                    <div class="large wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                        <div class="overlay">
+                            <figure>
+
+                                <img src="../img/photo-report.jpg"/>
+
+                                <span>Нам 5 лет <br><span>1 ноября</span></span>
+
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+                        <div class="overlay">
+                            <figure>
+
+                                <img src="../img/photo-report.jpg"/>
+
+
+                                <span>Нам 5 лет <br><span>1 ноября</span></span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                        <div class="overlay">
+                            <figure>
+
+                                <img src="../img/photo-report.jpg"/>
+
+                                <span>Нам 5 лет <br><span>1 ноября</span></span>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                        <div class="overlay">
+                            <figure>
+
+                                <img src="../img/photo-report.jpg"/>
+
+
+                                <span>Нам 5 лет <br><span>1 ноября</span></span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
+                        <div class="overlay">
+                            <figure>
+
+                                <img src="../img/photo-report.jpg"/>
+
+                                <span>Нам 5 лет <br><span>1 ноября</span></span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="medium wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.5s">
+                        <div class="overlay">
+                            <figure>
+
+                                <img src="../img/photo-report.jpg"/>
+
+
+                                <span>Нам 5 лет <br><span>1 ноября</span></span>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="medium wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s">
+                        <div class="overlay">
+                            <figure>
+
+                                <img src="../img/photo-report.jpg"/>
+
+                                <span>Нам 5 лет <br><span>1 ноября</span></span>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="circle button button-1">
+                <i class="icon-more"></i>Ещё
+            </button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2016 Санта-Рест</p>
+        <p>Комплексный интернет маркетинг - <a href="" class="cool-link">"Wide-Web"</a></p>
+    </div>
+</footer>
+<script>
+    new WOW().init();
+</script>
+</body>
+</html>

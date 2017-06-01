@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+
+        .filters select {
+            width: 100%;
+            height: 52px;
+            border: 1px solid #787780;
+            padding-left: 10px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            color: #161522;
+            cursor: pointer;
+            background-color: #edf1f4;
+            -webkit-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            -o-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            -moz-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        }
+
+        .filters select::-webkit-input-placeholder {
+            color: #787780;
+        }
+
+        .filters select::-moz-placeholder {
+            color: #787780;
+        }
+
+        .filters select:-ms-input-placeholder {
+            color: #787780;
+        }
+
+        .filters select:-moz-placeholder {
+            color: #787780;
+        }
+
+        .filters select:focus {
+            background: white;
+            border: 1px solid #252336;
+        }
+
+        .filters select {
+            margin-bottom: 0;
+        }
+
+        .filters .select-wrapper {
+            position: relative;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .filters .select-wrapper:after {
+            content: '\e912';
+            font-family: icomoon;
+            position: absolute;
+            color: #161522;
+            font-size: 33px;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .filters {
+            background: #f6f6f7;
+            width: 100%;
+            padding: 30px 40px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .filters > div {
+            width: 27%;
+        }
+
+        .filters > div:last-of-type {
+            width: 19%;
+        }
+
+        .filters .select-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 88%;
+            align-items: flex-start;
+        }
+
+        .filters .select-wrapper span {
+            font-size: 18px;
+            display: inline-block;
+            margin-bottom: 10px;
+
+        }
+
+        .filters .large-btn {
+            width: 100%;
+            height: 52px;
+        }
+
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+<div class="remodal-bg">
+
+</div>
+<div class="remodal" data-remodal-id="modal-reg">
+    <div class="head">
+        <span>Регистрация</span>
+        <a data-remodal-action="close" class="icon-close"></a>
+    </div>
+    <form action="">
+        <div class="left">
+            <input type="text" placeholder="Логин">
+            <input type="text" placeholder="Email">
+         </div>
+        <div class="right">
+            <input type="text" placeholder="Пароль">
+            <input type="tel" placeholder="Телефон">
+        </div>
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm">Зарегистрироваться
+        </button>
+    </form>
+</div>
+<div class="remodal" data-remodal-id="modal-login">
+    <div class="head">
+        <span>Вход</span>
+        <a data-remodal-action="close" class="icon-close"></a>
+    </div>
+    <form action="">
+        <div class="left">
+            <input type="text" placeholder="Логин">
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Пароль">
+        </div>
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm">Войти
+        </button>
+    </form>
+</div>
+
+<div class="remodal" data-remodal-id="modal">
+    <div class="head">
+        <span>Бронирование</span>
+        <a data-remodal-action="close" class="icon-close"></a>
+    </div>
+    <form action="">
+        <div class="left">
+            <input type="text" placeholder="Дата">
+            <input type="text" placeholder="Время">
+            <input type="text" placeholder="Количество гостей">
+            <div class="select-wrapper">
+                <select name="" id="radiusSelect1">
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                </select>
+            </div>
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Имя">
+            <input type="tel" placeholder="Телефон">
+            <textarea name="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+        </div>
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm"><i
+                class="icon-book"></i>Забронировать
+        </button>
+    </form>
+</div>
+<header>
+    <section class="header">
+        <div class="container">
+
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <a><img src="../img/logo.png" alt=""></a>
+            <div class="languages">
+                <a href="javascript:void(0)" class="cool-link"  data-remodal-target="modal-reg">Регистрация</a><i>|</i><a onclick="return false;" data-remodal-target="modal-login" href="javascript:void(0)" class="cool-link">Вход</a>
+            </div>
+
+        </div>
+    </section>
+    <section class="navigation">
+        <div class="nav-container">
+            <nav class="menu" id="main-nav" style="margin: 0;">
+                <!--  this is the mobile menu button -->
+                <a href="#" id="mobileButton" class="mobileMenuButton"><i class="icon-menu"></i></a>
+                <!--  this is the menu -->
+                <ul class="listMenu nav-list">
+                    <li><a [routerLink]="['./cafe']" class="cool-link">Кафе и рестораны</a></li>
+                    <li><a [routerLink]="['./event']" class="cool-link">События</a></li>
+                    <li><a [routerLink]="['./contact']" class="cool-link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobileMenu slideOut">
+
+            <div class="head">
+                <a href="#"><img src="../img/logo.png" alt=""></a>
+                <span class="close"><i class="icon-close"></i></span>
+            </div>
+
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <div class="languages">
+                <a href="javascript:void(0)" class="cool-link"  data-remodal-target="modal-reg">Регистрация</a><i>|</i><a onclick="return false;" data-remodal-target="modal-login" href="javascript:void(0)" class="cool-link">Вход</a>
+            </div>
+
+            <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+        </div>
+
+        <div class="mobileMenu2 slideOut">
+
+            <div class="head">
+                <a href="#"><img src="../img/logo.png" alt=""></a>
+                <span class="close2"><i class="icon-close"></i></span>
+            </div>
+            <ul>
+                <li class="back-to-main-menu"><a href="#"><i class="icon-arr-left"></i>Гостиницы</a></li>
+                <li><a href="pages/cart-hotel.html">Chalet GreenWood</a></li>
+                <li><a href="pages/cart-hotel.html">Гостиница «Молодежная</a></li>
+            </ul>
+
+            <div class="social cf">
+                <a href="" class="button button-1"><i class="icon-facebook"></i></a>
+                <a href="" class="button button-1"><i class="icon-VK"></i></a>
+            </div>
+            <div class="languages">
+                <a href="javascript:void(0)" class="cool-link"  data-remodal-target="modal-reg">Регистрация</a><i>|</i><a onclick="return false;" data-remodal-target="modal-login" href="javascript:void(0)" class="cool-link">Вход</a>
+            </div>
+
+            <!-- 05. obtain menu links from .listMenu and copy them to the here (Traversing the DOM) See js section 05-->
+        </div>
+
+        <script>
+            // var settings ****************************************************
+            var $header = $('header');
+            var $brand = $('.branding');
+            var $logoLG = $('.logo-lg');
+            var $logoSM = $('.logo-sm');
+            var $overlay = $('<div class="overlay-menu"></div>');
+            var $menu = $('.mobileMenu');
+            var $ul = $('<ul></ul>');
+            // code setting  (mobile menu )*************************************
+
+
+            // 01. append overlay div (see overlay var) to body
+            $("body").append($overlay);
+
+            // 02. lock page scroll whe the mobile menu is active, Given a jQuery object that represents a set of DOM elements, the .add() method constructs a new jQuery object from the union of those elements and the ones passed into the method.
+            $overlay.add($menu).on('scroll touchmove mousewheel', function (event) {
+                event.preventDefault();
+            });
+
+            // 03. on mobile button press, slide menu in and show overlay
+            $('#mobileButton').click(function (event) {
+                event.preventDefault();
+                //Show the overlay and we add some opacity animation
+                $overlay.show().animate({opacity: 0.8,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+            // 04. on overlay click, close menu and hide overlay
+            $overlay.click(function () {
+                //Hide the overlay and set opacity to 0
+                $overlay.hide().animate({opacity: 0,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+            $('.close').click(function (event) {
+                //Hide the overlay and set opacity to 0
+                $overlay.hide().animate({opacity: 0,}, 200);
+                //Togle class
+                $menu.toggleClass("slideOut");
+            });
+
+
+            // 05. obtain menu links from .listMenu and copy them to the mobile menu (Traversing the DOM)
+            $menu.append($ul);
+            $('.listMenu a').each(function () {
+                var $anchor = $(this);
+                var $li = $('<li></li>');
+                $anchor.clone().appendTo($li);
+                $ul.append($li);
+            });
+
+            // 06. we add the class stick to the fixed header to change his appearance and the apparence of their content on scroll
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $($header).addClass("stick");
+                    $($brand).addClass('stick')
+                    $($logoLG).hide();
+                    $($logoSM).show();
+                }
+                else {
+                    $($header).removeClass("stick");
+                    $($brand).removeClass('stick');
+                    $($logoSM).hide();
+                    $($logoLG).show();
+                }
+            });
+
+            var $menu2 = $('.mobileMenu2');
+            $('.mobileMenu li:nth-child(2) ').addClass('submenu-hotels');
+
+            $('.submenu-hotels').click(function (event) {
+
+                $menu2.toggleClass("slideOut");
+            });
+
+            $('.close2').click(function (event) {
+                $menu2.toggleClass("slideOut");
+                $menu.toggleClass("slideOut");
+                $overlay.hide().animate({opacity: 0,}, 200);
+            });
+
+            $('.back-to-main-menu').click(function (event) {
+                $menu2.toggleClass("slideOut");
+            });
+        </script>
+    </section>
+
+</header>
+<main>
+    <section class="catalog-nav">
+        <div class="container">
+            <h1>Кафе и рестораны</h1>
+        </div>
+    </section>
+
+    <section class="restaurants-list">
+        <div class="container">
+            <div class="filters">
+                <div>
+                    <div class="select-wrapper">
+                        <span>Город</span>
+                        <select name="" id="radiusSelect2">
+                            <option value="">Брест</option>
+                            <option value="">Минск</option>
+                            <option value="">Гродно</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div class="select-wrapper">
+                        <span>Тип заведения</span>
+                        <select name="" id="radiusSelect3">
+                            <option value="">Кафе</option>
+                            <option value="">Ресторан</option>
+                            <option value="">Бар</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div class="select-wrapper">
+                        <span>Время работы</span>
+                        <select name="" id="radiusSelect4">
+                            <option value="">до 17:00</option>
+                            <option value="">до 18:00</option>
+                            <option value="">до 20:00</option>
+                            <option value="">до 22:00</option>
+                            <option value="">до 24:00</option>
+                            <option value="">до 02:00</option>
+                            <option value="">до 04:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="large-btn button button-1">Поиск<i class="icon-arr-right2"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item golden wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                <div class="photo"></div>
+                <div class="info">
+                    <div class="header">
+                        <img src="../img/times-logo.png" alt="">
+                        <h2>Times Cafe</h2>
+                        <a href="tel:375162207176" class="call circle button button-1"><i class="icon-phone"></i></a>
+
+                    </div>
+                    <ul class="info-list">
+                        <li>
+                            <span class="left">Тип заведения:</span>
+                            <span class="right">Кафе</span>
+                        </li>
+                        <li>
+                            <span class="left">Телефон:</span>
+                            <a href="tel:375162207176" class="right">+375 <span>162 207176</span></a>
+                        </li>
+                        <li>
+                            <span class="left">Пн. - Пт.</span>
+                            <span class="right">с 8:30 до 23:00</span>
+                        </li>
+                        <li>
+                            <span class="left">Сб. - Вс.</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
+                        <li>
+                            <span class="left">Кухня:</span>
+                            <span class="right">Итальянская, средиземноморская</span>
+                        </li>
+                        <li class="address">
+                            <span class="left">Адрес:</span>
+                            <span class="right">г. Брест, ул. Советская, 30</span>
+                        </li>
+                        <li class="today">
+                            <span class="left">Сегодня:</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
+                    </ul>
+                    <div class="bttns">
+                        <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"
+                                style="width: 100%"><i
+                                class="icon-book"></i>Забронировать
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item traktir wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                <div class="info">
+                    <div class="header">
+                        <img src="../img/traktir-logo.png" alt="">
+                        <h2>Трактир у озера</h2>
+                        <a href="tel:375162207176" class="call circle button button-1"><i class="icon-phone"></i></a>
+
+                    </div>
+                    <ul class="info-list">
+                        <li>
+                            <span class="left">Тип заведения:</span>
+                            <span class="right">Кафе</span>
+                        </li>
+                        <li>
+                            <span class="left">Телефон:</span>
+                            <a href="tel:375162207176" class="right">+375 <span>162 207176</span></a>
+                        </li>
+                        <li>
+                            <span class="left">Пн. - Пт.</span>
+                            <span class="right">с 8:30 до 23:00</span>
+                        </li>
+                        <li>
+                            <span class="left">Сб. - Вс.</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
+                        <li>
+                            <span class="left">Кухня:</span>
+                            <span class="right">Итальянская, средиземноморская</span>
+                        </li>
+                        <li class="address">
+                            <span class="left">Адрес:</span>
+                            <span class="right">г. Брест, ул. Советская, 30</span>
+                        </li>
+                        <li class="today">
+                            <span class="left">Сегодня:</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
+                    </ul>
+                    <div class="bttns">
+                        <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"
+                                style="width: 100%"><i
+                                class="icon-book"></i>Забронировать
+                        </button>
+                    </div>
+                </div>
+                <div class="photo"></div>
+            </div>
+            <div class="item papi wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                <div class="photo"></div>
+                <div class="info">
+                    <div class="header">
+                        <img src="../img/papi-logo.png" alt="">
+                        <h2>PaPi</h2>
+                        <a href="tel:375162207176" class="call circle button button-1"><i class="icon-phone"></i></a>
+
+                    </div>
+                    <ul class="info-list">
+                        <li>
+                            <span class="left">Тип заведения:</span>
+                            <span class="right">Кафе</span>
+                        </li>
+                        <li>
+                            <span class="left">Телефон:</span>
+                            <a href="tel:375162207176" class="right">+375 <span>162 207176</span></a>
+                        </li>
+                        <li>
+                            <span class="left">Пн. - Пт.</span>
+                            <span class="right">с 8:30 до 23:00</span>
+                        </li>
+                        <li>
+                            <span class="left">Сб. - Вс.</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
+                        <li>
+                            <span class="left">Кухня:</span>
+                            <span class="right">Итальянская, средиземноморская</span>
+                        </li>
+                        <li class="address">
+                            <span class="left">Адрес:</span>
+                            <span class="right">г. Брест, ул. Советская, 30</span>
+                        </li>
+                        <li class="today">
+                            <span class="left">Сегодня:</span>
+                            <span class="right">с 11:00 до 23:00</span>
+                        </li>
+                    </ul>
+                    <div class="bttns">
+                        <button class="large-btn ico-left filled button button-1" data-remodal-target="modal"
+                                style="width: 100%"><i
+                                class="icon-book"></i>Забронировать
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback">
+        <div class="container">
+            <span>Появились вопросы?</span>
+            <p>Напишите нам и наш менеджер свяжется с Вами в течении 30 секунд</p>
+            <form action="">
+                <div class="select-wrapper">
+                    <select name="" id="radiusSelect">
+                        <option value="">Написать директору</option>
+                        <option value="">Написать директору</option>
+                        <option value="">Написать директору</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Ваше имя">
+                <input type="tel" placeholder="Телефон">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                <button type='submit' class="large-btn button button-1">Отправить<i class='icon-arr-right2'></i>
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2016 Санта-Рест</p>
+        <p>Комплексный интернет маркетинг - <a href="" class="cool-link">"Wide-Web"</a></p>
+    </div>
+</footer>
+<script>
+    new WOW().init();
+</script>
+<div id="toTop"><i class="icon-arr-top"></i></div>
+</body>
+</html>
