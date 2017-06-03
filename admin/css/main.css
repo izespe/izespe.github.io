@@ -100,10 +100,12 @@ body {
   background: #242023;
   height: 48px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   color: white;
   font-size: 18px; }
+  .redaktor.toolbar.nav .ui.inverted.menu:after {
+    display: none; }
 
 .redaktor.push.nav {
   z-index: 1;
@@ -160,8 +162,13 @@ body {
   transition: all 0s; }
 
 .ui.vertical.menu > .item:first-child {
-  border-radius: 0.26666667rem 0.26666667rem 0px;
-  background: #2b2729; }
+  height: 48px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-style: normal; }
   .ui.vertical.menu > .item:first-child img {
     margin-right: 15px;
     height: 16px; }
@@ -225,30 +232,30 @@ body {
 
 /* Navigation Push Toggling */
 .redaktor.nav.toggle:checked ~ .redaktor.body.container {
-  width: calc(100% - 128px);
-  -webkit-transform: translate(128px, 32px);
-  -moz-transform: translate(128px, 32px);
-  -ms-transform: translate(128px, 32px);
-  -o-transform: translate(128px, 32px);
-  transform: translate(128px, 32px);
-  -webkit-transform: translate3d(128px, 32px, 0);
-  -moz-transform: translate3d(128px, 32px, 0);
-  -ms-transform: translate3d(128px, 32px, 0);
-  -o-transform: translate3d(128px, 32px, 0);
-  transform: translate3d(128px, 32px, 0); }
+  width: calc(100% - 285px);
+  -webkit-transform: translate(285px, 48px);
+  -moz-transform: translate(285px, 48px);
+  -ms-transform: translate(285px, 48px);
+  -o-transform: translate(285px, 48px);
+  transform: translate(285px, 48px);
+  -webkit-transform: translate3d(285px, 48px, 0);
+  -moz-transform: translate3d(285px, 48px, 0);
+  -ms-transform: translate3d(285px, 48px, 0);
+  -o-transform: translate3d(285px, 48px, 0);
+  transform: translate3d(285px, 48px, 0); }
 
 .redaktor.nav.toggle:not(:checked) ~ .redaktor.body.container {
   width: 100%;
-  -webkit-transform: translate(0px, 32px);
-  -moz-transform: translate(0px, 32px);
-  -ms-transform: translate(0px, 32px);
-  -o-transform: translate(0px, 32px);
-  transform: translate(0px, 32px);
-  -webkit-transform: translate3d(0px, 32px, 0);
-  -moz-transform: translate3d(0px, 32px, 0);
-  -ms-transform: translate3d(0px, 32px, 0);
-  -o-transform: translate3d(0px, 32px, 0);
-  transform: translate3d(0px, 32px, 0); }
+  -webkit-transform: translate(0px, 48px);
+  -moz-transform: translate(0px, 48px);
+  -ms-transform: translate(0px, 48px);
+  -o-transform: translate(0px, 48px);
+  transform: translate(0px, 48px);
+  -webkit-transform: translate3d(0px, 48px, 0);
+  -moz-transform: translate3d(0px, 48px, 0);
+  -ms-transform: translate3d(0px, 48px, 0);
+  -o-transform: translate3d(0px, 48px, 0);
+  transform: translate3d(0px, 48px, 0); }
 
 .redaktor.nav.toggle:not(:checked) ~ .redaktor.push.nav {
   width: 0px;
@@ -345,11 +352,333 @@ body {
   background-size: cover; }
 
 .EXAMPLE {
-  padding: 80px 0;
   color: black;
   text-align: center; }
 
 .ui.container {
   width: 100%; }
+
+h1 {
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 15px; }
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline; }
+  .wrap form {
+    width: 35%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start; }
+    .wrap form select, .wrap form input[type='text'], .wrap form input[type='tel'], .wrap form textarea {
+      width: 100%;
+      height: 52px;
+      margin-bottom: 20px;
+      border: 1px solid #787780;
+      padding-left: 10px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      color: #161522;
+      background-color: #edf1f4;
+      -webkit-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -o-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      .wrap form select::-webkit-input-placeholder, .wrap form input[type='text']::-webkit-input-placeholder, .wrap form input[type='tel']::-webkit-input-placeholder, .wrap form textarea::-webkit-input-placeholder {
+        color: #787780; }
+      .wrap form select::-moz-placeholder, .wrap form input[type='text']::-moz-placeholder, .wrap form input[type='tel']::-moz-placeholder, .wrap form textarea::-moz-placeholder {
+        color: #787780; }
+      .wrap form select:-ms-input-placeholder, .wrap form input[type='text']:-ms-input-placeholder, .wrap form input[type='tel']:-ms-input-placeholder, .wrap form textarea:-ms-input-placeholder {
+        color: #787780; }
+      .wrap form select:-moz-placeholder, .wrap form input[type='text']:-moz-placeholder, .wrap form input[type='tel']:-moz-placeholder, .wrap form textarea:-moz-placeholder {
+        color: #787780; }
+      .wrap form select:focus, .wrap form input[type='text']:focus, .wrap form input[type='tel']:focus, .wrap form textarea:focus {
+        background: white;
+        border: 1px solid #252336; }
+    .wrap form textarea {
+      height: 125px;
+      padding-top: 15px; }
+    .wrap form select {
+      margin-bottom: 0; }
+    .wrap form .select-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%; }
+      .wrap form .select-wrapper:after {
+        content: '\e912';
+        font-family: icomoon;
+        position: absolute;
+        color: #161522;
+        font-size: 33px;
+        right: 0; }
+
+.large-btn {
+  background: transparent;
+  border: 2px solid #161522;
+  color: #161522;
+  cursor: pointer;
+  width: 210px;
+  height: 56px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  -webkit-transition: background ease 0.2s;
+  -o-transition: background ease 0.2s;
+  -moz-transition: background ease 0.2s;
+  transition: background ease 0.2s;
+  display: block;
+  line-height: 52px;
+  position: relative;
+  text-align: center; }
+  .large-btn i {
+    margin-left: 10px;
+    font-size: 21px;
+    top: 3px;
+    position: relative; }
+  .large-btn:hover {
+    color: white; }
+  .large-btn.ico-left {
+    border: 1px solid #161522;
+    font-weight: 400;
+    font-size: 14px;
+    height: 56px;
+    width: 49%;
+    display: block;
+    line-height: 48px;
+    position: relative; }
+    .large-btn.ico-left i {
+      margin-right: 10px;
+      margin-left: 0;
+      font-size: 21px;
+      top: 3px;
+      position: relative;
+      color: #787780;
+      -webkit-transition: ease 0.2s;
+      -o-transition: ease 0.2s;
+      -moz-transition: ease 0.2s;
+      transition: ease 0.2s; }
+      .large-btn.ico-left i.icon-more {
+        font-size: 36px;
+        margin-right: 6px;
+        padding-bottom: 0px;
+        position: relative;
+        top: 10px; }
+    .large-btn.ico-left:hover i {
+      color: white; }
+  .large-btn.filled {
+    background: #161522;
+    color: white; }
+    .large-btn.filled:hover {
+      color: white; }
+
+table.zebra tr:nth-child(odd) {
+  background-color: #f6f6f6; }
+
+table.zebra {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0px 0px;
+  font-size: 15px; }
+
+table.zebra th {
+  background: #161522;
+  color: #fff;
+  padding: 10px 5px;
+  text-align: left;
+  border-right: 1px solid #252336;
+  border-left: 1px solid #252336;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding-left: 20px;
+  text-transform: uppercase; }
+
+table.zebra td {
+  padding: 10px 5px;
+  border-bottom: 1px solid #252336;
+  vertical-align: middle;
+  letter-spacing: .5px;
+  text-align: left;
+  border-left: 1px solid #252336;
+  border-right: 1px solid #252336;
+  padding-left: 20px; }
+
+table.zebra tr {
+  background: #fff; }
+
+table.zebra td * {
+  padding: 10px 20px 10px 20px; }
+
+.h-add {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .h-add .add {
+    width: 200px;
+    border: none;
+    background: #4be14d;
+    line-height: 0;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .h-add .add img {
+      margin-right: 15px; }
+
+.large-btn.edit {
+  background: #fec607;
+  line-height: 0;
+  height: 36px;
+  display: flex;
+  border: none;
+  width: 36px;
+  margin: 0 5px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  float: left; }
+.large-btn.delete {
+  float: left;
+  width: 36px;
+  border: none;
+  background: #e14b2f;
+  line-height: 0;
+  height: 36px;
+  display: flex;
+  margin: 0 5px;
+  padding: 0;
+  align-items: center;
+  justify-content: center; }
+
+.remodal {
+  max-width: 760px;
+  padding: 35px 20px; }
+  .remodal .head {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #bdbcc1;
+    padding-bottom: 15px;
+    margin-bottom: 30px; }
+    .remodal .head a {
+      color: #787780; }
+    .remodal .head span {
+      font-size: 22px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-transform: uppercase; }
+  .remodal form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .remodal form select, .remodal form input[type='text'], .remodal form input[type='tel'], .remodal form textarea {
+      width: 100%;
+      height: 52px;
+      margin-bottom: 20px;
+      border: 1px solid #787780;
+      padding-left: 10px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      color: #161522;
+      background-color: #f8fafb;
+      -webkit-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -o-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      -moz-transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      .remodal form select:focus, .remodal form input[type='text']:focus, .remodal form input[type='tel']:focus, .remodal form textarea:focus {
+        background: white;
+        border: 1px solid #252336; }
+    .remodal form .select-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%; }
+      .remodal form .select-wrapper:after {
+        content: '\e912';
+        font-family: icomoon;
+        position: absolute;
+        color: #161522;
+        font-size: 33px;
+        right: 0; }
+    .remodal form textarea {
+      height: 124px;
+      padding-top: 15px; }
+    .remodal form select {
+      margin-bottom: 0; }
+    .remodal form .large-btn {
+      width: 240px; }
+    .remodal form .left {
+      width: 50%;
+      padding-right: 5px; }
+    .remodal form .right {
+      width: 50%;
+      padding-left: 5px; }
 
 /*# sourceMappingURL=main.css.map */

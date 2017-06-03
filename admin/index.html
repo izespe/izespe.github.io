@@ -4,17 +4,140 @@
     <meta charset="UTF-8">
     <title>Admin Panel</title>
     <link rel="stylesheet" href="https://redaktor.circinus.uberspace.de/css/redaktor_0_95/semantic.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
 
     <script src="js/main.js"></script>
 </head>
 <body>
+<div class="remodal-bg">
 
-<input id="redaktorNavToggle" class="redaktor nav toggle" type="checkbox" checked="true" />
+</div>
+
+<!--                        Резервации модалки                          -->
+
+<div class="remodal" data-remodal-id="add-reservation">
+    <div class="head">
+        <span>Добавить резервацию</span>
+        <a data-remodal-action="close" class="icon-close"></a>
+    </div>
+    <form action="">
+        <div class="left">
+            <input type="text" placeholder="Дата">
+            <input type="text" placeholder="Время">
+            <input type="text" placeholder="Количество гостей">
+            <div class="select-wrapper">
+                <select name="" id="radiusSelect1">
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                </select>
+            </div>
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Имя">
+            <input type="tel" placeholder="Телефон">
+            <textarea name="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+        </div>
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm">Забронировать
+        </button>
+    </form>
+</div>
+
+<div class="remodal" data-remodal-id="edit-reservation">
+    <div class="head">
+        <span>Редактировать резервацию</span>
+        <a data-remodal-action="close" class="icon-close"></a>
+    </div>
+    <form action="">
+        <div class="left">
+            <input type="text" placeholder="Дата">
+            <input type="text" placeholder="Время">
+            <input type="text" placeholder="Количество гостей">
+            <div class="select-wrapper">
+                <select name="" id="radiusSelect1">
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                    <option value="">Частное мероприятие</option>
+                </select>
+            </div>
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Имя">
+            <input type="tel" placeholder="Телефон">
+            <textarea name="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+        </div>
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm">Редактировать
+        </button>
+    </form>
+</div>
+
+
+<!--                        Пользователи модалки                          -->
+
+<div class="remodal" data-remodal-id="add-user">
+    <div class="head">
+        <span>Добавить пользователя</span>
+        <a data-remodal-action="close" class="icon-close"></a>
+    </div>
+    <form action="">
+        <div class="left">
+            <input type="text" placeholder="Имя">
+            <input type="tel" placeholder="Телефон">
+
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Email">
+            <div class="select-wrapper">
+                <select name="" id="radiusSelect3">
+                    <option value="">Гость</option>
+                    <option value="">Администратор</option>
+                </select>
+            </div>
+        </div>
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm">Добавить
+        </button>
+    </form>
+</div>
+
+<div class="remodal" data-remodal-id="edit-user">
+    <div class="head">
+        <span>Редактировать пользователя</span>
+        <a data-remodal-action="close" class="icon-close"></a>
+    </div>
+    <form action="">
+        <div class="left">
+            <input type="text" placeholder="Имя">
+            <input type="tel" placeholder="Телефон">
+
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Email">
+            <div class="select-wrapper">
+                <select name="" id="radiusSelect4">
+                    <option value="">Гость</option>
+                    <option value="">Администратор</option>
+                </select>
+            </div>
+        </div>
+        <button class="large-btn ico-left filled button button-1" data-remodal-action="confirm">Редактировать
+        </button>
+    </form>
+</div>
+
+
+<input id="redaktorNavToggle" class="redaktor nav toggle" type="checkbox" checked="true"/>
 <label for="redaktorNavToggle" onclick></label>
 
 <aside class="redaktor toolbar nav">
-    <nav class="ui inverted menu"><img src="img/lines-menu.png" alt="">Меню</nav>
+    <nav class="ui inverted menu">
+        <div><img src="img/lines-menu.png" alt="">Меню</div>
+        <img src="img/power-symbol.png" alt=""></nav>
+
 </aside>
 <aside class="redaktor push nav">
     <nav class="ui inverted vertical menu">
@@ -34,28 +157,534 @@
 <div class="redaktor body container fade">
     <div class="ui page container">
         <div id="first" class="redaktor page EXAMPLE">
-            1111111111111
+            <div class="wrap">
+                <h1>Личная информация</h1>
+                <form action="">
+                    <label for="user">Логин</label>
+                    <input type="text" placeholder="user" id="user">
+                    <label for="name">Имя</label>
+                    <input type="text" placeholder="Прокопий" id="name">
+                    <label for="email">Телефон</label>
+                    <input type="text" placeholder="+375 (33) 000 00 00" id="email">
+                    <label for="phone">Email</label>
+                    <input type="tel" placeholder="example@mail" id="phone">
+                    <button class="large-btn ico-left filled button button-1" data-remodal-target="add-reservation">
+                        Сохранить
+                    </button>
+                </form>
+
+            </div>
         </div>
         <div id="second" class="redaktor page EXAMPLE">
-            222222222222222222
+            <div class="wrap">
+                <div class="h-add">
+                    <h1>Мои резервации</h1>
+                    <button class=" add large-btn ico-left filled button button-1"
+                            data-remodal-target="add-reservation"><img src="img/plus.png" alt="">Добавить
+                    </button>
+                </div>
+
+                <table class="zebra">
+                    <thead>
+                    <tr>
+                        <th>Заведение</th>
+                        <th>Дата и вермя</th>
+                        <th>Количество гостей</th>
+                        <th>Тип мероприятия</th>
+                        <th>Телефон</th>
+                        <th>Имя</th>
+                        <th>Комментарий</th>
+                        <th>Управление</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Korova</td>
+                        <td>5 июня 2017, 18:00</td>
+                        <td>2</td>
+                        <td>-</td>
+                        <td>+3575 33 000 00 00</td>
+                        <td>Прокопий</td>
+                        <td>На террасе</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Korova</td>
+                        <td>5 июня 2017, 18:00</td>
+                        <td>2</td>
+                        <td>-</td>
+                        <td>+3575 33 000 00 00</td>
+                        <td>Прокопий</td>
+                        <td>На террасе</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Korova</td>
+                        <td>5 июня 2017, 18:00</td>
+                        <td>2</td>
+                        <td>-</td>
+                        <td>+3575 33 000 00 00</td>
+                        <td>Прокопий</td>
+                        <td>На террасе</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Korova</td>
+                        <td>5 июня 2017, 18:00</td>
+                        <td>2</td>
+                        <td>-</td>
+                        <td>+3575 33 000 00 00</td>
+                        <td>Прокопий</td>
+                        <td>На террасе</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div id="third" class="redaktor page EXAMPLE">
-            33333333333333333333
+            <div class="wrap">
+                <h1>Изменить пароль</h1>
+                <form action="">
+                    <label for="old-psswrd">Старый пароль</label>
+                    <input type="text" placeholder="Введите старый пароль" id="old-psswrd">
+                    <label for="new-psswrd">Новый пароль</label>
+                    <input type="text" placeholder="Введите новый пароль" id="new-psswrd">
+                    <label for="new-psswrd-repeat">Повторите новый пароль</label>
+                    <input type="text" placeholder="Повторите новый пароль" id="new-psswrd-repeat">
+                    <button class="large-btn ico-left filled button button-1" data-remodal-target="confirm">Изменить
+                    </button>
+                </form>
+
+            </div>
         </div>
         <div id="fourth" class="redaktor page EXAMPLE">
-            444444444
+            <div class="wrap">
+                <div class="h-add">
+                    <h1>Список пользователей</h1>
+                    <button class=" add large-btn ico-left filled button button-1"
+                            data-remodal-target="add-user"><img src="img/plus.png" alt="">Добавить
+                    </button>
+                </div>
+                <table class="zebra">
+                    <thead>
+                    <tr>
+                        <th>Логин</th>
+                        <th>Имя</th>
+                        <th>Телефон</th>
+                        <th>Email</th>
+                        <th>Тип</th>
+                        <th>Управление</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>user</td>
+                        <td>Прокопий</td>
+                        <td>+3575 33 000 00 00</td>
+                        <td>example@example</td>
+                        <td>Гость</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-user">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-user">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Прокопий</td>
+                        <td>+3575 33 000 00 00</td>
+                        <td>example@example</td>
+                        <td>Администратор</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-user">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-user">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Прокопий</td>
+                        <td>+3575 33 000 00 00</td>
+                        <td>example@example</td>
+                        <td>Гость</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-user">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-user">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>user</td>
+                        <td>Прокопий</td>
+                        <td>+3575 33 000 00 00</td>
+                        <td>example@example</td>
+                        <td>Гость</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-user">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-user">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div id="fifth" class="redaktor page EXAMPLE">
-           55555555
+            <div class="wrap">
+                <div class="h-add">
+                    <h1>Активные заявки</h1>
+                    <button class=" add large-btn ico-left filled button button-1"
+                            data-remodal-target="add-reservation"><img src="img/plus.png" alt="">Добавить
+                    </button>
+                </div>
+                <table class="zebra">
+                    <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>LED</th>
+                        <th>T5</th>
+                        <th>Управление</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Pandora 1</td>
+                        <td>1 x 150w</td>
+                        <td>2 x 24w</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pandora 2</td>
+                        <td>2 x 150w</td>
+                        <td>4 x 39w</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pandora 3</td>
+                        <td>3 x 150w</td>
+                        <td>4 x 54w</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pandora 4</td>
+                        <td>4 x 150w</td>
+                        <td>4 x 80w</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div id="sixth" class="redaktor page EXAMPLE">
-            6666666666
+            <div class="wrap">
+                <div class="h-add">
+                    <h1>История заявок</h1>
+                    <button class=" add large-btn ico-left filled button button-1"
+                            data-remodal-target="add-reservation"><img src="img/plus.png" alt="">Добавить
+                    </button>
+                </div>
+                <table class="zebra">
+                    <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>LED</th>
+                        <th>T5</th>
+                        <th>Управление</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Pandora 1</td>
+                        <td>1 x 150w</td>
+                        <td>2 x 24w</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pandora 2</td>
+                        <td>2 x 150w</td>
+                        <td>4 x 39w</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pandora 3</td>
+                        <td>3 x 150w</td>
+                        <td>4 x 54w</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pandora 4</td>
+                        <td>4 x 150w</td>
+                        <td>4 x 80w</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div id="seventh" class="redaktor page EXAMPLE">
-           77777
+            <div class="wrap">
+                <div class="h-add">
+                    <h1>Список заведений</h1>
+                    <button class=" add large-btn ico-left filled button button-1"
+                            data-remodal-target="add-reservation"><img src="img/plus.png" alt="">Добавить
+                    </button>
+                </div>
+                <table class="zebra">
+                    <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Тип</th>
+                        <th>Город</th>
+                        <th>Адрес</th>
+                        <th>Режим работы</th>
+                        <th>Управление</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Korova</td>
+                        <td>Бар</td>
+                        <td>Брест</td>
+                        <td>Советская 00</td>
+                        <td>пн-чт: 10-24, пт-вс: 10-04</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Korova</td>
+                        <td>Бар</td>
+                        <td>Брест</td>
+                        <td>Советская 00</td>
+                        <td>пн-чт: 10-24, пт-вс: 10-04</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Korova</td>
+                        <td>Бар</td>
+                        <td>Брест</td>
+                        <td>Советская 00</td>
+                        <td>пн-чт: 10-24, пт-вс: 10-04</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Korova</td>
+                        <td>Бар</td>
+                        <td>Брест</td>
+                        <td>Советская 00</td>
+                        <td>пн-чт: 10-24, пт-вс: 10-04</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div id="eighth" class="redaktor page EXAMPLE">
-            888888
+            <div class="wrap">
+                <div class="h-add">
+                    <h1>Список мероприятий</h1>
+                    <button class=" add large-btn ico-left filled button button-1"
+                            data-remodal-target="add-reservation"><img src="img/plus.png" alt="">Добавить
+                    </button>
+                </div>
+                <table class="zebra">
+                    <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Заведение</th>
+                        <th>Дата</th>
+                        <th>Постер</th>
+                        <th>Управление</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Финал лиги чемпионов</td>
+                        <td>Korova</td>
+                        <td>5 июня 2017</td>
+                        <td>ch-l-final.jpg</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Финал лиги чемпионов</td>
+                        <td>Korova</td>
+                        <td>5 июня 2017</td>
+                        <td>ch-l-final.jpg</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Финал лиги чемпионов</td>
+                        <td>Korova</td>
+                        <td>5 июня 2017</td>
+                        <td>ch-l-final.jpg</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Финал лиги чемпионов</td>
+                        <td>Korova</td>
+                        <td>5 июня 2017</td>
+                        <td>ch-l-final.jpg</td>
+                        <td>
+                            <button class="large-btn ico-left filled button button-1 edit"
+                                    data-remodal-target="edit-reservation">
+                                <img src="img/pencil.png" alt=""></button>
+                            <button class="large-btn ico-left filled button button-1 delete"
+                                    data-remodal-target="delete-reservation">
+                                <img src="img/cancel.png" alt=""></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
