@@ -14,14 +14,13 @@ $(document).ready(function () {
             toleft: '__left'
         };
 
-
         $('a', selectors.nav).on('click', function () {
 
             var $this = $(this)[0];
+
             if ($($this).hasClass(classes.active)) {
                 return false;
             }
-
 
             $(selectors.active, selectors.nav).removeClass(classes.active);
             $('img', selectors.screens).removeClass(classes.toleft);
@@ -33,9 +32,11 @@ $(document).ready(function () {
                 $('img.__active').addClass(classes.toleft);
                 $('img.__left').addClass(classes.toright);
             }
+
             $($this.hash, selectors.tabs).addClass(classes.active);
             $('img', selectors.screens).removeClass(classes.active);
             $($this.hash, selectors.screens).addClass(classes.active);
+
             return false;
         });
     })();
@@ -57,7 +58,7 @@ $(document).ready(function () {
     $('#modal-content').apFullscreenModal({
         openSelector: '.open-modal',
         backgroundColor: '#fafafa',
-        closeSelector: '.close-modal, #send',
+        closeSelector: '.close-modal, #send'
     });
 
     $('.owl-carousel').owlCarousel({
@@ -65,7 +66,7 @@ $(document).ready(function () {
         margin: 10,
         nav: false,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 1500,
         autoplayHoverPause: true,
         responsive: {
             0: {

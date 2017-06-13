@@ -196,6 +196,8 @@
   }
   #features .features-content {
     width: 100%;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
   #opportunities .wrap > img {
@@ -204,5 +206,18 @@
   #opportunities .wrap .right {
     right: 12px;
     top: 120px;
+  }
+  #reliability {
+    background: #f5f5f5;
+    height: 460px;
+  }
+  #ident .wrap {
+    max-width: 90%;
+  }
+  #ident .container{
+    justify-content: flex-start;
+  }
+  #ident {
+    background: #f4f4f6;
   }
 }
