@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?3kw2g6');
+  src:  url('fonts/icomoon.eot?3kw2g6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3kw2g6') format('truetype'),
+    url('fonts/icomoon.woff?3kw2g6') format('woff'),
+    url('fonts/icomoon.svg?3kw2g6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-law:before {
+  content: "\e91b";
+}
+.icon-rub:before {
+  content: "\e91a";
+}
+.icon-close:before {
+  content: "\e900";
+}
+.icon-adv1:before {
+  content: "\e901";
+}
+.icon-adv2:before {
+  content: "\e902";
+}
+.icon-adv3:before {
+  content: "\e903";
+}
+.icon-adv4:before {
+  content: "\e904";
+}
+.icon-arrow-down:before {
+  content: "\e905";
+}
+.icon-autorization:before {
+  content: "\e906";
+}
+.icon-cloud:before {
+  content: "\e907";
+}
+.icon-Ellipse-1:before {
+  content: "\e908";
+}
+.icon-fa-angle-down:before {
+  content: "\e909";
+}
+.icon-fa-angle-left:before {
+  content: "\e90a";
+}
+.icon-fa-angle-right:before {
+  content: "\e90b";
+}
+.icon-fa-angle-up:before {
+  content: "\e90c";
+}
+.icon-fa-check:before {
+  content: "\e90d";
+}
+.icon-fa-times:before {
+  content: "\e90e";
+}
+.icon-ident:before {
+  content: "\e90f";
+}
+.icon-marker:before {
+  content: "\e910";
+}
+.icon-market:before {
+  content: "\e911";
+}
+.icon-menu:before {
+  content: "\e912";
+}
+.icon-pereodres:before {
+  content: "\e913";
+}
+.icon-poddershka:before {
+  content: "\e914";
+}
+.icon-scheme_el_ledt:before {
+  content: "\e915";
+}
+.icon-scheme_el_right:before {
+  content: "\e916";
+}
+.icon-Speed:before {
+  content: "\e917";
+}
+.icon-video:before {
+  content: "\e918";
+}
+.icon-work:before {
+  content: "\e919";
+}

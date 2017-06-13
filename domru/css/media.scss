@@ -1,0 +1,208 @@
+@media (max-width: 1460px) {
+  header .container,
+  #opportunities .container,
+  #reliability .container,
+  #features .container,
+  #ident .container,
+  #offers .container,
+  #b2b .container,
+  #partners .container,
+  footer .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #ident {
+    background: url(../img/back_identify.jpg) 35% center no-repeat transparent;
+  }
+  #reliability {
+    background: url(../img/back_service.jpg) 90% center no-repeat transparent;
+  }
+
+}
+
+@media (max-width: 1367px) {
+  #ident {
+    background: url(../img/back_identify.jpg) 40% center no-repeat transparent;
+  }
+  #reliability {
+    background: url(../img/back_service.jpg) 79% center no-repeat transparent;
+  }
+
+}
+
+@media (max-width: 1281px) {
+  #ident {
+    background: url(../img/back_identify.jpg) 32% center no-repeat transparent;
+  }
+  #reliability {
+    background: url(../img/back_service.jpg) 87% center no-repeat transparent;
+  }
+  .info-popup-3 {
+    right: 31%;
+  }
+  .info-popup-4 {
+    right: 28%;
+  }
+  #offers table.zebra td .price {
+    font-size: 32px;
+  }
+  #offers table.zebra th {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1170px) {
+  #ident {
+    background: url(../img/back_identify.jpg) 34% center no-repeat transparent;
+    height: 690px;
+    background-size: cover;
+  }
+  #reliability {
+    background: url(../img/back_service.jpg) 77% center no-repeat transparent;
+    height: 600px;
+    background-size: cover;
+  }
+  #ident .wrap {
+    max-width: 537px;
+  }
+  #offers table.zebra td {
+    width: 25%;
+  }
+  #offers table.zebra td:nth-child(even) {
+    width: 25%;
+  }
+  #offers table.zebra td.left > p {
+    font-size: 15px;
+  }
+  .info-popup-3, .info-popup-4 {
+    right: 28%;
+  }
+  #features .features-content .features-content-col.texts {
+    display: none;
+  }
+  #features .features-content .features-content-col {
+    width: calc(100% - 461px);
+  }
+}
+
+@media (max-width: 1024px) {
+  #ident {
+    background: url(../img/back_identify.jpg) 49% center no-repeat transparent;
+    height: 530px;
+    background-size: cover;
+  }
+  #reliability {
+    background: url(../img/back_service.jpg) 74% center no-repeat transparent;
+    height: 460px;
+    background-size: cover;
+  }
+  #reliability h2, #ident h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  #reliability li {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  #ident p, #ident li {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  #ident li {
+    margin-top: 12px;
+  }
+
+  #ident .wrap {
+    max-width: 500px;
+  }
+
+  #offers .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #offers table.zebra button {
+    width: 80%;
+    height: 46px;
+  }
+  #offers table.zebra td .price {
+    font-size: 26px;
+    margin-bottom: 11px;
+    display: inline-block;
+  }
+  #opportunities .wrap > img {
+    width: 90%;
+    margin-top: 80px;
+  }
+  #opportunities .wrap .right {
+    right: 125px;
+    top: 90px;
+  }
+  #opportunities .wrap {
+    margin: 10px 0 60px;
+  }
+  header {
+    height: 700px;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  section, footer {
+    min-width: initial;
+  }
+  #opportunities .advantages > div > p {
+    font-size: 16px;
+  }
+  header .middle h1 {
+    font-size: 32px;
+  }
+  header .middle span {
+    font-size: 20px;
+  }
+  header {
+    height: 650px;
+    background-size: cover;
+  }
+  #opportunities .wrap > img {
+    width: 100%;
+  }
+  #offers table.zebra td {
+    width: 33.33%;
+  }
+  #offers table.zebra td:nth-child(2),#offers table.zebra th:nth-child(2) {
+    display: none;
+  }
+
+  #offers table.zebra td:nth-child(even) {
+    width: 33.33%;
+  }
+  footer .container > p{
+    width: 60%;
+  }
+  #features .features-content .features-content-col .features-graph:after{
+    display: none;
+  }
+  #features .features-graph .btn-with-icon{
+    margin-right: 0 !important;
+  }
+  #features .features-content .img-slide {
+    right: -45px;
+  }
+  #features .features-content .buttons{
+    position: absolute;
+    left: 0;
+    width: 45%;
+  }
+  #features .features-content {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  #opportunities .wrap > img {
+    margin-top: 113px;
+  }
+  #opportunities .wrap .right {
+    right: 12px;
+    top: 120px;
+  }
+}
