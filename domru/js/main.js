@@ -15,12 +15,14 @@ $(document).ready(function () {
         };
 
 
-
-
         $('a', selectors.nav).on('click', function () {
 
-
             var $this = $(this)[0];
+            if ($($this).hasClass(classes.active)) {
+                return false;
+            }
+
+
             $(selectors.active, selectors.nav).removeClass(classes.active);
             $('img', selectors.screens).removeClass(classes.toleft);
 
@@ -50,4 +52,32 @@ $(document).ready(function () {
     $(".info-button-4").hover(function () {
         $(".info-popup-4").toggleClass('active');
     });
+
+
+    $('#modal-content').apFullscreenModal({
+        openSelector: '.open-modal',
+        backgroundColor: '#fafafa',
+        closeSelector: '.close-modal, #send',
+    });
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 4
+            },
+            1000: {
+                items: 6
+            }
+        }
+    })
+
 });
