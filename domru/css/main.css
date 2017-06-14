@@ -1,6 +1,9 @@
 @import url(../fonts/fonts.css);
 @import url(../fonts/style.css);
 @import url(normalize.css);
+@import url(../fonts/fonts.css);
+@import url(../fonts/style.css);
+@import url(normalize.css);
 h1,
 h2,
 h3,
@@ -1027,205 +1030,503 @@ footer {
   right: 30%;
   left: initial; }
 
-@media (max-width: 1460px) {
-  header .container,
-  #opportunities .container,
-  #reliability .container,
-  #features .container,
-  #ident .container,
-  #offers .container,
-  #b2b .container,
-  #partners .container,
-  footer .container {
-    padding-left: 30px;
-    padding-right: 30px; }
+button {
+  margin: 0 auto;
+  border-radius: 29px;
+  background-color: #ffdd00;
+  -webkit-box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
+  box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
+  width: 178px;
+  height: 48px;
+  border: none;
+  font-size: 16px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-family: "Conv_FedraSansAltPro-MediumTF"; }
+  button:hover {
+    background-color: #ffe74c; }
 
-  #ident {
-    background: url(../img/back_identify.jpg) 35% center no-repeat transparent; }
+header {
+  border-bottom: 1px solid #e9e9e9; }
+  header p {
+    margin: 0; }
+  header #top {
+    border-bottom: 1px solid #e9e9e9; }
+    header #top .container {
+      padding: 8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      header #top .container .logo {
+        line-height: 0; }
+        header #top .container .logo img {
+          width: 97px; }
+      header #top .container > div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        font-size: 14px;
+        text-align: right;
+        line-height: 18px; }
+        header #top .container > div a {
+          font-size: 18px;
+          font-family: "Conv_FedraSansAltPro-MediumTF";
+          color: #333333;
+          text-decoration: none; }
+  header #first {
+    border-bottom: 1px solid #e9e9e9;
+    background: url("../img/back_header_mobile.jpg") center no-repeat transparent;
+    background-size: cover;
+    height: 430px; }
+    header #first .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      padding: 10px;
+      text-align: center;
+      height: 100%; }
+    header #first .middle {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+      header #first .middle span {
+        font-size: 16px;
+        display: inline-block;
+        margin: 0px 0 15px; }
+      header #first .middle h1 {
+        font-size: 18px;
+        font-family: "Conv_FedraSansAltPro-MediumTF"; }
+    header #first .bottom {
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: relative; }
+      header #first .bottom p {
+        margin: 30px 0 25px; }
+      header #first .bottom span {
+        width: 48px;
+        height: 48px;
+        color: #ffdd00;
+        border-radius: 100%;
+        background: white;
+        -webkit-box-shadow: 0px 6px 10px 0px rgba(51, 51, 51, 0.1);
+        box-shadow: 0px 6px 10px 0px rgba(51, 51, 51, 0.1);
+        font-size: 22px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: absolute;
+        bottom: -34px;
+        z-index: 10; }
 
-  #reliability {
-    background: url(../img/back_service.jpg) 90% center no-repeat transparent; } }
-@media (max-width: 1367px) {
-  #ident {
-    background: url(../img/back_identify.jpg) 40% center no-repeat transparent; }
+#opportunities {
+  position: relative;
+  background: #fafafa;
+  border-bottom: 1px solid #e9e9e9; }
+  #opportunities .container {
+    padding: 35px 8px 30px;
+    text-align: center; }
+  #opportunities h2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    font-family: "Conv_FedraSansAltPro-MediumTF"; }
+  #opportunities .wrap {
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #f1eff0;
+    margin-bottom: 25px; }
+    #opportunities .wrap p {
+      position: relative;
+      padding-left: 16px; }
+      #opportunities .wrap p span {
+        color: #55ac62; }
+      #opportunities .wrap p:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background: #ffdd00;
+        position: absolute;
+        top: 7px;
+        left: 0px; }
+  #opportunities .advantages {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: left; }
+    #opportunities .advantages > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      color: #333333;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      #opportunities .advantages > div div {
+        margin-bottom: 30px; }
+    #opportunities .advantages p {
+      font-size: 16px;
+      margin: 0; }
+    #opportunities .advantages span {
+      min-width: 48px;
+      margin-right: 10px;
+      margin-top: 3px;
+      height: 48px;
+      color: #333333;
+      border: 4px solid #ffdd00;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-size: 28px; }
 
-  #reliability {
-    background: url(../img/back_service.jpg) 79% center no-repeat transparent; } }
-@media (max-width: 1281px) {
-  #ident {
-    background: url(../img/back_identify.jpg) 32% center no-repeat transparent; }
-
-  #reliability {
-    background: url(../img/back_service.jpg) 87% center no-repeat transparent; }
-
-  .info-popup-3 {
-    right: 31%; }
-
-  .info-popup-4 {
-    right: 28%; }
-
-  #offers table.zebra td .price {
-    font-size: 32px; }
-
-  #offers table.zebra th {
-    font-size: 15px; } }
-@media (max-width: 1170px) {
-  #ident {
-    background: url(../img/back_identify.jpg) 34% center no-repeat transparent;
-    height: 690px;
-    background-size: cover; }
-
-  #reliability {
-    background: url(../img/back_service.jpg) 77% center no-repeat transparent;
-    height: 600px;
-    background-size: cover; }
-
-  #ident .wrap {
-    max-width: 537px; }
-
-  #offers table.zebra td {
-    width: 25%; }
-
-  #offers table.zebra td:nth-child(even) {
-    width: 25%; }
-
-  #offers table.zebra td.left > p {
-    font-size: 15px; }
-
-  .info-popup-3, .info-popup-4 {
-    right: 28%; }
-
-  #features .features-content .features-content-col.texts {
-    display: none; }
-
-  #features .features-content .features-content-col {
-    width: calc(100% - 461px); } }
-@media (max-width: 1024px) {
-  #ident {
-    background: url(../img/back_identify.jpg) 49% center no-repeat transparent;
-    height: 530px;
-    background-size: cover; }
-
-  #reliability {
-    background: url(../img/back_service.jpg) 74% center no-repeat transparent;
-    height: 460px;
-    background-size: cover; }
-
-  #reliability h2, #ident h2 {
-    font-size: 32px;
-    line-height: 42px; }
-
-  #reliability li {
+#reliability {
+  border-bottom: 1px solid #e9e9e9; }
+  #reliability .container {
+    max-width: 1410px;
+    padding: 32px 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%; }
+    #reliability .container .img {
+      background: url(../img/back_service.jpg) right top no-repeat transparent;
+      background-size: 135%;
+      height: 125px;
+      width: 100%; }
+  #reliability h2 {
     font-size: 18px;
     line-height: 26px; }
-
-  #ident p, #ident li {
+  #reliability ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  #reliability li {
+    list-style-type: none;
     font-size: 16px;
-    line-height: 25px; }
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 16px; }
+    #reliability li:before {
+      background: #ffdd00;
+      content: "";
+      width: 8px;
+      height: 8px;
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 8px; }
 
-  #ident li {
-    margin-top: 12px; }
+#features {
+  border-bottom: 1px solid #e9e9e9;
+  background: #fafafa; }
+  #features h2 {
+    font-size: 18px;
+    margin: 0; }
+    #features h2 span {
+      color: #ec1c24; }
+  #features .container {
+    padding: 30px 8px; }
+    #features .container > p {
+      margin: 10px 0 0;
+      font-size: 14px; }
+      #features .container > p .red {
+        color: #ec1c24; }
+      #features .container > p .icon-rub {
+        font-size: 11px; }
+    #features .container > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      #features .container > div span {
+        color: #55ac62;
+        min-width: 32px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-size: 30px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-right: 10px; }
+        #features .container > div span.icon-adv2 {
+          font-size: 25px; }
+        #features .container > div span.icon-adv3 {
+          font-size: 28px; }
+        #features .container > div span.icon-adv4 {
+          font-size: 32px; }
 
-  #ident .wrap {
-    max-width: 500px; }
-
-  #offers .container {
-    padding-left: 10px;
-    padding-right: 10px; }
-
-  #offers table.zebra button {
-    width: 80%;
-    height: 46px; }
-
-  #offers table.zebra td .price {
-    font-size: 26px;
-    margin-bottom: 11px;
-    display: inline-block; }
-
-  #opportunities .wrap > img {
-    width: 90%;
-    margin-top: 80px; }
-
-  #opportunities .wrap .right {
-    right: 125px;
-    top: 90px; }
-
-  #opportunities .wrap {
-    margin: 10px 0 60px; }
-
-  header {
-    height: 700px;
-    background-size: cover; } }
-@media (max-width: 768px) {
-  section, footer {
-    min-width: initial; }
-
-  #opportunities .advantages > div > p {
-    font-size: 16px; }
-
-  header .middle h1 {
-    font-size: 32px; }
-
-  header .middle span {
-    font-size: 20px; }
-
-  header {
-    height: 650px;
-    background-size: cover; }
-
-  #opportunities .wrap > img {
-    width: 100%; }
-
-  #offers table.zebra td {
-    width: 33.33%; }
-
-  #offers table.zebra td:nth-child(2), #offers table.zebra th:nth-child(2) {
-    display: none; }
-
-  #offers table.zebra td:nth-child(even) {
-    width: 33.33%; }
-
-  footer .container > p {
-    width: 60%; }
-
-  #features .features-content .features-content-col .features-graph:after {
-    display: none; }
-
-  #features .features-graph .btn-with-icon {
-    margin-right: 0 !important; }
-
-  #features .features-content .img-slide {
-    right: -45px; }
-
-  #features .features-content .buttons {
-    position: absolute;
-    left: 0;
-    width: 45%; }
-
-  #features .features-content {
-    width: 100%;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end; }
-
-  #opportunities .wrap > img {
-    margin-top: 113px; }
-
-  #opportunities .wrap .right {
-    right: 12px;
-    top: 120px; }
-
-  #reliability {
-    background: #f5f5f5;
-    height: 460px; }
-
-  #ident .wrap {
-    max-width: 90%; }
-
+#ident {
+  border-bottom: 1px solid #e9e9e9; }
   #ident .container {
-    justify-content: flex-start; }
+    padding: 30px 8px; }
+    #ident .container .img {
+      background: url(../img/back_identify.jpg) left center no-repeat transparent;
+      background-size: 135%;
+      height: 125px;
+      width: 100%; }
+  #ident h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 25px;
+    font-weight: 400;
+    font-family: "Conv_FedraSansAltPro-MediumTF"; }
+  #ident span {
+    font-size: 18px;
+    font-family: "Conv_FedraSansAltPro-MediumTF";
+    font-weight: 400;
+    margin-top: 15px;
+    display: inline-block; }
+  #ident ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  #ident p {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 10px; }
+    #ident p a {
+      color: #333333; }
+  #ident li {
+    list-style-type: none;
+    font-size: 16px;
+    margin-top: 15px;
+    position: relative;
+    padding-left: 16px; }
+    #ident li:before {
+      background: #ffdd00;
+      content: "";
+      width: 8px;
+      height: 8px;
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 8px; }
 
-  #ident {
-    background: #f4f4f6; } }
+#offers {
+  background: #f5f6f8;
+  border-bottom: 1px solid #e9e9e9; }
+  #offers .container {
+    padding: 30px 8px;
+    text-align: center; }
+  #offers h2 {
+    font-size: 18px;
+    margin: 0;
+    font-family: "Conv_FedraSansAltPro-MediumTF";
+    font-weight: 400;
+    margin-bottom: 18px; }
+  #offers .wrap {
+    width: 100%;
+    border: 2px solid #f0f0f0; }
+    #offers .wrap .top {
+      background: #55ac62;
+      color: white;
+      padding: 0px 6px;
+      position: relative; }
+      #offers .wrap .top h3 {
+        font-size: 18px;
+        font-family: "Conv_FedraSansAltPro-MediumTF";
+        width: 100%;
+        padding: 15px 6px;
+        border-bottom: 1px solid #479152;
+        font-weight: 400;
+        margin: 0; }
+      #offers .wrap .top span {
+        font-size: 16px;
+        display: inline-block;
+        padding: 15px 6px 35px; }
+      #offers .wrap .top:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 9px 9px 0 9px;
+        border-color: #55ac62 transparent transparent transparent;
+        bottom: -9px;
+        left: calc(50% - 9px); }
+  #offers .bottom {
+    background: white;
+    padding: 20px 0 30px; }
+    #offers .bottom p {
+      margin: 0;
+      font-family: "Conv_FedraSansAltPro-MediumTF";
+      margin-bottom: 10px; }
+      #offers .bottom p .price {
+        font-size: 32px; }
+      #offers .bottom p .icon-rub {
+        font-size: 14px;
+        font-weight: 700; }
+
+#b2b .container {
+  padding: 30px 8px 0; }
+#b2b .wrap {
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 15px; }
+#b2b h2 {
+  font-size: 18px;
+  font-family: "Conv_FedraSansAltPro-MediumTF";
+  font-weight: 400;
+  margin: 0; }
+#b2b p {
+  font-size: 16px;
+  margin-top: 8px; }
+
+footer .container {
+  padding: 30px 8px; }
+  footer .container p {
+    font-size: 16px;
+    margin: 0; }
+    footer .container p span {
+      font-size: 14px; }
+
+.modal-content {
+  outline: red;
+  margin: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px;
+  overflow: hidden; }
+  .modal-content .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center; }
+  .modal-content span {
+    font-size: 18px;
+    font-family: "Conv_FedraSansAltPro-MediumTF"; }
+  .modal-content p {
+    font-size: 16px;
+    margin: 0 0 60px; }
+  .modal-content button {
+    margin-top: 30px;
+    margin-bottom: 10%; }
+    .modal-content button.remodal-close {
+      margin-top: 0;
+      margin-bottom: 120px;
+      left: initial;
+      right: 60px;
+      top: 60px;
+      background: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+  .modal-content .remodal-close:before {
+    font-family: icomoon !important;
+    font-size: 18px;
+    line-height: 26px;
+    content: "\e900";
+    text-align: center; }
+  .modal-content label {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 8px;
+    display: block; }
+  .modal-content input {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-size: 20px;
+    color: #333333;
+    padding: 12px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    font-family: "Conv_FedraSansAltPro-BookTF"; }
+    .modal-content input::-webkit-input-placeholder {
+      font-size: 20px;
+      color: #9a9a9a;
+      font-family: "Conv_FedraSansAltPro-BookTF" !important; }
+    .modal-content input:focus {
+      border: 1px solid #ffdd00; }
 
 /*# sourceMappingURL=main.css.map */
