@@ -1050,7 +1050,10 @@ footer {
     background: url(../img/back_identify.jpg) 40% center no-repeat transparent; }
 
   #reliability {
-    background: url(../img/back_service.jpg) 79% center no-repeat transparent; } }
+    background: url(../img/back_service.jpg) 79% center no-repeat transparent; }
+
+  header {
+    height: 680px; } }
 @media (max-width: 1281px) {
   #ident {
     background: url(../img/back_identify.jpg) 32% center no-repeat transparent; }

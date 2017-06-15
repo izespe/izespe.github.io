@@ -49,9 +49,6 @@ header {
       align-items: center;
       .logo {
         line-height: 0;
-        img {
-          width: 97px;
-        }
       }
       > div {
         display: -webkit-box;
@@ -78,7 +75,7 @@ header {
 
   #first {
     border-bottom: 1px solid #e9e9e9;
-    background: url("../img/back_header_mobile.jpg") center no-repeat transparent;
+    background: url(../img/back_header_mobile.jpg) top center no-repeat #f0ebe4;
     background-size: cover;
     height: 430px;
     .container {
@@ -161,6 +158,7 @@ header {
         position: absolute;
         bottom: -34px;
         z-index: 10;
+        left: calc(50% - 24px);
       }
     }
   }
