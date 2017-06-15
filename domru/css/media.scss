@@ -1,615 +1,223 @@
-@import "../fonts/fonts.css";
-@import "../fonts/style.css";
-@import "normalize.css";
+@media (max-width: 1460px) {
+  header .container,
+  #opportunities .container,
+  #reliability .container,
+  #features .container,
+  #ident .container,
+  #offers .container,
+  #b2b .container,
+  #partners .container,
+  footer .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-$dark-gray: #333333;
-$ligth-gray: #f5f6f8;
-$yellow: #ffdd00;
-$light-yellow: #fffdf2;
-$green: #55ac62;
-$light-green: #eef7ef;
+  #ident {
+    background: url(../img/back_identify.jpg) 35% center no-repeat transparent;
+  }
+  #reliability {
+    background: url(../img/back_service.jpg) 90% center no-repeat transparent;
+  }
 
-button {
-  margin: 0 auto;
-  border-radius: 29px;
-  background-color: $yellow;
-  -webkit-box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
-  box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
-  width: 178px;
-  height: 48px;
-  border: none;
-  font-size: 16px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  font-family: "Conv_FedraSansAltPro-MediumTF";
-  &:hover {
-    background-color: #ffe74c;
+}
+
+@media (max-width: 1367px) {
+  #ident {
+    background: url(../img/back_identify.jpg) 40% center no-repeat transparent;
+  }
+  #reliability {
+    background: url(../img/back_service.jpg) 79% center no-repeat transparent;
+  }
+
+}
+
+@media (max-width: 1281px) {
+  #ident {
+    background: url(../img/back_identify.jpg) 32% center no-repeat transparent;
+  }
+  #reliability {
+    background: url(../img/back_service.jpg) 87% center no-repeat transparent;
+  }
+  .info-popup-3 {
+    right: 31%;
+  }
+  .info-popup-4 {
+    right: 28%;
+  }
+  #offers table.zebra td .price {
+    font-size: 32px;
+  }
+  #offers table.zebra th {
+    font-size: 15px;
   }
 }
 
-header {
-  border-bottom: 1px solid #e9e9e9;
-
-  p {
-    margin: 0;
-  }
-
-  #top {
-    border-bottom: 1px solid #e9e9e9;
-    .container {
-      padding: 8px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      .logo {
-        line-height: 0;
-        img {
-          width: 97px;
-        }
-      }
-      > div {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        font-size: 14px;
-        text-align: right;
-        line-height: 18px;
-        a {
-
-          font-size: 18px;
-          font-family: "Conv_FedraSansAltPro-MediumTF";
-          color: $dark-gray;
-          text-decoration: none;
-
-        }
-      }
-    }
-  }
-
-  #first {
-    border-bottom: 1px solid #e9e9e9;
-    background: url("../img/back_header_mobile.jpg") center no-repeat transparent;
+@media (max-width: 1170px) {
+  #ident {
+    background: url(../img/back_identify.jpg) 34% center no-repeat transparent;
+    height: 690px;
     background-size: cover;
-    height: 430px;
-    .container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
-      justify-content: flex-end;
-      padding: 10px;
-      text-align: center;
-      height: 100%;
-    }
-    .middle {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: end;
-      -ms-flex-pack: end;
-      justify-content: flex-end;
-      span {
-        font-size: 16px;
-        display: inline-block;
-        margin: 0px 0 15px;
-      }
-      h1 {
-        font-size: 18px;
-        font-family: "Conv_FedraSansAltPro-MediumTF";
-      }
-    }
-
-    .bottom {
-      text-align: center;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      position: relative;
-      p {
-        margin: 30px 0 25px;
-      }
-      span {
-        width: 48px;
-        height: 48px;
-        color: $yellow;
-        border-radius: 100%;
-        background: white;
-        -webkit-box-shadow: 0px 6px 10px 0px rgba(51, 51, 51, 0.1);
-        box-shadow: 0px 6px 10px 0px rgba(51, 51, 51, 0.1);
-        font-size: 22px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        position: absolute;
-        bottom: -34px;
-        z-index: 10;
-      }
-    }
   }
-
-}
-
-#opportunities {
-  position: relative;
-  background: #fafafa;
-  border-bottom: 1px solid #e9e9e9;
-  .container {
-    padding: 35px 8px 30px;
-    text-align: center;
+  #reliability {
+    background: url(../img/back_service.jpg) 77% center no-repeat transparent;
+    height: 600px;
+    background-size: cover;
   }
-  h2 {
-    font-size: 16px;
-    font-weight: 400;
-    text-align: left;
-    font-family: "Conv_FedraSansAltPro-MediumTF";
+  #ident .wrap {
+    max-width: 537px;
   }
-  .wrap {
-    text-align: left;
-    padding-bottom: 10px;
-    border-bottom: 2px dashed #f1eff0;
-    margin-bottom: 25px;
-    p {
-      position: relative;
-      padding-left: 16px;
-      span {
-        color: #55ac62;
-      }
-      &:before {
-        content: '';
-        width: 8px;
-        height: 8px;
-        background: $yellow;
-        position: absolute;
-        top: 7px;
-        left: 0px;
-      }
-    }
+  #offers table.zebra td {
+    width: 25%;
   }
-  .advantages {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-bottom: 10px;
-    text-align: left;
-    > div {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      color: $dark-gray;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      div {
-        margin-bottom: 30px;
-      }
-    }
-    p {
-      font-size: 16px;
-      margin: 0;
-    }
-    span {
-      min-width: 48px;
-      margin-right: 10px;
-      margin-top: 3px;
-      height: 48px;
-      color: $dark-gray;
-      border: 4px solid $yellow;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      font-size: 28px;
-    }
+  #offers table.zebra td:nth-child(even) {
+    width: 25%;
+  }
+  #offers table.zebra td.left > p {
+    font-size: 15px;
+  }
+  .info-popup-3, .info-popup-4 {
+    right: 28%;
+  }
+  #features .features-content .features-content-col.texts {
+    display: none;
+  }
+  #features .features-content .features-content-col {
+    width: calc(100% - 461px);
   }
 }
 
-#reliability {
-  border-bottom: 1px solid #e9e9e9;
-  .container {
-    max-width: 1410px;
-    padding: 32px 8px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 100%;
-    .img {
-      background: url(../img/back_service.jpg) right top no-repeat transparent;
-      background-size: 135%;
-      height: 125px;
-      width: 100%;
-    }
+@media (max-width: 1024px) {
+  #ident {
+    background: url(../img/back_identify.jpg) 49% center no-repeat transparent;
+    height: 530px;
+    background-size: cover;
   }
-  h2 {
+  #reliability {
+    background: url(../img/back_service.jpg) 74% center no-repeat transparent;
+    height: 460px;
+    background-size: cover;
+  }
+  #reliability h2, #ident h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  #reliability li {
     font-size: 18px;
     line-height: 26px;
   }
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    list-style-type: none;
+  #ident p, #ident li {
     font-size: 16px;
-    margin-bottom: 16px;
-    position: relative;
-    padding-left: 16px;
-    &:before {
-      background: $yellow;
-      content: "";
-      width: 8px;
-      height: 8px;
-      display: block;
-      position: absolute;
-      left: 0px;
-      top: 8px;
-    }
+    line-height: 25px;
   }
-}
-
-#features {
-  border-bottom: 1px solid #e9e9e9;
-  background: #fafafa;
-  h2 {
-    font-size: 18px;
-    margin: 0;
-    span {
-      color: #ec1c24;
-    }
-  }
-  .container {
-    padding: 30px 8px;
-    > p {
-      margin: 10px 0 0;
-      font-size: 14px;
-      .red {
-        color: #ec1c24;
-      }
-      .icon-rub {
-        font-size: 11px;
-      }
-    }
-    > div {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-
-      span {
-        color: $green;
-        min-width: 32px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        font-size: 30px;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin-right: 10px;
-        &.icon-adv2 {
-          font-size: 25px;
-        }
-        &.icon-adv3 {
-          font-size: 28px;
-        }
-        &.icon-adv4 {
-          font-size: 32px;
-        }
-      }
-    }
+  #ident li {
+    margin-top: 12px;
   }
 
-}
-
-#ident {
-  border-bottom: 1px solid #e9e9e9;
-
-  .container {
-    padding: 30px 8px;
-    .img {
-      background: url(../img/back_identify.jpg) left center no-repeat transparent;
-      background-size: 135%;
-      height: 125px;
-      width: 100%;
-    }
+  #ident .wrap {
+    max-width: 500px;
   }
-  h2 {
-    font-size: 18px;
-    margin-bottom: 0;
-    margin-top: 25px;
-    font-weight: 400;
-    font-family: "Conv_FedraSansAltPro-MediumTF";
+
+  #offers .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  span {
-    font-size: 18px;
-    font-family: "Conv_FedraSansAltPro-MediumTF";
-    font-weight: 400;
-    margin-top: 15px;
+  #offers table.zebra button {
+    width: 80%;
+    height: 46px;
+  }
+  #offers table.zebra td .price {
+    font-size: 26px;
+    margin-bottom: 11px;
     display: inline-block;
   }
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  #opportunities .wrap > img {
+    width: 90%;
+    margin-top: 80px;
   }
-  p {
-    font-size: 16px;
-    a {
-      color: $dark-gray;
-    }
-    margin-top: 8px;
-    margin-bottom: 10px;
+  #opportunities .wrap .right {
+    right: 125px;
+    top: 90px;
   }
-  li {
-    list-style-type: none;
-    font-size: 16px;
-    margin-top: 15px;
-    position: relative;
-    padding-left: 16px;
-    &:before {
-      background: $yellow;
-      content: "";
-      width: 8px;
-      height: 8px;
-      display: block;
-      position: absolute;
-      left: 0px;
-      top: 8px;
-    }
+  #opportunities .wrap {
+    margin: 10px 0 60px;
+  }
+  header {
+    height: 700px;
+    background-size: cover;
   }
 }
 
-#offers {
-  background: #f5f6f8;
-  border-bottom: 1px solid #e9e9e9;
-  .container {
-    padding: 30px 8px;
-    text-align: center;
+@media (max-width: 768px) {
+  section, footer {
+    min-width: initial;
   }
-  h2 {
-    font-size: 18px;
-    margin: 0;
-    font-family: "Conv_FedraSansAltPro-MediumTF";
-    font-weight: 400;
-    margin-bottom: 18px;
-  }
-  .wrap {
-    width: 100%;
-    border: 2px solid #f0f0f0;
-    .top {
-      background: $green;
-      color: white;
-      padding: 0px 6px;
-      h3 {
-        font-size: 18px;
-        font-family: "Conv_FedraSansAltPro-MediumTF";
-        width: 100%;
-        padding: 15px 6px;
-        border-bottom: 1px solid #479152;
-        font-weight: 400;
-        margin: 0;
-      }
-      span {
-        font-size: 16px;
-        display: inline-block;
-        padding: 15px 6px 35px;
-      }
-      position: relative;
-      &:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 9px 9px 0 9px;
-        border-color: #55ac62 transparent transparent transparent;
-        bottom: -9px;
-        left: calc(50% - 9px);
-      }
-
-    }
-  }
-  .bottom {
-    background: white;
-    padding: 20px 0 30px;
-
-    p {
-      margin: 0;
-      font-family: "Conv_FedraSansAltPro-MediumTF";
-      margin-bottom: 10px;
-      .price {
-        font-size: 32px;
-      }
-      .icon-rub {
-        font-size: 14px;
-        font-weight: 700;
-      }
-    }
-  }
-}
-
-#b2b {
-  .container {
-    padding: 30px 8px 0;
-  }
-  .wrap{
-    border-bottom: 1px solid #e9e9e9;
-    padding-bottom: 15px;
-  }
-  h2 {
-    font-size: 18px;
-    font-family: "Conv_FedraSansAltPro-MediumTF";
-    font-weight: 400;
-    margin: 0;
-  }
-  p {
+  #opportunities .advantages > div > p {
     font-size: 16px;
-    margin-top: 8px;
   }
-}
-
-footer{
-  .container{
-    padding: 30px 8px;
-    p{
-      font-size: 16px;
-      margin: 0;
-      span{
-        font-size: 14px;
-      }
-    }
+  header .middle h1 {
+    font-size: 32px;
   }
-}
-
-.modal-content {
-  outline: red;
-  margin: 0;
-  max-width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 15px;
-  overflow: hidden;
-  .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-align: center;
-  }
-  span {
-    font-size: 18px;
-    font-family: "Conv_FedraSansAltPro-MediumTF";
-  }
-  p {
-    font-size: 16px;
-    margin: 0 0 60px;
-  }
-  button {
-    margin-top: 30px;
-    margin-bottom: 10%;
-    &.remodal-close {
-      margin-top: 0;
-      margin-bottom: 120px;
-      left: initial;
-      right: 60px;
-      top: 60px;
-      background: transparent;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-  }
-  .remodal-close:before {
-    font-family: icomoon !important;
-    font-size: 18px;
-    line-height: 26px;
-    content: "\e900";
-    text-align: center;
-  }
-  label {
-    text-align: left;
-    width: 100%;
-    margin-bottom: 8px;
-    display: block;
-  }
-  input {
-    width: 100%;
-    height: 52px;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
+  header .middle span {
     font-size: 20px;
-    color: $dark-gray;
-    padding: 12px;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    font-family: "Conv_FedraSansAltPro-BookTF";
-    &::-webkit-input-placeholder {
-      font-size: 20px;
-      color: #9a9a9a;
-      font-family: "Conv_FedraSansAltPro-BookTF" !important;
-    }
-    &:focus {
-      border: 1px solid #ffdd00;
-    }
+  }
+  header {
+    height: 650px;
+    background-size: cover;
+  }
+  #opportunities .wrap > img {
+    width: 100%;
+  }
+  #offers table.zebra td {
+    width: 33.33%;
+  }
+  #offers table.zebra td:nth-child(2),#offers table.zebra th:nth-child(2) {
+    display: none;
+  }
+
+  #offers table.zebra td:nth-child(even) {
+    width: 33.33%;
+  }
+  footer .container > p{
+    width: 60%;
+  }
+  #features .features-content .features-content-col .features-graph:after{
+    display: none;
+  }
+  #features .features-graph .btn-with-icon{
+    margin-right: 0 !important;
+  }
+  #features .features-content .img-slide {
+    right: -45px;
+  }
+  #features .features-content .buttons{
+    position: absolute;
+    left: 0;
+    width: 45%;
+  }
+  #features .features-content {
+    width: 100%;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  #opportunities .wrap > img {
+    margin-top: 113px;
+  }
+  #opportunities .wrap .right {
+    right: 12px;
+    top: 120px;
+  }
+  #reliability {
+    background: #f5f5f5;
+    height: 460px;
+  }
+  #ident .wrap {
+    max-width: 90%;
+  }
+  #ident .container{
+    justify-content: flex-start;
+  }
+  #ident {
+    background: #f4f4f6;
   }
 }

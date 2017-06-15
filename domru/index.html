@@ -2,368 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Интернет для сотрудников и Wi-Fi для посетителей</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.css">
-    <link rel="stylesheet" href="css/ap-fullscreen-modal.min.css" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="css/main.css">
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-    <script src="js/ap-fullscreen-modal.min.js"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
+<script type="text/javascript">
+    (function (i) {
+        var e = /iPhone/i, n = /iPod/i, o = /iPad/i, t = /(?=.*\bAndroid\b)(?=.*\bMobile\b)/i, r = /Android/i, d = /BlackBerry/i, s = /Opera Mini/i, a = /IEMobile/i, b = /(?=.*\bFirefox\b)(?=.*\bMobile\b)/i, h = RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)", "i"), c = function (i, e) {
+            return i.test(e)
+        }, l = function (i) {
+            var l = i || navigator.userAgent;
+            this.apple = {
+                phone: c(e, l),
+                ipod: c(n, l),
+                tablet: c(o, l),
+                device: c(e, l) || c(n, l) || c(o, l)
+            }, this.android = {
+                phone: c(t, l),
+                tablet: !c(t, l) && c(r, l),
+                device: c(t, l) || c(r, l)
+            }, this.other = {
+                blackberry: c(d, l),
+                opera: c(s, l),
+                windows: c(a, l),
+                firefox: c(b, l),
+                device: c(d, l) || c(s, l) || c(a, l) || c(b, l)
+            }, this.seven_inch = c(h, l), this.any = this.apple.device || this.android.device || this.other.device || this.seven_inch
+        }, v = i.isMobile = new l;
+        v.Class = l
+    })(window);
 
+    (function () {
+        var MOBILE_SITE = 'mobile.html',
+            DESCTOP_SITE = 'desktop.html',
+            NO_REDIRECT = 'noredirect';
 
-<div style="display: none;">
-
-    <div id="modal-content" class="modal-content">
-        <div class="wrapper">
-            <span>Заявка на подключение</span>
-            <p> Отправьте заявку, и мы свяжемся с вами<br>в ближайшее время. </p>
-
-            <div class="form">
-                <div class="row">
-                    <label for="phone">Контактный телефон:</label>
-                    <input type="phone" id="phone" placeholder="+7 (___) ___-__-__">
-
-                </div>
-                <div class="row">
-                    <button>Отправить заявку</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<header>
-    <div class="container">
-        <div class="top">
-            <a href="" class="logo"><img src="img/logo.jpg" alt=""></a>
-            <div>
-                <a href="tel:88003339000">8 800 333-90-00</a>
-                звонок бесплатный
-            </div>
-        </div>
-        <div class="middle">
-            <h1>Интернет для сотрудников <br>и Wi-Fi для посетителей</h1>
-            <span>Выгодное предложение для владельцев гостиниц, <br>
-кафе и ресторанов</span>
-            <button value="Modal 1" id="open-modal" class="open-modal">Подключить</button>
-        </div>
-        <div class="bottom">
-            <p>Что мы предлагаем</p>
-            <span class="icon-arrow-down"></span>
-        </div>
-    </div>
-</header>
-<main>
-    <section id="opportunities">
-        <div class="container">
-            <h2>Вы получите 2 независимых интернет соединения:</h2>
-            <div class="wrap">
-                <div class="left">
-                    <p>Отдельный Интернет-канал<br><span>для сотрудников</span><a href="#"
-                                                                                  class="info-button-1">!</a></p>
-                    <div class="info-popup-1">
-                        <span>Скорость до 300 Мбит/с</span><br>
-                        входит в абонентскую плату
-                    </div>
-
-                    <i class="icon-scheme_el_ledt"></i>
-                </div>
-                <div class="right">
-                    <p>Отдельная Wi-Fi зона<br><span>для посетителей</span><a href="#" class="info-button-2">!</a>
-                    </p>
-                    <div class="info-popup-2">
-                        <span>Скорость 100 Мбит/с </span><br>
-                        входит в абонентскую плату
-                    </div>
-
-                    <i class="icon-scheme_el_right"></i>
-                </div>
-                <img src="img/Scheme.png" alt="">
-            </div>
-
-            <div class="advantages">
-                <div>
-                    <span class="icon-work"></span>
-                    <p>Гарантированная доступность<br>интернета 99,98% времени</p>
-                </div>
-                <div>
-                    <span class="icon-market"></span>
-                    <p>Дополнительные маркетинговые<br>возможности для вашего бизнеса</p>
-                </div>
-                <div>
-                    <span class="icon-law"></span>
-                    <p>Wi-Fi в соответствии<br>с требованиями закона</p>
-                </div>
-            </div>
-            <button value="Modal 1" id="open-modal" class="open-modal">Подключить</button>
-        </div>
-    </section>
-    <section id="reliability">
-        <div class="container">
-            <h2>Обеспечиваем бесперебойное<br>интернет соединение</h2>
-            <ul>
-                <li>Устанавливаем оборудование компании Ruckus,<br>одного из лидеров на рынке Wi-Fi систем</li>
-                <li>Мониторинг сети и техническая поддержка в режиме 24/7</li>
-                <li>Возвращаем деньги в случае недоступности сети</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="features" class="features">
-        <div class="container foo">
-            <h2>Маркетинговые возможности<span>*</span></h2>
-            <div class="features-content">
-                <div class="features-content-col buttons">
-                    <div data-features-nav class="features-graph">
-                        <div class="button-holder">
-                            <div>
-                                <span>Брендированное окно<br> авторизации гостей</span>
-                                <a href="#feature-1" class="icon-features- btn-with-icon __active icon-adv1"></a>
-                            </div>
-                            <div>
-                            <span>Акции на стартовой<br>
-странице</span>
-                                <a href="#feature-2" class="icon-features- btn-with-icon icon-adv2"></a>
-                            </div>
-                            <div>
-                                <span>Изменение название сети<br> вайфай в трее телефона</span>
-                                <a href="#feature-3" class="icon-features- btn-with-icon icon-adv3"></a>
-                            </div>
-                            <div>
-                            <span>Расширенная аналитика<br>
-по Wi-Fi зонам</span>
-                                <a href="#feature-4" class="icon-features- btn-with-icon icon-adv4"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="img-slide">
-                    <div class="phone">
-                        <div class="screens" data-features-screens>
-                            <img src="img/screen1.jpg" alt="" class="first __active" id="feature-1">
-                            <img src="img/screen2.jpg" alt="" class="second" id="feature-2">
-                            <img src="img/screen3.jpg" alt="" class="third" id="feature-3">
-                            <img src="img/screen4.jpg" alt="" class="fourth" id="feature-4">
-                        </div>
-                    </div>
-                </div>
-                <div data-features-tabs class="features-content-col texts">
-                    <div id="feature-1" class="features-textblock animated fadeIn __active">
-                        <p>Ваша компания — серьёзная и престижная организация, где в каждой детали забота о сотрудниках
-                            и клиентах.</p>
-                    </div>
-                    <div id="feature-2" class="features-textblock animated fadeIn">
-                        <p>Демонстрируйте уникальные предложения и скидки посетителям заведения и увеличивайте
-                            клиентопоток</p>
-                    </div>
-                    <div id="feature-3" class="features-textblock animated fadeIn">
-                        <p>Повышайте узнаваемость вашего бренда. При поиске доступных сетей Wi-Fi пользователи будут
-                            видеть брендированное название сети. </p>
-                    </div>
-                    <div id="feature-4" class="features-textblock animated fadeIn loup">
-                        <img src="img/loup4.png" alt="">
-                        <p>Собирайте детальную статистику по пользователям и общему количеству подключений в рамках
-                            выбранной Wi-Fi локации посетителей.</p>
-                    </div>
-                </div>
-
-
-            </div>
-            <p>
-                <span class="red">*</span>Дополнительные услуги. Подключение каждой + 1000 <span
-                    class="icon-rub"></span>/мес АП,<br>
-                если АП клиента на одном адресе < 1000 <span class="icon-rub"></span>/мес
-            </p>
-
-        </div>
-    </section>
-
-    <section id="ident">
-        <div class="container">
-            <div class="wrap">
-                <h2>Идентификация пользователей<br>по законодательству</h2>
-                <p>Согласно требованиям Постановлений Правительства РФ <a href="">№758</a> и <a href="">№801</a> доступ
-                    в
-                    Интернет через публичные Wi-Fi-точки требует обязательной идентификации. </p>
-                <span>Удобная идентификация пользователей:</span>
-                <ul>
-                    <li>Бесплатная SMS-авторизация</li>
-                    <li>Сквозная авторизация во всей сети Wi-Fi Дом.ru Бизнес</li>
-                    <li>Возможность войти в сеть, как абонент домашнего интернета Дом.ru на скорости своего тарифного
-                        плана
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </section>
-    <section id="offers">
-        <div class="container">
-            <h2>Пакеты услуг</h2>
-            <table class="zebra">
-                <thead>
-                <tr class="fake-top">
-                    <th></th>
-                    <th></th>
-                    <th class="active">
-                        <div>ХИТ</div>
-                    </th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th class="left"></th>
-                    <th>Интернет для сотрудников</th>
-                    <th>Интернет для сотрудников<br>+Wi-Fi для клиентов</th>
-                    <th>Интернет для сотрудников<br>+ Wi-Fi для клиентов<br>+ Видеонаблюдение</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="left"><span class="icon-Speed"></span>
-                        <p>Скорость доступа</p></td>
-                    <td>2 Мбит/с</td>
-                    <td>2 Мбит/с</td>
-                    <td>2 Мбит/с</td>
-                </tr>
-                <tr>
-                    <td class="left"><span class="icon-poddershka"></span>
-                        <p>Круглосуточный мониторинг
-                            и тех. поддержка 24/7</p></td>
-                    <td><span class="icon-fa-check"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                </tr>
-                <tr>
-                    <td class="left"><span class="icon-ident"></span>
-                        <p>Бесплатная SMS-авторизация</p></td>
-                    <td><span class="icon-fa-times"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                </tr>
-                <tr>
-                    <td class="left"><span class="icon-autorization"></span>
-                        <p>Сквозная авторизация</p></td>
-                    <td><span class="icon-fa-times"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                </tr>
-                <tr>
-                    <td class="left"><span class="icon-pereodres"></span>
-                        <p>Переадресация на страницу авторизации</p></td>
-                    <td><span class="icon-fa-times"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                </tr>
-                <tr>
-                    <td class="left"><span class="icon-video"></span>
-                        <p>Видеоаналитика</p></td>
-                    <td><span class="icon-fa-times"></span></td>
-                    <td><span class="icon-fa-times"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                </tr>
-                <tr>
-                    <td class="left"><span class="icon-cloud"></span>
-                        <p>Хранение записи с камер на защищенном облачном хранилище Дом.ru Бизнес</p></td>
-                    <td><span class="icon-fa-times"></span></td>
-                    <td><span class="icon-fa-times"></span></td>
-                    <td><span class="icon-fa-check"></span></td>
-                </tr>
-                <tr>
-                    <td class="left b-none"></td>
-                    <td class="green" colspan="3">Оборудование и подключение входит в стоимость услуги</td>
-                </tr>
-                <tr class="prices">
-                    <td class="left b-none"></td>
-                    <td class="b-none">от <span class="price">1 500</span> <span class="icon-rub"></span>/мес</td>
-                    <td class="b-none">от <span class="price">2 300</span> <span class="icon-rub"></span>/мес</td>
-                    <td class="b-none">от <span class="price">3 250</span> <span class="icon-rub"></span>/мес</td>
-                </tr>
-                <tr class="sale">
-                    <td class="left b-none"></td>
-                    <td class="b-none"></td>
-                    <td class="b-none">Сэкономьте <span>14%</span><a href="" class="info-button-3">?</a>
-                        <div class="info-popup-3">
-                            <span>Скорость до 300 Мбит/с</span><br>
-                            входит в абонентскую плату
-                        </div>
-                    </td>
-                    <td class="b-none">Сэкономьте <span>21%</span><a href="" class="info-button-4">?</a>
-                        <div class="info-popup-4">
-                            <span>Скорость до 300 Мбит/с</span><br>
-                            входит в абонентскую плату
-                        </div>
-                    </td>
-                </tr>
-                <tr class="buttons">
-                    <td class="left b-none"></td>
-                    <td>
-                        <button value="Modal 1" id="open-modal" class="open-modal">Подключить</button>
-                    </td>
-                    <td>
-                        <button value="Modal 1" id="open-modal" class="open-modal">Подключить</button>
-                    </td>
-                    <td>
-                        <button value="Modal 1" id="open-modal" class="open-modal">Подключить</button>
-                    </td>
-                </tr>
-                <tr class="fake-bottom">
-                    <td></td>
-                    <td></td>
-                    <td class="active"></td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <section id="b2b">
-        <div class="container">
-            <h2>Бренд Дом.ru Бизнес </h2>
-            <p>Дом.ru Бизнес — бренд компании «ЭР-Телеком Холдинг»<br>для оказания услуг связи корпоративным
-                клиентам.<br>В Санкт-Петербурге Дом.ru Бизнес работает с 2012 года.</p>
-        </div>
-    </section>
-    <section id="partners">
-        <div class="container">
-            <h2>Присоединяйтесь к числу наших клинетов</h2>
-            <div class="owl-carousel owl-theme">
-                <div class="item"><img src="img/bank_jugra.png" alt=""></div>
-                <div class="item"><img src="img/azbuka.png" alt=""></div>
-                <div class="item"><img src="img/Layer5.png" alt=""></div>
-                <div class="item"><img src="img/dostavevskiy.png" alt=""></div>
-                <div class="item"><img src="img/magnit.png" alt=""></div>
-                <div class="item"><img src="img/Koreana.png" alt=""></div>
-                <div class="item"><img src="img/polushka.png" alt=""></div>
-                <div class="item"><img src="img/spectr.png" alt=""></div>
-                <div class="item"><img src="img/smile.png" alt=""></div>
-                <div class="item"><img src="img/shtole.png" alt=""></div>
-                <div class="item"><img src="img/sushishop.png" alt=""></div>
-                <div class="item"><img src="img/sushiwok.png" alt=""></div>
-            </div>
-        </div>
-    </section>
-
-</main>
-<footer>
-    <div class="container">
-        <p>
-            © АО «ЭР-Телеком Холдинг» 2011—2017<br>
-            Фактический адрес: БЦ «Петровский Форт», Финляндский пр., д. 4A, Санкт-Петербург
-        </p>
-        <div>
-            <a href="tel:88003339000">8 800 333-90-00</a>
-            звонок бесплатный
-        </div>
-    </div>
-</footer>
+        if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+            document.location.href = MOBILE_SITE;
+        } else {
+            document.location.href = DESCTOP_SITE;
+        }
+    })();
+</script>
 </body>
 </html>

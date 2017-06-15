@@ -67,7 +67,11 @@ header {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end;
       padding: 10px;
       text-align: center;
@@ -80,7 +84,11 @@ header {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
       justify-content: flex-end; }
       header #first .middle span {
         font-size: 16px;
@@ -158,14 +166,26 @@ header {
         left: 0px; }
   #opportunities .advantages {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 10px;
     text-align: left; }
     #opportunities .advantages > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       flex-direction: row;
       color: #333333;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
       align-items: flex-start; }
       #opportunities .advantages > div div {
         margin-bottom: 30px; }
@@ -252,14 +272,24 @@ header {
       #features .container > p .icon-rub {
         font-size: 11px; }
     #features .container > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
       #features .container > div span {
         color: #55ac62;
         min-width: 32px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         font-size: 30px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-right: 10px; }
         #features .container > div span.icon-adv2 {
