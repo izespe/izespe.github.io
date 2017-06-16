@@ -355,8 +355,8 @@ header {
         &.icon-adv3 {
           font-size: 28px;
         }
-        &.icon-adv4 {
-          font-size: 32px;
+        &.icon-graphic {
+          font-size: 34px;
         }
       }
     }
@@ -610,4 +610,7 @@ footer{
       border: 1px solid #ffdd00;
     }
   }
+}
+.icon-graphic{
+  font-size: 40px;
 }
