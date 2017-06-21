@@ -589,9 +589,9 @@ footer .container {
         font-size: 28px;
         top: -5px;
         left: 2px; }
-      #offers table.zebra td.left .icon-cloud {
-        top: -22px;
-        font-size: 22px; }
+      #offers table.zebra td.left .icon-lock {
+        top: -17px;
+        font-size: 30px; }
     #offers table.zebra td .price {
       font-size: 36px; }
     #offers table.zebra td .icon-rub {
@@ -759,8 +759,7 @@ footer .container {
         margin-right: 87px; }
       #features .features-graph .btn-with-icon.icon-graphic {
         margin-right: 2%;
-        font-size: 40px;
-      }
+        font-size: 40px; }
     #features .features-graph .sq-bt-label {
       letter-spacing: 0;
       color: #656b6f;
@@ -1232,6 +1231,5 @@ footer {
 
   #ident {
     background: #f4f4f6; } }
-
 
 /*# sourceMappingURL=main.css.map */
