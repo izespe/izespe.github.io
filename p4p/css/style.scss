@@ -19,6 +19,8 @@
   font-weight: 800;
 }
 
+@import url(../fonts/icomoon/style.css);
+
 /*--------------------COLORS----------------------*/
 $gray: #393939;
 $gold: #bc9d71;
@@ -29,11 +31,16 @@ $gold: #bc9d71;
   height: 100%;
 }
 
+.container{
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: PTSansRegular;
   font-size: 16px;
   color: $gray;
+  line-height: 1.3;
   .overlay-active {
     width: 100%;
     height: 100%;
@@ -1004,3 +1011,5 @@ main {
 
   }
 }
+
+@import "dmve";

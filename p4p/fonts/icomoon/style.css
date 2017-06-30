@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?33ife');
+  src:  url('fonts/icomoon.eot?33ife#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?33ife') format('truetype'),
+    url('fonts/icomoon.woff?33ife') format('woff'),
+    url('fonts/icomoon.svg?33ife#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-i-_3d:before {
+  content: "\e919";
+}
+.icon-i-_ar-left:before {
+  content: "\e91a";
+}
+.icon-i-_ar-right:before {
+  content: "\e91b";
+}
+.icon-i-_hotel:before {
+  content: "\e91c";
+}
+.icon-i-_massage:before {
+  content: "\e91d";
+}
+.icon-i-_restaurant:before {
+  content: "\e91e";
+}
+.icon-i-_sauna:before {
+  content: "\e91f";
+}
+.icon-i-_spa:before {
+  content: "\e920";
+}
+.icon-icon_facebook:before {
+  content: "\e910";
+}
+.icon-icon_inst:before {
+  content: "\e911";
+}
+.icon-icon_trip:before {
+  content: "\e912";
+}
+.icon-icon_vk:before {
+  content: "\e915";
+}
+.icon-play_play:before {
+  content: "\e916";
+}
+.icon-logo:before {
+  content: "\e913";
+}
+.icon-i_ar-l:before {
+  content: "\e90d";
+}
+.icon-i_ar-r:before {
+  content: "\e90e";
+}
+.icon-i_booked:before {
+  content: "\e90f";
+}
+.icon-arr_l:before {
+  content: "\e90b";
+}
+.icon-arr_r:before {
+  content: "\e90c";
+}
+.icon-rotate:before {
+  content: "\e90a";
+}
+.icon-nav-ar-down2:before {
+  content: "\e900";
+}
+.icon-i_arrow2:before {
+  content: "\e901";
+}
+.icon-card:before {
+  content: "\e902";
+}
+.icon-close:before {
+  content: "\e903";
+}
+.icon-nav-ar-down:before {
+  content: "\e904";
+}
+.icon-i_logo:before {
+  content: "\e905";
+}
+.icon-money:before {
+  content: "\e906";
+}
+.icon-more:before {
+  content: "\e907";
+}
+.icon-ar-check:before {
+  content: "\e908";
+}
+.icon-pdf:before {
+  content: "\e909";
+}
+.icon-pointer:before {
+  content: "\e914";
+}
+.icon-ya:before {
+  content: "\e917";
+}
+.icon-i_letter:before {
+  content: "\e918";
+}
+

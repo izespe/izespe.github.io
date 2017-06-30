@@ -35,9 +35,28 @@ $(function () {
 $(document).ready(function () {
     $('.menutoggle, .menumobile>a').click(function () {
         $('.menumobile').toggleClass("menuoff");
-        $("html,body").toggleClass("noscroll");
+        $("html,body").addClass("noscroll");
         $('.overlay').toggleClass("overlay-active");
     });
+
+    $('.services-toggle, .menu-services>a, .back-to-menu').click(function () {
+        $('.menu-services').toggleClass("menuoff1");
+        $("html,body").addClass("noscroll");
+      });
+    $('.menu-services>a, .overlay').click(function () {
+        $('.overlay').toggleClass("overlay-active");
+    });
+
+    $('.close-menu, .overlay').click(function () {
+        $('.menu-services').addClass("menuoff1");
+        $('.menumobile').addClass("menuoff");
+        $("html,body").removeClass("noscroll");
+        $('.overlay').removeClass("overlay-active");
+    });
+
+
+
+
 
     $('.banktoggle, .bankmobile>a').click(function () {
         $('.bankmobile').toggleClass("menuoff");
