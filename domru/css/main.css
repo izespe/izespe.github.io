@@ -44,19 +44,20 @@ footer {
     border-bottom: none; }
 
 button {
-  border-radius: 29px;
-  background-color: #ffdd00;
-  -webkit-box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
-  box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
   width: 260px;
   height: 58px;
   border: none;
   font-size: 20px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  font-family: "Conv_FedraSansAltPro-MediumTF"; }
+  font-family: "Conv_FedraSansAltPro-MediumTF";
+  border-radius: 3px;
+  background-color: #fd0;
+  box-shadow: 0 3px 0 0 #fda609;
+  font-weight: 400;
+  color: #333333; }
   button:hover {
-    background-color: #ffe74c; }
+    background-color: #ffe74f; }
 
 header {
   height: 790px;
@@ -212,11 +213,11 @@ footer .container {
         width: 18px;
         height: 18px;
         border-radius: 100%;
-        background: #ffdd00;
+        background: #6e6e6e;
         display: inline-block;
         margin-left: 6px;
         text-decoration: none;
-        color: #333333;
+        color: white;
         position: absolute;
         top: 44px;
         font-family: "Conv_FedraSansAltPro-MediumTF";
@@ -236,16 +237,16 @@ footer .container {
           -webkit-box-sizing: border-box;
           box-sizing: border-box; }
     #opportunities .wrap .left {
-      left: 67px;
-      top: 33px; }
+      left: 81px;
+      top: 13px; }
       #opportunities .wrap .left i {
         right: -43px; }
         #opportunities .wrap .left i:after {
           left: -16px;
           top: -4px; }
     #opportunities .wrap .right {
-      right: 125px;
-      top: 30px; }
+      right: -31px;
+      top: 13px; }
       #opportunities .wrap .right i {
         left: -47px; }
         #opportunities .wrap .right i:after {
@@ -277,7 +278,7 @@ footer .container {
       width: 78px;
       height: 78px;
       color: #333333;
-      border: 4px solid #ffdd00;
+      background: #ffdd00;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -623,8 +624,6 @@ footer .container {
   #features h2 {
     font-size: 38px;
     margin-bottom: 22px; }
-    #features h2 span {
-      color: #ec1c24; }
   #features .container {
     padding: 85px 0 55px;
     display: -webkit-box;
@@ -641,7 +640,8 @@ footer .container {
       position: absolute;
       bottom: 50px;
       left: calc( 50% - 257px);
-      margin: 0; }
+      margin: 0;
+      width: 514px; }
       #features .container > p .red {
         color: #ec1c24; }
       #features .container > p .icon-rub {
@@ -1045,7 +1045,15 @@ footer {
     background: url(../img/back_identify.jpg) 35% center no-repeat transparent; }
 
   #reliability {
-    background: url(../img/back_service.jpg) 90% center no-repeat transparent; } }
+    background: url(../img/back_service.jpg) 90% center no-repeat transparent; }
+
+  #opportunities .wrap .left {
+    left: 43px;
+    top: 13px; }
+
+  #opportunities .wrap .right {
+    right: -60px;
+    top: 13px; } }
 @media (max-width: 1367px) {
   #ident {
     background: url(../img/back_identify.jpg) 40% center no-repeat transparent; }
@@ -1103,7 +1111,11 @@ footer {
     display: none; }
 
   #features .features-content .features-content-col {
-    width: calc(100% - 461px); } }
+    width: calc(100% - 461px); }
+
+  #opportunities .wrap .right {
+    right: 0px;
+    top: -20px; } }
 @media (max-width: 1024px) {
   #ident {
     background: url(../img/back_identify.jpg) 49% center no-repeat transparent;
@@ -1150,16 +1162,16 @@ footer {
     width: 90%;
     margin-top: 80px; }
 
-  #opportunities .wrap .right {
-    right: 125px;
-    top: 90px; }
-
   #opportunities .wrap {
     margin: 10px 0 60px; }
 
   header {
     height: 700px;
-    background-size: cover; } }
+    background-size: cover; }
+
+  #opportunities .wrap .right {
+    right: 9px;
+    top: 20px; } }
 @media (max-width: 768px) {
   section, footer {
     min-width: initial; }
@@ -1183,9 +1195,11 @@ footer {
   #offers table.zebra td {
     width: 33.33%; }
 
-  #offers table.zebra td:nth-child(2), #offers table.zebra th:nth-child(2) {
-    display: none; }
-
+  /*
+  #offers table.zebra td:nth-child(2),#offers table.zebra th:nth-child(2) {
+    display: none;
+  }
+  */
   #offers table.zebra td:nth-child(even) {
     width: 33.33%; }
 
@@ -1199,7 +1213,7 @@ footer {
     margin-right: 0 !important; }
 
   #features .features-content .img-slide {
-    right: -45px; }
+    right: -25px; }
 
   #features .features-content .buttons {
     position: absolute;

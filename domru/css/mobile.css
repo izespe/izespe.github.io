@@ -3,17 +3,18 @@
 @import url(normalize.css);
 button {
   margin: 0 auto;
-  border-radius: 29px;
-  background-color: #ffdd00;
-  -webkit-box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
-  box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
   width: 178px;
   height: 48px;
   border: none;
   font-size: 16px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  font-family: "Conv_FedraSansAltPro-MediumTF"; }
+  font-family: "Conv_FedraSansAltPro-MediumTF";
+  border-radius: 3px;
+  background-color: #fd0;
+  box-shadow: 0 3px 0 0 #fda609;
+  font-weight: 400;
+  color: #333333; }
   button:hover {
     background-color: #ffe74c; }
 
@@ -54,9 +55,8 @@ header {
           text-decoration: none; }
   header #first {
     border-bottom: 1px solid #e9e9e9;
-    background: url(../img/back_header_mobile.jpg) top center no-repeat #f0ebe4;
-    background-size: cover;
-    height: 430px; }
+    height: 430px;
+    background: #f5f6f8; }
     header #first .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -74,6 +74,11 @@ header {
       padding: 10px;
       text-align: center;
       height: 100%; }
+    header #first .img {
+      background: url(../img/back_header.jpg) right 56% no-repeat transparent;
+      background-size: 133%;
+      height: 125px;
+      width: 100%; }
     header #first .middle {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -183,21 +188,17 @@ header {
       -ms-flex-direction: row;
       flex-direction: row;
       color: #333333;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start; }
-      #opportunities .advantages > div div {
-        margin-bottom: 30px; }
+      align-items: center;
+      margin-bottom: 30px; }
     #opportunities .advantages p {
       font-size: 16px;
       margin: 0; }
     #opportunities .advantages span {
       min-width: 48px;
-      margin-right: 10px;
-      margin-top: 3px;
+      margin-right: 15px;
       height: 48px;
       color: #333333;
-      border: 4px solid #ffdd00;
+      background: #ffdd00;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -296,7 +297,7 @@ header {
         #features .container > div span.icon-adv3 {
           font-size: 28px; }
         #features .container > div span.icon-graphic {
-          font-size: 34px; }
+          font-size: 37px; }
 
 #ident {
   border-bottom: 1px solid #e9e9e9; }
@@ -498,8 +499,5 @@ footer .container {
       font-family: "Conv_FedraSansAltPro-BookTF" !important; }
     .modal-content input:focus {
       border: 1px solid #ffdd00; }
-
-.icon-graphic {
-  font-size: 40px; }
 
 /*# sourceMappingURL=mobile.css.map */

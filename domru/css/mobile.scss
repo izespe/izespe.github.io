@@ -11,10 +11,6 @@ $light-green: #eef7ef;
 
 button {
   margin: 0 auto;
-  border-radius: 29px;
-  background-color: $yellow;
-  -webkit-box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
-  box-shadow: 0px 6px 10px 0px rgba(250, 213, 0, 0.25);
   width: 178px;
   height: 48px;
   border: none;
@@ -22,6 +18,11 @@ button {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-family: "Conv_FedraSansAltPro-MediumTF";
+  border-radius: 3px;
+  background-color: #fd0;
+  box-shadow: 0 3px 0 0 #fda609;
+  font-weight: 400;
+  color: #333333;
   &:hover {
     background-color: #ffe74c;
   }
@@ -75,9 +76,8 @@ header {
 
   #first {
     border-bottom: 1px solid #e9e9e9;
-    background: url(../img/back_header_mobile.jpg) top center no-repeat #f0ebe4;
-    background-size: cover;
     height: 430px;
+    background: #f5f6f8;
     .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -95,6 +95,12 @@ header {
       padding: 10px;
       text-align: center;
       height: 100%;
+    }
+    .img {
+      background: url(../img/back_header.jpg) right 56% no-repeat transparent;
+      background-size: 133%;
+      height: 125px;
+      width: 100%;
     }
     .middle {
       display: -webkit-box;
@@ -221,12 +227,8 @@ header {
       -ms-flex-direction: row;
       flex-direction: row;
       color: $dark-gray;
-      -webkit-box-align: start;
-      -ms-flex-align: start;
-      align-items: flex-start;
-      div {
-        margin-bottom: 30px;
-      }
+      align-items: center;
+      margin-bottom: 30px;
     }
     p {
       font-size: 16px;
@@ -234,11 +236,10 @@ header {
     }
     span {
       min-width: 48px;
-      margin-right: 10px;
-      margin-top: 3px;
+      margin-right: 15px;
       height: 48px;
       color: $dark-gray;
-      border: 4px solid $yellow;
+      background: $yellow;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -356,7 +357,7 @@ header {
           font-size: 28px;
         }
         &.icon-graphic {
-          font-size: 34px;
+          font-size: 37px;
         }
       }
     }
@@ -610,7 +611,4 @@ footer{
       border: 1px solid #ffdd00;
     }
   }
-}
-.icon-graphic{
-  font-size: 40px;
 }
