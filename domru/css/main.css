@@ -999,6 +999,45 @@ footer {
     .modal-content input:focus {
       border: 1px solid #ffdd00; }
 
+.modal-content-good {
+  outline: red;
+  margin: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .modal-content-good .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .modal-content-good span {
+    font-size: 28px;
+    font-family: "Conv_FedraSansAltPro-MediumTF";
+    display: inline-block;
+    margin: 20px 0 5px; }
+  .modal-content-good p {
+    font-size: 16px;
+    margin: 0 0 60px; }
+  .modal-content-good .remodal-close:before {
+    font-family: icomoon !important;
+    font-size: 25px;
+    line-height: 35px;
+    content: "\e900";
+    text-align: center; }
+
 .info-popup-1, .info-popup-2, .info-popup-3, .info-popup-4 {
   background-color: white;
   pointer-events: none;

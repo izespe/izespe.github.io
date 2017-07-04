@@ -58,9 +58,13 @@ $(document).ready(function () {
     $('#modal-content').apFullscreenModal({
         openSelector: '.open-modal',
         backgroundColor: '#fafafa',
+        closeSelector: '.close-modal, #send, #open-modal-good'
+    });
+    $('#modal-content-good').apFullscreenModal({
+        openSelector: '.open-modal-good',
+        backgroundColor: '#fafafa',
         closeSelector: '.close-modal, #send'
     });
-
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,

@@ -612,3 +612,65 @@ footer{
     }
   }
 }
+
+.modal-content-good {
+  outline: red;
+  margin: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px;
+  overflow: hidden;
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  img{
+    width: 70%;
+  }
+  span {
+    font-size: 18px;
+    font-family: "Conv_FedraSansAltPro-MediumTF";
+    display: inline-block;
+    margin: 20px 0 5px;
+  }
+  p {
+    font-size: 16px;
+    margin: 0 0 60px;
+  }
+  button {
+    &.remodal-close {
+      margin-top: 0;
+      margin-bottom: 120px;
+      left: initial;
+      right: 60px;
+      top: 60px;
+      background: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+  .remodal-close:before {
+    font-family: icomoon !important;
+    font-size: 18px;
+    line-height: 26px;
+    content: "\e900";
+    text-align: center;
+  }
+
+}
