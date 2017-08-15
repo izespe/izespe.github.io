@@ -1,0 +1,747 @@
+@import "fonts/icomoon/style.css";
+
+.basket {
+  max-width: 1420px;
+  margin: 0 auto;
+  h1 {
+    font-size: 36px;
+    color: white;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #595959;
+    margin-bottom: 0;
+  }
+  .back {
+    .icon-back {
+      font-size: 13px;
+      margin-right: 5px;
+    }
+    color: white;
+  }
+
+  .items {
+    .item {
+      width: 100%;
+      display: flex;
+      border-bottom: 1px solid #595959;
+      padding: 20px 0 25px;
+    }
+    .title {
+      width: 40%;
+      img {
+        float: left;
+        max-width: 105px;
+      }
+      p {
+        float: left;
+        margin-left: 15px;
+        color: white;
+        font-size: 16px;
+        span {
+          color: #999999;
+        }
+      }
+    }
+    .color {
+      width: 15%;
+      > .line {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 15px;
+      }
+      .color-item {
+        float: left;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #9d9d9d;
+        background: white;
+        margin-right: 5px;
+      }
+      span {
+        float: left;
+        line-height: 40px;
+        color: #707070;
+      }
+      a {
+        line-height: 40px;
+        margin: 0;
+        margin-left: 10px;
+        &.icon-edit {
+          font-size: 18px;
+        }
+        .icon-add {
+          font-size: 18px;
+        }
+      }
+    }
+    .size {
+      width: 25%;
+      input {
+        width: 40px;
+        float: left;
+        margin-right: 5px;
+        height: 40px;
+      }
+      > .line {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 15px;
+        float: left;
+      }
+      span {
+        float: left;
+        line-height: 40px;
+        color: #707070;
+      }
+      a {
+        line-height: 40px;
+        margin: 0;
+        margin-left: 10px;
+        &.icon-edit {
+          font-size: 18px;
+        }
+        .icon-add {
+          font-size: 18px;
+        }
+      }
+    }
+    .pieces {
+      width: 15%;
+      input, a {
+        width: 40px;
+        float: left;
+        margin-right: 4px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        border: 1px solid #9d9d9d;
+      }
+      span {
+        line-height: 40px;
+        margin-left: 15px;
+        color: white;
+      }
+
+    }
+    .delete {
+      width: 5%;
+      height: 40px;
+      a {
+        float: right;
+        line-height: 40px;
+        text-decoration: none;
+        font-size: 26px;
+      }
+    }
+  }
+
+  .wrap-form {
+    width: 100%;
+    padding-top: 50px;
+    .fdbck {
+      float: right;
+      padding: 0;
+      h2 {
+        margin-bottom: 20px;
+      }
+      .large-6 {
+        padding-right: 0;
+      }
+      input {
+        width: 95%;
+      }
+      #fdbck-get {
+        width: 60%;
+      }
+    }
+  }
+
+}
+
+.cards {
+  max-width: 1420px;
+  margin: 0 auto;
+  .card {
+    border-bottom: 1px solid white;
+    display: flex;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+  .back {
+    .icon-back {
+      font-size: 13px;
+      margin-right: 5px;
+    }
+    color: white;
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+
+  .gallery {
+    max-width: 55%;
+    display: block;
+    float: left;
+    padding-left: 120px;
+    padding-right: 80px;
+    .owl-carousel {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+
+      .owl-stage-outer {
+        width: 100%;
+
+      }
+      .owl-nav [class*=owl-] {
+        background: transparent;
+      }
+      .owl-nav {
+        width: 100%;
+        padding: 0 2%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        position: absolute;
+        top: 45%;
+        pointer-events: none;
+        > div {
+          pointer-events: all;
+        }
+        span {
+          color: black;
+          opacity: 0.6;
+          font-size: 24px;
+        }
+      }
+      .owl-nav [class*=owl-]:hover {
+        background: transparent;
+        color: #FFF;
+        text-decoration: none;
+      }
+      .owl-dots {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        position: absolute;
+        left: -120px;
+        top: 0;
+        margin: 0;
+      }
+    }
+
+    /*SEE END OF THUMBNAIL FUCNTION TO TINKER SIZE OF THUMBS*/
+    .owl-carousel .owl-controls .owl-dot {
+      float: left;
+      margin-top: 10px;
+
+    }
+
+    .owl-carousel .owl-dot {
+      float: left;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      width: 100% !important;
+      height: 148px !important;
+      background-size: cover;
+      margin-bottom: 10px;
+      border: 3px solid #DADADA;
+      transition: all 0.5s;
+      &.active {
+        border-color: #646363;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+  .info {
+    width: 45%;
+    float: left;
+    p {
+      font-size: 17px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: white;
+      margin: 0 0 20px;
+    }
+    .item-info {
+      margin: 0 0 20px;
+      p {
+        font-size: 12px;
+        margin: 0 0 10px;
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+    .button {
+      text-transform: uppercase;
+      padding-right: 40px;
+      padding-left: 40px;
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+
+    .accordion {
+      max-width: 560px;
+      border-top: 1px solid #d9e5e8;
+      margin: 40px 0 20px;
+      padding: 0;
+
+      li {
+        position: relative;
+        list-style-type: none;
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+          text-transform: none;
+          display: none;
+          padding: 5px 5px 5px 0;
+        }
+      }
+      a {
+        width: 100%;
+        display: block;
+        cursor: pointer;
+        font-weight: 600;
+        line-height: 3;
+        user-select: none;
+        text-transform: uppercase;
+        color: white;
+        &:after {
+          border-right: 1px solid white;
+          border-bottom: 1px solid white;
+          position: absolute;
+          right: 10px;
+          width: 10px;
+          height: 10px;
+          content: " ";
+          top: 20px;
+          transform: rotate(225deg);
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      p {
+        line-height: 2;
+        padding: 10px;
+      }
+
+    }
+    .text {
+      color: white;
+
+      span {
+        font-size: 18px;
+        margin-top: 10px;
+        display: inline-block;
+      }
+      p {
+        text-transform: none;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 10px;
+      }
+    }
+    a.active:after {
+      top: 15px;
+      transform: rotate(45deg);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .color-item {
+      width: 160px;
+      height: 80px;
+      border: 2px solid #9d9d9d;
+      background: black;
+      margin: 0 0 10px;
+    }
+    .size-item {
+      margin: 0 0 5px;
+      p {
+        display: inline-block;
+        min-width: 65px;
+      }
+      form {
+        position: relative;
+        display: inline-block;
+      }
+      input {
+        display: none;
+      }
+      input:checked + label {
+        border: solid 1px white;
+        color: white;
+        font-weight: 700;
+      }
+      label {
+        cursor: pointer;
+        display: inline-block;
+        border: solid 1px transparent;
+        margin: 0 2px 0 0;
+        font-size: 12px;
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        line-height: 20px;
+        box-sizing: border-box;
+        color: white;
+      }
+      label:last-child {
+        margin-right: 0;
+      }
+      label:hover {
+        background: rgba(225, 225, 225, .1);
+        border: solid 1px rgba(0, 0, 0, .15);
+      }
+
+      .color {
+        label {
+          width: 40px;
+          height: 40px;
+          &.gray {
+            background: #eeecec;
+          }
+          &.red {
+            background: #944990;
+          }
+          position: relative;
+
+        }
+        input:checked + label {
+          border: 2px solid #9d9d9d;
+        }
+        input:checked + label:before {
+          content: '✔';
+          width: 60%;
+          height: 60%;
+          left: 20%;
+          top: 20%;
+          background: white;
+          color: gray;
+          border-radius: 100%;
+          position: absolute;
+          font-weight: 700;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+      }
+    }
+    .pieces-item {
+      p {
+        display: inline-block;
+        min-width: 65px;
+      }
+      form {
+        position: relative;
+        display: inline-block;
+      }
+      input {
+        display: inline-block;
+        margin: 0 2px 0 0;
+        font-size: 12px;
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        line-height: 20px;
+        box-sizing: border-box;
+        color: white;
+        border: solid 1px white;
+        font-weight: 700;
+        padding: 0;
+        &:disabled {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .cards .info {
+    width: 41%;
+
+  }
+  .cards .gallery {
+    max-width: 59%;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .cards .info {
+    width: 50%;
+  }
+  .cards .gallery {
+    max-width: 55%;
+    padding-left: 100px;
+    padding-right: 40px;
+  }
+  .cards .gallery .owl-carousel .owl-dot {
+    height: 115px !important;
+  }
+  .cards .gallery .owl-carousel .owl-dots {
+    left: -100px;
+  }
+  .cards .gallery .owl-carousel .owl-dots {
+    width: 80px;
+  }
+  .basket {
+    .items {
+      .title {
+        width: 35%;
+      }
+      .color {
+        width: 15%;
+      }
+      .size {
+        width: 20%;
+      }
+      .pieces {
+        width: 20%;
+      }
+      .delete {
+        width: 10%;
+      }
+    }
+    .wrap-form .fdbck {
+      width: 65%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cards .gallery .owl-carousel .owl-dot {
+    width: initial !important;
+  }
+  .cards .gallery .owl-carousel .owl-dots {
+    display: none;
+  }
+  .cards .gallery {
+    padding-left: 0;
+  }
+  .cards .info {
+    width: 50%;
+  }
+  .cards .gallery {
+    max-width: 50%;
+  }
+  .basket .items .title {
+    width: auto;
+    padding-right: 17px;
+    p {
+      position: absolute;
+      left: 120px;
+    }
+  }
+  .basket {
+    .items {
+      .color {
+        width: 20%;
+        margin-top: 50px;
+      }
+      .size {
+        width: 20%;
+        margin-top: 50px;
+      }
+      .pieces {
+        width: 30%;
+        margin-top: 50px;
+      }
+      .delete {
+        width: 10%;
+        margin-top: 50px;
+        float: right;
+      }
+      .item {
+        position: relative;
+      }
+    }
+    .wrap-form .fdbck {
+      width: 65%;
+    }
+  }
+  .basket .wrap-form .fdbck {
+    width: 100%;
+  }
+  .cards .gallery .owl-carousel {
+    display: block;
+  }
+
+
+  .cards .gallery .owl-carousel .owl-dots {
+    width: initial;
+    position: relative;
+    left: initial;
+    top: initial;
+    margin: 0;
+  }
+
+  .cards .gallery .owl-carousel .owl-dot {
+    float: left;
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 100%;
+    background-size: cover;
+    border: 8px solid gray;
+    transition: all 0.5s;
+    background: #DADADA;
+    margin: 6px;
+  }
+
+  .cards .gallery .owl-carousel .owl-dots {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cards .gallery .owl-carousel .owl-dot.active {
+    border-color: white;
+  }
+
+}
+
+@media (max-width: 540px) {
+  .cards .gallery .owl-carousel .owl-dots {
+    display: block;
+  }
+  .cards .info {
+    width: 100%;
+
+  }
+  .cards .gallery {
+    max-width: 100%;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .cards .gallery .owl-carousel .owl-dots {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cards .card {
+    flex-wrap: wrap;
+  }
+
+  .basket {
+    .items {
+      position: relative;
+
+      .title {
+        width: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        p {
+          position: relative;
+          left: 0;
+          margin: 15px 0 0;
+        }
+      }
+
+      .color {
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        .color-item {
+          width: 32px;
+          height: 32px;
+        }
+        a, span {
+          line-height: 32px;
+        }
+      }
+      .size {
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        input {
+          width: 32px;
+          height: 32px;
+        }
+        a, span {
+          line-height: 32px;
+        }
+      }
+      .pieces {
+        width: 100%;
+        margin-top: 0;
+      }
+      .delete {
+        width: 10%;
+        margin-top: 0;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .item {
+        padding: 220px 0 5px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+    }
+    .wrap-form .fdbck {
+      width: 65%;
+    }
+
+  }
+  .basket .wrap-form .fdbck {
+    width: 100%;
+  }
+  .basket .wrap-form .fdbck .large-6 {
+    width: 100%;
+  }
+  .basket .wrap-form .fdbck {
+    input {
+      width: 100%;
+    }
+    textarea {
+      min-height: 100px;
+    }
+  }
+  .basket .wrap-form .fdbck .large-6 {
+    padding-right: 5px;
+
+  }
+  .basket .wrap-form .fdbck #fdbck-get {
+    width: 100%;
+  }
+  .basket h1 {
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  .container {
+    padding: 0 4%;
+  }
+  .basket .items .delete a {
+    font-size: 36px;
+  }
+  .basket .wrap-form {
+    padding-top: 10px;
+  }
+  .cards .info .button {
+    width: 100%;
+  }
+  .cards .info {
+    margin-top: 20px;
+  }
+}

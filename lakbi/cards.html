@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ie8.css" type="text/css">
+    <link rel="stylesheet" href="css/lakbi.css" type="text/css">
+    <link rel="stylesheet" href="css/style_dark.css">
+    <link rel="stylesheet" href="css/add-your.css" type="text/css">
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/dmve.css" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/plugins/foundation.reveal.min.js"></script>
+
+    <script src="https://cdn.rawgit.com/jackmoore/zoom/master/jquery.zoom.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+
+<div id="myModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <h2 id="modalTitle">Awesome. I have it.</h2>
+    <p class="lead">Your couch. It is mine.</p>
+    <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+<div class="reveal-modal-bg" style="display: none"></div>
+<div class="container cards">
+    <a href="" class="back"><span class="icon-back"></span>Продолжить покупки</a><br>
+    <div class="card">
+        <div class="gallery">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><span class='zoom'><img src="img/1.jpg"></span></div>
+                <div class="item"><span class='zoom'><img src="img/1.jpg"></span></div>
+                <div class="item"><span class='zoom'><img src="img/1.jpg"></span></div>
+                <div class="item"><span class='zoom'><img src="img/1.jpg"></span></div>
+            </div>
+        </div>
+        <script>
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                nav: true,
+                navText: ["<span class='icon-left'></span>", "<span class='icon-right'></span>"]
+            });
+
+            dotcount = 1;
+
+            jQuery('.owl-dot').each(function () {
+                jQuery(this).addClass('dotnumber' + dotcount);
+                jQuery(this).attr('data-info', dotcount);
+                dotcount = dotcount + 1;
+            });
+
+            // 2) ASSIGN EACH 'SLIDE' A NUMBER
+            slidecount = 1;
+
+            jQuery('.owl-item').not('.cloned').each(function () {
+                jQuery(this).addClass('slidenumber' + slidecount);
+                slidecount = slidecount + 1;
+            });
+
+            // SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
+            jQuery('.owl-dot').each(function () {
+
+                grab = jQuery(this).data('info');
+
+                slidegrab = jQuery('.slidenumber' + grab + ' img').attr('src');
+                console.log(slidegrab);
+
+                jQuery(this).css("background-image", "url(" + slidegrab + ")");
+
+            });
+
+            // THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
+            // TO MAKE IT ALL NEAT
+            amount = jQuery('.owl-dot').length;
+            gotowidth = 100 / amount;
+
+            jQuery('.owl-dot').css("width", gotowidth + "%");
+            newwidth = jQuery('.owl-dot').width();
+            jQuery('.owl-dot').css("height", newwidth + "px");
+
+
+            $('.zoom').zoom({
+                magnify: 1.2
+            });
+
+
+        </script>
+        <div class="info">
+            <p>Юбка <span>1156</span></p>
+            <div class="item-info">
+                <p>Цвет: <span>черный</span></p>
+
+                <div class="color-item"></div>
+                <div class="size-item">
+                    <p>Размер:</p>
+                    <form>
+                        <input type="checkbox" name="size" id="s42" value="s42" checked="checked"/>
+                        <label for="s42">42</label>
+                        <input type="checkbox" name="size" id="s44" value="s44"/>
+                        <label for="s44">44</label>
+                        <input type="checkbox" name="size" id="s46" value="s46"/>
+                        <label for="s46">46</label>
+                        <input type="checkbox" name="size" id="s48" value="s48" checked="checked"/>
+                        <label for="s48">48</label>
+                        <input type="checkbox" name="size" id="s50" value="s50"/>
+                        <label for="s50">50</label>
+                        <input type="checkbox" name="size" id="s52" value="s52"/>
+                        <label for="s52">52</label>
+                    </form>
+                </div>
+                <div class="pieces-item">
+
+                    <p>Кол-во:</p>
+                    <form>
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="item-info">
+                <p>Цвет: <span>черный</span></p>
+                <div class="color-item"></div>
+                <div class="size-item">
+
+                    <p>Размер:</p>
+                    <form>
+                        <input type="checkbox" name="size" id="s42" value="s42" checked="checked"/>
+                        <label for="s42">42</label>
+                        <input type="checkbox" name="size" id="s44" value="s44"/>
+                        <label for="s44">44</label>
+                        <input type="checkbox" name="size" id="s46" value="s46"/>
+                        <label for="s46">46</label>
+                        <input type="checkbox" name="size" id="s48" value="s48" checked="checked"/>
+                        <label for="s48">48</label>
+                        <input type="checkbox" name="size" id="s50" value="s50"/>
+                        <label for="s50">50</label>
+                        <input type="checkbox" name="size" id="s52" value="s52"/>
+                        <label for="s52">52</label>
+                    </form>
+                </div>
+                <div class="pieces-item">
+                    <p>Кол-во:</p>
+                    <form>
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="item-info">
+                <p>Цвет: <span>черный</span></p>
+                <div class="color-item"></div>
+                <div class="size-item">
+                    <p>Размер:</p>
+                    <form>
+                        <input type="checkbox" name="size" id="s42" value="s42" checked="checked"/>
+                        <label for="s42">42</label>
+                        <input type="checkbox" name="size" id="s44" value="s44"/>
+                        <label for="s44">44</label>
+                        <input type="checkbox" name="size" id="s46" value="s46"/>
+                        <label for="s46">46</label>
+                        <input type="checkbox" name="size" id="s48" value="s48" checked="checked"/>
+                        <label for="s48">48</label>
+                        <input type="checkbox" name="size" id="s50" value="s50"/>
+                        <label for="s50">50</label>
+                        <input type="checkbox" name="size" id="s52" value="s52"/>
+                        <label for="s52">52</label>
+                    </form>
+                </div>
+                <div class="pieces-item">
+                    <p>Кол-во:</p>
+                    <form>
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <button id="fdbck-get" class="button">В корзину</button>
+            <a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
+            <ul class="accordion">
+                <li>
+                    <a>Описание товара и состав</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsum, fuga, in,
+                        obcaecati magni ullam nobis voluptas fugiat tenetur voluptatum quas tempora maxime rerum neque
+                        deserunt suscipit provident cumque et mollitia ex aspernatur porro minus sapiente voluptatibus
+                        eos at perferendis repellat odit aliquid harum molestias ratione pariatur adipisci. Aliquid,
+                        iure.</p>
+                </li>
+            </ul> <!-- / accordion -->
+            <div class="text">
+                <span>ВОЗВРАТ ТОВАРА В МАГАЗИН</span>
+                <p>Вы можете вернуть товар в любой магазин Massimo Dutti, при условии, что он находится в той же стране,
+                    где вы совершили покупку.</p>
+                <p>Если вы выберете оплату наличными при доставке, то сможете возвратить заказ только в тот магазин,
+                    куда была осуществлена доставка.</p>
+                <p>Возврат возможен в течение 30 дней с даты покупки</p>
+
+                <span>БЕСПЛАТНЫЙ ВОЗВРАТ ИЗ ДОМА</span>
+                <p>Вы можете запросить возврат из дома в разделе «МОЯ УЧЕТНАЯ ЗАПИСЬ» (недоступно для «Доставки из
+                    магазина»).</p>
+                <p>Возврат возможен в течение 30 дней с даты покупки.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="gallery">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><span class='zoom'><img src="img/1.jpg"></span></div>
+
+            </div>
+        </div>
+        <script>
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                nav: true,
+                navText: ["<span class='icon-left'></span>", "<span class='icon-right'></span>"]
+
+            });
+
+
+                dotcount = 1;
+
+                jQuery('.owl-dot').each(function () {
+                    jQuery(this).addClass('dotnumber' + dotcount);
+                    jQuery(this).attr('data-info', dotcount);
+                    dotcount = dotcount + 1;
+                });
+
+                // 2) ASSIGN EACH 'SLIDE' A NUMBER
+                slidecount = 1;
+
+                jQuery('.owl-item').not('.cloned').each(function () {
+                    jQuery(this).addClass('slidenumber' + slidecount);
+                    slidecount = slidecount + 1;
+                });
+
+                // SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
+                jQuery('.owl-dot').each(function () {
+
+                    grab = jQuery(this).data('info');
+
+                    slidegrab = jQuery('.slidenumber' + grab + ' img').attr('src');
+                    console.log(slidegrab);
+
+                    jQuery(this).css("background-image", "url(" + slidegrab + ")");
+
+                });
+
+                // THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
+                // TO MAKE IT ALL NEAT
+                amount = jQuery('.owl-dot').length;
+                gotowidth = 100 / amount;
+
+                jQuery('.owl-dot').css("width", gotowidth + "%");
+                newwidth = jQuery('.owl-dot').width();
+                jQuery('.owl-dot').css("height", newwidth + "px");
+
+
+
+
+            $('.zoom').zoom({
+                magnify: 1.2
+            });
+
+
+        </script>
+        <div class="info">
+            <p>Юбка <span>1156</span></p>
+            <div class="item-info">
+                <p>Цвет: <span>черный</span></p>
+
+                <div class="color-item"></div>
+                <div class="size-item">
+                    <p>Размер:</p>
+                    <form>
+                        <input type="checkbox" name="size" id="s42" value="s42" checked="checked"/>
+                        <label for="s42">42</label>
+                        <input type="checkbox" name="size" id="s44" value="s44"/>
+                        <label for="s44">44</label>
+                        <input type="checkbox" name="size" id="s46" value="s46"/>
+                        <label for="s46">46</label>
+                        <input type="checkbox" name="size" id="s48" value="s48" checked="checked"/>
+                        <label for="s48">48</label>
+                        <input type="checkbox" name="size" id="s50" value="s50"/>
+                        <label for="s50">50</label>
+                        <input type="checkbox" name="size" id="s52" value="s52"/>
+                        <label for="s52">52</label>
+                    </form>
+                </div>
+                <div class="pieces-item">
+
+                    <p>Кол-во:</p>
+                    <form>
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="item-info">
+                <p>Цвет: <span>черный</span></p>
+                <div class="color-item"></div>
+                <div class="size-item">
+
+                    <p>Размер:</p>
+                    <form>
+                        <input type="checkbox" name="size" id="s42" value="s42" checked="checked"/>
+                        <label for="s42">42</label>
+                        <input type="checkbox" name="size" id="s44" value="s44"/>
+                        <label for="s44">44</label>
+                        <input type="checkbox" name="size" id="s46" value="s46"/>
+                        <label for="s46">46</label>
+                        <input type="checkbox" name="size" id="s48" value="s48" checked="checked"/>
+                        <label for="s48">48</label>
+                        <input type="checkbox" name="size" id="s50" value="s50"/>
+                        <label for="s50">50</label>
+                        <input type="checkbox" name="size" id="s52" value="s52"/>
+                        <label for="s52">52</label>
+                    </form>
+                </div>
+                <div class="pieces-item">
+                    <p>Кол-во:</p>
+                    <form>
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="item-info">
+                <p>Цвет: <span>черный</span></p>
+                <div class="color-item"></div>
+                <div class="size-item">
+                    <p>Размер:</p>
+                    <form>
+                        <input type="checkbox" name="size" id="s42" value="s42" checked="checked"/>
+                        <label for="s42">42</label>
+                        <input type="checkbox" name="size" id="s44" value="s44"/>
+                        <label for="s44">44</label>
+                        <input type="checkbox" name="size" id="s46" value="s46"/>
+                        <label for="s46">46</label>
+                        <input type="checkbox" name="size" id="s48" value="s48" checked="checked"/>
+                        <label for="s48">48</label>
+                        <input type="checkbox" name="size" id="s50" value="s50"/>
+                        <label for="s50">50</label>
+                        <input type="checkbox" name="size" id="s52" value="s52"/>
+                        <label for="s52">52</label>
+                    </form>
+                </div>
+                <div class="pieces-item">
+                    <p>Кол-во:</p>
+                    <form>
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                        <input type="text" name="pieces" value="1" disabled="disabled"/>
+
+                    </form>
+                </div>
+
+
+            </div>
+            <button id="fdbck-get" class="button">В корзину</button>
+            <a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
+            <ul class="accordion">
+                <li>
+                    <a>Описание товара и состав</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsum, fuga, in,
+                        obcaecati magni ullam nobis voluptas fugiat tenetur voluptatum quas tempora maxime rerum neque
+                        deserunt suscipit provident cumque et mollitia ex aspernatur porro minus sapiente voluptatibus
+                        eos at perferendis repellat odit aliquid harum molestias ratione pariatur adipisci. Aliquid,
+                        iure.</p>
+                </li>
+            </ul> <!-- / accordion -->
+            <div class="text">
+                <span>ВОЗВРАТ ТОВАРА В МАГАЗИН</span>
+                <p>Вы можете вернуть товар в любой магазин Massimo Dutti, при условии, что он находится в той же стране,
+                    где вы совершили покупку.</p>
+                <p>Если вы выберете оплату наличными при доставке, то сможете возвратить заказ только в тот магазин,
+                    куда была осуществлена доставка.</p>
+                <p>Возврат возможен в течение 30 дней с даты покупки</p>
+
+                <span>БЕСПЛАТНЫЙ ВОЗВРАТ ИЗ ДОМА</span>
+                <p>Вы можете запросить возврат из дома в разделе «МОЯ УЧЕТНАЯ ЗАПИСЬ» (недоступно для «Доставки из
+                    магазина»).</p>
+                <p>Возврат возможен в течение 30 дней с даты покупки.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    $(document).foundation({
+        animation: 'fadeAndPop',
+        animation_speed: 250,
+        close_on_background_click: true,
+        dismiss_modal_class: 'close-reveal-modal',
+        multiple_opened: false,
+        bg_class: 'reveal-modal-bg',
+        root_element: 'body',
+        on_ajax_error: $.noop,
+        bg: $('.reveal-modal-bg'),
+        css: {
+            open: {
+                'opacity': 0,
+                'visibility': 'visible',
+                'display': 'block'
+            },
+            close: {
+                'opacity': 1,
+                'visibility': 'hidden',
+                'display': 'none'
+            }
+        }
+    });
+
+</script>
+</div>
+<script>
+    (function ($) {
+        $('.accordion > li:eq(0) a').addClass('active').next();
+
+        $('.accordion a').click(function (j) {
+            var dropDown = $(this).closest('li').find('p');
+
+            $(this).closest('.accordion').find('p').not(dropDown).slideUp();
+
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+            } else {
+                $(this).closest('.accordion').find('a.active').removeClass('active');
+                $(this).addClass('active');
+            }
+
+            dropDown.stop(false, true).slideToggle();
+
+            j.preventDefault();
+        });
+    })(jQuery);
+</script>
+</body>
+</html>
