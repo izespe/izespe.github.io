@@ -1,0 +1,36 @@
+
+@font-face {
+	font-family: 'PFBeauSansPro-SeBold';
+	src: url('PFBeauSansPro-SeBold.eot');
+	src: local('☺'), url('PFBeauSansPro-SeBold.woff') format('woff'), url('PFBeauSansPro-SeBold.ttf') format('truetype'), url('PFBeauSansPro-SeBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'PFBeauSansPro-Reg';
+	src: url('PFBeauSansPro-Reg.eot');
+	src: local('☺'), url('PFBeauSansPro-Reg.woff') format('woff'), url('PFBeauSansPro-Reg.ttf') format('truetype'), url('PFBeauSansPro-Reg.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'PFBeauSansPro-Light';
+	src: url('PFBeauSansPro-Light.eot');
+	src: local('☺'), url('PFBeauSansPro-Light.woff') format('woff'), url('PFBeauSansPro-Light.ttf') format('truetype'), url('PFBeauSansPro-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'PFBeauSansPro-Black';
+	src: url('PFBeauSansPro-Black.eot');
+	src: local('☺'), url('PFBeauSansPro-Black.woff') format('woff'), url('PFBeauSansPro-Black.ttf') format('truetype'), url('PFBeauSansPro-Black.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+

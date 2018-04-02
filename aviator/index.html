@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>Home</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+<div class="remodal-bg">
+    <div class="remodal" data-remodal-id="modal">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Обратная связь</h1>
+        <form action="">
+
+            <div class="material-input">
+                <input id='name' type='text' minlength='2' placeholder=' ' required='true'>
+                <label for='name'>Ваше имя</label>
+                <span class="error">Место для ошибки, когда программист сделаает валидацию</span>
+            </div>
+
+            <div class="material-input">
+                <input id='email' type='email' placeholder=' ' required='true'>
+                <label for='email'>Номер телефона</label>
+                <span class="error">Место для ошибки, когда программист сделаает валидацию</span>
+            </div>
+
+
+            <div class="material-textarea">
+<textarea id='body' onkeyup="document.getElementById('counter').innerHTML = this.value.length;"
+          placeholder=' ' minlength='10' maxlength='500' required='true'></textarea>
+                <label for='body'>Как мы можем вам помочь?</label>
+                <span class="error">Место для ошибки, когда программист сделаает валидацию</span>
+                <span id="counter">0</span>
+            </div>
+
+            <button class="class-btn send">Отправить</button>
+
+        </form>
+    </div>
+    <div class="remodal" data-remodal-id="modal2">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h1>Обратный звонок</h1>
+        <form action="">
+
+            <div class="material-input">
+                <input id='name' type='text' minlength='2' placeholder=' ' required='true'>
+                <label for='name'>Ваше имя</label>
+                <span class="error">Место для ошибки, когда программист сделаает валидацию</span>
+            </div>
+
+            <div class="material-input">
+                <input id='email' type='email' placeholder=' ' required='true'>
+                <label for='email'>Номер телефона</label>
+                <span class="error">Место для ошибки, когда программист сделаает валидацию</span>
+            </div>
+
+            <button class="class-btn send">Отправить</button>
+
+        </form>
+    </div>
+</div>
+<header id="head">
+    <div class="top-line">
+        <div class="container">
+
+            <nav>
+                <ul class="anchor-nav">
+                    <a href="#head" class="logo linky">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                    <li><a href="#serv" class="linky">Услуги</a></li>
+                    <li><a href="#pros" class="linky">О нас</a></li>
+                    <li><a href="#prices" class="linky">Цены</a></li>
+                    <li class="partners"><a href="#partners" class="linky">Партнеры</a></li>
+                    <li><a href="#contacts" class="linky">Конаткты</a></li>
+
+                </ul>
+            </nav>
+            <script>
+                wow = new WOW(
+                    {
+                        boxClass:     'wow',      // default
+                        animateClass: 'animated', // default
+                        offset:       0,          // default
+                        mobile:       true,       // default
+                        live:         true        // default
+                    }
+                )
+                wow.init();
+            </script>
+            <script>
+                // page init
+                jQuery(function () {
+                    initAnchors();
+                });
+
+                // smooth anchor links
+                function initAnchors() {
+                    /* global SmoothScroll */
+
+                    // simple case:
+                    new SmoothScroll({
+                        anchorLinks: 'a.back-to-top'
+                    });
+
+                    // common case:
+                    new SmoothScroll({
+                        extraOffset: $('.anchor-nav').height() || 0,
+                        anchorLinks: '.anchor-nav a',
+                        activeClasses: 'link',
+                        wheelBehavior: 'ignore',
+                        animDuration: 800
+                    });
+
+                    // custom case:
+                    new SmoothScroll({
+                        anchorLinks: '.inner-links a',
+                        container: '.inner-container',
+                        activeClasses: 'parent'
+                    });
+                }
+
+                /*!
+                 * SmoothScroll module
+                 */
+                ;
+                (function ($, exports) {
+                    // private variables
+                    var page,
+                        win = $(window),
+                        activeBlock, activeWheelHandler,
+                        wheelEvents = ('onwheel' in document || document.documentMode >= 9 ? 'wheel' : 'mousewheel DOMMouseScroll');
+
+                    // animation handlers
+                    function scrollTo(offset, options, callback) {
+                        // initialize variables
+                        var scrollBlock;
+                        if (document.body) {
+                            if (typeof options === 'number') {
+                                options = {
+                                    duration: options
+                                };
+                            } else {
+                                options = options || {};
+                            }
+                            page = page || $('html, body');
+                            scrollBlock = options.container || page;
+                        } else {
+                            return;
+                        }
+
+                        // treat single number as scrollTop
+                        if (typeof offset === 'number') {
+                            offset = {
+                                top: offset
+                            };
+                        }
+
+                        // handle mousewheel/trackpad while animation is active
+                        if (activeBlock && activeWheelHandler) {
+                            activeBlock.off(wheelEvents, activeWheelHandler);
+                        }
+                        if (options.wheelBehavior && options.wheelBehavior !== 'none') {
+                            activeWheelHandler = function (e) {
+                                if (options.wheelBehavior === 'stop') {
+                                    scrollBlock.off(wheelEvents, activeWheelHandler);
+                                    scrollBlock.stop();
+                                } else if (options.wheelBehavior === 'ignore') {
+                                    e.preventDefault();
+                                }
+                            };
+                            activeBlock = scrollBlock.on(wheelEvents, activeWheelHandler);
+                        }
+
+                        // start scrolling animation
+                        scrollBlock.stop().animate({
+                            scrollLeft: offset.left,
+                            scrollTop: offset.top
+                        }, options.duration, function () {
+                            if (activeWheelHandler) {
+                                scrollBlock.off(wheelEvents, activeWheelHandler);
+                            }
+                            if ($.isFunction(callback)) {
+                                callback();
+                            }
+                        });
+                    }
+
+                    // smooth scroll contstructor
+                    function SmoothScroll(options) {
+                        this.options = $.extend({
+                            anchorLinks: 'a[href^="#"]', // selector or jQuery object
+                            container: null, // specify container for scrolling (default - whole page)
+                            extraOffset: null, // function or fixed number
+                            activeClasses: null, // null, "link", "parent"
+                            easing: 'swing', // easing of scrolling
+                            animMode: 'duration', // or "speed" mode
+                            animDuration: 800, // total duration for scroll (any distance)
+                            animSpeed: 1500, // pixels per second
+                            anchorActiveClass: 'anchor-active',
+                            sectionActiveClass: 'section-active',
+                            wheelBehavior: 'stop', // "stop", "ignore" or "none"
+                            useNativeAnchorScrolling: false // do not handle click in devices with native smooth scrolling
+                        }, options);
+                        this.init();
+                    }
+
+                    SmoothScroll.prototype = {
+                        init: function () {
+                            this.initStructure();
+                            this.attachEvents();
+                        },
+                        initStructure: function () {
+                            var self = this;
+
+                            this.container = this.options.container ? $(this.options.container) : $('html,body');
+                            this.scrollContainer = this.options.container ? this.container : win;
+                            this.anchorLinks = jQuery(this.options.anchorLinks).filter(function () {
+                                return document.getElementById(this.getAttribute('href').slice(1));
+                            });
+                        },
+                        getAnchorTarget: function (link) {
+                            // get target block from link href
+                            var targetId = $(link).attr('href');
+                            return $(targetId.length > 1 ? targetId : 'html');
+                        },
+                        getTargetOffset: function (block) {
+                            // get target offset
+                            var blockOffset = block.offset().top;
+                            if (this.options.container) {
+                                blockOffset -= this.container.offset().top - this.container.prop('scrollTop');
+                            }
+
+                            // handle extra offset
+                            if (typeof this.options.extraOffset === 'number') {
+                                blockOffset -= this.options.extraOffset;
+                            } else if (typeof this.options.extraOffset === 'function') {
+                                blockOffset -= this.options.extraOffset(block);
+                            }
+                            return {
+                                top: blockOffset
+                            };
+                        },
+                        attachEvents: function () {
+                            var self = this;
+
+                            // handle active classes
+                            if (this.options.activeClasses && this.anchorLinks.length) {
+                                // cache structure
+                                this.anchorData = [];
+
+                                for (var i = 0; i < this.anchorLinks.length; i++) {
+                                    var link = jQuery(this.anchorLinks[i]),
+                                        targetBlock = self.getAnchorTarget(link),
+                                        anchorDataItem;
+
+                                    $.each(self.anchorData, function (index, item) {
+                                        if (item.block[0] === targetBlock[0]) {
+                                            anchorDataItem = item;
+                                        }
+                                    });
+
+                                    if (anchorDataItem) {
+                                        anchorDataItem.link = anchorDataItem.link.add(link);
+                                    } else {
+                                        self.anchorData.push({
+                                            link: link,
+                                            block: targetBlock
+                                        });
+                                    }
+                                }
+                                ;
+
+                                // add additional event handlers
+                                this.resizeHandler = function () {
+                                    self.recalculateOffsets();
+                                };
+                                this.scrollHandler = function () {
+                                    self.refreshActiveClass();
+                                };
+
+                                this.recalculateOffsets();
+                                this.scrollContainer.on('scroll', this.scrollHandler);
+                                win.on('resize', this.resizeHandler);
+                            }
+
+                            // handle click event
+                            this.clickHandler = function (e) {
+                                self.onClick(e);
+                            };
+                            if (!this.options.useNativeAnchorScrolling) {
+                                this.anchorLinks.on('click', this.clickHandler);
+                            }
+                        },
+                        recalculateOffsets: function () {
+                            var self = this;
+                            $.each(this.anchorData, function (index, data) {
+                                data.offset = self.getTargetOffset(data.block);
+                                data.height = data.block.outerHeight();
+                            });
+                            this.refreshActiveClass();
+                        },
+                        refreshActiveClass: function () {
+                            var self = this,
+                                foundFlag = false,
+                                containerHeight = this.container.prop('scrollHeight'),
+                                viewPortHeight = this.scrollContainer.height(),
+                                scrollTop = this.options.container ? this.container.prop('scrollTop') : win.scrollTop();
+
+                            // user function instead of default handler
+                            if (this.options.customScrollHandler) {
+                                this.options.customScrollHandler.call(this, scrollTop, this.anchorData);
+                                return;
+                            }
+
+                            // sort anchor data by offsets
+                            this.anchorData.sort(function (a, b) {
+                                return a.offset.top - b.offset.top;
+                            });
+
+                            function toggleActiveClass(anchor, block, state) {
+                                anchor.toggleClass(self.options.anchorActiveClass, state);
+                                block.toggleClass(self.options.sectionActiveClass, state);
+                            }
+
+                            // default active class handler
+                            $.each(this.anchorData, function (index) {
+                                var reverseIndex = self.anchorData.length - index - 1,
+                                    data = self.anchorData[reverseIndex],
+                                    anchorElement = (self.options.activeClasses === 'parent' ? data.link.parent() : data.link);
+
+                                if (scrollTop >= containerHeight - viewPortHeight) {
+                                    // handle last section
+                                    if (reverseIndex === self.anchorData.length - 1) {
+                                        toggleActiveClass(anchorElement, data.block, true);
+                                    } else {
+                                        toggleActiveClass(anchorElement, data.block, false);
+                                    }
+                                } else {
+                                    // handle other sections
+                                    if (!foundFlag && (scrollTop >= data.offset.top - 1 || reverseIndex === 0)) {
+                                        foundFlag = true;
+                                        toggleActiveClass(anchorElement, data.block, true);
+                                    } else {
+                                        toggleActiveClass(anchorElement, data.block, false);
+                                    }
+                                }
+                            });
+                        },
+                        calculateScrollDuration: function (offset) {
+                            var distance;
+                            if (this.options.animMode === 'speed') {
+                                distance = Math.abs(this.scrollContainer.scrollTop() - offset.top);
+                                return (distance / this.options.animSpeed) * 1000;
+                            } else {
+                                return this.options.animDuration;
+                            }
+                        },
+                        onClick: function (e) {
+                            var targetBlock = this.getAnchorTarget(e.currentTarget),
+                                targetOffset = this.getTargetOffset(targetBlock);
+
+                            e.preventDefault();
+                            scrollTo(targetOffset, {
+                                container: this.container,
+                                wheelBehavior: this.options.wheelBehavior,
+                                duration: this.calculateScrollDuration(targetOffset)
+                            });
+                        },
+                        destroy: function () {
+                            if (this.options.activeClasses) {
+                                win.off('resize', this.resizeHandler);
+                                this.scrollContainer.off('scroll', this.scrollHandler);
+                            }
+                            this.anchorLinks.off('click', this.clickHandler);
+                        }
+                    };
+
+                    // public API
+                    $.extend(SmoothScroll, {
+                        scrollTo: function (blockOrOffset, durationOrOptions, callback) {
+                            scrollTo(blockOrOffset, durationOrOptions, callback);
+                        }
+                    });
+
+                    // export module
+                    exports.SmoothScroll = SmoothScroll;
+                }(jQuery, this));
+
+            </script>
+            <div class="phones">
+                <ul>
+                    <li><img src="img/ru.png" alt=""><a href="tel:+74997031866">+7 (499) 703-18-66</a></li>
+                    <li><img src="img/by.png" alt=""><a href="tel:+375445714547">+375 (44) 571-45-47</a></li>
+                </ul>
+                <button class="class-btn" data-remodal-target="modal2"> Обратный звонок</button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="wrapper-bg">
+            <div class="container">
+                <div class="wrap wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".3s">
+                    <h1>Агентство<br>профессионального<br>копирайтинга</h1>
+                    <p>Вам нужны те, кто умеет из букв алфавита писать грамотные, качественные и интересные тексты? Тогда вы
+                        попали точно по адресу!
+                    </p>
+                    <button class="class-btn white" data-remodal-target="modal">Получить консультацию</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</header>
+
+<main>
+    <section id="serv">
+        <div class="container">
+            <h2>Мы предлагаем</h2>
+            <div class="wrap">
+                <div class="item wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <img src="img/ss1.png" alt="">
+                    <span>SEO-оптимизированные <br>тексты</span>
+                </div>
+                <div class="item wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <img src="img/ss2.png" alt="">
+                    <span>Рекламные и продающие<br>материалы</span>
+                </div>
+                <div class="item wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <img src="img/ss5.png" alt="">
+                    <span>Переводы<br>с английского языка</span>
+                </div>
+                <div class="item wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <img src="img/ss3.png" alt="">
+                    <span>Контент для сайта,<br>описание товаров</span>
+                </div>
+                <div class="item wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <img src="img/ss4.png" alt="">
+                    <span>Информационные<br>статьи</span>
+                </div>
+                <div class="item wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <img src="img/ss6.png" alt="">
+                    <span>Пресс-релизы, заметки<br>и многое другое</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pros">
+        <div class="container">
+            <h2>Почему именно мы?</h2>
+            <div class="wrap">
+                <div class="left">
+                    <p>Мы пишем уникально, качественно и сдаем материалы четко в указанные сроки. Представьте, вы
+                        удивитесь
+                        тому, как легко и просто можно работать с нашими авторами!</p>
+                    <p>Теперь, мечта каждого заказчика <span>«отдал в работу техническое задание, получил готовые статьи, залил на
+                сайт»</span> стала реальностью.</p>
+
+                </div>
+                <div class="right wow fadeInRight" data-wow-duration=".8s" data-wow-delay=".2s" >
+                    <ul>
+                        <li><img src="img/team.png" alt="">Команда профессиональных авторов</li>
+                        <li><img src="img/cal.png" alt="">Строгое соблюдение сроков</li>
+                        <li><img src="img/star.png" alt="">Мы дорожим репутацией</li>
+                        <li><img src="img/nice.png" alt="">Гарантия качества. Знаем свое дело!</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="prices">
+        <div class="wrapper-bg">
+            <div class="container">
+                <div class="left wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <h2>Ориентировочная<br> стоимость</h2>
+                    <p>Точную цену мы рассчитаем после того, как ознакомимся с заданием и зададим уточняющие вопросы.</p>
+                    <span>*Все цены указаны за 1000 знаков.</span>
+                </div>
+                <div class="right">
+                    <div class="item">
+                        <img src="img/s1.png" alt="">
+                        <p>SEO-оптимизированные<br>тексты</p>
+                        <span class="rur">295 <span>RUB</span></span>
+                        <span class="byn">10 <span>BYN</span></span>
+                        <button class="class-btn small" data-remodal-target="modal">Рассчитать</button>
+                    </div>
+                    <div class="item">
+                        <img src="img/s2.png" alt="">
+                        <p>Рекламные и продающие<br>материалы</p>
+                        <span class="rur">295 <span>RUB</span></span>
+                        <span class="byn">10 <span>BYN</span></span>
+                        <button class="class-btn small" data-remodal-target="modal">Рассчитать</button>
+                    </div>
+                    <div class="item">
+                        <img src="img/s3.png" alt="">
+                        <p>Переводы<br>с английского языка</p>
+                        <span class="rur">295 <span>RUB</span></span>
+                        <span class="byn">10 <span>BYN</span></span>
+                        <button class="class-btn small" data-remodal-target="modal">Рассчитать</button>
+                    </div>
+                    <div class="item">
+                        <img src="img/s4.png" alt="">
+                        <p>Описание<br>товаров</p>
+                        <span class="rur">295 <span>RUB</span></span>
+                        <span class="byn">10 <span>BYN</span></span>
+                        <button class="class-btn small" data-remodal-target="modal">Рассчитать</button>
+                    </div>
+                    <div class="item">
+                        <img src="img/s5.png" alt="">
+                        <p>Информационные<br>статьи</p>
+                        <span class="rur">295 <span>RUB</span></span>
+                        <span class="byn">10 <span>BYN</span></span>
+                        <button class="class-btn small" data-remodal-target="modal">Рассчитать</button>
+                    </div>
+                    <div class="item">
+                        <img src="img/s6.png" alt="">
+                        <p>Пресс-релизы,<br>заметки</p>
+                        <span class="rur">295 <span>RUB</span></span>
+                        <span class="byn">10 <span>BYN</span></span>
+                        <button class="class-btn small" data-remodal-target="modal">Рассчитать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="partners">
+        <div class="container">
+            <h2>Нам доверяют</h2>
+            <div class="wrap">
+                <img src="img/l1.png" alt="">
+                <img src="img/l2.png" alt="">
+                <img src="img/l3.png" alt="">
+                <img src="img/l4.png" alt="">
+                <img src="img/l5.png" alt="">
+                <img src="img/l6.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="contacts">
+        <div class="bg">
+
+        </div>
+        <div class="container">
+            <div class="left">
+                <h2>Контакты</h2>
+                <span>
+                    Для получения консультации свяжитесь с нами удобным вам способом.
+                </span>
+                <ul  class="wow fadeInLeft" data-wow-duration=".8s" data-wow-delay=".2s">
+                    <li><img src="img/skype.png" alt=""> <a href="skype:net.wizards?add">net.wizards</a></li>
+                    <li><img src="img/phone.png" alt=""> <a href="tel:+74997031866">+7 (499) 703-18-66</a> <span
+                            class="flag"><img
+                            src="img/ru.png" alt=""></span></li>
+                    <li><img src="img/phone.png" alt=""> <a href="tel:+375445714547">+375 (44) 571-45-47</a><span
+                            class="flag"><img
+                            src="img/by.png" alt=""></span></li>
+                    <li><img src="img/mail.png" alt=""> <a href="mailto:5714547@mail.ru">5714547@mail.ru</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <h3>Напишите нам</h3>
+
+                <form action="">
+
+                    <div class="material-input">
+                        <input id='name' type='text' minlength='2' placeholder=' ' required='true'>
+                        <label for='name'>Ваше имя</label>
+                        <span class="error">Место для ошибки, когда программист сделаает валидацию</span>
+                    </div>
+
+                    <div class="material-input">
+                        <input id='email' type='email' placeholder=' ' required='true'>
+                        <label for='email'>Номер телефона</label>
+                        <span class="error">Место для ошибки, когда программист сделаает валидацию</span>
+                    </div>
+
+
+                    <div class="material-textarea">
+<textarea id='body' onkeyup="document.getElementById('counter').innerHTML = this.value.length;"
+          placeholder=' ' minlength='10' maxlength='500' required='true'></textarea>
+                        <label for='body'>Как мы вам можем помочь?</label>
+                        <span class="error">Место для ошибки, когда программист сделаает валидацию</span>
+                        <span id="counter">0</span>
+                    </div>
+
+                    <button class="class-btn send">Отправить</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer-content">
+        <div class="left">
+            <span> Агентство профессионального копирайтинга “Авиатор”</span>
+        </div>
+        <div class="right">
+            <span>УНП 12516345678</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
